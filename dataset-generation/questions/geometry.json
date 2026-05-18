@@ -1,0 +1,86 @@
+{
+  "category": "geometry",
+  "model": "gemma3:12b-it-qat",
+  "generated_at": "2026-05-09T10:15:20.865972",
+  "total": 6,
+  "questions": [
+    {
+      "subtopic": "finding the circumference of a circle from a given area",
+      "question": "A circular garden has an area of 113.04 square feet. What is the circumference of the garden, rounded to the nearest tenth of a foot?",
+      "solution": [
+        "1. Recall the formula for the area of a circle: A = πr², where A is the area and r is the radius.",
+        "2. Substitute the given area into the formula: 113.04 = πr².",
+        "3. Divide both sides by π: r² = 113.04 / π ≈ 36.",
+        "4. Take the square root of both sides: r = √36 = 6 feet.",
+        "5. Recall the formula for the circumference of a circle: C = 2πr, where C is the circumference and r is the radius.",
+        "6. Substitute the radius into the circumference formula: C = 2π(6) = 12π.",
+        "7. Calculate the circumference: C ≈ 12 * 3.14159 ≈ 37.69908 feet.",
+        "8. Round the circumference to the nearest tenth: C ≈ 37.7 feet."
+      ]
+    },
+    {
+      "subtopic": "determining the hypotenuse using cosine ratio",
+      "question": "A 25-foot ladder leans against a wall, forming an angle of 68 degrees with the ground. Determine the distance from the base of the ladder to the wall. Round your answer to the nearest foot.",
+      "solution": [
+        "1. Identify the knowns: Adjacent side = distance from base of ladder to wall (let's call it 'x'), Hypotenuse = 25 feet, Angle = 68 degrees.",
+        "2. Recall the cosine ratio: cos(angle) = Adjacent / Hypotenuse",
+        "3. Substitute the known values into the cosine ratio: cos(68°) = x / 25",
+        "4. Calculate cos(68°): cos(68°) ≈ 0.3746",
+        "5. Rewrite the equation: 0.3746 = x / 25",
+        "6. Solve for x: x = 0.3746 * 25",
+        "7. Calculate x: x ≈ 9.365",
+        "8. Round to the nearest foot: x ≈ 9 feet"
+      ]
+    },
+    {
+      "subtopic": "determining a missing endpoint using the midpoint formula",
+      "question": "Point M is the midpoint of the line segment AB, where A = (-2, 5) and M = (1, 1). Determine the coordinates of point B.",
+      "solution": [
+        "1. Recall the midpoint formula: M = ((x₁ + x₂)/2, (y₁ + y₂)/2), where M is the midpoint, and (x₁, y₁) and (x₂, y₂) are the endpoints.",
+        "2. Let B have coordinates (x₂, y₂). We have M = ((−2 + x₂)/2, (5 + y₂)/2) = (1, 1).",
+        "3. Set the x-coordinates equal: (−2 + x₂)/2 = 1. Multiply both sides by 2: −2 + x₂ = 2. Add 2 to both sides: x₂ = 4.",
+        "4. Set the y-coordinates equal: (5 + y₂)/2 = 1. Multiply both sides by 2: 5 + y₂ = 2. Subtract 5 from both sides: y₂ = -3.",
+        "5. Therefore, the coordinates of point B are (4, -3)."
+      ]
+    },
+    {
+      "subtopic": "finding the missing side of a right triangle using Pythagoras theorem",
+      "question": "A ladder 13 feet long leans against a wall. The base of the ladder is 5 feet away from the wall; how high up the wall does the ladder reach?",
+      "solution": [
+        "1. Let 'h' be the height the ladder reaches on the wall.",
+        "2. According to the Pythagorean theorem, a² + b² = c², where 'a' and 'b' are the legs of the right triangle and 'c' is the hypotenuse.",
+        "3. In this case, a = 5 feet (distance from the wall), b = h, and c = 13 feet (length of the ladder).",
+        "4. Substitute the values into the theorem: 5² + h² = 13²",
+        "5. Simplify: 25 + h² = 169",
+        "6. Subtract 25 from both sides: h² = 169 - 25",
+        "7. Calculate: h² = 144",
+        "8. Take the square root of both sides: h = √144",
+        "9. Therefore, h = 12 feet."
+      ]
+    },
+    {
+      "subtopic": "determining the length of a line segment using the distance formula",
+      "question": "Triangle ABC has vertices at A(2, -1), B(5, 3), and C(-1, 4). Determine the length of side AC of the triangle.",
+      "solution": [
+        "1. Recall the distance formula: d = √((x₂ - x₁)² + (y₂ - y₁)²).",
+        "2. Identify the coordinates of points A and C: A(2, -1) and C(-1, 4).",
+        "3. Substitute the coordinates into the distance formula: d = √((-1 - 2)² + (4 - (-1))²).",
+        "4. Simplify the expression inside the parentheses: d = √((-3)² + (5)²).",
+        "5. Calculate the squares: d = √(9 + 25).",
+        "6. Add the values: d = √34.",
+        "7. The length of side AC is √34 units."
+      ]
+    },
+    {
+      "subtopic": "finding the total interior angle sum of a polygon",
+      "question": "A regular dodecagon (12-sided polygon) is divided into 10 triangles by connecting its center to each vertex. What is the total measure of all interior angles of the dodecagon, in degrees?",
+      "solution": [
+        "1. Recall the formula for the sum of interior angles of a polygon with 'n' sides: (n - 2) * 180 degrees.",
+        "2. Identify the number of sides of the dodecagon: n = 12.",
+        "3. Substitute n = 12 into the formula: (12 - 2) * 180 degrees.",
+        "4. Simplify the expression inside the parentheses: 10 * 180 degrees.",
+        "5. Perform the multiplication: 1800 degrees."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+# ── Port-a-Prof — Docker Compose ─────────────────────────────────────
+#
+# Two containers:
+#   llama-server  — serves the model on port 8080 (official llama.cpp image)
+#   app           — FastAPI frontend on port 8001
+#
+# Usage:  docker compose up
+# Rebuild: docker compose up --build  (only needed after changing app files)
+#
+# The app will be available at http://localhost:8001
+
+services:
+
+  llama-server:
+    # Official llama.cpp CPU image — handles all library dependencies correctly
+    image: ghcr.io/ggml-org/llama.cpp:server
+    container_name: llama-server
+    volumes:
+      # GGUFs stay on your machine and are never baked into the image
+      - ./models:/models
+    ports:
+      - "8080:8080"
+    command: >
+      --model /models/port-a-prof-Q4_K_M.gguf
+      --mmproj /models/mmproj-F16.gguf
+      --port 8080
+      --host 0.0.0.0
+      --jinja
+      --image-min-tokens 560
+      --image-max-tokens 560
+      --ubatch-size 1024
+      --batch-size 1024
+      -c 8192
+    restart: unless-stopped
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: port-a-prof
+    ports:
+      - "8001:8001"
+    depends_on:
+      - llama-server
+    environment:
+      # Overrides the localhost URL in port-a-prof.py for container networking
+      - LLAMA_BASE_URL=http://llama-server:8080
+    restart: unless-stopped

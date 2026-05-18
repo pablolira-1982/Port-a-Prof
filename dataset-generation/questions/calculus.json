@@ -1,0 +1,72 @@
+{
+  "category": "calculus",
+  "model": "gemma3:12b-it-qat",
+  "generated_at": "2026-05-03T12:12:47.463771",
+  "total": 6,
+  "questions": [
+    {
+      "subtopic": "basic derivatives",
+      "question": "The function f(x) is defined as f(x) = 3x² - 2x + 7. Find the derivative of f(x) with respect to x, and then evaluate the derivative at x = 2.",
+      "solution": [
+        "1. Recall the power rule for derivatives: d/dx (x^n) = nx^(n-1). Also, the derivative of a constant is 0, and the derivative of a constant times a function is the constant times the derivative of the function.",
+        "2. Apply the power rule to each term of f(x): d/dx (3x²) = 3 * 2x^(2-1) = 6x, d/dx (-2x) = -2 * 1x^(1-1) = -2, and d/dx (7) = 0.",
+        "3. Combine the derivatives of each term to find the derivative of f(x): f'(x) = 6x - 2 + 0 = 6x - 2.",
+        "4. Evaluate f'(x) at x = 2: f'(2) = 6(2) - 2 = 12 - 2 = 10."
+      ]
+    },
+    {
+      "subtopic": "derivative at a point",
+      "question": "Consider the function f(x) = 3x³ - 2x² + x - 5. Determine the derivative of f(x) at x = 2.",
+      "solution": [
+        "1. Find the derivative of f(x) with respect to x: f'(x) = d/dx (3x³ - 2x² + x - 5) = 9x² - 4x + 1.",
+        "2. Substitute x = 2 into the derivative f'(x): f'(2) = 9(2)² - 4(2) + 1 = 9(4) - 8 + 1 = 36 - 8 + 1 = 28 + 1 = 29.",
+        "3. Therefore, the derivative of f(x) at x = 2 is 29."
+      ]
+    },
+    {
+      "subtopic": "evaluating definite integrals",
+      "question": "Evaluate the definite integral ∫₀² (3x² + 2x - 1) dx.  Show all necessary steps to arrive at the result. The integral represents the area under the curve of the given polynomial from x=0 to x=2.",
+      "solution": [
+        "1. Find the antiderivative of the integrand: ∫(3x² + 2x - 1) dx = x³ + x² - x + C",
+        "2. Evaluate the antiderivative at the upper limit of integration: (2)³ + (2)² - (2) = 8 + 4 - 2 = 10",
+        "3. Evaluate the antiderivative at the lower limit of integration: (0)³ + (0)² - (0) = 0 + 0 - 0 = 0",
+        "4. Subtract the value of the antiderivative at the lower limit from the value at the upper limit: 10 - 0 = 10"
+      ]
+    },
+    {
+      "subtopic": "finding distance from velocity",
+      "question": "A particle moves along a straight line with velocity v(t) = 3t^2 - 6t + 2 meters per second.  Given that the particle's position at t = 0 is s(0) = 4 meters, determine the particle's position at t = 3 seconds.",
+      "solution": [
+        "1. We know that velocity is the derivative of position, so to find the position function s(t), we need to integrate the velocity function v(t).",
+        "2. Integrate v(t) with respect to t: ∫(3t^2 - 6t + 2) dt = t^3 - 3t^2 + 2t + C.",
+        "3. Use the initial condition s(0) = 4 to find the constant of integration C:  (0)^3 - 3(0)^2 + 2(0) + C = 4, therefore C = 4.",
+        "4. So the position function is s(t) = t^3 - 3t^2 + 2t + 4.",
+        "5. To find the position at t = 3 seconds, substitute t = 3 into the position function: s(3) = (3)^3 - 3(3)^2 + 2(3) + 4.",
+        "6. Calculate s(3): s(3) = 27 - 27 + 6 + 4 = 10.",
+        "7. Therefore, the particle's position at t = 3 seconds is 10 meters."
+      ]
+    },
+    {
+      "subtopic": "simple exponential growth",
+      "question": "A culture of bacteria initially contains 5000 cells. If the bacteria double every 3 hours, how many bacteria will be present after 12 hours?",
+      "solution": [
+        "1. Determine the growth factor. Since the bacteria double, the growth factor is 2.",
+        "2. Calculate the number of doubling periods. The bacteria double every 3 hours, and we want to know the population after 12 hours, so there are 12 hours / 3 hours/doubling = 4 doubling periods.",
+        "3. Apply the exponential growth formula: Population = Initial Population * (Growth Factor)^(Number of Doubling Periods).",
+        "4. Substitute the values: Population = 5000 * (2)^4.",
+        "5. Calculate the final population: Population = 5000 * 16 = 80000."
+      ]
+    },
+    {
+      "subtopic": "finding critical points from a simple derivative",
+      "question": "Consider the function f(x) = 3x³ - 12x + 5. Determine the x-values of all critical points of f(x).",
+      "solution": [
+        "1. Find the derivative of f(x) with respect to x: f'(x) = 9x² - 12.",
+        "2. Set the derivative equal to zero to find the critical points: 9x² - 12 = 0.",
+        "3. Solve for x: 9x² = 12  =>  x² = 12/9  =>  x² = 4/3.",
+        "4. Take the square root of both sides: x = ±√(4/3)  =>  x = ±(2/√3).",
+        "5. Rationalize the denominator: x = ±(2√3)/3."
+      ]
+    }
+  ]
+}

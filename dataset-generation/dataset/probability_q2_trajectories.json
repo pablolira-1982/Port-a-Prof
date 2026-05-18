@@ -1,0 +1,248 @@
+{
+  "problem": "A manufacturing process produces metal bolts, and 2% of them are defective. If a quality control inspector randomly selects 10 bolts, what is the probability that at least one bolt is defective?",
+  "topic": "probability",
+  "subtopic": "calculating probability using complementary events",
+  "solution_steps": [
+    "Define the complementary event: The complementary event to 'at least one bolt is defective' is 'no bolts are defective'.",
+    "Calculate the probability of the complementary event: The probability of a single bolt not being defective is 1 - 0.02 = 0.98.",
+    "Calculate the probability of no defective bolts in 10 selections: Since the selections are independent, the probability of 10 non-defective bolts is 0.98^10 ≈ 0.81707.",
+    "Calculate the probability of at least one defective bolt:  The probability of at least one defective bolt is 1 minus the probability of no defective bolts: 1 - 0.81707 ≈ 0.18293."
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "traj_1",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure how to approach this probability question. We need the chance of getting at least one defective bolt out of 10, and I don't know if there's a shortcut or a specific formula I should be using here."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is struggling with the initial approach to the problem, recognizing the need to find the probability of at least one defective bolt out of 10, but is unsure whether a shortcut or a specific formula should be used.",
+            "teacher_role": "inject_info",
+            "support": "none"
+          },
+          "target_teacher_response": "When you see phrases like \"at least one,\" it often signals that using the concept of **complementary probability** will simplify the calculation significantly.\n\nInstead of calculating the probability of getting exactly one defective bolt, plus the probability of getting exactly two, and so on, up to ten, we can use the complement.\n\nThe complementary event to \"at least one defective bolt\" is the event that *none* of the bolts are defective. The rule for complementary probability states that the probability of an event $A$ occurring is equal to 1 minus the probability of $A$ not occurring, which we write as $$P(A) = 1 - P(A^c)$$.\n\nIn the context of your problem, $P(A)$ is the probability of at least one defective bolt, and $P(A^c)$ is the probability that all 10 bolts are non-defective. To find $P(A^c)$, remember that since each selection is independent, you will multiply the probabilities for each individual bolt.\n\nGiven that 2% of bolts are defective, what is the probability that a single bolt is *not* defective, and how can you use that to find the probability that all 10 bolts are non-defective?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure how to approach this probability question. We need the chance of getting at least one defective bolt out of 10, and I don't know if there's a shortcut or a specific formula I should be using here."
+            },
+            {
+              "role": "teacher",
+              "content": "When you see phrases like \"at least one,\" it often signals that using the concept of **complementary probability** will simplify the calculation significantly.\n\nInstead of calculating the probability of getting exactly one defective bolt, plus the probability of getting exactly two, and so on, up to ten, we can use the complement.\n\nThe complementary event to \"at least one defective bolt\" is the event that *none* of the bolts are defective. The rule for complementary probability states that the probability of an event $A$ occurring is equal to 1 minus the probability of $A$ not occurring, which we write as $$P(A) = 1 - P(A^c)$$.\n\nIn the context of your problem, $P(A)$ is the probability of at least one defective bolt, and $P(A^c)$ is the probability that all 10 bolts are non-defective. To find $P(A^c)$, remember that since each selection is independent, you will multiply the probabilities for each individual bolt.\n\nGiven that 2% of bolts are defective, what is the probability that a single bolt is *not* defective, and how can you use that to find the probability that all 10 bolts are non-defective?"
+            },
+            {
+              "role": "student",
+              "content": "I understand that we need to find the probability of a single bolt being good first, and then multiply that out. But when I look at the 10 bolts, I'm not sure how to set up the full expression for the probability that all 10 are good. Do I just raise that single probability to the power of 10, or is there something else I need to account for?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly understands that they must first calculate the probability of a single bolt being non-defective and then use that value for all 10 selections. However, the student is seeking confirmation on whether raising this single probability to the power of 10 is the complete and correct mathematical expression for the probability of all 10 bolts being non-defective.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "Since the selection of each bolt is an **independent event**, the probability of all 10 bolts being non-defective is found by multiplying the probability of a single bolt being non-defective by itself, 10 times.\n\nIf we let $p_{\\text{good}}$ represent the probability that a single bolt is non-defective, then the probability that all 10 bolts are non-defective, which we call $P(\\text{none defective})$, is given by the expression:\n$$P(\\text{none defective}) = (p_{\\text{good}})^{10}$$\n\nNow that you have the structure for $P(\\text{none defective})$, what is the next step in finding the probability of at least one defective bolt?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_2",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "The probability of all 10 bolts being good is 0.98 raised to the power of 10. I got that value to be 0.817. So, to find the probability of at least one being defective, I subtract that from 1. 1 - 0.817 equals 0.193. I think that's the answer."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified the complementary event and calculated the probability of no defective bolts as 0.817. However, when calculating the final probability by subtracting this value from 1, the student incorrectly determined that 1 minus 0.817 equals 0.193, when the correct result is 0.183.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You calculated the probability of at least one defective bolt by finding 1 minus 0.817, and you stated the result is 0.193. Please check the arithmetic for the subtraction of 0.817 from 1."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "The probability of all 10 bolts being good is 0.98 raised to the power of 10. I got that value to be 0.817. So, to find the probability of at least one being defective, I subtract that from 1. 1 - 0.817 equals 0.193. I think that's the answer."
+            },
+            {
+              "role": "teacher",
+              "content": "You calculated the probability of at least one defective bolt by finding 1 minus 0.817, and you stated the result is 0.193. Please check the arithmetic for the subtraction of 0.817 from 1."
+            },
+            {
+              "role": "student",
+              "content": "Oh, right. 1 minus 0.817 is actually 0.183. So, I got the probability of at least one being defective by subtracting that from 1. But now I'm not sure what to do next. Is there some other step I need to calculate, or is this the final setup? I'm a little lost on how to finish this."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly calculates 1 minus 0.817 to be 0.183, demonstrating an understanding of the complementary probability approach. However, the student expresses confusion about whether this calculation represents the final answer or if further steps are required to complete the problem.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The probability of an event, $P(A)$, can often be calculated using its **complementary event**, $P(A^c)$.\n\nIf $A$ is the event that 'at least one bolt is defective', then $A^c$ is the event that 'no bolts are defective'.\n\nTherefore, the relationship between these two probabilities is given by the equation:\n$$P(A) = 1 - P(A^c)$$\n\nIn this problem, $P(A^c)$ is the probability of selecting 10 bolts that are all non-defective. Substitute the expression for $P(A^c)$ into the equation above, and then calculate the final value."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_3",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "Okay, so the probability that none of the 10 bolts are defective is about 0.817. So, to find the probability of at least one being defective, I just need to do 1 minus that number."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly stated that the probability of no defective bolts is approximately 0.817 and accurately concluded that the probability of at least one defective bolt is found by calculating 1 minus this value.",
+            "teacher_role": "confirm_and_advance",
+            "support": "none"
+          },
+          "target_teacher_response": "You have correctly found the probability of the complementary event. What value should you subtract this result from to find the probability of at least one defective bolt?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "Okay, so the probability that none of the 10 bolts are defective is about 0.817. So, to find the probability of at least one being defective, I just need to do 1 minus that number."
+            },
+            {
+              "role": "teacher",
+              "content": "You have correctly found the probability of the complementary event. What value should you subtract this result from to find the probability of at least one defective bolt?"
+            },
+            {
+              "role": "student",
+              "content": "If I take 1 minus 0.817, I get 0.183. So, the probability that at least one bolt is defective is about 0.183."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly applies the complementary probability rule by subtracting the probability of no defective bolts (0.817) from 1, calculating the final probability of at least one defective bolt to be 0.183.",
+            "teacher_role": "session_close",
+            "support": "none"
+          },
+          "target_teacher_response": "That is the correct probability. Do you have any other problems you would like to work on?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_4",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think if we want the probability of at least one defective bolt, it might be easier to calculate the opposite, right? So, the probability of none of them being defective. If we find that, we can just subtract it from 1. But how do I actually calculate the probability that all 10 bolts are non-defective?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies that calculating the probability of at least one defective bolt is best approached using the complementary event, which is the probability of none of the bolts being defective. The student understands the overall strategy of subtracting this complementary probability from 1, and is now asking for the method to calculate the probability of 10 independent non-defective selections.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The probability of selecting a single bolt that is not defective is $1 - 0.02 = 0.98$.\n\nSince the selections are independent events, the probability of all 10 bolts being non-defective is the product of the individual probabilities. You need to calculate:\n$$P(\\text{none defective}) = (P(\\text{not defective}))^{10}$$\n\nSubstitute the probability of a single non-defective bolt into the expression and calculate the value for $P(\\text{none defective})$.\n\nWhat is the value of $P(\\text{none defective})$?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think if we want the probability of at least one defective bolt, it might be easier to calculate the opposite, right? So, the probability of none of them being defective. If we find that, we can just subtract it from 1. But how do I actually calculate the probability that all 10 bolts are non-defective?"
+            },
+            {
+              "role": "teacher",
+              "content": "The probability of selecting a single bolt that is not defective is $1 - 0.02 = 0.98$.\n\nSince the selections are independent events, the probability of all 10 bolts being non-defective is the product of the individual probabilities. You need to calculate:\n$$P(\\text{none defective}) = (P(\\text{not defective}))^{10}$$\n\nSubstitute the probability of a single non-defective bolt into the expression and calculate the value for $P(\\text{none defective})$.\n\nWhat is the value of $P(\\text{none defective})$?"
+            },
+            {
+              "role": "student",
+              "content": "Hmm, so I need to calculate 0.98 to the power of 10. I think if I just multiply 0.98 by 10, I get 9.8. So, I think the probability of none defective is 9.8."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies the need to calculate 0.98 to the power of 10, but demonstrates a conceptual error by confusing exponentiation with multiplication. The student incorrectly calculates the probability of none defective by multiplying 0.98 by 10, yielding 9.8.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You are calculating the probability of 10 independent events, which requires exponentiation, not simple multiplication. Please re-examine the expression $$(0.98)^{10}$$ and calculate the value of that power."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_5",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the probability that at least one of the 10 bolts is defective, but I honestly don't know where to start. Should I just calculate the probability of one defective bolt and multiply that out?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies the goal of finding the probability of at least one defective bolt but is unsure how to proceed. The student proposes calculating the probability of a single defective bolt and multiplying it out, indicating a conceptual misunderstanding of how to calculate the probability of 'at least one' in a series of independent trials.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "Calculating the probability for 'at least one' defective bolt by summing up $P(X=1) + P(X=2) + ... + P(X=10)$ is complicated. \n\nInstead, consider the complementary event. The probability of 'at least one defective' is equal to 1 minus the probability of the opposite outcome.\n\nThe complementary event here is that 'none of the bolts are defective'.\n\nTherefore, the relationship you need to use is:\n$$P(\\text{at least one defective}) = 1 - P(\\text{none are defective})$$\n\nFirst, define the probability of a single bolt being non-defective. If $p$ is the probability of a bolt being defective, what is the expression for the probability of a single bolt being non-defective?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the probability that at least one of the 10 bolts is defective, but I honestly don't know where to start. Should I just calculate the probability of one defective bolt and multiply that out?"
+            },
+            {
+              "role": "teacher",
+              "content": "Calculating the probability for 'at least one' defective bolt by summing up $P(X=1) + P(X=2) + ... + P(X=10)$ is complicated. \n\nInstead, consider the complementary event. The probability of 'at least one defective' is equal to 1 minus the probability of the opposite outcome.\n\nThe complementary event here is that 'none of the bolts are defective'.\n\nTherefore, the relationship you need to use is:\n$$P(\\text{at least one defective}) = 1 - P(\\text{none are defective})$$\n\nFirst, define the probability of a single bolt being non-defective. If $p$ is the probability of a bolt being defective, what is the expression for the probability of a single bolt being non-defective?"
+            },
+            {
+              "role": "student",
+              "content": "Wait, so if I need to find the probability of a single bolt being non-defective, where do I even get that number? The problem just tells me that 2% are defective, but it doesn't say what the probability of it *not* being defective is. I'm really confused about how to start with that first step."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is confused about how to calculate the probability of a single bolt being non-defective. They correctly identify that the problem only provides the probability of being defective (2%) and are struggling with the conceptual step of deriving the probability of the complementary event.",
+            "teacher_role": "partial_worked_step",
+            "support": "medium"
+          },
+          "target_teacher_response": "The probability of a single bolt being non-defective is derived directly from the given information. \n\nWe are told that the probability of a bolt being defective is **2%**, which we write as $p = 0.02$.\n\nSince a bolt must either be defective or non-defective, the probability of it being non-defective, which we call $q$, is the complement of $p$. \n\nTherefore, the expression for $q$ is: $$q = 1 - p$$ \n\nSubstitute the value of $p$ into this expression to find the probability of a single bolt being non-defective. Once you have $q$, you can use it to set up the calculation for $P(\\text{none are defective})$. "
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the probability that at least one of the 10 bolts is defective, but I honestly don't know where to start. Should I just calculate the probability of one defective bolt and multiply that out?"
+            },
+            {
+              "role": "teacher",
+              "content": "Calculating the probability for 'at least one' defective bolt by summing up $P(X=1) + P(X=2) + ... + P(X=10)$ is complicated. \n\nInstead, consider the complementary event. The probability of 'at least one defective' is equal to 1 minus the probability of the opposite outcome.\n\nThe complementary event here is that 'none of the bolts are defective'.\n\nTherefore, the relationship you need to use is:\n$$P(\\text{at least one defective}) = 1 - P(\\text{none are defective})$$\n\nFirst, define the probability of a single bolt being non-defective. If $p$ is the probability of a bolt being defective, what is the expression for the probability of a single bolt being non-defective?"
+            },
+            {
+              "role": "student",
+              "content": "Wait, so if I need to find the probability of a single bolt being non-defective, where do I even get that number? The problem just tells me that 2% are defective, but it doesn't say what the probability of it *not* being defective is. I'm really confused about how to start with that first step."
+            },
+            {
+              "role": "teacher",
+              "content": "The probability of a single bolt being non-defective is derived directly from the given information. \n\nWe are told that the probability of a bolt being defective is **2%**, which we write as $p = 0.02$.\n\nSince a bolt must either be defective or non-defective, the probability of it being non-defective, which we call $q$, is the complement of $p$. \n\nTherefore, the expression for $q$ is: $$q = 1 - p$$ \n\nSubstitute the value of $p$ into this expression to find the probability of a single bolt being non-defective. Once you have $q$, you can use it to set up the calculation for $P(\\text{none are defective})$. "
+            },
+            {
+              "role": "student",
+              "content": "So, I understand that the probability of one bolt not being defective is 0.98. But how do I use that number to find the probability that all ten bolts are not defective? Do I just multiply 0.98 by itself ten times, or is there a formula I need to use?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified the probability of a single bolt being non-defective as 0.98. The student is now seeking clarification on how to calculate the probability of ten independent events, questioning whether simple multiplication or a formal formula is required.",
+            "teacher_role": "partial_worked_step",
+            "support": "high"
+          },
+          "target_teacher_response": "Since the selection of each bolt is an independent event, the probability of all ten bolts being non-defective is found by multiplying the probability of a single non-defective bolt by itself ten times. \n\nWe established that the probability of a single bolt being non-defective is $q = 0.98$.\n\nTherefore, the probability of none of the 10 bolts being defective is: $$P(\\text{none are defective}) = q^{10} = (0.98)^{10}$$\n\nCalculate the value of $(0.98)^{10}$ and provide the result, keeping at least four decimal places."
+        }
+      ]
+    }
+  ]
+}

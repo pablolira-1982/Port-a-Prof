@@ -1,0 +1,68 @@
+{
+  "category": "coding",
+  "model": "gemma3:12b-it-qat",
+  "generated_at": "2026-05-03T12:10:31.242555",
+  "total": 6,
+  "questions": [
+    {
+      "subtopic": "simple if/else branch selection",
+      "question": "Given the following pseudocode: `age = 17; if age >= 18 then print \"Eligible\" else print \"Not eligible\"`, what will be printed to the console?",
+      "solution": [
+        "1. Evaluate the condition `age >= 18`. Since `age` is 17, this becomes `17 >= 18`.",
+        "2. The comparison `17 >= 18` is false.",
+        "3. Because the condition is false, the `else` block will execute, which prints \"Not eligible\"."
+      ]
+    },
+    {
+      "subtopic": "basic boolean expressions (without nesting)",
+      "question": "Consider the following boolean expressions: `a = (10 > 5)`; `b = (8 == 8)`; `c = (3 < 10)`. What is the final value of `d = a AND b OR c`?",
+      "solution": [
+        "1. Evaluate `a = (10 > 5)`: Since 10 is greater than 5, `a` is `true`.",
+        "2. Evaluate `b = (8 == 8)`: Since 8 is equal to 8, `b` is `true`.",
+        "3. Evaluate `c = (3 < 10)`: Since 3 is less than 10, `c` is `true`.",
+        "4. Evaluate `a AND b`: `true AND true` is `true`.",
+        "5. Evaluate `(a AND b) OR c`: `true OR true` is `true`.",
+        "6. Therefore, `d = a AND b OR c` evaluates to `true`."
+      ]
+    },
+    {
+      "subtopic": "short fixed loops with at most 3 iterations",
+      "question": "Consider the following pseudocode: `total = 0; for i from 1 to 3 do total = total + i * 2; end for`. What is the final value of `total` after the loop completes?",
+      "solution": [
+        "1. Initialization: `total = 0`",
+        "2. First iteration (i = 1): `total = total + i * 2 = 0 + 1 * 2 = 2`",
+        "3. Second iteration (i = 2): `total = total + i * 2 = 2 + 2 * 2 = 2 + 4 = 6`",
+        "4. Third iteration (i = 3): `total = total + i * 2 = 6 + 3 * 2 = 6 + 6 = 12`",
+        "5. Final value: `total = 12`"
+      ]
+    },
+    {
+      "subtopic": "simple function output (with no loops)",
+      "question": "Consider the following pseudocode: `function calculate(a, b, c): return (a * b) + c;`. Given that `a = 3`, `b = 7`, and `c = 10`, what will the function `calculate(a, b, c)` return?",
+      "solution": [
+        "1. Calculate `a * b`: 3 * 7 = 21",
+        "2. Add `c` to the result: 21 + 10 = 31",
+        "3. The function returns the final result: 31"
+      ]
+    },
+    {
+      "subtopic": "tracing sequential assignments",
+      "question": "Given `a = 10; b = a * 2; c = b - 5; d = c / 3`, what is the final value of `d`?",
+      "solution": [
+        "1. `a` is initialized to 10.",
+        "2. `b` is calculated as `a * 2`, so `b = 10 * 2 = 20`.",
+        "3. `c` is calculated as `b - 5`, so `c = 20 - 5 = 15`.",
+        "4. `d` is calculated as `c / 3`, so `d = 15 / 3 = 5`."
+      ]
+    },
+    {
+      "subtopic": "modulo operations",
+      "question": "Given `a = 17`, `b = 5`, and `result = (a % b + b) % a`, what is the value of `result`?",
+      "solution": [
+        "1. Calculate `a % b`: `17 % 5 = 2` (17 divided by 5 is 3 with a remainder of 2).",
+        "2. Calculate `a % b + b`: `2 + 5 = 7`.",
+        "3. Calculate `(a % b + b) % a`: `7 % 17 = 7` (7 divided by 17 is 0 with a remainder of 7)."
+      ]
+    }
+  ]
+}

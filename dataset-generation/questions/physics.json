@@ -1,0 +1,78 @@
+{
+  "category": "physics",
+  "model": "gemma3:12b-it-qat",
+  "generated_at": "2026-05-03T12:20:54.885763",
+  "total": 6,
+  "questions": [
+    {
+      "subtopic": "constant-acceleration motion",
+      "question": "A rocket accelerates from rest at a constant 5.0 m/s² for 10.0 seconds, then coasts at a constant velocity. How far does the rocket travel from the start during the first 15.0 seconds?",
+      "solution": [
+        "1. Calculate the distance traveled during acceleration: d₁ = v₀t + (1/2)at², where v₀ = 0 m/s, a = 5.0 m/s², and t = 10.0 s.",
+        "2. Substitute the values: d₁ = (0 m/s)(10.0 s) + (1/2)(5.0 m/s²)(10.0 s)² = 0 + (2.5 m/s²)(100 s²) = 250 m.",
+        "3. Calculate the final velocity after acceleration: v = v₀ + at, where v₀ = 0 m/s, a = 5.0 m/s², and t = 10.0 s.",
+        "4. Substitute the values: v = 0 m/s + (5.0 m/s²)(10.0 s) = 50 m/s.",
+        "5. Calculate the distance traveled during coasting: d₂ = vt, where v = 50 m/s and t = 15.0 s - 10.0 s = 5.0 s.",
+        "6. Substitute the values: d₂ = (50 m/s)(5.0 s) = 250 m.",
+        "7. Calculate the total distance traveled: d = d₁ + d₂ = 250 m + 250 m = 500 m."
+      ]
+    },
+    {
+      "subtopic": "vertical motion under gravity",
+      "question": "A ball is thrown upwards with an initial velocity of 18 m/s from a height of 2 meters above the ground. Ignoring air resistance, determine the time it takes for the ball to hit the ground.",
+      "solution": [
+        "1. Determine the initial conditions: v₀ = 18 m/s, y₀ = 2 m, a = -9.8 m/s² (due to gravity), y = 0 m (ground level).",
+        "2. Use the kinematic equation: y = y₀ + v₀t + (1/2)at² to find the time t when y = 0.",
+        "3. Substitute the values: 0 = 2 + 18t + (1/2)(-9.8)t²  =>  0 = 2 + 18t - 4.9t².",
+        "4. Rearrange the equation into a quadratic form: 4.9t² - 18t - 2 = 0.",
+        "5. Solve the quadratic equation for t using the quadratic formula: t = (-b ± √(b² - 4ac)) / 2a, where a = 4.9, b = -18, c = -2.",
+        "6. Calculate the discriminant: Δ = b² - 4ac = (-18)² - 4(4.9)(-2) = 324 + 39.2 = 363.2.",
+        "7. Calculate the two possible values for t: t₁ = (18 + √363.2) / (2 * 4.9) ≈ (18 + 19.05) / 9.8 ≈ 3.73 s and t₂ = (18 - √363.2) / (2 * 4.9) ≈ (18 - 19.05) / 9.8 ≈ -0.16 s.",
+        "8. Since time cannot be negative, the relevant solution is t ≈ 3.73 s.",
+        "9. Therefore, the time it takes for the ball to hit the ground is approximately 3.73 seconds."
+      ]
+    },
+    {
+      "subtopic": "Newton's second law and forces",
+      "question": "A 12 kg crate rests on a ramp inclined at 30 degrees to the horizontal. The coefficient of kinetic friction between the crate and the ramp is 0.25. Determine the acceleration of the crate down the ramp.",
+      "solution": [
+        "1. Calculate the gravitational force acting on the crate: F_gravity = mg = (12 kg)(9.8 m/s²) = 117.6 N",
+        "2. Resolve the gravitational force into components parallel and perpendicular to the ramp: F_parallel = F_gravity * sin(30°) = 117.6 N * 0.5 = 58.8 N; F_perpendicular = F_gravity * cos(30°) = 117.6 N * 0.866 = 101.9 N",
+        "3. Calculate the normal force: F_normal = F_perpendicular = 101.9 N",
+        "4. Calculate the force of kinetic friction: F_friction = μ_k * F_normal = 0.25 * 101.9 N = 25.475 N",
+        "5. Calculate the net force acting on the crate down the ramp: F_net = F_parallel - F_friction = 58.8 N - 25.475 N = 33.325 N",
+        "6. Calculate the acceleration of the crate down the ramp using Newton's second law: a = F_net / m = 33.325 N / 12 kg = 2.777 m/s²"
+      ]
+    },
+    {
+      "subtopic": "calculating work done (W = Fd)",
+      "question": "A 15 kg box is pushed across a horizontal floor with a constant force of 25 N at an angle of 30 degrees above the horizontal. If the box moves a distance of 5 meters, calculate the work done on the box by the applied force.",
+      "solution": [
+        "1. Calculate the horizontal component of the force: F_horizontal = F * cos(theta) = 25 N * cos(30 degrees) = 25 N * 0.866 ≈ 21.65 N",
+        "2. Work is defined as the dot product of force and displacement, so only the horizontal component of the force contributes to the work done: W = F_horizontal * d = 21.65 N * 5 m",
+        "3. Calculate the work done: W = 21.65 N * 5 m = 108.25 J"
+      ]
+    },
+    {
+      "subtopic": "momentum (p = mv)",
+      "question": "A 2.5 kg bowling ball traveling at 8.0 m/s collides head-on with a 0.5 kg bowling pin at rest. Assuming the collision is perfectly elastic and the pin moves in the same direction as the ball after the collision, what is the final velocity of the bowling ball?",
+      "solution": [
+        "1. Define the initial momentum of the system: P_initial = P_ball + P_pin = (m_ball * v_ball) + (m_pin * v_pin) = (2.5 kg * 8.0 m/s) + (0.5 kg * 0 m/s) = 20 kg*m/s",
+        "2. Apply the conservation of momentum: P_initial = P_final, where P_final = (m_ball * v_ball_final) + (m_pin * v_pin_final).  Therefore, 20 kg*m/s = (2.5 kg * v_ball_final) + (0.5 kg * v_pin_final).",
+        "3. For a perfectly elastic head-on collision, the relative velocities before and after the collision are equal and opposite: v_relative = v_ball - v_pin; v_relative_final = v_pin_final - v_ball_final.  Since the pin was initially at rest, v_relative = 8.0 m/s; therefore, 8.0 m/s = v_pin_final - v_ball_final.",
+        "4. Solve the system of equations: 20 = 2.5 * v_ball_final + 0.5 * v_pin_final and 8 = v_pin_final - v_ball_final.  From the second equation, v_pin_final = 8 + v_ball_final. Substitute this into the first equation: 20 = 2.5 * v_ball_final + 0.5 * (8 + v_ball_final).",
+        "5. Simplify and solve for v_ball_final: 20 = 2.5 * v_ball_final + 4 + 0.5 * v_ball_final; 16 = 3 * v_ball_final; v_ball_final = 16/3 m/s ≈ 5.33 m/s"
+      ]
+    },
+    {
+      "subtopic": "using v = u + at",
+      "question": "A car accelerates from rest at a constant rate of 2.5 m/s² for 8.0 seconds.  After this time, the car maintains a constant velocity for another 6.0 seconds. What is the total distance traveled by the car?",
+      "solution": [
+        "1. Calculate the final velocity (v₁) after the acceleration phase using v = u + at: v₁ = 0 m/s + (2.5 m/s²) * (8.0 s) = 20 m/s.",
+        "2. Calculate the distance traveled during the acceleration phase (d₁) using d = ut + (1/2)at²: d₁ = (0 m/s * 8.0 s) + (1/2 * 2.5 m/s² * (8.0 s)²) = 80 m.",
+        "3. Calculate the distance traveled during the constant velocity phase (d₂) using d = vt: d₂ = (20 m/s) * (6.0 s) = 120 m.",
+        "4. Calculate the total distance traveled (d) by summing the distances from the two phases: d = d₁ + d₂ = 80 m + 120 m = 200 m."
+      ]
+    }
+  ]
+}

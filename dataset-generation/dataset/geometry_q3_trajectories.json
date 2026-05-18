@@ -1,0 +1,249 @@
+{
+  "problem": "Point M is the midpoint of the line segment AB, where A = (-2, 5) and M = (1, 1). Determine the coordinates of point B.",
+  "topic": "geometry",
+  "subtopic": "determining a missing endpoint using the midpoint formula",
+  "solution_steps": [
+    "Recall the midpoint formula: M = ((x₁ + x₂)/2, (y₁ + y₂)/2), where M is the midpoint, and (x₁, y₁) and (x₂, y₂) are the endpoints.",
+    "Let B have coordinates (x₂, y₂). We have M = ((−2 + x₂)/2, (5 + y₂)/2) = (1, 1).",
+    "Set the x-coordinates equal: (−2 + x₂)/2 = 1. Multiply both sides by 2: −2 + x₂ = 2. Add 2 to both sides: x₂ = 4.",
+    "Set the y-coordinates equal: (5 + y₂)/2 = 1. Multiply both sides by 2: 5 + y₂ = 2. Subtract 5 from both sides: y₂ = -3.",
+    "Therefore, the coordinates of point B are (4, -3)."
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "traj_1",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure how to start with this problem. We know A and M, and we need to find B, but I don't remember the formula for when you know the midpoint and the endpoints."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student expressed difficulty starting the problem because they do not recall the formula needed to find an endpoint (B) when given the other endpoint (A) and the midpoint (M).",
+            "teacher_role": "inject_info",
+            "support": "none"
+          },
+          "target_teacher_response": "The concept we need here is the Midpoint Formula. This formula tells us how to find the coordinates of a point that lies exactly halfway between two other points. If we have two endpoints, say $(x_1, y_1)$ and $(x_2, y_2)$, the coordinates of the midpoint $M$ are found by averaging the respective $x$ and $y$ coordinates.\n\nMathematically, the midpoint $M$ is given by the formula: $$M = \\left(\\frac{{x_1 + x_2}}{{2}}, \\frac{{y_1 + y_2}}{{2}}\\right)$$\n\nThis formula works because the coordinates of the midpoint are simply the average of the coordinates of the endpoints. In our problem, we are given the midpoint $M = (1, 1)$, and one endpoint $A = (-2, 5)$. We are looking for the coordinates of the other endpoint, $B = (x_2, y_2)$.\n\nIf we apply the Midpoint Formula using the coordinates of $A$ and $B$, we get $M = \\left(\\frac{{-2 + x_2}}{{2}}, \\frac{{5 + y_2}}{{2}}\\right)$. Since we know $M$ is $(1, 1)$, we can set up two separate equations, one for the $x$-coordinate and one for the $y$-coordinate. \n\nTo begin solving for the unknown coordinates of $B$, what equation must we set up by equating the $x$-coordinate of the midpoint formula to the known $x$-coordinate of $M$?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure how to start with this problem. We know A and M, and we need to find B, but I don't remember the formula for when you know the midpoint and the endpoints."
+            },
+            {
+              "role": "teacher",
+              "content": "The concept we need here is the Midpoint Formula. This formula tells us how to find the coordinates of a point that lies exactly halfway between two other points. If we have two endpoints, say $(x_1, y_1)$ and $(x_2, y_2)$, the coordinates of the midpoint $M$ are found by averaging the respective $x$ and $y$ coordinates.\n\nMathematically, the midpoint $M$ is given by the formula: $$M = \\left(\\frac{{x_1 + x_2}}{{2}}, \\frac{{y_1 + y_2}}{{2}}\\right)$$\n\nThis formula works because the coordinates of the midpoint are simply the average of the coordinates of the endpoints. In our problem, we are given the midpoint $M = (1, 1)$, and one endpoint $A = (-2, 5)$. We are looking for the coordinates of the other endpoint, $B = (x_2, y_2)$.\n\nIf we apply the Midpoint Formula using the coordinates of $A$ and $B$, we get $M = \\left(\\frac{{-2 + x_2}}{{2}}, \\frac{{5 + y_2}}{{2}}\\right)$. Since we know $M$ is $(1, 1)$, we can set up two separate equations, one for the $x$-coordinate and one for the $y$-coordinate. \n\nTo begin solving for the unknown coordinates of $B$, what equation must we set up by equating the $x$-coordinate of the midpoint formula to the known $x$-coordinate of $M$?"
+            },
+            {
+              "role": "student",
+              "content": "I see that we need to set up the equation for the x-coordinates, so we have ( -2 + x_2 ) / 2 = 1. But now I'm stuck on how to actually solve for x_2. Do I need to multiply both sides by 2, or is there a different way to get x_2 by itself?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly sets up the equation for the x-coordinate, writing (-2 + x_2) / 2 = 1. The student is currently struggling with the algebraic procedure needed to solve for x_2, asking for confirmation on whether multiplying both sides by 2 is the correct method.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "To isolate the variable $x_2$, we need to undo the division by 2. Since the entire numerator ($-2 + x_2$) is being divided by 2, we must first multiply both sides of the equation by **2**. This step eliminates the denominator on the left side, leaving us with: $$(-2 + x_2) = 2 \\cdot 1$$ \n\nNow that we have this simplified equation, what operation should we perform on both sides to get the term with $x_2$ by itself?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_2",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out the x-coordinate first. Since (-2 + x₂)/2 = 1, I multiplied by 2 to get -2 + x₂ = 2, so x₂ is 4. For the y-coordinate, I did the same thing: (5 + y₂)/2 = 1, which means 5 + y₂ = 2. If I solve that, I get y₂ is 7."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly solved for the x-coordinate, determining that x₂ is 4. However, when solving the equation for the y-coordinate, the student correctly set up 5 + y₂ = 2 but incorrectly solved it, stating that y₂ is 7 instead of the correct value of -3.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You correctly set up the equation for the y-coordinate as 5 + y₂ = 2. However, when you are solving for y₂, you need to subtract 5 from 2. Please check that subtraction step again."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out the x-coordinate first. Since (-2 + x₂)/2 = 1, I multiplied by 2 to get -2 + x₂ = 2, so x₂ is 4. For the y-coordinate, I did the same thing: (5 + y₂)/2 = 1, which means 5 + y₂ = 2. If I solve that, I get y₂ is 7."
+            },
+            {
+              "role": "teacher",
+              "content": "You correctly set up the equation for the y-coordinate as 5 + y₂ = 2. However, when you are solving for y₂, you need to subtract 5 from 2. Please check that subtraction step again."
+            },
+            {
+              "role": "student",
+              "content": "Okay, if I subtract 5 from 2, then y₂ is -3. So I have x₂ = 4 and y₂ = -3. But now that I have both of those numbers, what do I do next? How do I write the coordinates for point B?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student successfully recalculated the y-coordinate, finding y₂ = -3, and correctly stated both values as x₂ = 4 and y₂ = -3. The student then demonstrated understanding of the final step by asking how to combine these two numbers to write the coordinates for point B.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "To represent the coordinates of point B, you must write them as an ordered pair, using the standard format (x, y).\n\nSince you have determined that the x-coordinate of B is **4** and the y-coordinate of B is **-3**, the coordinates of point B must be written in the form $$(x_B, y_B)$$.\n\nSubstitute the values you found for $x_B$ and $y_B$ into this ordered pair structure to find the final coordinates of B."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_3",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I have the two equations set up: (-2 + x₂)/2 = 1 and (5 + y₂)/2 = 1. I guess I just need to solve these for x₂ and y₂."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly set up the two equations, (-2 + x₂)/2 = 1 and (5 + y₂)/2 = 1, using the midpoint formula and understands that solving these equations will determine the coordinates of point B.",
+            "teacher_role": "confirm_and_advance",
+            "support": "none"
+          },
+          "target_teacher_response": "You have correctly used the midpoint formula to set up the system of equations. What value must x₂ take to satisfy the equation (-2 + x₂)/2 = 1?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I have the two equations set up: (-2 + x₂)/2 = 1 and (5 + y₂)/2 = 1. I guess I just need to solve these for x₂ and y₂."
+            },
+            {
+              "role": "teacher",
+              "content": "You have correctly used the midpoint formula to set up the system of equations. What value must x₂ take to satisfy the equation (-2 + x₂)/2 = 1?"
+            },
+            {
+              "role": "student",
+              "content": "Working through the first equation, I get that x₂ has to be 4. And if I do the second equation, I find that y₂ equals -3. So the coordinates for point B are (4, -3)."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student successfully solved both resulting equations, determining that x₂ must be 4 and y₂ must be -3. The student correctly concluded that the coordinates for point B are (4, -3).",
+            "teacher_role": "session_close",
+            "support": "none"
+          },
+          "target_teacher_response": "That is correct. The coordinates of point B are (4, -3). Do you have any other problems you would like to work on?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_4",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that the midpoint formula means that the x-coordinate of the midpoint, 1, is the average of the x-coordinates of A and B. So, I set up the equation (x_A + x_B)/2 = 1. I got x_A + x_B = 2. Now I know A's x-coordinate is -2, so I can plug that in, which gives -2 + x_B = 2. But I'm not sure how to solve for x_B from there, or if I should do the y-coordinates first."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly used the midpoint formula to set up the equation for the x-coordinate, deriving -2 + x_B = 2. The student is currently unsure how to solve for x_B from this linear equation and is questioning whether they should solve the y-coordinates next.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The relationship for the x-coordinates is correct: $$x_A + x_B = 2$$ \n\nTo find the value of $x_B$, you need to isolate it by subtracting $x_A$ from both sides of the equation. \n\nSimilarly, for the y-coordinates, the relationship is $$y_A + y_B = 2$$ \n\nUsing the values $y_A = 5$ and $y_B$ for the y-coordinate of B, substitute $y_A$ into the equation and solve for $y_B$. What is the value of $y_B$?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that the midpoint formula means that the x-coordinate of the midpoint, 1, is the average of the x-coordinates of A and B. So, I set up the equation (x_A + x_B)/2 = 1. I got x_A + x_B = 2. Now I know A's x-coordinate is -2, so I can plug that in, which gives -2 + x_B = 2. But I'm not sure how to solve for x_B from there, or if I should do the y-coordinates first."
+            },
+            {
+              "role": "teacher",
+              "content": "The relationship for the x-coordinates is correct: $$x_A + x_B = 2$$ \n\nTo find the value of $x_B$, you need to isolate it by subtracting $x_A$ from both sides of the equation. \n\nSimilarly, for the y-coordinates, the relationship is $$y_A + y_B = 2$$ \n\nUsing the values $y_A = 5$ and $y_B$ for the y-coordinate of B, substitute $y_A$ into the equation and solve for $y_B$. What is the value of $y_B$?"
+            },
+            {
+              "role": "student",
+              "content": "Okay, so for the y-coordinates, I have the equation 5 + y_B = 2. If I just add 5 and 2 together, I get 7. Does that mean y_B is 7?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly sets up the equation for the y-coordinates as 5 + y_B = 2, but misunderstands how to isolate the variable. The student attempts to solve the equation by adding 5 and 2 together, incorrectly concluding that y_B is 7.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "The relationship $y_A + y_B = 2$ is correct. However, when you solve for $y_B$, you cannot simply add $y_A$ and 2. You need to isolate $y_B$ by performing the inverse operation on both sides of the equation."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_5",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the coordinates of point B, but I don't know how to start. We know A and M, and M is the midpoint. What formula should I use to even begin setting up the equations?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies the goal of finding the coordinates of point B using the known coordinates of A and M, but they are unsure which formula to use to begin setting up the necessary equations.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "Since M is the midpoint of AB, the coordinates of M must be the average of the corresponding coordinates of A and B.\n\nFor the x-coordinates, the relationship is given by the formula: $$M_x = \\frac{{A_x + B_x}}{{2}}$$\n\nFor the y-coordinates, the relationship is: $$M_y = \\frac{{A_y + B_y}}{{2}}$$\n\nSubstitute the known values for $A_x$, $A_y$, $M_x$, and $M_y$ into these two equations. What value must $B_x$ take based on the x-coordinate equation?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the coordinates of point B, but I don't know how to start. We know A and M, and M is the midpoint. What formula should I use to even begin setting up the equations?"
+            },
+            {
+              "role": "teacher",
+              "content": "Since M is the midpoint of AB, the coordinates of M must be the average of the corresponding coordinates of A and B.\n\nFor the x-coordinates, the relationship is given by the formula: $$M_x = \\frac{{A_x + B_x}}{{2}}$$\n\nFor the y-coordinates, the relationship is: $$M_y = \\frac{{A_y + B_y}}{{2}}$$\n\nSubstitute the known values for $A_x$, $A_y$, $M_x$, and $M_y$ into these two equations. What value must $B_x$ take based on the x-coordinate equation?"
+            },
+            {
+              "role": "student",
+              "content": "I'm still confused about those formulas. You gave us $M_x = \\frac{{A_x + B_x}}{{2}}$ and $M_y = \\frac{{A_y + B_y}}{{2}}$. But what are the values for $A_x$, $M_x$, and $A_y$? Where do I even get these numbers from? I don't know how to plug anything in."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly repeats the midpoint formulas but expresses confusion regarding the source of the numerical values for the variables. The student struggles with identifying the given coordinates, such as A_x, M_x, and A_y, from the original problem statement.",
+            "teacher_role": "partial_worked_step",
+            "support": "medium"
+          },
+          "target_teacher_response": "We are given the coordinates for all three points in the problem statement. \n\nRecall that point A is **(-2, 5)**, point M is **(1, 1)**, and point B is what we are trying to find. \n\nTherefore, the values we need are: \n\nFor the x-coordinates: $A_x$ is the x-coordinate of A, which is **-2**. \n$M_x$ is the x-coordinate of M, which is **1**. \n$B_x$ is the unknown x-coordinate of B. \n\nFor the y-coordinates: $A_y$ is the y-coordinate of A, which is **5**. \n$M_y$ is the y-coordinate of M, which is **1**. \n$B_y$ is the unknown y-coordinate of B.\n\nNow, substitute these specific values into the equations: $$1 = \\frac{{-2 + B_x}}{{2}}$$ and $$1 = \\frac{{5 + B_y}}{{2}}$$ \n\nCan you solve for $B_x$ using the first equation, and then solve for $B_y$ using the second equation?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the coordinates of point B, but I don't know how to start. We know A and M, and M is the midpoint. What formula should I use to even begin setting up the equations?"
+            },
+            {
+              "role": "teacher",
+              "content": "Since M is the midpoint of AB, the coordinates of M must be the average of the corresponding coordinates of A and B.\n\nFor the x-coordinates, the relationship is given by the formula: $$M_x = \\frac{{A_x + B_x}}{{2}}$$\n\nFor the y-coordinates, the relationship is: $$M_y = \\frac{{A_y + B_y}}{{2}}$$\n\nSubstitute the known values for $A_x$, $A_y$, $M_x$, and $M_y$ into these two equations. What value must $B_x$ take based on the x-coordinate equation?"
+            },
+            {
+              "role": "student",
+              "content": "I'm still confused about those formulas. You gave us $M_x = \\frac{{A_x + B_x}}{{2}}$ and $M_y = \\frac{{A_y + B_y}}{{2}}$. But what are the values for $A_x$, $M_x$, and $A_y$? Where do I even get these numbers from? I don't know how to plug anything in."
+            },
+            {
+              "role": "teacher",
+              "content": "We are given the coordinates for all three points in the problem statement. \n\nRecall that point A is **(-2, 5)**, point M is **(1, 1)**, and point B is what we are trying to find. \n\nTherefore, the values we need are: \n\nFor the x-coordinates: $A_x$ is the x-coordinate of A, which is **-2**. \n$M_x$ is the x-coordinate of M, which is **1**. \n$B_x$ is the unknown x-coordinate of B. \n\nFor the y-coordinates: $A_y$ is the y-coordinate of A, which is **5**. \n$M_y$ is the y-coordinate of M, which is **1**. \n$B_y$ is the unknown y-coordinate of B.\n\nNow, substitute these specific values into the equations: $$1 = \\frac{{-2 + B_x}}{{2}}$$ and $$1 = \\frac{{5 + B_y}}{{2}}$$ \n\nCan you solve for $B_x$ using the first equation, and then solve for $B_y$ using the second equation?"
+            },
+            {
+              "role": "student",
+              "content": "I just don't see how to solve those equations. I have $1 = \\frac{{-2 + B_x}}{{2}}$ and $1 = \\frac{{5 + B_y}}{{2}}$. What do I do first? Do I multiply by 2, or do I get rid of the fraction some other way? I'm lost on the algebra part."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is struggling with the algebraic steps necessary to solve the equations 1 = (-2 + B_x)/2 and 1 = (5 + B_y)/2. They are unsure of the correct procedure to eliminate the fraction and isolate the unknown variables, indicating a conceptual gap in solving linear equations.",
+            "teacher_role": "partial_worked_step",
+            "support": "high"
+          },
+          "target_teacher_response": "To isolate the variable $B_x$ in the first equation, we need to eliminate the denominator of 2. We can do this by multiplying both sides of the equation by 2.\n\n$$2 \\cdot 1 = 2 \\cdot \\left(\\frac{{-2 + B_x}}{{2}}\\right)$$\n\nThis simplifies the left side to 2, and the 2 in the numerator and denominator on the right side cancels out, leaving us with: $$2 = -2 + B_x$$\n\nNow, to get $B_x$ by itself, we need to move the $-2$ from the right side to the left side. What value must we add to both sides of the equation to solve for $B_x$?"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "problem": "Consider the following pseudocode: `total = 0; for i from 1 to 3 do total = total + i * 2; end for`. What is the final value of `total` after the loop completes?",
+  "topic": "coding",
+  "subtopic": "short fixed loops with at most 3 iterations",
+  "solution_steps": [
+    "Initialization: `total = 0`",
+    "First iteration (i = 1): `total = total + i * 2 = 0 + 1 * 2 = 2`",
+    "Second iteration (i = 2): `total = total + i * 2 = 2 + 2 * 2 = 2 + 4 = 6`",
+    "Third iteration (i = 3): `total = total + i * 2 = 6 + 3 * 2 = 6 + 6 = 12`",
+    "Final value: `total = 12`"
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "traj_1",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure how to start with this loop. It's a little confusing because the value of 'total' keeps changing, and I don't know if I should calculate all the additions at once or if I have to do it step by step."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student expressed confusion regarding the iterative nature of the loop, specifically questioning whether the additions should be calculated all at once or processed step by step.",
+            "teacher_role": "inject_info",
+            "support": "none"
+          },
+          "target_teacher_response": "When dealing with pseudocode that contains a `for` loop, the key concept is understanding sequential execution. A loop means that a block of code must be repeated, and the variables involved change their values with each repetition. You must track the state of all variables, like `total` and `i`, as the loop progresses.\n\nSpecifically, the loop structure `for i from 1 to 3 do ... end for` tells you that the code inside the loop will run three times, once for `i` equal to 1, once for `i` equal to 2, and finally once for `i` equal to 3. The calculation `total = total + i * 2` must be evaluated using the current value of `total` and the current value of `i` before moving to the next iteration.\n\nTo solve this, you need to simulate the process, updating `total` after every single iteration. Given that `total` starts at 0, what is the value of `total` after the first iteration when `i` is 1?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure how to start with this loop. It's a little confusing because the value of 'total' keeps changing, and I don't know if I should calculate all the additions at once or if I have to do it step by step."
+            },
+            {
+              "role": "teacher",
+              "content": "When dealing with pseudocode that contains a `for` loop, the key concept is understanding sequential execution. A loop means that a block of code must be repeated, and the variables involved change their values with each repetition. You must track the state of all variables, like `total` and `i`, as the loop progresses.\n\nSpecifically, the loop structure `for i from 1 to 3 do ... end for` tells you that the code inside the loop will run three times, once for `i` equal to 1, once for `i` equal to 2, and finally once for `i` equal to 3. The calculation `total = total + i * 2` must be evaluated using the current value of `total` and the current value of `i` before moving to the next iteration.\n\nTo solve this, you need to simulate the process, updating `total` after every single iteration. Given that `total` starts at 0, what is the value of `total` after the first iteration when `i` is 1?"
+            },
+            {
+              "role": "student",
+              "content": "I understand that I have to track the variables, but when I look at the formula total = total + i * 2, it feels like I need to substitute the values for both total and i at the same time. I'm not sure if I should calculate the i * 2 part first, or if I should just plug everything into the equation right away."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student understands the necessity of tracking variables but is struggling with the mechanics of substitution into the formula total = total + i * 2. Specifically, the student is confused about the correct order of operations, questioning whether they should calculate the product i * 2 first or if they should substitute all values into the equation immediately.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The calculation must follow the order of operations. Remember that the expression `total = total + i * 2` means you are calculating a new value for `total` based on its current value and the current value of `i`. For the first iteration, we know `i` is 1, and `total` is currently 0. Therefore, the first step is to evaluate the term `i * 2` using the current value of `i`. What is the result of `i * 2` when `i` is 1?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_2",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "For i=1, total is 2. Then for i=2, I get 2 + 4, which is 6. For i=3, I have to calculate 6 + 3 * 2. I think 6 plus 6 is 10, so the final total is 10."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly calculates the total up to the second iteration, but when calculating the third iteration, they incorrectly determine that 6 plus 6 equals 10, leading to an incorrect final total of 10.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You correctly set up the calculation for i=3 as 6 + 3 * 2. However, when you added 6 plus 6, you stated the result is 10. Please re-examine that specific addition step."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "For i=1, total is 2. Then for i=2, I get 2 + 4, which is 6. For i=3, I have to calculate 6 + 3 * 2. I think 6 plus 6 is 10, so the final total is 10."
+            },
+            {
+              "role": "teacher",
+              "content": "You correctly set up the calculation for i=3 as 6 + 3 * 2. However, when you added 6 plus 6, you stated the result is 10. Please re-examine that specific addition step."
+            },
+            {
+              "role": "student",
+              "content": "Oh, I see. 6 plus 6 is actually 12. So, for i=3, I have to calculate 6 plus 3 times 2. But I'm not sure if I should do the addition first or the multiplication first? What do I do with the 6 plus 3 * 2?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly calculated that 6 plus 6 equals 12 and correctly set up the final calculation for i=3 as 6 plus 3 times 2. The student's current struggle is determining the correct order of operations for the expression 6 plus 3 times 2.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "You are looking at the expression `6 + 3 * 2`. Remember that in mathematics, we must follow the **order of operations**. \n\nBefore you can perform the addition with `6`, you must first calculate the product of `3` and `2`. \n\nFocus only on the multiplication part: `3 * 2`. What is the result of that calculation?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_3",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think for the third iteration, I need to take the current total, which is 6, and add the value of i times 2. So it's 6 plus 3 times 2."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies that for the third iteration, the current total is 6, and accurately calculates the required addition by adding the value of i times 2 (3 times 2), demonstrating a clear understanding of the loop's accumulation process.",
+            "teacher_role": "confirm_and_advance",
+            "support": "none"
+          },
+          "target_teacher_response": "You have correctly determined that the value of `total` before the last step is 6. Following the pseudocode, what value should replace the expression `total + i * 2` when `i` is 3?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think for the third iteration, I need to take the current total, which is 6, and add the value of i times 2. So it's 6 plus 3 times 2."
+            },
+            {
+              "role": "teacher",
+              "content": "You have correctly determined that the value of `total` before the last step is 6. Following the pseudocode, what value should replace the expression `total + i * 2` when `i` is 3?"
+            },
+            {
+              "role": "student",
+              "content": "So, if I take 6 and add 3 times 2, that makes 6 plus 6, which means the final total is 12."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student successfully substitutes the values into the expression for the third iteration, correctly calculating 6 plus 6 to determine that the final total is 12.",
+            "teacher_role": "session_close",
+            "support": "none"
+          },
+          "target_teacher_response": "That is correct. The final value of `total` is 12. Do you have any other problems you would like to work on?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_4",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think after the second iteration, the total is 6. But for the third time, I'm not sure how to update the total. Do I just use the current total and add something involving i?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified that the total after the second iteration is 6. They are currently seeking clarification on the mechanism for updating the total during the third iteration, demonstrating an understanding that the process involves using the current total and adding a value involving the loop variable i.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "To update the total, you must calculate the new value of `total` by adding the current `i` multiplied by `2` to the existing `total`. The expression is `total = total + i * 2`.\n\nNow, substitute the value for `i` for the third time and calculate the resulting `total`."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think after the second iteration, the total is 6. But for the third time, I'm not sure how to update the total. Do I just use the current total and add something involving i?"
+            },
+            {
+              "role": "teacher",
+              "content": "To update the total, you must calculate the new value of `total` by adding the current `i` multiplied by `2` to the existing `total`. The expression is `total = total + i * 2`.\n\nNow, substitute the value for `i` for the third time and calculate the resulting `total`."
+            },
+            {
+              "role": "student",
+              "content": "Wait, if I use i=3, the formula is total = total + i * 2. I think I just add the current total, which is 6, and then I add 3, and then 2. That gives me 11."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly stated the formula for the third iteration but struggled with the calculation, interpreting the operation i multiplied by 2 as adding 3 and then adding 2 to the current total of 6, resulting in 11.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You are calculating `total = total + i * 2`. Remember that the expression `i * 2` must be evaluated first. Before adding that result to the existing `total`, you need to calculate the product of `i` and `2`."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_5",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about where to start with this pseudocode. It's a loop, and I don't know how to track the changes to total and i all at once. Can you help me set up the first step?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is confused about how to begin solving the pseudocode, specifically struggling with the conceptual task of tracking the simultaneous changes to both the total and the loop variable i.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The pseudocode starts with an **initialization** step, setting the variable `total` to 0.\n\nNext, the **loop structure** dictates that the variable `i` will start at 1 and continue until it reaches 3.\n\nFor the first iteration, when `i` is 1, the calculation is `total = total + i * 2`. Remember to substitute the current value of `i` into the expression and calculate the new value for `total`.\n\nWhat is the value of `total` after this first calculation?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about where to start with this pseudocode. It's a loop, and I don't know how to track the changes to total and i all at once. Can you help me set up the first step?"
+            },
+            {
+              "role": "teacher",
+              "content": "The pseudocode starts with an **initialization** step, setting the variable `total` to 0.\n\nNext, the **loop structure** dictates that the variable `i` will start at 1 and continue until it reaches 3.\n\nFor the first iteration, when `i` is 1, the calculation is `total = total + i * 2`. Remember to substitute the current value of `i` into the expression and calculate the new value for `total`.\n\nWhat is the value of `total` after this first calculation?"
+            },
+            {
+              "role": "student",
+              "content": "I'm still confused about the calculation. It says total = total + i * 2. Like, which 'total' am I using? The starting one, or the one that changes? And where does the 'i' come from for the calculation?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is struggling with the concept of variable state within the loop, specifically questioning whether the calculation should use the initial value of total or the updated value of total. They also express confusion regarding the source and usage of the loop variable i.",
+            "teacher_role": "partial_worked_step",
+            "support": "medium"
+          },
+          "target_teacher_response": "The variable `total` on the right side of the equation, `total = total + i * 2`, refers to the **current** value of `total` before this specific calculation. \n\nThe variable `i` is the **loop counter**, and for this first iteration, the pseudocode dictates that `i` must be 1.\n\nTherefore, we are calculating `total` using the formula `total` (current value) + `i` * 2. Given that `total` starts at 0 and `i` is 1, what is the resulting value of `total`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about where to start with this pseudocode. It's a loop, and I don't know how to track the changes to total and i all at once. Can you help me set up the first step?"
+            },
+            {
+              "role": "teacher",
+              "content": "The pseudocode starts with an **initialization** step, setting the variable `total` to 0.\n\nNext, the **loop structure** dictates that the variable `i` will start at 1 and continue until it reaches 3.\n\nFor the first iteration, when `i` is 1, the calculation is `total = total + i * 2`. Remember to substitute the current value of `i` into the expression and calculate the new value for `total`.\n\nWhat is the value of `total` after this first calculation?"
+            },
+            {
+              "role": "student",
+              "content": "I'm still confused about the calculation. It says total = total + i * 2. Like, which 'total' am I using? The starting one, or the one that changes? And where does the 'i' come from for the calculation?"
+            },
+            {
+              "role": "teacher",
+              "content": "The variable `total` on the right side of the equation, `total = total + i * 2`, refers to the **current** value of `total` before this specific calculation. \n\nThe variable `i` is the **loop counter**, and for this first iteration, the pseudocode dictates that `i` must be 1.\n\nTherefore, we are calculating `total` using the formula `total` (current value) + `i` * 2. Given that `total` starts at 0 and `i` is 1, what is the resulting value of `total`?"
+            },
+            {
+              "role": "student",
+              "content": "I just don't get it. When you say 'current value,' does that mean I have to remember the previous answer and use that number? And if I use the starting total of 0, then where does the calculation go wrong? Can you just walk me through it step-by-step, showing me exactly how to plug in the numbers?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is struggling with the concept of state tracking within the loop, specifically questioning whether the calculation must use the initial value of 0 or the accumulated, current value of the variable total. The student is requesting a detailed, step-by-step walkthrough to clarify how the variable's value changes and how to correctly plug in the numbers for each iteration.",
+            "teacher_role": "partial_worked_step",
+            "support": "high"
+          },
+          "target_teacher_response": "Let's focus only on the first iteration. We know that `total` starts at 0, and the loop counter `i` is 1. The equation is `total = total + i * 2`. The `total` on the right side of the equals sign refers to the value of `total` *before* this calculation, which is 0.\n\nWe substitute the values: `total` becomes 0, and `i` becomes 1.\n\nSo, the calculation is `total = 0 + 1 * 2`. First, we must evaluate the multiplication: `1 * 2` equals 2.\n\nNow the equation simplifies to `total = 0 + 2`. What is the resulting value for `total` after this addition?"
+        }
+      ]
+    }
+  ]
+}

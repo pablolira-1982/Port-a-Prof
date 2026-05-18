@@ -1,0 +1,16 @@
+# run: pip install -r requirements.txt
+
+# dataset & question generation
+requests==2.32.3
+tqdm==4.67.3
+
+# fine-tuning port-a-prof
+# torch — install manually from https://pytorch.org/get-started/locally/
+transformers==5.5.4
+datasets==4.3.0
+scikit-learn==1.6.0
+peft==0.18.1
+trl==0.23.0
+bitsandbytes==0.49.2
+
+# app dependencies (fastapi, uvicorn, httpx, Pillow) are managed in the Dockerfile

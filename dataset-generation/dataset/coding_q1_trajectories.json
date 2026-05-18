@@ -1,0 +1,247 @@
+{
+  "problem": "Given the following pseudocode: `age = 17; if age >= 18 then print \"Eligible\" else print \"Not eligible\"`, what will be printed to the console?",
+  "topic": "coding",
+  "subtopic": "simple if/else branch selection",
+  "solution_steps": [
+    "Evaluate the condition `age >= 18`. Since `age` is 17, this becomes `17 >= 18`.",
+    "The comparison `17 >= 18` is false.",
+    "Because the condition is false, the `else` block will execute, which prints \"Not eligible\"."
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "traj_1",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really stuck on this pseudocode. I see the variable `age` is set to 17, and then there's this whole `if` statement, but I don't know how to figure out what the whole thing means or what the final output will be."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified that the variable age is set to 17 and that the pseudocode contains an if statement. However, they are struggling with determining the overall meaning or the final output of the conditional logic.",
+            "teacher_role": "inject_info",
+            "support": "none"
+          },
+          "target_teacher_response": "The core concept here is understanding **conditional execution**, which is the logic that determines which block of code runs based on whether a condition is true or false. When you encounter an `if` statement, you must first evaluate the condition inside the parentheses. This condition uses comparison operators, such as `>=` (greater than or equal to), to compare two values. The result of this comparison is always a boolean value: either true or false.\n\nIf the condition evaluates to `true`, the code immediately following the `if` statement executes. If the condition evaluates to `false`, the program skips that code and instead executes the code within the corresponding `else` block, if one exists.\n\nIn your problem, we are evaluating the condition `age >= 18`. Remember that `age` is set to 17. To proceed, you need to determine the boolean result of comparing 17 to 18 using the `>=` operator. What is the truth value of the statement 17 >= 18?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really stuck on this pseudocode. I see the variable `age` is set to 17, and then there's this whole `if` statement, but I don't know how to figure out what the whole thing means or what the final output will be."
+            },
+            {
+              "role": "teacher",
+              "content": "The core concept here is understanding **conditional execution**, which is the logic that determines which block of code runs based on whether a condition is true or false. When you encounter an `if` statement, you must first evaluate the condition inside the parentheses. This condition uses comparison operators, such as `>=` (greater than or equal to), to compare two values. The result of this comparison is always a boolean value: either true or false.\n\nIf the condition evaluates to `true`, the code immediately following the `if` statement executes. If the condition evaluates to `false`, the program skips that code and instead executes the code within the corresponding `else` block, if one exists.\n\nIn your problem, we are evaluating the condition `age >= 18`. Remember that `age` is set to 17. To proceed, you need to determine the boolean result of comparing 17 to 18 using the `>=` operator. What is the truth value of the statement 17 >= 18?"
+            },
+            {
+              "role": "student",
+              "content": "I think I understand that I have to check if the condition is true or false, but I'm not sure how to actually do that with the numbers. We have age set to 17, and the condition is age >= 18. Can you walk me through what that specific comparison means?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student understands the conceptual requirement of determining a boolean truth value for the if statement's condition but is struggling with the practical execution of the numerical comparison, specifically asking for a step-by-step walkthrough of evaluating 17 >= 18.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The comparison `age >= 18` requires you to compare the value stored in the variable `age` to the number 18 using the `>=` operator.\n\nThis comparison asks: \"Is the value of `age` greater than or equal to 18?\"\n\nSince `age` is currently 17, you are evaluating the statement 17 >= 18. Based on that comparison, what is the resulting boolean value?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_2",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think since age is 17, and we check if age is greater than or equal to 18, that condition must be true because 17 is close to 18. So, it should print \"Eligible\"."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student incorrectly assumes that because 17 is close to 18, the condition age greater than or equal to 18 must be true. This indicates a misunderstanding of how the boolean comparison 17 >= 18 is evaluated.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You evaluated the condition `age >= 18` and concluded it was true. However, when comparing the value 17 to 18 using the `>=` operator, the result is actually false. Please re-examine the comparison `17 >= 18`."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I think since age is 17, and we check if age is greater than or equal to 18, that condition must be true because 17 is close to 18. So, it should print \"Eligible\"."
+            },
+            {
+              "role": "teacher",
+              "content": "You evaluated the condition `age >= 18` and concluded it was true. However, when comparing the value 17 to 18 using the `>=` operator, the result is actually false. Please re-examine the comparison `17 >= 18`."
+            },
+            {
+              "role": "student",
+              "content": "Oh, I see. So the comparison 17 is not greater than or equal to 18, meaning the condition is false. But if the condition is false, what happens next in the pseudocode? I'm not sure if we skip the rest of the code or if we do something else."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly accepted that the comparison 17 is not greater than or equal to 18, concluding that the condition is false. The student's current struggle is conceptual, as they are questioning the flow control logic and are unsure whether the program skips the rest of the code or executes an alternative path when the condition is false.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "When the condition in an `if` statement evaluates to `false`, the program skips the code inside the `if` block and instead executes the code found within the `else` block.\n\nFor this problem, the `else` block contains the instruction to print \"Not eligible\".\n\nNow, based on the pseudocode structure, what value will be printed to the console?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_3",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "So, I see that the variable age is set to 17. When we get to the if statement, we have to check if 17 is greater than or equal to 18. That comparison is false."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified that the variable age is set to 17 and accurately evaluated the condition 17 is greater than or equal to 18 as false.",
+            "teacher_role": "confirm_and_advance",
+            "support": "none"
+          },
+          "target_teacher_response": "You correctly evaluated the condition `age >= 18` and determined that the result is false. Given that the condition is false, which block of code will the program execute?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "So, I see that the variable age is set to 17. When we get to the if statement, we have to check if 17 is greater than or equal to 18. That comparison is false."
+            },
+            {
+              "role": "teacher",
+              "content": "You correctly evaluated the condition `age >= 18` and determined that the result is false. Given that the condition is false, which block of code will the program execute?"
+            },
+            {
+              "role": "student",
+              "content": "Since the condition 17 >= 18 is false, the program will skip the 'Eligible' print statement and instead execute the 'else' block, so it will print \"Not eligible\"."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly determined that because the condition 17 >= 18 is false, the program will skip the 'Eligible' statement and execute the 'else' block, resulting in the output \"Not eligible\".",
+            "teacher_role": "session_close",
+            "support": "none"
+          },
+          "target_teacher_response": "That is correct. Because the condition was false, the program executed the code within the `else` block, printing \"Not eligible\". Do you have any other problems you would like to work on?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_4",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "So, I see that the age variable is set to 17, and the code checks if age is greater than or equal to 18. Since 17 is definitely not greater than or equal to 18, does that mean the condition is false? If the condition is false, what happens next in the code?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified that the age variable is 17 and that the condition age is greater than or equal to 18 evaluates to false, and they are now asking about the subsequent execution path of the code.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "When a condition like `age >= 18` evaluates to `false`, the program skips the `then` block and executes the code found in the `else` block.\n\nFocus on the structure of the `if` statement. The `else` keyword dictates which piece of code runs when the preceding condition is not met. What action does the `else` block perform in this specific problem?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "So, I see that the age variable is set to 17, and the code checks if age is greater than or equal to 18. Since 17 is definitely not greater than or equal to 18, does that mean the condition is false? If the condition is false, what happens next in the code?"
+            },
+            {
+              "role": "teacher",
+              "content": "When a condition like `age >= 18` evaluates to `false`, the program skips the `then` block and executes the code found in the `else` block.\n\nFocus on the structure of the `if` statement. The `else` keyword dictates which piece of code runs when the preceding condition is not met. What action does the `else` block perform in this specific problem?"
+            },
+            {
+              "role": "student",
+              "content": "Wait, if the condition `age >= 18` is false, does that mean we just skip the whole `if` statement? Or maybe we should just use the value 17 and print \"Eligible\" anyway since it's the first block?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student struggled with the concept of flow control, questioning if a false condition causes the entire if statement to be skipped. They also demonstrated a misunderstanding by suggesting that the program should print \"Eligible\" simply because that code appeared in the first block.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You are making an assumption about what happens when the condition fails. When the expression `age >= 18` evaluates to `false`, the program does not simply skip the whole `if` statement, nor does it default to the `then` block."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_5",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure where to start with this pseudocode. It has the variable age and then this whole if/else structure. What part should I focus on first?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is currently expressing general confusion about the pseudocode, noting the presence of the age variable and the if/else structure, and is asking for guidance on where to begin the analysis.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "To determine the output, you must first evaluate the condition inside the `if` statement.\n\nWe need to check the expression `age >= 18`.\n\nRemember that the result of this comparison will be either true or false, which dictates which block of code executes.\n\nWhat value does the variable `age` hold, and how does that relate to the comparison `age >= 18`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure where to start with this pseudocode. It has the variable age and then this whole if/else structure. What part should I focus on first?"
+            },
+            {
+              "role": "teacher",
+              "content": "To determine the output, you must first evaluate the condition inside the `if` statement.\n\nWe need to check the expression `age >= 18`.\n\nRemember that the result of this comparison will be either true or false, which dictates which block of code executes.\n\nWhat value does the variable `age` hold, and how does that relate to the comparison `age >= 18`?"
+            },
+            {
+              "role": "student",
+              "content": "I guess I see the variable age, but I don't know what value it has. And what does the comparison age >= 18 mean? Are those values just floating around, or do they come from somewhere in the pseudocode?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is struggling with the foundational elements of the pseudocode, specifically stating that they do not know the value of the age variable and questioning the meaning and origin of the comparison expression age >= 18.",
+            "teacher_role": "partial_worked_step",
+            "support": "medium"
+          },
+          "target_teacher_response": "The value for the variable `age` is explicitly defined at the start of the pseudocode: `age = 17`. \n\nTherefore, when we evaluate the condition `age >= 18`, we are comparing the **assigned value** of `age` (which is 17) against the **constant value** 18, using the **comparison operator** `>=`. \n\nYour next step is to determine the **boolean result** of the expression `17 >= 18`. What value does this comparison yield?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure where to start with this pseudocode. It has the variable age and then this whole if/else structure. What part should I focus on first?"
+            },
+            {
+              "role": "teacher",
+              "content": "To determine the output, you must first evaluate the condition inside the `if` statement.\n\nWe need to check the expression `age >= 18`.\n\nRemember that the result of this comparison will be either true or false, which dictates which block of code executes.\n\nWhat value does the variable `age` hold, and how does that relate to the comparison `age >= 18`?"
+            },
+            {
+              "role": "student",
+              "content": "I guess I see the variable age, but I don't know what value it has. And what does the comparison age >= 18 mean? Are those values just floating around, or do they come from somewhere in the pseudocode?"
+            },
+            {
+              "role": "teacher",
+              "content": "The value for the variable `age` is explicitly defined at the start of the pseudocode: `age = 17`. \n\nTherefore, when we evaluate the condition `age >= 18`, we are comparing the **assigned value** of `age` (which is 17) against the **constant value** 18, using the **comparison operator** `>=`. \n\nYour next step is to determine the **boolean result** of the expression `17 >= 18`. What value does this comparison yield?"
+            },
+            {
+              "role": "student",
+              "content": "I'm still confused about what '17 >= 18' means. Like, is it a math problem, or is it just a comparison? I don't know how to figure out if it's true or false, and I'm not sure what I'm supposed to do with that result."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is struggling conceptually with the nature of the comparison 17 >= 18, questioning whether it is a mathematical problem or a logical comparison. They are confused about how to determine the resulting boolean value (true or false) and what that resulting value means for the program's execution.",
+            "teacher_role": "partial_worked_step",
+            "support": "high"
+          },
+          "target_teacher_response": "The expression `17 >= 18` is a **boolean comparison**. It asks if the value on the left (`17`) is greater than or equal to the value on the right (`18`).\n\nWhen a comparison is made, the result must be a **boolean value**: either `true` or `false`.\n\nSince we are comparing 17 to 18, we need to determine if 17 is actually greater than or equal to 18. What boolean value does the comparison `17 >= 18` yield?"
+        }
+      ]
+    }
+  ]
+}

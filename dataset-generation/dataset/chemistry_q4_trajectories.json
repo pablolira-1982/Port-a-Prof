@@ -1,0 +1,250 @@
+{
+  "problem": "Sodium carbonate (Na₂CO₃) reacts with hydrochloric acid (HCl) to produce sodium chloride (NaCl), water (H₂O), and carbon dioxide (CO₂). If you start with 11.3 grams of Na₂CO₃ and 36.5 grams of HCl, what is the mass of NaCl produced?",
+  "topic": "chemistry",
+  "subtopic": "limiting reagent with simple mole ratios",
+  "solution_steps": [
+    "Determine the molar masses: Na₂CO₃ = 105.99 g/mol, HCl = 36.46 g/mol, NaCl = 58.44 g/mol.",
+    "Convert grams to moles: moles Na₂CO₃ = 11.3 g / 105.99 g/mol = 0.1064 mol; moles HCl = 36.5 g / 36.46 g/mol = 1.000 mol.",
+    "Write the balanced chemical equation: Na₂CO₃(s) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g).",
+    "Determine the limiting reagent:  From the balanced equation, 1 mole of Na₂CO₃ reacts with 2 moles of HCl. The mole ratio of Na₂CO₃ to HCl required is 1:2.  We have 0.1064 mol Na₂CO₃, which would require 0.1064 mol * 2 = 0.2128 mol HCl. Since we have 1.000 mol HCl, Na₂CO₃ is the limiting reagent.",
+    "Calculate moles of NaCl produced: Since 1 mole of Na₂CO₃ produces 2 moles of NaCl, 0.1064 mol Na₂CO₃ will produce 0.1064 mol * 2 = 0.2128 mol NaCl.",
+    "Convert moles of NaCl to grams: mass NaCl = 0.2128 mol * 58.44 g/mol = 12.42 g."
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "traj_1",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really lost on this stoichiometry problem. We have two starting masses, 11.3 grams of Na₂CO₃ and 36.5 grams of HCl, and we need the mass of NaCl. I don't know if I should just use the mole ratio from the equation or if there's some other step I'm missing."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies the starting masses of 11.3 grams of Na₂CO₃ and 36.5 grams of HCl. However, the student is confused about the overall procedure, questioning whether using only the mole ratio from the balanced equation is sufficient or if a limiting reagent calculation is required.",
+            "teacher_role": "inject_info",
+            "support": "none"
+          },
+          "target_teacher_response": "When you are given starting amounts for multiple reactants, like the 11.3 grams of Na₂CO₃ and the 36.5 grams of HCl in this problem, you must first determine which reactant limits the reaction. This is a concept called the **limiting reagent**. \n\nThe limiting reagent is the reactant that is completely consumed first, thereby determining the maximum amount of product that can be formed. You cannot calculate the product yield based on the amount of a reactant that is left over.\n\nTo find the limiting reagent, you must compare the available moles of each reactant using the mole ratios from the balanced chemical equation: $$\\text{Na}_2\\text{CO}_3(s) + 2\\text{HCl}(aq) \\rightarrow 2\\text{NaCl}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$$.\n\nFirst, you need to convert the given masses into moles for every reactant. Then, you use the stoichiometry to calculate how much product *could* be formed by each reactant individually. The reactant that produces the smallest amount of product is your limiting reagent.\n\nGiven that the reaction involves Na₂CO₃ and HCl, what is the first step you should take to determine the moles of each reactant?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really lost on this stoichiometry problem. We have two starting masses, 11.3 grams of Na₂CO₃ and 36.5 grams of HCl, and we need the mass of NaCl. I don't know if I should just use the mole ratio from the equation or if there's some other step I'm missing."
+            },
+            {
+              "role": "teacher",
+              "content": "When you are given starting amounts for multiple reactants, like the 11.3 grams of Na₂CO₃ and the 36.5 grams of HCl in this problem, you must first determine which reactant limits the reaction. This is a concept called the **limiting reagent**. \n\nThe limiting reagent is the reactant that is completely consumed first, thereby determining the maximum amount of product that can be formed. You cannot calculate the product yield based on the amount of a reactant that is left over.\n\nTo find the limiting reagent, you must compare the available moles of each reactant using the mole ratios from the balanced chemical equation: $$\\text{Na}_2\\text{CO}_3(s) + 2\\text{HCl}(aq) \\rightarrow 2\\text{NaCl}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$$.\n\nFirst, you need to convert the given masses into moles for every reactant. Then, you use the stoichiometry to calculate how much product *could* be formed by each reactant individually. The reactant that produces the smallest amount of product is your limiting reagent.\n\nGiven that the reaction involves Na₂CO₃ and HCl, what is the first step you should take to determine the moles of each reactant?"
+            },
+            {
+              "role": "student",
+              "content": "I understand that I need to find the limiting reagent, and I know I have to convert everything to moles first. But when I look at the problem, I have two different starting amounts, 11.3 grams and 36.5 grams. How do I even start the calculation for the moles of each reactant?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly understands the conceptual goal of finding the limiting reagent and recognizes that the initial step must involve converting the given masses to moles. However, the student is struggling with the procedural starting point, asking for guidance on how to begin the calculation when presented with two separate starting amounts.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "To convert a given mass of a substance into moles, you must use the molar mass of that substance.\n\nThe relationship is: $$\\text{moles} = \\frac{\\text{given mass}}{\\text{molar mass}}$$\n\nFor the Na₂CO₃, the calculation is: $$\\text{moles Na}_2\\text{CO}_3 = \\frac{\\text{mass of Na}_2\\text{CO}_3}{\\text{Molar mass of Na}_2\\text{CO}_3}$$\n\nFor the HCl, the calculation is: $$\\text{moles HCl} = \\frac{\\text{mass of HCl}}{\\text{Molar mass of HCl}}$$\n\nCalculate the moles of both reactants and report those two values. Then, we will proceed to the next step."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_2",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that Na₂CO₃ is the limiting reactant. Since 1 mole of Na₂CO₃ produces 2 moles of NaCl, I multiply 0.1064 by 2, which gives me 0.2128 moles of NaCl. Then I take that amount and multiply by the molar mass of NaCl, 58.44 g/mol, and I get 12.3 grams for the mass of NaCl."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly determined that 0.2128 moles of NaCl are produced and used the correct molar mass of 58.44 g/mol. However, when calculating the final mass of NaCl, the student incorrectly reported 12.3 grams instead of the calculated value of 12.42 grams.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You correctly identified that Na₂CO₃ is the limiting reactant and calculated 0.2128 moles of NaCl. However, when you multiply 0.2128 by 58.44, your final result of 12.3 grams seems incorrect. Could you check your arithmetic for that last multiplication step?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that Na₂CO₃ is the limiting reactant. Since 1 mole of Na₂CO₃ produces 2 moles of NaCl, I multiply 0.1064 by 2, which gives me 0.2128 moles of NaCl. Then I take that amount and multiply by the molar mass of NaCl, 58.44 g/mol, and I get 12.3 grams for the mass of NaCl."
+            },
+            {
+              "role": "teacher",
+              "content": "You correctly identified that Na₂CO₃ is the limiting reactant and calculated 0.2128 moles of NaCl. However, when you multiply 0.2128 by 58.44, your final result of 12.3 grams seems incorrect. Could you check your arithmetic for that last multiplication step?"
+            },
+            {
+              "role": "student",
+              "content": "Wait, if I re-calculate 0.2128 times 58.44, I get 12.42 grams. So, I have the mass of NaCl. But what does this number represent? Do I need to do anything else with it, or is this the final answer?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly recalculates the mass of NaCl as 12.42 grams and then asks for conceptual clarification, questioning whether this calculated mass represents the final answer or if additional steps are necessary.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The value of 12.42 grams represents the total mass of **sodium chloride (NaCl)** produced based on the limiting reactant. \n\nTo ensure you have addressed the prompt completely, consider the relationship between the calculated mass and the question asked. The problem asks for the mass of NaCl produced, and your calculation yielded the mass in grams.\n\nDoes the calculated mass of NaCl directly answer the question posed in the problem?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_3",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "Okay, so I figured out we have 0.2128 moles of NaCl, and the molar mass is 58.44 grams per mole. I guess I just need to multiply those two numbers to get the final mass in grams, right?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies the calculated moles of NaCl (0.2128 mol) and the molar mass (58.44 g/mol), and accurately proposes the final step of multiplying these two values to determine the mass in grams.",
+            "teacher_role": "confirm_and_advance",
+            "support": "none"
+          },
+          "target_teacher_response": "You have correctly identified the values needed for the final calculation. What do you get when you multiply the moles of NaCl by its molar mass?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "Okay, so I figured out we have 0.2128 moles of NaCl, and the molar mass is 58.44 grams per mole. I guess I just need to multiply those two numbers to get the final mass in grams, right?"
+            },
+            {
+              "role": "teacher",
+              "content": "You have correctly identified the values needed for the final calculation. What do you get when you multiply the moles of NaCl by its molar mass?"
+            },
+            {
+              "role": "student",
+              "content": "If I multiply 0.2128 moles by 58.44 grams per mole, I get 12.42 grams. So that's the mass of NaCl produced."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies that the final step requires multiplying the calculated moles of NaCl (0.2128 mol) by its molar mass (58.44 g/mol), and accurately performs the calculation to determine the final mass of NaCl produced as 12.42 grams.",
+            "teacher_role": "session_close",
+            "support": "none"
+          },
+          "target_teacher_response": "That calculation is correct; the mass of NaCl produced is 12.42 grams. Do you have any other problems you would like to work on?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_4",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out the balanced equation is Na₂CO₃ + 2HCl -> 2NaCl + H₂O + CO₂. I also calculated the moles of both starting materials: I have about 0.1064 moles of Na₂CO₃ and 1.000 mole of HCl. Now I'm supposed to figure out which one runs out first, but I'm not sure how to compare the amounts I have to the amounts the equation tells me I need. What do I do next?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly wrote the balanced chemical equation and calculated the initial moles of both reactants (0.1064 mol of Na₂CO₃ and 1.000 mol of HCl). The student's current struggle is understanding the method required to compare the available amounts to the stoichiometric ratios provided by the equation in order to identify the limiting reagent.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "To determine the **limiting reagent**, you must compare the ratio of the moles you **have** to the ratio of the moles required by the balanced equation. \n\nFor the reaction $\\text{Na}_2\\text{CO}_3(s) + 2\\text{HCl}(aq) \\rightarrow 2\\text{NaCl}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$, the required mole ratio of $\\text{Na}_2\\text{CO}_3$ to $\\text{HCl}$ is $\\frac{{1}}{{2}}$.\n\nCalculate the ratio of the moles you have: $\\frac{{\\text{moles of Na}_2\\text{CO}_3 \\text{ available}}}{{\\text{moles of HCl available}}}$.\n\nCompare this calculated ratio to the stoichiometric ratio $\\frac{{1}}{{2}}$ to identify the limiting reagent. What is the value of this ratio?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out the balanced equation is Na₂CO₃ + 2HCl -> 2NaCl + H₂O + CO₂. I also calculated the moles of both starting materials: I have about 0.1064 moles of Na₂CO₃ and 1.000 mole of HCl. Now I'm supposed to figure out which one runs out first, but I'm not sure how to compare the amounts I have to the amounts the equation tells me I need. What do I do next?"
+            },
+            {
+              "role": "teacher",
+              "content": "To determine the **limiting reagent**, you must compare the ratio of the moles you **have** to the ratio of the moles required by the balanced equation. \n\nFor the reaction $\\text{Na}_2\\text{CO}_3(s) + 2\\text{HCl}(aq) \\rightarrow 2\\text{NaCl}(aq) + \\text{H}_2\\text{O}(l) + \\text{CO}_2(g)$, the required mole ratio of $\\text{Na}_2\\text{CO}_3$ to $\\text{HCl}$ is $\\frac{{1}}{{2}}$.\n\nCalculate the ratio of the moles you have: $\\frac{{\\text{moles of Na}_2\\text{CO}_3 \\text{ available}}}{{\\text{moles of HCl available}}}$.\n\nCompare this calculated ratio to the stoichiometric ratio $\\frac{{1}}{{2}}$ to identify the limiting reagent. What is the value of this ratio?"
+            },
+            {
+              "role": "student",
+              "content": "I calculated the ratio of the moles I have, which is 0.1064 divided by 1.000, giving me 0.1064. Since 0.1064 is less than 0.5, I guess that means Na₂CO₃ is the limiting reagent."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly calculated the ratio of available moles by dividing 0.1064 by 1.000, resulting in 0.1064. The student then correctly compared this ratio to the required stoichiometric ratio of 0.5 and concluded that Na₂CO₃ is the limiting reagent.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You calculated the ratio of the moles available, $\\frac{0.1064}{1.000}$. However, when comparing this value, you must compare it to the stoichiometric ratio $\\frac{1}{2}$ to determine which reactant is limiting."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_5",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the mass of NaCl produced, but I have two starting masses, 11.3 grams of Na₂CO₃ and 36.5 grams of HCl. I don't know if I should start by converting everything to moles, or if I need to write the equation first. Where do I even begin?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified the goal of finding the mass of NaCl and listed the two starting masses, 11.3 grams of Na₂CO₃ and 36.5 grams of HCl. The student is currently struggling with the initial procedural steps, specifically whether to begin by writing the balanced chemical equation or by converting the given masses to moles.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "Before calculating anything, you must establish the relationship between the reactants and products. \n\nFirst, write the balanced chemical equation for the reaction between sodium carbonate and hydrochloric acid. This will tell you the mole ratio.\n\nOnce you have the balanced equation, remember that to use the mole ratio, you must convert the given masses into moles using the formula: $$moles = \\frac{{mass}}{{molar\\ mass}}$$\n\nCalculate the moles of both Na₂CO₃ and HCl using their respective molar masses. What are the molar masses for Na₂CO₃ and HCl?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the mass of NaCl produced, but I have two starting masses, 11.3 grams of Na₂CO₃ and 36.5 grams of HCl. I don't know if I should start by converting everything to moles, or if I need to write the equation first. Where do I even begin?"
+            },
+            {
+              "role": "teacher",
+              "content": "Before calculating anything, you must establish the relationship between the reactants and products. \n\nFirst, write the balanced chemical equation for the reaction between sodium carbonate and hydrochloric acid. This will tell you the mole ratio.\n\nOnce you have the balanced equation, remember that to use the mole ratio, you must convert the given masses into moles using the formula: $$moles = \\frac{{mass}}{{molar\\ mass}}$$\n\nCalculate the moles of both Na₂CO₃ and HCl using their respective molar masses. What are the molar masses for Na₂CO₃ and HCl?"
+            },
+            {
+              "role": "student",
+              "content": "I wrote down the balanced equation, but when you asked for the molar masses, I don't know where to get those numbers from. Are they supposed to be given somewhere, or do I have to calculate them myself? I'm really lost on how to start the mole calculation."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student confirmed they were able to write the balanced chemical equation but expressed confusion regarding the source of the molar masses, asking whether these values should be provided or if they needed to be calculated themselves.",
+            "teacher_role": "partial_worked_step",
+            "support": "medium"
+          },
+          "target_teacher_response": "The molar masses are derived from the **atomic masses** of the elements that make up the compounds. \n\nFor the first substance, **sodium carbonate** (Na₂CO₃), you must sum the atomic masses of two sodium atoms, one carbon atom, and three oxygen atoms. This gives you the molar mass for Na₂CO₃.\n\nSimilarly, for the second substance, **hydrochloric acid** (HCl), you must sum the atomic masses of one hydrogen atom and one chlorine atom. This gives you the molar mass for HCl.\n\nOnce you have these two values, you can set up the initial mole calculations using the given masses: \n\n$$moles\\ Na₂CO₃ = \\frac{{11.3\\ g}}{{Molar\\ Mass\\ of\\ Na₂CO₃}}$$ \n\n$$moles\\ HCl = \\frac{{36.5\\ g}}{{Molar\\ Mass\\ of\\ HCl}}$$ \n\nSubstitute the calculated molar masses into these equations and find the moles of each reactant."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm supposed to find the mass of NaCl produced, but I have two starting masses, 11.3 grams of Na₂CO₃ and 36.5 grams of HCl. I don't know if I should start by converting everything to moles, or if I need to write the equation first. Where do I even begin?"
+            },
+            {
+              "role": "teacher",
+              "content": "Before calculating anything, you must establish the relationship between the reactants and products. \n\nFirst, write the balanced chemical equation for the reaction between sodium carbonate and hydrochloric acid. This will tell you the mole ratio.\n\nOnce you have the balanced equation, remember that to use the mole ratio, you must convert the given masses into moles using the formula: $$moles = \\frac{{mass}}{{molar\\ mass}}$$\n\nCalculate the moles of both Na₂CO₃ and HCl using their respective molar masses. What are the molar masses for Na₂CO₃ and HCl?"
+            },
+            {
+              "role": "student",
+              "content": "I wrote down the balanced equation, but when you asked for the molar masses, I don't know where to get those numbers from. Are they supposed to be given somewhere, or do I have to calculate them myself? I'm really lost on how to start the mole calculation."
+            },
+            {
+              "role": "teacher",
+              "content": "The molar masses are derived from the **atomic masses** of the elements that make up the compounds. \n\nFor the first substance, **sodium carbonate** (Na₂CO₃), you must sum the atomic masses of two sodium atoms, one carbon atom, and three oxygen atoms. This gives you the molar mass for Na₂CO₃.\n\nSimilarly, for the second substance, **hydrochloric acid** (HCl), you must sum the atomic masses of one hydrogen atom and one chlorine atom. This gives you the molar mass for HCl.\n\nOnce you have these two values, you can set up the initial mole calculations using the given masses: \n\n$$moles\\ Na₂CO₃ = \\frac{{11.3\\ g}}{{Molar\\ Mass\\ of\\ Na₂CO₃}}$$ \n\n$$moles\\ HCl = \\frac{{36.5\\ g}}{{Molar\\ Mass\\ of\\ HCl}}$$ \n\nSubstitute the calculated molar masses into these equations and find the moles of each reactant."
+            },
+            {
+              "role": "student",
+              "content": "I calculated the molar masses, but now I have two mole amounts: 0.1064 mol of Na₂CO₃ and 1.000 mol of HCl. The teacher said I need to use the mole ratio, but I don't know how to use that. Do I just divide the moles by the ratio, or is there a specific formula I need to use to figure out which one runs out first?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly calculated the initial moles of both reactants (0.1064 mol of Na₂CO₃ and 1.000 mol of HCl) but is struggling with the conceptual application of the mole ratio. Specifically, the student is unsure how to use the stoichiometric ratio to determine which reactant is limiting and how to calculate the resulting product mass.",
+            "teacher_role": "partial_worked_step",
+            "support": "high"
+          },
+          "target_teacher_response": "The mole ratio from the balanced equation, Na₂CO₃ + 2HCl $\\rightarrow$ 2NaCl + H₂O + CO₂, tells us that 1 mole of Na₂CO₃ reacts with 2 moles of HCl. To determine the limiting reagent, you must calculate how much of one reactant is needed to completely consume the other. \n\nLet's check the amount of HCl required if all the Na₂CO₃ is used. We know the mole ratio is 2:1 (HCl:Na₂CO₃). \n\n$$moles\\ HCl\\ required = moles\\ Na₂CO₃\\ available \\times \\frac{{2}}{{1}}$$\n\nSubstitute the calculated moles of Na₂CO₃ into this equation. This will give you the maximum moles of HCl that can react. Now, compare this required amount to the 1.000 mol of HCl you started with. Which value is smaller? This smaller value determines the limiting reagent. \n\nOnce the limiting reagent is identified, use its initial moles to calculate the moles of NaCl produced, remembering the ratio is 1 mole of Na₂CO₃ to 2 moles of NaCl. \n\n$$moles\\ NaCl\\ produced = moles\\ limiting\\ reagent\\ available \\times \\frac{{2}}{{1}}$$\n\nSubstitute the moles of the limiting reagent into this equation and find the resulting moles of NaCl. Finally, convert these moles to grams using the molar mass of NaCl, which is 58.44 g/mol. What is the final mass of NaCl produced?"
+        }
+      ]
+    }
+  ]
+}

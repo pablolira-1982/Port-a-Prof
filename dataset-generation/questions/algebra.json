@@ -1,0 +1,83 @@
+{
+  "category": "algebra",
+  "model": "gemma3:12b-it-qat",
+  "generated_at": "2026-05-09T11:34:40.395853",
+  "total": 6,
+  "questions": [
+    {
+      "subtopic": "solving a quadratic by factoring",
+      "question": "The area of a rectangular garden is 45 square feet, and its length is 5 feet longer than its width. Find the width of the garden, in feet.",
+      "solution": [
+        "1. Let 'w' represent the width of the garden in feet. Then the length is 'w + 5' feet.",
+        "2. The area of a rectangle is length times width, so w(w + 5) = 45.",
+        "3. Expanding the left side gives w² + 5w = 45.",
+        "4. Subtracting 45 from both sides gives w² + 5w - 45 = 0.",
+        "5. We need to find two numbers that multiply to -45 and add to 5. These numbers are 9 and -5.",
+        "6. Factoring the quadratic gives (w + 9)(w - 5) = 0.",
+        "7. Setting each factor to zero gives w + 9 = 0 or w - 5 = 0.",
+        "8. Solving for w gives w = -9 or w = 5.",
+        "9. Since the width cannot be negative, the width of the garden is 5 feet."
+      ]
+    },
+    {
+      "subtopic": "solving a linear equation with variables on both sides",
+      "question": "A landscaping company charges $45 for a design fee plus $12 per square foot of lawn. Another company charges only $27 for a design fee and $15 per square foot. For what area, in square feet, will the two companies charge the same amount?",
+      "solution": [
+        "1. Let 'x' represent the area in square feet.",
+        "2. Set up the equation representing the total cost for each company: 45 + 12x = 27 + 15x.",
+        "3. Subtract 12x from both sides: 45 = 27 + 3x.",
+        "4. Subtract 27 from both sides: 18 = 3x.",
+        "5. Divide both sides by 3: x = 6.",
+        "6. The area for which the two companies charge the same amount is 6 square feet."
+      ]
+    },
+    {
+      "subtopic": "solving a linear system by elimination given two explicit equations",
+      "question": "A local bakery sells cookies for $2 each and muffins for $3 each. On Tuesday, they sold 120 items and earned $300. Determine the number of cookies and muffins sold using a system of elimination.",
+      "solution": [
+        "1. Define variables: Let 'c' represent the number of cookies sold and 'm' represent the number of muffins sold.",
+        "2. Write the equations based on the given information: c + m = 120 (total items) and 2c + 3m = 300 (total earnings).",
+        "3. Multiply the first equation by -2: -2c - 2m = -240.",
+        "4. Add the modified first equation to the second equation: (-2c - 2m) + (2c + 3m) = -240 + 300.",
+        "5. Simplify the resulting equation: m = 60.",
+        "6. Substitute the value of m into the first equation: c + 60 = 120.",
+        "7. Solve for c: c = 120 - 60 = 60.",
+        "8. The bakery sold 60 cookies and 60 muffins."
+      ]
+    },
+    {
+      "subtopic": "solving a proportion word problem using cross multiplication",
+      "question": "A recipe for cookies calls for 2.5 cups of flour to make 36 cookies. If you want to bake 60 cookies, how many cups of flour will you need? Set up a proportion and solve for the unknown.",
+      "solution": [
+        "1. Set up the proportion: 2.5 cups / 36 cookies = x cups / 60 cookies",
+        "2. Cross-multiply: 2.5 * 60 = 36 * x",
+        "3. Simplify: 150 = 36x",
+        "4. Divide both sides by 36: 150 / 36 = x",
+        "5. Calculate: x = 4.1666... ≈ 4.17",
+        "6. Final Answer: You will need approximately 4.17 cups of flour."
+      ]
+    },
+    {
+      "subtopic": "solving an absolute value equation with extraneous root checking",
+      "question": "Solve the equation |2x - 3| = x + 1 for x. Remember to check your solutions against the original equation to identify any extraneous roots.",
+      "solution": [
+        "1. Split the absolute value equation into two separate equations: 2x - 3 = x + 1 and 2x - 3 = -(x + 1).",
+        "2. Solve the first equation: 2x - 3 = x + 1  =>  2x - x = 1 + 3  =>  x = 4.",
+        "3. Solve the second equation: 2x - 3 = -x - 1  =>  2x + x = -1 + 3  =>  3x = 2  =>  x = 2/3.",
+        "4. Check x = 4 in the original equation: |2(4) - 3| = 4 + 1  =>  |8 - 3| = 5  =>  |5| = 5  =>  5 = 5.  This solution is valid.",
+        "5. Check x = 2/3 in the original equation: |2(2/3) - 3| = (2/3) + 1  =>  |(4/3) - (9/3)| = (2/3) + (3/3)  =>  |-5/3| = 5/3  =>  5/3 = 5/3. This solution is valid.",
+        "6. Therefore, the solutions are x = 4 and x = 2/3."
+      ]
+    },
+    {
+      "subtopic": "evaluating and simplifying an algebraic expression using order of operations",
+      "question": "Evaluate the following expression: 3a + 5b - 2c, given that a = 4, b = -2, and c = 1.",
+      "solution": [
+        "1. Substitute the given values into the expression: 3(4) + 5(-2) - 2(1)",
+        "2. Perform the multiplications: 12 - 10 - 2",
+        "3. Perform the subtraction from left to right: 12 - 10 = 2",
+        "4. Continue the subtraction: 2 - 2 = 0"
+      ]
+    }
+  ]
+}

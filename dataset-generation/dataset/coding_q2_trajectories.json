@@ -1,0 +1,250 @@
+{
+  "problem": "Consider the following boolean expressions: `a = (10 > 5)`; `b = (8 == 8)`; `c = (3 < 10)`. What is the final value of `d = a AND b OR c`?",
+  "topic": "coding",
+  "subtopic": "basic boolean expressions (without nesting)",
+  "solution_steps": [
+    "Evaluate `a = (10 > 5)`: Since 10 is greater than 5, `a` is `true`.",
+    "Evaluate `b = (8 == 8)`: Since 8 is equal to 8, `b` is `true`.",
+    "Evaluate `c = (3 < 10)`: Since 3 is less than 10, `c` is `true`.",
+    "Evaluate `a AND b`: `true AND true` is `true`.",
+    "Evaluate `(a AND b) OR c`: `true OR true` is `true`.",
+    "Therefore, `d = a AND b OR c` evaluates to `true`."
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "traj_1",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about this boolean expression, d = a AND b OR c. I don't know if I should calculate the AND part first, or if I should just work from left to right. Where do I even start?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is confused about the order of operations for the boolean expression d = a AND b OR c, specifically questioning whether they should follow standard operator precedence (calculating AND before OR) or if they should simply work through the expression from left to right.",
+            "teacher_role": "inject_info",
+            "support": "none"
+          },
+          "target_teacher_response": "The key concept here is understanding operator precedence in boolean logic. Just like in arithmetic, where multiplication is done before addition, boolean operators also follow a specific order of operations.\n\nIn standard boolean algebra, the `AND` operator has a higher precedence than the `OR` operator. This means that when you encounter an expression containing both `AND` and `OR`, you must evaluate all the `AND` operations first, before evaluating any `OR` operations.\n\nThink of it this way: the expression `a AND b OR c` must be grouped conceptually as `(a AND b) OR c`. The parentheses are implied by the rules of precedence.\n\nSince `a`, `b`, and `c` are already evaluated boolean values, you first need to determine the result of `a AND b`. After you have that single boolean result, you can then perform the final `OR` comparison with `c`.\n\nGiven that `a` is `(10 > 5)`, `b` is `(8 == 8)`, and `c` is `(3 < 10)`, what is the first operation you should perform based on the rule that `AND` takes precedence over `OR`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about this boolean expression, d = a AND b OR c. I don't know if I should calculate the AND part first, or if I should just work from left to right. Where do I even start?"
+            },
+            {
+              "role": "teacher",
+              "content": "The key concept here is understanding operator precedence in boolean logic. Just like in arithmetic, where multiplication is done before addition, boolean operators also follow a specific order of operations.\n\nIn standard boolean algebra, the `AND` operator has a higher precedence than the `OR` operator. This means that when you encounter an expression containing both `AND` and `OR`, you must evaluate all the `AND` operations first, before evaluating any `OR` operations.\n\nThink of it this way: the expression `a AND b OR c` must be grouped conceptually as `(a AND b) OR c`. The parentheses are implied by the rules of precedence.\n\nSince `a`, `b`, and `c` are already evaluated boolean values, you first need to determine the result of `a AND b`. After you have that single boolean result, you can then perform the final `OR` comparison with `c`.\n\nGiven that `a` is `(10 > 5)`, `b` is `(8 == 8)`, and `c` is `(3 < 10)`, what is the first operation you should perform based on the rule that `AND` takes precedence over `OR`?"
+            },
+            {
+              "role": "student",
+              "content": "So, I understand that AND comes before OR, but when I look at the whole expression, d = a AND b OR c, it still feels like I have to do something with all three variables at once. Which specific part should I focus on first to make sure I'm following the precedence rule correctly?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student acknowledges the rule that AND takes precedence over OR but remains confused about how to apply this rule to the entire expression, asking for specific guidance on which part of the expression to focus on first.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "You are correct that we must respect the **precedence** rule: `AND` must be evaluated before `OR`. \n\nTherefore, the very first logical unit you must determine is the result of the `AND` operation involving `a` and `b`. \n\nWe need to calculate the value of the construct `a AND b`. \n\nOnce you have determined the boolean result for `a AND b`, you will then use that single result to complete the final `OR` comparison with `c`. \n\nWhat is the result of `a AND b`?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_2",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I got a, b, and c all evaluated to true. So, for d, I first calculate a AND b, which is true. Then I have to do true OR true. I think that combination makes the final answer false."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly evaluated a, b, and c as true, and correctly calculated that a AND b is true. However, the student incorrectly concluded that the final operation, true OR true, evaluates to false, when the correct logical result is true.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You correctly determined that `a AND b` evaluates to `true`. However, when you evaluate the final expression, `true OR true`, the result is not `false`. Please recheck the definition of the `OR` operation for boolean values."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I got a, b, and c all evaluated to true. So, for d, I first calculate a AND b, which is true. Then I have to do true OR true. I think that combination makes the final answer false."
+            },
+            {
+              "role": "teacher",
+              "content": "You correctly determined that `a AND b` evaluates to `true`. However, when you evaluate the final expression, `true OR true`, the result is not `false`. Please recheck the definition of the `OR` operation for boolean values."
+            },
+            {
+              "role": "student",
+              "content": "Oh, right. You're right about the OR operation. If I calculate true OR true, the result is actually true. So now I have this result, which is true, and I need to OR it with c. But the whole expression is d = a AND b OR c. Since I already calculated a AND b, and then I OR it with c, I'm not sure if I should treat the whole thing as one big OR, or if there's a specific order I need to follow for the whole expression."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly acknowledged that true OR true evaluates to true. However, the student struggled with the order of operations for the full expression, d = a AND b OR c, questioning whether the entire expression should be treated as a single OR operation or if a specific order of precedence must be followed.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "You correctly determined that `true OR true` evaluates to **true**. \n\nRemember that boolean expressions follow standard **order of operations**, where `AND` is evaluated before `OR`. \n\nGiven the structure `d = a AND b OR c`, the first required calculation is the result of `a AND b`. \n\nNow, you must evaluate the final operation: `(a AND b)` OR `c`. \n\nWhat is the next step to determine the final value of `d`?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_3",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that a is true, b is true, and c is true. So, for d = a AND b OR c, I guess I need to figure out a AND b first, and then take that result and OR it with c."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly determined that the values for a, b, and c are all true. Furthermore, the student demonstrated an understanding of the order of operations by planning to evaluate the AND operation (a AND b) before performing the final OR operation with c.",
+            "teacher_role": "confirm_and_advance",
+            "support": "none"
+          },
+          "target_teacher_response": "You correctly identified that the `AND` operation must be evaluated before the `OR` operation in the expression `d = a AND b OR c`. What value do you get when you perform the `AND` operation on `a` and `b`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that a is true, b is true, and c is true. So, for d = a AND b OR c, I guess I need to figure out a AND b first, and then take that result and OR it with c."
+            },
+            {
+              "role": "teacher",
+              "content": "You correctly identified that the `AND` operation must be evaluated before the `OR` operation in the expression `d = a AND b OR c`. What value do you get when you perform the `AND` operation on `a` and `b`?"
+            },
+            {
+              "role": "student",
+              "content": "So, if a AND b is true, and then I OR that result with c, which is also true, then true OR true has to be true. I think the final value of d is true."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly determined that the result of the AND operation (a AND b) is true, and then accurately calculated that ORing this result with c (true OR true) yields true, thus arriving at the correct final value for d.",
+            "teacher_role": "session_close",
+            "support": "none"
+          },
+          "target_teacher_response": "That is correct. The evaluation of `d = a AND b OR c` results in `true`. Do you have any other problems you would like to work on?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_4",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that a is true because 10 is greater than 5, and b is true because 8 equals 8. So, if I calculate a AND b, that part is true. But then I have to combine that result with c, and I'm not sure if I should do (a AND b) OR c, or if the order of operations changes things."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly evaluated that a and b are true and that the result of a AND b is true. However, the student expressed uncertainty regarding the correct order of operations for the full expression, questioning whether the grouping (a AND b) OR c is necessary or if standard precedence rules apply.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "You have correctly determined the values for `a` and `b`, and the result of `a AND b` is `true`. \n\nRemember that boolean logic follows standard order of operations, meaning `AND` is evaluated before `OR`. \n\nTherefore, the next logical step is to evaluate the expression `(a AND b) OR c`. \n\nSubstitute the result of `a AND b` into the expression and determine the value of the entire statement. What is the final value of `(a AND b) OR c`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that a is true because 10 is greater than 5, and b is true because 8 equals 8. So, if I calculate a AND b, that part is true. But then I have to combine that result with c, and I'm not sure if I should do (a AND b) OR c, or if the order of operations changes things."
+            },
+            {
+              "role": "teacher",
+              "content": "You have correctly determined the values for `a` and `b`, and the result of `a AND b` is `true`. \n\nRemember that boolean logic follows standard order of operations, meaning `AND` is evaluated before `OR`. \n\nTherefore, the next logical step is to evaluate the expression `(a AND b) OR c`. \n\nSubstitute the result of `a AND b` into the expression and determine the value of the entire statement. What is the final value of `(a AND b) OR c`?"
+            },
+            {
+              "role": "student",
+              "content": "I'm still confused about the order. If I just look at `a` and `b`, and combine them with `OR` first, that gives me `true OR true`, which is `true`. Then I combine that result with `c` using `OR` again, so `true OR true`... wait, is that supposed to be `false`?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student continues to struggle with the order of operations, incorrectly grouping the variables by performing an OR operation on a and b first. Although the student correctly calculates that true OR true equals true, they conclude that the final result of the expression must be false.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You are correctly identifying the values for `a`, `b`, and `c`. However, you are evaluating the expression by calculating `a OR b` first. Remember that the structure of the problem requires you to evaluate the `AND` operation, specifically `a AND b`, before applying the `OR` operation with `c`."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_5",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about where to even start with this whole thing. It's a bunch of boolean expressions and then an `AND` and an `OR` combined. How do I even set up the calculation for `d`?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is expressing general confusion about the starting point for the calculation, specifically struggling with how to set up the process involving multiple boolean expressions and the combination of AND and OR operations to determine the final value of d.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "To evaluate `d`, you must first determine the boolean value for each component variable: `a`, `b`, and `c`.\n\nFocus on the definition of `a`: `a = (10 > 5)`.\n\nDetermine if the comparison `10 > 5` is true or false, and assign that resulting boolean value to `a`. What is the value of `a`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about where to even start with this whole thing. It's a bunch of boolean expressions and then an `AND` and an `OR` combined. How do I even set up the calculation for `d`?"
+            },
+            {
+              "role": "teacher",
+              "content": "To evaluate `d`, you must first determine the boolean value for each component variable: `a`, `b`, and `c`.\n\nFocus on the definition of `a`: `a = (10 > 5)`.\n\nDetermine if the comparison `10 > 5` is true or false, and assign that resulting boolean value to `a`. What is the value of `a`?"
+            },
+            {
+              "role": "student",
+              "content": "I mean, I get that I have to find the value for a, but where do the values for b and c come from? And how do I even start with the whole thing? It's just a bunch of comparisons and then the AND and OR operators, I'm lost."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student confirms understanding that the variable 'a' must be evaluated, but expresses significant confusion regarding the source of the values for 'b' and 'c' and struggles with the overall structure of combining multiple comparisons with AND and OR operators.",
+            "teacher_role": "partial_worked_step",
+            "support": "medium"
+          },
+          "target_teacher_response": "The variables `a`, `b`, and `c` are defined by the boolean expressions given in the problem statement itself.\n\nTo find the value of `a`, we evaluate the comparison `10 > 5`.\n\nSimilarly, the variable `b` is defined by the comparison `8 == 8`, and the variable `c` is defined by the comparison `3 < 10`.\n\nThese three variables, `a`, `b`, and `c`, must be evaluated first, before you can determine the final value of `d` using the structure `d = a AND b OR c`. What is the boolean value for `b`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm really confused about where to even start with this whole thing. It's a bunch of boolean expressions and then an `AND` and an `OR` combined. How do I even set up the calculation for `d`?"
+            },
+            {
+              "role": "teacher",
+              "content": "To evaluate `d`, you must first determine the boolean value for each component variable: `a`, `b`, and `c`.\n\nFocus on the definition of `a`: `a = (10 > 5)`.\n\nDetermine if the comparison `10 > 5` is true or false, and assign that resulting boolean value to `a`. What is the value of `a`?"
+            },
+            {
+              "role": "student",
+              "content": "I mean, I get that I have to find the value for a, but where do the values for b and c come from? And how do I even start with the whole thing? It's just a bunch of comparisons and then the AND and OR operators, I'm lost."
+            },
+            {
+              "role": "teacher",
+              "content": "The variables `a`, `b`, and `c` are defined by the boolean expressions given in the problem statement itself.\n\nTo find the value of `a`, we evaluate the comparison `10 > 5`.\n\nSimilarly, the variable `b` is defined by the comparison `8 == 8`, and the variable `c` is defined by the comparison `3 < 10`.\n\nThese three variables, `a`, `b`, and `c`, must be evaluated first, before you can determine the final value of `d` using the structure `d = a AND b OR c`. What is the boolean value for `b`?"
+            },
+            {
+              "role": "student",
+              "content": "I'm still totally lost. You keep mentioning a, b, and c, but I don't know how to combine them. I just see d = a AND b OR c, and I don't know if I should do the AND first or the OR first, or if I even know the values yet. Can you just walk me through the whole calculation for d? I need to see how it all works together."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is overwhelmed and struggling to understand how to combine the variables a, b, and c into the final expression for d. They specifically express confusion regarding the order of operations for the boolean logic, questioning whether the AND operation or the OR operation should be calculated first.",
+            "teacher_role": "partial_worked_step",
+            "support": "high"
+          },
+          "target_teacher_response": "We must follow the order of operations, which means we evaluate the `AND` operation before the `OR` operation. \n\nWe have already established that `a` is **true** (from `10 > 5`) and that `b` is **true** (from `8 == 8`).\n\nNow we evaluate the first part of the expression: `a AND b`. \n\nSubstituting the values, we calculate `true AND true`. \n\nRemember that the `AND` operator only returns `true` if **both** operands are `true`. \n\nWhat is the resulting boolean value for `a AND b`?"
+        }
+      ]
+    }
+  ]
+}

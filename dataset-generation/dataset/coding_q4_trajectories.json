@@ -1,0 +1,247 @@
+{
+  "problem": "Consider the following pseudocode: `function calculate(a, b, c): return (a * b) + c;`. Given that `a = 3`, `b = 7`, and `c = 10`, what will the function `calculate(a, b, c)` return?",
+  "topic": "coding",
+  "subtopic": "simple function output (with no loops)",
+  "solution_steps": [
+    "Calculate `a * b`: 3 * 7 = 21",
+    "Add `c` to the result: 21 + 10 = 31",
+    "The function returns the final result: 31"
+  ],
+  "trajectories": [
+    {
+      "trajectory_id": "traj_1",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure where to start with this function. It has three variables and then it does multiplication and addition, so I don't know what order I should calculate things in."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student expressed confusion regarding the order of operations, noting that the function involves both multiplication and addition and is unsure of the correct sequence for calculating the result.",
+            "teacher_role": "inject_info",
+            "support": "none"
+          },
+          "target_teacher_response": "When evaluating a function like `calculate(a, b, c)`, you must follow the established rules of arithmetic and the structure defined by the function itself. The key concept here is the order of operations, which dictates that operations inside parentheses must be performed first.\n\nIn the pseudocode, the expression is `(a * b) + c`. The parentheses around `(a * b)` tell you that the multiplication of `a` and `b` must be treated as a single unit and calculated before anything else.\n\nAfter you determine the result of the expression inside the parentheses, you then perform the remaining operation, which is adding `c` to that result.\n\nGiven the function `calculate(a, b, c)` and the values `a = 3`, `b = 7`, and `c = 10`, what is the first calculation you need to perform based on the structure of the function?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm not sure where to start with this function. It has three variables and then it does multiplication and addition, so I don't know what order I should calculate things in."
+            },
+            {
+              "role": "teacher",
+              "content": "When evaluating a function like `calculate(a, b, c)`, you must follow the established rules of arithmetic and the structure defined by the function itself. The key concept here is the order of operations, which dictates that operations inside parentheses must be performed first.\n\nIn the pseudocode, the expression is `(a * b) + c`. The parentheses around `(a * b)` tell you that the multiplication of `a` and `b` must be treated as a single unit and calculated before anything else.\n\nAfter you determine the result of the expression inside the parentheses, you then perform the remaining operation, which is adding `c` to that result.\n\nGiven the function `calculate(a, b, c)` and the values `a = 3`, `b = 7`, and `c = 10`, what is the first calculation you need to perform based on the structure of the function?"
+            },
+            {
+              "role": "student",
+              "content": "I get that the parentheses mean I have to do the multiplication first, but when I look at the whole thing, (a * b) + c, I'm still confused about how to actually start the calculation with the numbers. Which part should I focus on first?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly understands that the parentheses dictate that the multiplication of a and b must be performed first. However, the student is currently struggling with the practical step of initiating the numerical calculation using the given values and needs guidance on where to focus first.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "You are correct that the structure dictates the order. Since the expression is `(a * b) + c`, the first required calculation is the value of the expression inside the parentheses, which is `a * b`. \n\nTo find this intermediate result, you must substitute the values for `a` and `b` into the expression `a * b` and calculate that product. \n\nWhat is the result of `a * b` using the given values?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_2",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I multiply `a` and `b`, which is 3 times 7, and that gives me 18. Then I add `c`, which is 10, so 18 plus 10 is 28. That's my final answer."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student incorrectly calculates the product of a and b, stating that 3 times 7 equals 18 instead of 21. Based on this initial error, the student then adds c (10) to 18, arriving at the final answer of 28.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You stated that `3` times `7` equals 18. Please recheck the multiplication of `a` and `b`."
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I multiply `a` and `b`, which is 3 times 7, and that gives me 18. Then I add `c`, which is 10, so 18 plus 10 is 28. That's my final answer."
+            },
+            {
+              "role": "teacher",
+              "content": "You stated that `3` times `7` equals 18. Please recheck the multiplication of `a` and `b`."
+            },
+            {
+              "role": "student",
+              "content": "Oh, wait, I messed up the multiplication again. Three times seven is actually twenty-one. So now I have 21, and then I need to add c, which is 10. But how do I put that together? What do I do with the 21 and the 10?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student successfully corrected the multiplication of a and b, stating that 3 times 7 equals 21. The student correctly identified that the next step is to add c, which is 10, to this intermediate result, but they are now asking for procedural guidance on how to combine the two numbers.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The function definition specifies that the return value is the result of `(a * b)` plus `c`. \n\nTo find the final result, you must calculate the value of `(a * b)` first, and then add `c` to that intermediate result. \n\nFocus on the expression: `(a * b) + c`. \n\nWhat is the value of `(a * b) + c`?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_3",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "Okay, so if I calculate a times b, I get 21. Then I just need to add c to that result."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly calculated a times b, finding the result to be 21. They also correctly identified that the next step is to add c to this intermediate result.",
+            "teacher_role": "confirm_and_advance",
+            "support": "none"
+          },
+          "target_teacher_response": "You correctly determined the value of `a * b` and are ready to incorporate `c`. What value do you need to add to 21?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "Okay, so if I calculate a times b, I get 21. Then I just need to add c to that result."
+            },
+            {
+              "role": "teacher",
+              "content": "You correctly determined the value of `a * b` and are ready to incorporate `c`. What value do you need to add to 21?"
+            },
+            {
+              "role": "student",
+              "content": "If I take 21 and add 10, I get 31. So the function returns 31."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identifies that the final step is adding the value of c (10) to the product of a and b (21), and accurately concludes that the function returns 31.",
+            "teacher_role": "session_close",
+            "support": "none"
+          },
+          "target_teacher_response": "That is correct. The function returns 31. Do you have any other problems you'd like to work on?"
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_4",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that the first thing the function does is multiply 'a' and 'b'. So, a times b is 21. What do I do with that result and 'c'?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified that the first step is multiplying a and b, calculating the result as 21. The student is now asking for guidance on how to incorporate the variable c into the final calculation.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "You have calculated the value of `a * b`. \nTo find the return value, you need to take that result and perform an addition operation with the variable `c`. \nSpecifically, you need to calculate `(a * b) + c`. \nWhat is the next step in combining these two results?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I figured out that the first thing the function does is multiply 'a' and 'b'. So, a times b is 21. What do I do with that result and 'c'?"
+            },
+            {
+              "role": "teacher",
+              "content": "You have calculated the value of `a * b`. \nTo find the return value, you need to take that result and perform an addition operation with the variable `c`. \nSpecifically, you need to calculate `(a * b) + c`. \nWhat is the next step in combining these two results?"
+            },
+            {
+              "role": "student",
+              "content": "I think I just add 21 and 10, and that gives me 30. So, that's what the function returns."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified that the next step is to add the result of a times b (21) and c (10), but they made a calculation error, stating that 21 plus 10 equals 30.",
+            "teacher_role": "redirect",
+            "support": "none"
+          },
+          "target_teacher_response": "You calculated 21 plus 10 equals 30. Please check your addition of 21 and 10 again. Remember, you are calculating `(a * b) + c`."
+        }
+      ]
+    },
+    {
+      "trajectory_id": "traj_5",
+      "entries": [
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm looking at this function, calculate(a, b, c), and I'm not sure where to start. It has three variables, and it's asking for a return value. Is there a specific order I need to follow?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student correctly identified the function and the variables but is unsure about the required order of operations to calculate the return value.",
+            "teacher_role": "partial_worked_step",
+            "support": "low"
+          },
+          "target_teacher_response": "The function definition tells us the exact order of operations. \nFirst, you must calculate the product of `a` and `b`. This is represented by the expression `a * b`. \n**Remember** that the result of this multiplication must then be added to `c`. \nFocus on evaluating the expression `a * b` first. What value do you get when you multiply `a` by `b`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm looking at this function, calculate(a, b, c), and I'm not sure where to start. It has three variables, and it's asking for a return value. Is there a specific order I need to follow?"
+            },
+            {
+              "role": "teacher",
+              "content": "The function definition tells us the exact order of operations. \nFirst, you must calculate the product of `a` and `b`. This is represented by the expression `a * b`. \n**Remember** that the result of this multiplication must then be added to `c`. \nFocus on evaluating the expression `a * b` first. What value do you get when you multiply `a` by `b`?"
+            },
+            {
+              "role": "student",
+              "content": "I don't know what to do with `a` and `b`. The problem just gives the function, but where do the values for `a` and `b` come from? I'm really lost on how to even start the multiplication."
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student expressed confusion regarding the origin of the values for variables a and b, noting that the problem only provided the function definition and making it difficult to start the multiplication.",
+            "teacher_role": "partial_worked_step",
+            "support": "medium"
+          },
+          "target_teacher_response": "The values for the variables are provided in the problem description itself. \nSpecifically, the problem states that we are given **a = 3**, **b = 7**, and **c = 10**. \nThese are the initial values we must use to evaluate the function. \nWe already established that the first step is to calculate the product of `a` and `b`. \nNow that you know the values for `a` and `b`, what is the result of evaluating the expression `a * b`?"
+        },
+        {
+          "dialogue_history": [
+            {
+              "role": "student",
+              "content": "I'm looking at this function, calculate(a, b, c), and I'm not sure where to start. It has three variables, and it's asking for a return value. Is there a specific order I need to follow?"
+            },
+            {
+              "role": "teacher",
+              "content": "The function definition tells us the exact order of operations. \nFirst, you must calculate the product of `a` and `b`. This is represented by the expression `a * b`. \n**Remember** that the result of this multiplication must then be added to `c`. \nFocus on evaluating the expression `a * b` first. What value do you get when you multiply `a` by `b`?"
+            },
+            {
+              "role": "student",
+              "content": "I don't know what to do with `a` and `b`. The problem just gives the function, but where do the values for `a` and `b` come from? I'm really lost on how to even start the multiplication."
+            },
+            {
+              "role": "teacher",
+              "content": "The values for the variables are provided in the problem description itself. \nSpecifically, the problem states that we are given **a = 3**, **b = 7**, and **c = 10**. \nThese are the initial values we must use to evaluate the function. \nWe already established that the first step is to calculate the product of `a` and `b`. \nNow that you know the values for `a` and `b`, what is the result of evaluating the expression `a * b`?"
+            },
+            {
+              "role": "student",
+              "content": "I still don't get it. You keep talking about evaluating the expression, but I don't know how to actually do the math part. Can you just walk me through it? Like, show me exactly what numbers I should multiply and what the next step is after I get that result?"
+            }
+          ],
+          "internal_state": {
+            "current_status": "The student is expressing difficulty with the procedural aspect of the problem, stating that while they understand the concept of evaluating the expression, they do not know how to perform the actual arithmetic calculations. They are requesting a detailed, step-by-step walkthrough of the required multiplication and addition.",
+            "teacher_role": "partial_worked_step",
+            "support": "high"
+          },
+          "target_teacher_response": "We are working with the expression `a * b`. Since we know that `a` is 3 and `b` is 7, we substitute these values into the expression.\nThis gives us the calculation: `3 * 7`.\n**Remember** that the result of this multiplication is the value we must use for the next step, which is adding `c`.\nSo, what is the product of 3 and 7?"
+        }
+      ]
+    }
+  ]
+}

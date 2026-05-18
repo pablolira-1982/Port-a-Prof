@@ -1,0 +1,72 @@
+{
+  "category": "probability",
+  "model": "gemma3:12b-it-qat",
+  "generated_at": "2026-05-09T11:28:28.513310",
+  "total": 6,
+  "questions": [
+    {
+      "subtopic": "calculating probability using a sample space",
+      "question": "A bag contains 5 red marbles, 3 blue marbles, and 2 green marbles. If you randomly draw two marbles without replacement, what is the probability that the first marble is red and the second marble is blue?",
+      "solution": [
+        "1. Calculate the probability of drawing a red marble first: P(Red first) = (Number of red marbles) / (Total number of marbles) = 5 / (5 + 3 + 2) = 5/10 = 1/2",
+        "2. Given that a red marble was drawn and not replaced, calculate the new total number of marbles: New total = 10 - 1 = 9",
+        "3. Calculate the probability of drawing a blue marble second, given that a red marble was drawn first: P(Blue second | Red first) = (Number of blue marbles) / (New total number of marbles) = 3 / 9 = 1/3",
+        "4. Calculate the probability of drawing a red marble first and a blue marble second by multiplying the individual probabilities: P(Red first and Blue second) = P(Red first) * P(Blue second | Red first) = (1/2) * (1/3) = 1/6"
+      ]
+    },
+    {
+      "subtopic": "calculating probability using complementary events",
+      "question": "A manufacturing process produces metal bolts, and 2% of them are defective. If a quality control inspector randomly selects 10 bolts, what is the probability that at least one bolt is defective?",
+      "solution": [
+        "1. Define the complementary event: The complementary event to 'at least one bolt is defective' is 'no bolts are defective'.",
+        "2. Calculate the probability of the complementary event: The probability of a single bolt not being defective is 1 - 0.02 = 0.98.",
+        "3. Calculate the probability of no defective bolts in 10 selections: Since the selections are independent, the probability of 10 non-defective bolts is 0.98^10 ≈ 0.81707.",
+        "4. Calculate the probability of at least one defective bolt:  The probability of at least one defective bolt is 1 minus the probability of no defective bolts: 1 - 0.81707 ≈ 0.18293."
+      ]
+    },
+    {
+      "subtopic": "calculating expected value for a discrete probability distribution",
+      "question": "A carnival game involves spinning a wheel with three equally sized sections. If the wheel lands on red, you win $5; on blue, you win $2; and on green, you lose $1. What is the expected value of playing this game?",
+      "solution": [
+        "1. Define the possible outcomes and their corresponding probabilities: Red ($5 win), Blue ($2 win), Green (-$1 loss). Since the sections are equally sized, each outcome has a probability of 1/3.",
+        "2. Calculate the expected value for each outcome: Expected Value (Red) = $5 * (1/3) = $5/3; Expected Value (Blue) = $2 * (1/3) = $2/3; Expected Value (Green) = -$1 * (1/3) = -$1/3.",
+        "3. Calculate the total expected value by summing the expected values of each outcome: Total Expected Value = ($5/3) + ($2/3) + (-$1/3) = $6/3 = $2."
+      ]
+    },
+    {
+      "subtopic": "finding the probability of consecutive independent events",
+      "question": "A vending machine dispenses snacks. The probability of dispensing a bag of chips is 0.3, and the probability of dispensing a candy bar is 0.4. If you press the button twice, what is the probability that the machine dispenses a bag of chips followed by a candy bar?",
+      "solution": [
+        "1. Define the events: Let C be the event of dispensing chips, and B be the event of dispensing a candy bar.",
+        "2. State the given probabilities: P(C) = 0.3 and P(B) = 0.4.",
+        "3. Recognize the independence: The events are independent, meaning the outcome of the first dispense does not affect the outcome of the second dispense.",
+        "4. Calculate the probability of consecutive independent events: P(C and B) = P(C) * P(B).",
+        "5. Substitute the given probabilities: P(C and B) = 0.3 * 0.4.",
+        "6. Perform the calculation: P(C and B) = 0.12."
+      ]
+    },
+    {
+      "subtopic": "calculating the number of arrangements using basic permutations",
+      "question": "A bakery is creating a display of 6 different types of cookies. If they want to arrange 4 of these cookies in a row on the display, how many different arrangements are possible?",
+      "solution": [
+        "1. We need to find the number of permutations of 6 cookies taken 4 at a time, which is denoted as P(6, 4).",
+        "2. The formula for permutations is P(n, r) = n! / (n - r)!, where n is the total number of items and r is the number of items to arrange.",
+        "3. Substituting n = 6 and r = 4 into the formula, we get P(6, 4) = 6! / (6 - 4)! = 6! / 2!.",
+        "4. Calculating the factorials: 6! = 6 × 5 × 4 × 3 × 2 × 1 = 720 and 2! = 2 × 1 = 2.",
+        "5. Therefore, P(6, 4) = 720 / 2 = 360. Thus, there are 360 different arrangements possible."
+      ]
+    },
+    {
+      "subtopic": "calculating simple conditional probability from from a word problem scenario",
+      "question": "A bag contains 5 red marbles and 3 blue marbles. If a marble is randomly selected and it is red, what is the probability that it is also one of the larger red marbles, knowing that 2 of the 5 red marbles are larger than the others?",
+      "solution": [
+        "1. Define the events: R = marble is red, L = marble is larger. We want to find P(L|R).",
+        "2. Recall the conditional probability formula: P(L|R) = P(L and R) / P(R).",
+        "3. Calculate P(R): The probability of selecting a red marble is the number of red marbles divided by the total number of marbles: P(R) = 5/8.",
+        "4. Calculate P(L and R): The probability of selecting a larger red marble is the number of larger red marbles divided by the total number of marbles: P(L and R) = 2/8.",
+        "5. Substitute the values into the conditional probability formula: P(L|R) = (2/8) / (5/8).",
+        "6. Simplify the fraction: P(L|R) = 2/5."
+      ]
+    }
+  ]
+}
