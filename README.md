@@ -1,6 +1,6 @@
 # Port-a-Prof: Aprendizado mais profundo, onde você estiver 💭
 ### Expandindo o acesso à educação com IA, sem comprometer a qualidade do aprendizado.
-*Um projeto para o [The Gemma 4 Good Hackathon](https://www.kaggle.com/competitions/gemma-4-good-hackathon)*
+*Um projeto para o com dedicação para os necessitados.*
 
 ---
 
