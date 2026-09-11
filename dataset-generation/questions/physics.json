@@ -1,77 +1,77 @@
 {
-  "category": "physics",
+  "category": "física",
   "model": "gemma3:12b-it-qat",
   "generated_at": "2026-05-03T12:20:54.885763",
   "total": 6,
   "questions": [
     {
-      "subtopic": "constant-acceleration motion",
-      "question": "A rocket accelerates from rest at a constant 5.0 m/s² for 10.0 seconds, then coasts at a constant velocity. How far does the rocket travel from the start during the first 15.0 seconds?",
+      "subtopic": "movimento de aceleração constante",
+      "question": "Um foguete acelera de repouso a uma constante de 5,0 m/s2 para 10.0 segundos, em seguida, costa a uma velocidade constante. Quão longe o foguete viaja desde o início durante o primeiro 15.0 segundos?",
       "solution": [
-        "1. Calculate the distance traveled during acceleration: d₁ = v₀t + (1/2)at², where v₀ = 0 m/s, a = 5.0 m/s², and t = 10.0 s.",
-        "2. Substitute the values: d₁ = (0 m/s)(10.0 s) + (1/2)(5.0 m/s²)(10.0 s)² = 0 + (2.5 m/s²)(100 s²) = 250 m.",
-        "3. Calculate the final velocity after acceleration: v = v₀ + at, where v₀ = 0 m/s, a = 5.0 m/s², and t = 10.0 s.",
-        "4. Substitute the values: v = 0 m/s + (5.0 m/s²)(10.0 s) = 50 m/s.",
-        "5. Calculate the distance traveled during coasting: d₂ = vt, where v = 50 m/s and t = 15.0 s - 10.0 s = 5.0 s.",
-        "6. Substitute the values: d₂ = (50 m/s)(5.0 s) = 250 m.",
-        "7. Calculate the total distance traveled: d = d₁ + d₂ = 250 m + 250 m = 500 m."
+        "1. Calcular a distância percorrida durante a aceleração: d1 = v0t + (1/2)at2, onde v0 = 0 m/s, a = 5,0 m/s2 e t = 10,0 s.",
+        "2. Substituir os valores: d1 = (0 m/s)(10,0 s) + (1/2)(5.0 m/s2)(10,0 s)2 = 0 + (2,5 m/s2)(100 s2) = 250 m.",
+        "3. Calcular a velocidade final após aceleração: v = v0 + em, onde v0 = 0 m/s, a = 5,0 m/s2 e t = 10,0 s.",
+        "4. Substitua os valores: v = 0 m/s + (5,0 m/s2) (10,0 s) = 50 m/s.",
+        "5. Calcular a distância percorrida durante a costa: d2 = vt, onde v = 50 m/s e t = 15,0 s - 10,0 s = 5,0 s.",
+        "6. Substitua os valores: d2 = (50 m/s)(5.0 s) = 250 m.",
+        "7. Calcular a distância total percorrida: d = d1 + d2 = 250 m + 250 m = 500 m."
       ]
     },
     {
-      "subtopic": "vertical motion under gravity",
-      "question": "A ball is thrown upwards with an initial velocity of 18 m/s from a height of 2 meters above the ground. Ignoring air resistance, determine the time it takes for the ball to hit the ground.",
+      "subtopic": "movimento vertical sob gravidade",
+      "question": "Uma bola é lançada para cima com uma velocidade inicial de 18 m/s a partir de uma altura de 2 metros acima do solo. Ignorando a resistência do ar, determinar o tempo que leva para a bola bater no chão.",
       "solution": [
-        "1. Determine the initial conditions: v₀ = 18 m/s, y₀ = 2 m, a = -9.8 m/s² (due to gravity), y = 0 m (ground level).",
-        "2. Use the kinematic equation: y = y₀ + v₀t + (1/2)at² to find the time t when y = 0.",
-        "3. Substitute the values: 0 = 2 + 18t + (1/2)(-9.8)t²  =>  0 = 2 + 18t - 4.9t².",
-        "4. Rearrange the equation into a quadratic form: 4.9t² - 18t - 2 = 0.",
-        "5. Solve the quadratic equation for t using the quadratic formula: t = (-b ± √(b² - 4ac)) / 2a, where a = 4.9, b = -18, c = -2.",
-        "6. Calculate the discriminant: Δ = b² - 4ac = (-18)² - 4(4.9)(-2) = 324 + 39.2 = 363.2.",
-        "7. Calculate the two possible values for t: t₁ = (18 + √363.2) / (2 * 4.9) ≈ (18 + 19.05) / 9.8 ≈ 3.73 s and t₂ = (18 - √363.2) / (2 * 4.9) ≈ (18 - 19.05) / 9.8 ≈ -0.16 s.",
-        "8. Since time cannot be negative, the relevant solution is t ≈ 3.73 s.",
-        "9. Therefore, the time it takes for the ball to hit the ground is approximately 3.73 seconds."
+        "1. Determinar as condições iniciais: v0 = 18 m/s, y0 = 2 m, a = -9,8 m/s2 (devido à gravidade), y = 0 m (nível do solo).",
+        "2. Use a equação cinemática: y = y0 + v0t + (1/2)at2 para encontrar o tempo t quando y = 0.",
+        "3. Substituir os valores: 0 = 2 + 18t + (1/2)(-9.8)t2 = > 0 = 2 + 18t - 4.9t2.",
+        "4. Rearranjar a equação em uma forma quadrática: 4.9t2 - 18t - 2 = 0.",
+        "5. Resolva a equação quadrática para t usando a fórmula quadrática: t = (-b ± √(b2 - 4ac)) / 2a, onde a = 4,9, b = -18, c = -2.",
+        "6. Calcular o discriminante: Δ = b2 - 4ac = (-18)2 - 4(4.9)(-2) = 324 + 39.2 = 363.2.",
+        "7. Calcule os dois valores possíveis para t: t1 = (18 + 363.2) / (2 * 4.9) □ (18 + 19.05) / 9.8 □ 3,73 s e t2 = (18 - 363.2) / (2 * 4.9) □ (18 - 19.05) / 9.8 □ -0.16 s.",
+        "8. Uma vez que o tempo não pode ser negativo, a solução relevante é t = 3,73 s.",
+        "9. Portanto, o tempo que leva para a bola bater no chão é de aproximadamente 3,73 segundos."
       ]
     },
     {
-      "subtopic": "Newton's second law and forces",
-      "question": "A 12 kg crate rests on a ramp inclined at 30 degrees to the horizontal. The coefficient of kinetic friction between the crate and the ramp is 0.25. Determine the acceleration of the crate down the ramp.",
+      "subtopic": "Lei e forças segundo de Newton",
+      "question": "Uma caixa de 12 kg repousa em uma rampa inclinada a 30 graus para a horizontal. O coeficiente de atrito cinético entre a caixa e a rampa é de 0,25. Determinar a aceleração da caixa na rampa.",
       "solution": [
-        "1. Calculate the gravitational force acting on the crate: F_gravity = mg = (12 kg)(9.8 m/s²) = 117.6 N",
-        "2. Resolve the gravitational force into components parallel and perpendicular to the ramp: F_parallel = F_gravity * sin(30°) = 117.6 N * 0.5 = 58.8 N; F_perpendicular = F_gravity * cos(30°) = 117.6 N * 0.866 = 101.9 N",
-        "3. Calculate the normal force: F_normal = F_perpendicular = 101.9 N",
-        "4. Calculate the force of kinetic friction: F_friction = μ_k * F_normal = 0.25 * 101.9 N = 25.475 N",
-        "5. Calculate the net force acting on the crate down the ramp: F_net = F_parallel - F_friction = 58.8 N - 25.475 N = 33.325 N",
-        "6. Calculate the acceleration of the crate down the ramp using Newton's second law: a = F_net / m = 33.325 N / 12 kg = 2.777 m/s²"
+        "1. Calcular a força gravitacional que atua na caixa: F gravidade = mg = (12 kg)(9,8 m/s2) = 117.6 N",
+        "2. Resolver a força gravitacional em componentes paralelos e perpendiculares à rampa: F paralelo = F gravidade * sin(30°) = 117.6 N * 0,5 = 58.8 N; F perpendicular = F gravidade * cos(30°) = 117.6 N * 0,866 = 101.9 N",
+        "3. Calcular a força normal: F normal = F perpendicular = 101,9 N",
+        "4. Calcular a força do atrito cinético: F friction = μ k * F normal = 0,25 * 101.9 N = 25.475 N",
+        "5. Calcular a força líquida que atua sobre o caixote na rampa: F net = F parallel - F friction = 58.8 N - 25.475 N = 33.325 N",
+        "6. Calcular a aceleração da caixa abaixo da rampa usando a lei segundo de Newton: a = F net / m = 33.325 N / 12 kg = 2.777 m/s2"
       ]
     },
     {
-      "subtopic": "calculating work done (W = Fd)",
-      "question": "A 15 kg box is pushed across a horizontal floor with a constant force of 25 N at an angle of 30 degrees above the horizontal. If the box moves a distance of 5 meters, calculate the work done on the box by the applied force.",
+      "subtopic": "cálculo do trabalho realizado (W = Fd)",
+      "question": "Uma caixa de 15 kg é empurrada através de um piso horizontal com uma força constante de 25 N em um ângulo de 30 graus acima da horizontal. Se a caixa mover uma distância de 5 metros, calcular o trabalho feito na caixa pela força aplicada.",
       "solution": [
-        "1. Calculate the horizontal component of the force: F_horizontal = F * cos(theta) = 25 N * cos(30 degrees) = 25 N * 0.866 ≈ 21.65 N",
-        "2. Work is defined as the dot product of force and displacement, so only the horizontal component of the force contributes to the work done: W = F_horizontal * d = 21.65 N * 5 m",
-        "3. Calculate the work done: W = 21.65 N * 5 m = 108.25 J"
+        "1. Calcular o componente horizontal da força: F horizontal = F * cos(theta) = 25 N * cos(30 graus) = 25 N * 0.866",
+        "2. O trabalho é definido como o produto do ponto de força e deslocamento, então apenas o componente horizontal da força contribui para o trabalho feito: W = F horizontal * d = 21,65 N * 5 m",
+        "3. Calcular o trabalho realizado: W = 21,65 N * 5 m = 108,25 J"
       ]
     },
     {
-      "subtopic": "momentum (p = mv)",
-      "question": "A 2.5 kg bowling ball traveling at 8.0 m/s collides head-on with a 0.5 kg bowling pin at rest. Assuming the collision is perfectly elastic and the pin moves in the same direction as the ball after the collision, what is the final velocity of the bowling ball?",
+      "subtopic": "momento (p = mv)",
+      "question": "Uma bola de bowling de 2,5 kg que viaja a 8,0 m/s colide de frente com um pino de bowling de 0,5 kg em repouso. Assumindo que a colisão é perfeitamente elástica e o pino se move na mesma direção que a bola após a colisão, qual é a velocidade final da bola de bowling?",
       "solution": [
-        "1. Define the initial momentum of the system: P_initial = P_ball + P_pin = (m_ball * v_ball) + (m_pin * v_pin) = (2.5 kg * 8.0 m/s) + (0.5 kg * 0 m/s) = 20 kg*m/s",
-        "2. Apply the conservation of momentum: P_initial = P_final, where P_final = (m_ball * v_ball_final) + (m_pin * v_pin_final).  Therefore, 20 kg*m/s = (2.5 kg * v_ball_final) + (0.5 kg * v_pin_final).",
-        "3. For a perfectly elastic head-on collision, the relative velocities before and after the collision are equal and opposite: v_relative = v_ball - v_pin; v_relative_final = v_pin_final - v_ball_final.  Since the pin was initially at rest, v_relative = 8.0 m/s; therefore, 8.0 m/s = v_pin_final - v_ball_final.",
-        "4. Solve the system of equations: 20 = 2.5 * v_ball_final + 0.5 * v_pin_final and 8 = v_pin_final - v_ball_final.  From the second equation, v_pin_final = 8 + v_ball_final. Substitute this into the first equation: 20 = 2.5 * v_ball_final + 0.5 * (8 + v_ball_final).",
-        "5. Simplify and solve for v_ball_final: 20 = 2.5 * v_ball_final + 4 + 0.5 * v_ball_final; 16 = 3 * v_ball_final; v_ball_final = 16/3 m/s ≈ 5.33 m/s"
+        "1. Defina o momento inicial do sistema: P inicial = P ball + P pin = (m ball * v ball) + (m pin * v pin) = (2,5 kg * 8,0 m/s) + (0,5 kg * 0 m/s) = 20 kg*m/s",
+        "2. Aplicar a conservação do momento: P inicial = P final, onde P final = (m ball * v ball final) + (m pin * v pin final). Portanto, 20 kg*m/s = (2,5 kg * v ball final) + (0,5 kg * v pin final).",
+        "3. Para uma colisão frontal perfeitamente elástica, as velocidades relativas antes e depois da colisão são iguais e opostas: v relative = v ball - v pin; v relative final = v pin final - v ball final. Como o pino estava inicialmente em repouso, v relativo = 8,0 m/s; portanto, 8,0 m/s = v pin final - v ball final.",
+        "4. Resolva o sistema de equações: 20 = 2,5 * v ball final + 0,5 * v pin final e 8 = v pin final - v ball final. Da equação segundo, v pin final = 8 + v ball final. Substitua isto na primeira equação: 20 = 2,5 * v ball final + 0,5 * (8 + v ball final).",
+        "5. Simplifique e solucione para v ball final: 20 = 2,5 * v ball final + 4 + 0,5 * v ball final; 16 = 3 * v ball final; v ball final = 16/3 m/s"
       ]
     },
     {
-      "subtopic": "using v = u + at",
-      "question": "A car accelerates from rest at a constant rate of 2.5 m/s² for 8.0 seconds.  After this time, the car maintains a constant velocity for another 6.0 seconds. What is the total distance traveled by the car?",
+      "subtopic": "usando v = u + em",
+      "question": "Um carro acelera de repouso a uma taxa constante de 2,5 m/s2 para 8.0 segundos. Após este tempo, o carro mantém uma velocidade constante para outro 6.0 segundos. Qual é a distância total percorrida pelo carro?",
       "solution": [
-        "1. Calculate the final velocity (v₁) after the acceleration phase using v = u + at: v₁ = 0 m/s + (2.5 m/s²) * (8.0 s) = 20 m/s.",
-        "2. Calculate the distance traveled during the acceleration phase (d₁) using d = ut + (1/2)at²: d₁ = (0 m/s * 8.0 s) + (1/2 * 2.5 m/s² * (8.0 s)²) = 80 m.",
-        "3. Calculate the distance traveled during the constant velocity phase (d₂) using d = vt: d₂ = (20 m/s) * (6.0 s) = 120 m.",
-        "4. Calculate the total distance traveled (d) by summing the distances from the two phases: d = d₁ + d₂ = 80 m + 120 m = 200 m."
+        "1. Calcular a velocidade final (v1) após a fase de aceleração usando v = u + a: v1 = 0 m/s + (2,5 m/s2) * (8,0 s) = 20 m/s.",
+        "2. Calcular a distância percorrida durante a fase de aceleração (d1) usando d = ut + (1/2)at2: d1 = (0 m/s * 8,0 s) + (1/2 * 2,5 m/s2 * (8,0 s)2) = 80 m.",
+        "3. Calcular a distância percorrida durante a fase de velocidade constante (d2) usando d = vt: d2 = (20 m/s) * (6,0 s) = 120 m.",
+        "4. Calcular a distância total percorrida (d) somando as distâncias das duas fases: d = d1 + d2 = 80 m + 120 m = 200 m."
       ]
     }
   ]

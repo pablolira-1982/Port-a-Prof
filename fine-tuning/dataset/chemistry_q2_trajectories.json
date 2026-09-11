@@ -1,11 +1,11 @@
 {
-  "problem": "A chemist needs 0.750 moles of sodium chloride (NaCl) for a reaction. If sodium chloride has a molar mass of 58.44 g/mol, what mass of NaCl, in grams, must the chemist weigh out?",
-  "topic": "chemistry",
-  "subtopic": "converting from mass to moles",
+  "problem": "Um químico precisa de 0,750 moles de cloreto de sódio (NaCl) para uma reação. Se o cloreto de sódio tem uma massa molar de 58,44 g/mol, que massa de NaCl, em gramas, deve o químico pesar?",
+  "topic": "química",
+  "subtopic": "conversão de massa em moles",
   "solution_steps": [
-    "Identify the given information: desired moles of NaCl = 0.750 mol; molar mass of NaCl = 58.44 g/mol.",
-    "Recall the relationship between mass, moles, and molar mass: moles = mass / molar mass. Rearrange to solve for mass: mass = moles × molar mass.",
-    "Substitute the given values into the equation: mass = 0.750 mol × 58.44 g/mol = 43.83 g"
+    "Identificar as informações: moles desejados de NaCl = 0,750 mol; massa molar de NaCl = 58,44 g/mol.",
+    "Lembrar a relação entre massa, moles e massa molar: moles = massa/massa molar. Rearranjo para resolver a massa: massa = moles × massa molar.",
+    "Substituir os valores indicados na equação: massa = 0,750 mol × 58,44 g/mol = 43,83 g"
   ],
   "trajectories": [
     {
@@ -15,37 +15,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this problem. We know the moles of NaCl and the molar mass, but how do we actually get the mass in grams?"
+              "content": "Não sei por onde começar com este problema. Conhecemos as verrugas de NaCl e a massa molar, mas como é que conseguimos a massa em gramas?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the known variables, the moles of NaCl and the molar mass, but is struggling with the procedural step of determining the mathematical relationship required to calculate the mass in grams.",
+            "current_status": "O aluno identifica corretamente as variáveis conhecidas, as moles de NaCl e a massa molar, mas está lutando com o passo processual de determinar a relação matemática necessária para calcular a massa em gramas.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "The key concept here is understanding what molar mass represents. Molar mass is essentially a conversion factor that relates the amount of substance (moles) to the mass in grams. \n\nWhen we talk about molar mass, we are stating the mass of one mole of a substance. For example, if a substance has a molar mass of $M$ grams per mole, it means that $M$ grams contains exactly one mole of that substance.\n\nThis relationship allows us to set up a simple equation to find the mass ($m$) when we know the number of moles ($n$) and the molar mass ($M$). The formula is:\n$$m = n \\times M$$\n\nIn the context of this problem, we are given $n = 0.750$ moles of NaCl and $M = 58.44$ g/mol. We need to use this formula to find the required mass. \n\nGiven this relationship, what calculation should you perform to find the mass of NaCl?"
+          "target_teacher_response": "O conceito chave aqui é entender o que a massa molar representa. Massa molar é essencialmente um fator de conversão que relaciona a quantidade de substância (moles) com a massa em gramas.\n\nQuando falamos de massa molar, estamos declarando a massa de um mol de uma substância. Por exemplo, se uma substância tem uma massa molar de $M$ gramas por mol, significa que $M$ gramas contém exatamente um mol dessa substância.\n\nEssa relação nos permite estabelecer uma equação simples para encontrar a massa ($m$) quando sabemos o número de moles ($n$) e a massa molar ($M$). A fórmula é:\n$$m = n \\times M$$\n\nNo contexto desse problema, são-nos dados $n = 0,750$ moles de NaCl e $M = 58,44$ g/mol. Precisamos usar esta fórmula para encontrar a massa necessária.\n\nDada esta relação, que cálculo você deve realizar para encontrar a massa de NaCl?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this problem. We know the moles of NaCl and the molar mass, but how do we actually get the mass in grams?"
+              "content": "Não sei por onde começar com este problema. Conhecemos as verrugas de NaCl e a massa molar, mas como é que conseguimos a massa em gramas?"
             },
             {
               "role": "teacher",
-              "content": "The key concept here is understanding what molar mass represents. Molar mass is essentially a conversion factor that relates the amount of substance (moles) to the mass in grams. \n\nWhen we talk about molar mass, we are stating the mass of one mole of a substance. For example, if a substance has a molar mass of $M$ grams per mole, it means that $M$ grams contains exactly one mole of that substance.\n\nThis relationship allows us to set up a simple equation to find the mass ($m$) when we know the number of moles ($n$) and the molar mass ($M$). The formula is:\n$$m = n \\times M$$\n\nIn the context of this problem, we are given $n = 0.750$ moles of NaCl and $M = 58.44$ g/mol. We need to use this formula to find the required mass. \n\nGiven this relationship, what calculation should you perform to find the mass of NaCl?"
+              "content": "O conceito chave aqui é entender o que a massa molar representa. Massa molar é essencialmente um fator de conversão que relaciona a quantidade de substância (moles) com a massa em gramas.\n\nQuando falamos de massa molar, estamos declarando a massa de um mol de uma substância. Por exemplo, se uma substância tem uma massa molar de $M$ gramas por mol, significa que $M$ gramas contém exatamente um mol dessa substância.\n\nEssa relação nos permite estabelecer uma equação simples para encontrar a massa ($m$) quando sabemos o número de moles ($n$) e a massa molar ($M$). A fórmula é:\n$$m = n \\times M$$\n\nNo contexto desse problema, são-nos dados $n = 0,750$ moles de NaCl e $M = 58,44$ g/mol. Precisamos usar esta fórmula para encontrar a massa necessária.\n\nDada esta relação, que cálculo você deve realizar para encontrar a massa de NaCl?"
             },
             {
               "role": "student",
-              "content": "I see that the formula is mass equals moles times molar mass. But when I look at the numbers, I'm still a little confused about how to put it all together. What exactly do I multiply?"
+              "content": "Vejo que a fórmula é massa igual a molas vezes massa molar. Mas quando olho para os números, ainda estou um pouco confuso sobre como juntar tudo. O que exatamente eu multiplico?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly recalled the relationship that mass equals moles times molar mass, but they expressed continued confusion regarding the practical application of the numbers and specifically asked what values they should multiply.",
+            "current_status": "O aluno relembrava corretamente a relação que massa é igual a mols vezes massa molar, mas expressavam contínua confusão quanto à aplicação prática dos números e perguntavam especificamente quais valores deveriam multiplicar.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You are correctly identifying the relationship: the mass ($m$) is found by multiplying the number of moles ($n$) by the molar mass ($M$).\n\nFor this specific problem, we are looking for the mass of NaCl, so we need to set up the calculation as:\n$$m = n \\times M$$ \n\nRemember that $n$ is the given number of moles, and $M$ is the molar mass of NaCl. Now, substitute the given values into this expression and calculate the result."
+          "target_teacher_response": "Você está identificando corretamente a relação: a massa ($m$) é encontrada multiplicando o número de moles ($n$) pela massa molar ($M$).\n\nPara este problema específico, estamos procurando a massa de NaCl, então precisamos configurar o cálculo como:\n$$m = n \\times M$$\n\nLembre-se que $n$ é o número dado de moles, e $M$ é a massa molar de NaCl. Agora, substitua os valores dados nesta expressão e calcule o resultado."
         }
       ]
     },
@@ -56,37 +56,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I need to find the mass, and I know the moles are 0.750 and the molar mass is 58.44. I think I should divide the moles by the molar mass to get the mass. So, 0.750 divided by 58.44 gives me 0.0128 moles, which I guess is the mass in grams?"
+              "content": "Preciso de encontrar a massa, e sei que as verrugas são 0,750 e a massa molar é 58,44. Acho que devia dividir as toupeiras pela massa molar para obter a massa. Então, 0,750 dividido por 58,44 me dá 0,0128 moles, que eu acho que é a massa em gramas?"
             }
           ],
           "internal_state": {
-            "current_status": "The student incorrectly attempts to find the mass by dividing the moles by the molar mass, calculating 0.750 divided by 58.44 to get 0.0128, and misunderstanding that this result represents the mass in grams.",
+            "current_status": "O aluno tenta incorretamente encontrar a massa dividindo as moles pela massa molar, calculando 0,750 dividida por 58,44 para obter 0,0128, e mal-entendido de que esse resultado representa a massa em gramas.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly identified the values, but the relationship between mass, moles, and molar mass requires multiplication, not division. Can you re-examine the formula you need to use to find the mass when you know the moles and the molar mass?"
+          "target_teacher_response": "Você identificou corretamente os valores, mas a relação entre massa, moles e massa molar requer multiplicação, não divisão. Você pode reexaminar a fórmula que você precisa usar para encontrar a massa quando você conhece as toupeiras e a massa molar?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I need to find the mass, and I know the moles are 0.750 and the molar mass is 58.44. I think I should divide the moles by the molar mass to get the mass. So, 0.750 divided by 58.44 gives me 0.0128 moles, which I guess is the mass in grams?"
+              "content": "Preciso de encontrar a massa, e sei que as verrugas são 0,750 e a massa molar é 58,44. Acho que devia dividir as toupeiras pela massa molar para obter a massa. Então, 0,750 dividido por 58,44 me dá 0,0128 moles, que eu acho que é a massa em gramas?"
             },
             {
               "role": "teacher",
-              "content": "You correctly identified the values, but the relationship between mass, moles, and molar mass requires multiplication, not division. Can you re-examine the formula you need to use to find the mass when you know the moles and the molar mass?"
+              "content": "Você identificou corretamente os valores, mas a relação entre massa, moles e massa molar requer multiplicação, não divisão. Você pode reexaminar a fórmula que você precisa usar para encontrar a massa quando você conhece as toupeiras e a massa molar?"
             },
             {
               "role": "student",
-              "content": "Okay, if I multiply the moles by the molar mass, then 0.750 times 58.44 gives me 43.83. So, I have 43.83 grams. But wait, is that the final answer? What do I need to do with this number now?"
+              "content": "Se eu multiplicar as verrugas pela massa molar, então 0,750 vezes 58,44 dá-me 43,83. Então, eu tenho 43,83 gramas. Mas espera, essa é a resposta final? O que tenho de fazer com este número agora?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly applies the formula by multiplying the moles (0.750) by the molar mass (58.44), yielding the correct mass of 43.83 grams. The student demonstrates mastery of the calculation but expresses uncertainty regarding whether this calculated value is the final answer or if additional steps are necessary.",
+            "current_status": "O aluno aplica corretamente a fórmula multiplicando as moles (0,750) pela massa molar (58,44), produzindo a massa correta de 43,83 gramas. O aluno demonstra domínio do cálculo, mas expressa incerteza quanto a se este valor calculado é a resposta final ou se são necessários passos adicionais.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You have correctly calculated the mass in grams. \nTo ensure the final answer is presented with the correct units and significant figures, you need to confirm the unit analysis. \nRemember that the calculation was based on the relationship: $$\\text{Mass} = \\text{Moles} \\times \\text{Molar Mass}$$ \nSince the molar mass was given in grams per mole, the resulting unit for the mass is **grams**. \nNow, state the final calculated value, making sure to include the correct unit."
+          "target_teacher_response": "Você calculou corretamente a massa em gramas.\nPara garantir que a resposta final seja apresentada com as unidades corretas e números significativos, você precisa confirmar a análise da unidade.\nLembre-se que o cálculo foi baseado na relação: $$\\text{Mass} = \\text{Moles} \\times \\text{Molar Mass}$$\nComo a massa molar foi dada em gramas por mol, a unidade resultante para a massa é **gramas**.\nAgora, defina o valor final calculado, certificando-se de incluir a unidade correta."
         }
       ]
     },
@@ -97,37 +97,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "So, I know I have the moles, which is 0.750 mol, and I have the molar mass, 58.44 g/mol. Since I need mass, I guess I just have to multiply the moles by the molar mass, so it's 0.750 mol times 58.44 g/mol."
+              "content": "Então, eu sei que eu tenho as toupeiras, que é 0,750 mol, e eu tenho a massa molar, 58,44 g/mol. Como eu preciso de massa, eu acho que eu só tenho que multiplicar as moles pela massa molar, então é 0,750 mol vezes 58,44 g/mol."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the given values, 0.750 mol for moles and 58.44 g/mol for molar mass. They also correctly recall the relationship that mass is calculated by multiplying moles by molar mass, setting up the calculation as 0.750 mol times 58.44 g/mol.",
+            "current_status": "O aluno identifica corretamente os valores dados, 0,750 mol para moles e 58,44 g/mol para massa molar. Eles também lembram corretamente a relação que a massa é calculada multiplicando molares por massa molar, configurando o cálculo como 0,750 mol vezes 58,44 g/mol.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You correctly identified the relationship needed to find the mass. Given the values you set up, what unit will the final calculated mass be in?"
+          "target_teacher_response": "Identificaste correctamente a relação necessária para encontrar a massa. Dado os valores que você estabeleceu, em que unidade estará a massa final calculada?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "So, I know I have the moles, which is 0.750 mol, and I have the molar mass, 58.44 g/mol. Since I need mass, I guess I just have to multiply the moles by the molar mass, so it's 0.750 mol times 58.44 g/mol."
+              "content": "Então, eu sei que eu tenho as toupeiras, que é 0,750 mol, e eu tenho a massa molar, 58,44 g/mol. Como eu preciso de massa, eu acho que eu só tenho que multiplicar as moles pela massa molar, então é 0,750 mol vezes 58,44 g/mol."
             },
             {
               "role": "teacher",
-              "content": "You correctly identified the relationship needed to find the mass. Given the values you set up, what unit will the final calculated mass be in?"
+              "content": "Identificaste correctamente a relação necessária para encontrar a massa. Dado os valores que você estabeleceu, em que unidade estará a massa final calculada?"
             },
             {
               "role": "student",
-              "content": "If I multiply 0.750 mol by 58.44 g/mol, I get 43.83 g. So the mass must be 43.83 grams."
+              "content": "Se eu multiplicar 0,750 mol por 58,44 g/mol, eu recebo 43,83 g. Então a massa deve ser 43,83 gramas."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculates the mass by multiplying 0.750 mol by 58.44 g/mol, resulting in 43.83 g. The student successfully identifies the final unit of the calculated mass as grams.",
+            "current_status": "O aluno calcula corretamente a massa multiplicando 0,750 mol por 58,44 g/mol, resultando em 43,83 g. O aluno identifica com sucesso a unidade final da massa calculada como gramas.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is correct. The mass of sodium chloride needed is 43.83 grams. Do you have any other problems you would like to work on?"
+          "target_teacher_response": "Correto. A massa de cloreto de sódio necessária é de 43,83 gramas. Tem outros problemas em que gostaria de trabalhar?"
         }
       ]
     },
@@ -138,37 +138,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I know we need to find the mass, and I have the moles and the molar mass. It seems like I need to multiply the moles by the molar mass, but I'm not totally sure if that's the right formula for mass. Is it just moles times molar mass?"
+              "content": "Sei que precisamos de encontrar a massa, e tenho as verrugas e a massa molar. Parece que preciso multiplicar as molares pela massa molar, mas não tenho certeza se essa é a fórmula certa para a massa. É apenas molas vezes massa molar?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the variables needed (moles and molar mass) and proposed the correct formula, suggesting that mass equals moles multiplied by molar mass, while also expressing conceptual uncertainty about the formula's validity.",
+            "current_status": "O aluno identificou corretamente as variáveis necessárias (moles e massa molar) e propôs a fórmula correta, sugerindo que a massa é igual a moles multiplicadas pela massa molar, expressando também incerteza conceitual sobre a validade da fórmula.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The relationship between mass, moles, and molar mass is defined by the equation:\n$$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$\n\nRemember that **molar mass** is given in units of grams per mole (g/mol). \n\nNow, substitute the given values for the desired moles of NaCl and the molar mass of NaCl into this equation. What expression do you get?"
+          "target_teacher_response": "A relação entre massa, moles e massa molar é definida pela equação:\n$$\\text{mass} = \\text{moles} \\times \\text{molar mass} $$\n\nLembre-se que ** massa molar** é administrada em unidades de gramas por mol (g/mol).\n\nAgora, substitua os valores dados pelos moles desejados de NaCl e a massa molar de NaCl nesta equação. Qual é a sua expressão?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I know we need to find the mass, and I have the moles and the molar mass. It seems like I need to multiply the moles by the molar mass, but I'm not totally sure if that's the right formula for mass. Is it just moles times molar mass?"
+              "content": "Sei que precisamos de encontrar a massa, e tenho as verrugas e a massa molar. Parece que preciso multiplicar as molares pela massa molar, mas não tenho certeza se essa é a fórmula certa para a massa. É apenas molas vezes massa molar?"
             },
             {
               "role": "teacher",
-              "content": "The relationship between mass, moles, and molar mass is defined by the equation:\n$$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$\n\nRemember that **molar mass** is given in units of grams per mole (g/mol). \n\nNow, substitute the given values for the desired moles of NaCl and the molar mass of NaCl into this equation. What expression do you get?"
+              "content": "A relação entre massa, moles e massa molar é definida pela equação:\n$$\\text{mass} = \\text{moles} \\times \\text{molar mass} $$\n\nLembre-se que ** massa molar** é administrada em unidades de gramas por mol (g/mol).\n\nAgora, substitua os valores dados pelos moles desejados de NaCl e a massa molar de NaCl nesta equação. Qual é a sua expressão?"
             },
             {
               "role": "student",
-              "content": "If I plug in the numbers, I get 0.750 times 58.44, which equals 38.88. So the mass must be 38.88 grams."
+              "content": "Se eu ligar os números, eu tenho 0,750 vezes 58,44, que é igual a 38,88. Portanto, a massa deve ser 38,88 gramas."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly set up the calculation by multiplying 0.750 by 58.44, but made a calculation error, stating that the resulting mass is 38.88 grams instead of the correct value of 43.83 grams.",
+            "current_status": "O aluno configurou corretamente o cálculo multiplicando 0,750 por 58,44, mas cometeu um erro de cálculo, afirmando que a massa resultante é 38,88 gramasU em vez do valor correto de 43,83 gramas.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly set up the expression as 0.750 multiplied by 58.44. However, when you calculate 0.750 multiplied by 58.44, you get 38.88. Please check your arithmetic for that specific multiplication step."
+          "target_teacher_response": "Você corretamente configurar a expressão como 0,750 multiplicado por 58,44. No entanto, quando você calcula 0,750 multiplicado por 58,44, você obtém 38,88. Por favor, verifique sua aritmética para esse passo de multiplicação específico."
         }
       ]
     },
@@ -179,67 +179,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the mass of NaCl, but I'm not sure how to start. We have the moles and the molar mass, but I don't know what formula connects those three things."
+              "content": "Tenho de encontrar a massa do NaCl, mas não sei como começar. Temos as verrugas e a massa molar, mas não sei que fórmula liga essas três coisas."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the known values, noting that they have the desired moles of NaCl and the molar mass of NaCl. However, the student is struggling with the conceptual relationship and is unsure of the formula needed to calculate the unknown mass.",
+            "current_status": "O aluno identificou corretamente os valores conhecidos, observando que possui as molares desejadas de NaCl e a massa molar de NaCl. No entanto, o aluno está lutando com a relação conceitual e está inseguro da fórmula necessária para calcular a massa desconhecida.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To find the **mass** of a substance when you know the **moles** and the **molar mass**, you need to use the relationship: $$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$ \n\nIn this problem, the **moles** of NaCl are 0.750 mol, and the **molar mass** is 58.44 g/mol. \n\nSubstitute these values into the equation and calculate the resulting mass. What is the value you get for the mass?"
+          "target_teacher_response": "Para encontrar a massa** de uma substância quando você conhece o **moles** e a massa **molar**, você precisa usar a relação: $$ \\text{massa} = \\text{moles} \\times \\text{massa molar} $$\n\nNeste problema, os **moles** de NaCl são 0,750 mol, e a **massa molar** é 58,44 g/mol.\n\nSubstitua estes valores na equação e calcule a massa resultante. Qual é o valor da massa?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the mass of NaCl, but I'm not sure how to start. We have the moles and the molar mass, but I don't know what formula connects those three things."
+              "content": "Tenho de encontrar a massa do NaCl, mas não sei como começar. Temos as verrugas e a massa molar, mas não sei que fórmula liga essas três coisas."
             },
             {
               "role": "teacher",
-              "content": "To find the **mass** of a substance when you know the **moles** and the **molar mass**, you need to use the relationship: $$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$ \n\nIn this problem, the **moles** of NaCl are 0.750 mol, and the **molar mass** is 58.44 g/mol. \n\nSubstitute these values into the equation and calculate the resulting mass. What is the value you get for the mass?"
+              "content": "Para encontrar a massa** de uma substância quando você conhece o **moles** e a massa **molar**, você precisa usar a relação: $$ \\text{massa} = \\text{moles} \\times \\text{massa molar} $$\n\nNeste problema, os **moles** de NaCl são 0,750 mol, e a **massa molar** é 58,44 g/mol.\n\nSubstitua estes valores na equação e calcule a massa resultante. Qual é o valor da massa?"
             },
             {
               "role": "student",
-              "content": "I'm still confused about the numbers. You mentioned 0.750 mol and 58.44 g/mol, but where exactly do I get those values from? Are they just given in the problem description, or do I have to calculate them first?"
+              "content": "Ainda estou confuso com os números. Você mencionou 0,750 mol e 58,44 g/mol, mas de onde exatamente eu consigo esses valores? Eles são apenas dados na descrição do problema, ou eu tenho que calculá-los primeiro?"
             }
           ],
           "internal_state": {
-            "current_status": "The student is confused about the origin of the numerical values 0.750 mol and 58.44 g/mol, questioning whether these values are provided directly in the problem description or if they need to be calculated first.",
+            "current_status": "O aluno está confuso quanto à origem dos valores numéricos 0,750 mol e 58,44 g/mol, questionando se esses valores são fornecidos diretamente na descrição do problema ou se precisam ser calculados primeiro.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "The values needed for the calculation are directly provided in the problem description. \n\nWe are trying to find the **mass** of NaCl, and the problem states that the chemist needs **0.750 moles** of NaCl. This is your value for **moles**.\n\nAdditionally, the problem gives the **molar mass** of NaCl as **58.44 g/mol**. This value is used directly in the formula: $$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$ \n\nNow that you have identified the **moles** ($ 0.750 \\text{ mol} $) and the **molar mass** ($ 58.44 \\text{ g/mol} $), substitute these values into the equation and calculate the resulting mass."
+          "target_teacher_response": "Os valores necessários para o cálculo são fornecidos diretamente na descrição do problema.\n\nEstamos tentando encontrar a **massa** de NaCl, e o problema afirma que o químico precisa **0,750 moles** de NaCl. Este é o seu valor para **moles**.\n\nAlém disso, o problema dá a ** massa molar** de NaCl como **58,44 g/mol**. Este valor é usado diretamente na fórmula: $$ \\text{massa} = \\text{moles} \\times \\text{massa molar} $$\n\nAgora que você identificou os **moles** ($ 0,750 \\text{ mol} $) e a **massa molar** ($ 58,44 \\text{ g/mol} $), substitua esses valores na equação e calcule a massa resultante."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the mass of NaCl, but I'm not sure how to start. We have the moles and the molar mass, but I don't know what formula connects those three things."
+              "content": "Tenho de encontrar a massa do NaCl, mas não sei como começar. Temos as verrugas e a massa molar, mas não sei que fórmula liga essas três coisas."
             },
             {
               "role": "teacher",
-              "content": "To find the **mass** of a substance when you know the **moles** and the **molar mass**, you need to use the relationship: $$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$ \n\nIn this problem, the **moles** of NaCl are 0.750 mol, and the **molar mass** is 58.44 g/mol. \n\nSubstitute these values into the equation and calculate the resulting mass. What is the value you get for the mass?"
+              "content": "Para encontrar a massa** de uma substância quando você conhece o **moles** e a massa **molar**, você precisa usar a relação: $$ \\text{massa} = \\text{moles} \\times \\text{massa molar} $$\n\nNeste problema, os **moles** de NaCl são 0,750 mol, e a **massa molar** é 58,44 g/mol.\n\nSubstitua estes valores na equação e calcule a massa resultante. Qual é o valor da massa?"
             },
             {
               "role": "student",
-              "content": "I'm still confused about the numbers. You mentioned 0.750 mol and 58.44 g/mol, but where exactly do I get those values from? Are they just given in the problem description, or do I have to calculate them first?"
+              "content": "Ainda estou confuso com os números. Você mencionou 0,750 mol e 58,44 g/mol, mas de onde exatamente eu consigo esses valores? Eles são apenas dados na descrição do problema, ou eu tenho que calculá-los primeiro?"
             },
             {
               "role": "teacher",
-              "content": "The values needed for the calculation are directly provided in the problem description. \n\nWe are trying to find the **mass** of NaCl, and the problem states that the chemist needs **0.750 moles** of NaCl. This is your value for **moles**.\n\nAdditionally, the problem gives the **molar mass** of NaCl as **58.44 g/mol**. This value is used directly in the formula: $$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$ \n\nNow that you have identified the **moles** ($ 0.750 \\text{ mol} $) and the **molar mass** ($ 58.44 \\text{ g/mol} $), substitute these values into the equation and calculate the resulting mass."
+              "content": "Os valores necessários para o cálculo são fornecidos diretamente na descrição do problema.\n\nEstamos tentando encontrar a **massa** de NaCl, e o problema afirma que o químico precisa **0,750 moles** de NaCl. Este é o seu valor para **moles**.\n\nAlém disso, o problema dá a ** massa molar** de NaCl como **58,44 g/mol**. Este valor é usado diretamente na fórmula: $$ \\text{massa} = \\text{moles} \\times \\text{massa molar} $$\n\nAgora que você identificou os **moles** ($ 0,750 \\text{ mol} $) e a **massa molar** ($ 58,44 \\text{ g/mol} $), substitua esses valores na equação e calcule a massa resultante."
             },
             {
               "role": "student",
-              "content": "I understand that I need to multiply the moles by the molar mass, but I'm not sure how to set up the calculation. Can you just show me the steps for plugging in the numbers and getting the final answer?"
+              "content": "Entendo que preciso multiplicar as verrugas pela massa molar, mas não sei como configurar o cálculo. Podes mostrar-me os passos para ligar os números e obter a resposta final?"
             }
           ],
           "internal_state": {
-            "current_status": "The student confirms understanding that the mass must be calculated by multiplying the moles by the molar mass, but they are struggling with the procedural steps of setting up the calculation and obtaining the final numerical answer.",
+            "current_status": "O aluno confirma a compreensão de que a massa deve ser calculada multiplicando-se as moles pela massa molar, mas elas estão lutando com as etapas processuais de fixação do cálculo e obtenção da resposta numérica final.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We established the formula: $$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$ \n\nWe know that the **moles** is $ 0.750 \\text{ mol} $ and the **molar mass** is $ 58.44 \\text{ g/mol} $. \n\nSubstituting these values gives us:\n$$ \\text{mass} = 0.750 \\text{ mol} \\times 58.44 \\text{ g/mol} $$\n\nWhen we multiply the numbers, we get $ 43.83 \\text{ mol}\\cdot\\text{g/mol} $. Since the units of moles and molar mass cancel out, the remaining unit for the mass is grams. \n\nWhat is the final numerical value for the mass?"
+          "target_teacher_response": "Estabelecemos a fórmula: $$ \\text{mass} = \\text{moles} \\times \\text{molar mass} $$\n\nSabemos que o **moles** é $ 0,750 \\text{ mol} $ e o **molar massa** é $ 58,44 \\text{ g/mol} $.\n\nSubstituir esses valores nos dá:\n$$ \\text{massa} = 0,750 \\text{ mol} \\times 58,44 \\text{ g/mol} $$\n\nQuando multiplicamos os números, recebemos $ 43,83 \\text{ mol}\\cdot\\text{g/mol} $. Como as unidades de molares e massa molar se anulam, a unidade restante para a massa é gramas.\n\nQual é o valor numérico final da massa?"
         }
       ]
     }

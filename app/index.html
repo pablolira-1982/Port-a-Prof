@@ -1171,10 +1171,10 @@
     </div>
     <div class="startup-stack">
       <div class="stack-line" id="line-1">Offline</div>
-      <div class="stack-line" id="line-2">Private</div>
+      <div class="stack-line" id="line-2">Privado</div>
       <div class="stack-line" id="line-3">
-        <span id="ready-main">Deeper learning,</span>
-        <span id="ready-sub"> wherever you are...</span>
+        <span id="ready-main">Aprendizado mais profundo,</span>
+        <span id="ready-sub"> onde você estiver...</span>
       </div>
     </div>
   </div>
@@ -1185,13 +1185,13 @@
 
 <div id="sessions-panel" aria-label="Session history">
   <div class="panel-header">
-    <h2>History</h2>
+    <h2>Histórico</h2>
     <button class="new-chat-btn" onclick="newChat()">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="12" y1="5" x2="12" y2="19"></line>
         <line x1="5" y1="12" x2="19" y2="12"></line>
       </svg>
-      New problem
+      Novo problema
     </button>
   </div>
   <div id="sessions-list"></div>
@@ -1200,7 +1200,7 @@
 <!-- ── Header ─────────────────────────────── -->
 <header>
   <div class="header-left">
-    <button class="hdr-btn" onclick="openPanel()" aria-label="Open session history" title="History">
+    <button class="hdr-btn" onclick="openPanel()" aria-label="Abrir histórico de sessões" title="Histórico">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <line x1="3" y1="6"  x2="21" y2="6"></line>
         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -1216,7 +1216,7 @@
       <span class="header-app-title">__APP_TITLE__</span>
       <div class="header-sub">
         <div class="status-dot"></div>
-        <span>Ready</span>
+        <span>Pronto</span>
       </div>
     </div>
     <div class="avatar"><img src="/logo.png" alt="Logo"></div>
@@ -1225,8 +1225,8 @@
 
 <!-- ── Bold problem banner (shown in chat mode) ───────── -->
 <div id="problem-display" aria-live="polite">
-  <div class="problem-display-label">Problem</div>
-  <img id="problem-display-img" alt="Problem image">
+  <div class="problem-display-label">Problema</div>
+  <img id="problem-display-img" alt="Imagem do problema">
   <div id="problem-display-text"></div>
 </div>
 
@@ -1235,74 +1235,74 @@
   <div class="entry-inner">
     <div class="entry-heading">
       <span class="entry-icon">👋</span>
-      <h2>What are we working on today?</h2>
+      <h2>No que vamos trabalhar hoje?</h2>
     </div>
 
     <!-- Problem field -->
     <div class="entry-field" id="entry-problem-field">
       <div class="entry-field-label">
-        <span>The problem</span>
+        <span>O problema</span>
         <span class="checking-badge" id="problem-checking-badge">
-          <span class="spin"></span>checking…
+          <span class="spin"></span>verificando…
         </span>
       </div>
       <textarea id="entry-problem" class="entry-textarea" rows="3"
-        placeholder="Type or paste the problem, speak it, or upload a picture..."
+        placeholder="Digite ou cole o problema, fale-o, ou envie uma imagem..."
         oninput="autoResizeEntry(this)"></textarea>
       <div id="entry-problem-img-preview" class="entry-img-preview">
         <div class="preview-wrap">
-          <img id="entry-problem-img" src="" alt="problem image">
-          <button class="remove-btn" onclick="clearProblemImage()" aria-label="Remove image">✕</button>
+          <img id="entry-problem-img" src="" alt="imagem do problema">
+          <button class="remove-btn" onclick="clearProblemImage()" aria-label="Remover imagem">✕</button>
         </div>
       </div>
       <div class="entry-actions">
         <button class="entry-icon-btn" id="mic-problem"
           onclick="toggleRecording('entry-problem','mic-problem')"
-          aria-label="Speak the problem" title="Speak">🎤</button>
+          aria-label="Fale o problema" title="Falar">🎤</button>
         <button class="entry-icon-btn"
           onclick="document.getElementById('problem-image-in').click()"
-          aria-label="Attach image" title="Attach image">📎</button>
+          aria-label="Anexar imagem" title="Anexar imagem">📎</button>
         <input id="problem-image-in" type="file" accept="image/*" capture="environment"
           style="display:none" onchange="onProblemImagePicked(event)">
       </div>
       <!-- Error shown when text is not a valid academic problem -->
       <div class="entry-error-msg" id="problem-text-error">
         <span class="err-icon">⚠️</span>
-        <span id="problem-text-error-msg">Please input a valid problem or question.</span>
+        <span id="problem-text-error-msg">Por favor, insira um problema ou pergunta válida.</span>
       </div>
       <!-- Error shown when image contains no recognisable problem -->
       <div class="entry-error-msg" id="problem-image-error">
         <span class="err-icon">🖼️</span>
-        <span>No problem found in the image — please upload another image or type the problem.</span>
+        <span>Nenhum problema encontrado na imagem — por favor, envie outra imagem ou digite o problema.</span>
       </div>
       <!-- Error shown when problem is non-deterministic (humanities, essays, etc.) -->
       <div class="entry-error-msg" id="problem-nondeterministic-error">
         <span class="err-icon">📖</span>
-        <span>This needs to be a deterministic problem with a clear answer. Support for open-ended questions is coming in a future update!</span>
+        <span>Este precisa ser um problema determinístico com uma resposta clara. O suporte para perguntas abertas chegará em uma atualização futura!</span>
       </div>
     </div>
 
     <!-- Concern field -->
     <div class="entry-field" id="entry-comment-field">
       <div class="entry-field-label">
-        <span>Where are you stuck?</span>
-        <span class="optional">optional</span>
+        <span>Onde você travou?</span>
+        <span class="optional">opcional</span>
       </div>
       <textarea id="entry-comment" class="entry-textarea" rows="3"
-        placeholder="Tell me your question or concern, or leave blank..."
+        placeholder="Diga sua dúvida ou preocupação, ou deixe em branco..."
         oninput="autoResizeEntry(this)"></textarea>
       <div class="entry-actions">
         <button class="entry-icon-btn" id="mic-comment"
           onclick="toggleRecording('entry-comment','mic-comment')"
-          aria-label="Speak your concern" title="Speak">🎤</button>
+          aria-label="Falar sua dúvida" title="Falar">🎤</button>
       </div>
     </div>
 
     <!-- Thinking toggle -->
     <div class="thinking-row">
       <div class="thinking-row-label">
-        <span>⚙️ Thinking Mode</span>
-        <span>Slower responses yet more reliable reasoning (Please turn on for complex problems!)</span>
+        <span>⚙️ Modo Raciocínio</span>
+        <span>Respostas mais lentas, porém mais confiáveis (Ative para problemas complexos!)</span>
       </div>
       <label class="toggle-wrap" aria-label="Toggle extended thinking">
         <input type="checkbox" id="thinking-toggle" checked>
@@ -1311,7 +1311,7 @@
     </div>
 
     <button id="start-btn" onclick="startLearning()">
-      Start learning
+      Começar a aprender
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
         <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -1327,19 +1327,19 @@
 <!-- ── Recording pill ─────────────────────── -->
 <div id="rec-pill">
   <div class="rec-dot"></div>
-  <span>Recording — tap mic to stop</span>
+  <span>Gravando — toque no microfone para parar</span>
 </div>
 
 <!-- ── Input bar (chat mode only, no image attach) ─────────── -->
 <div id="input-bar">
   <button class="icon-btn" id="mic-btn" onclick="toggleRecording('txt','mic-btn')"
-    title="Record voice" aria-label="Record voice">🎤</button>
+    title="Gravar voz" aria-label="Gravar voz">🎤</button>
 
-  <textarea id="txt" rows="1" placeholder="Message…"
+  <textarea id="txt" rows="1" placeholder="Mensagem…"
     oninput="autoResize(this)"
     onkeydown="handleKey(event)"></textarea>
 
-  <button id="send-btn" onclick="send()" aria-label="Send message">
+  <button id="send-btn" onclick="send()" aria-label="Enviar mensagem">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
          stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -1446,7 +1446,7 @@ function generateTitle() {
       ? first.content.slice(0, 42).trim() + '…'
       : first.content;
   }
-  return 'New conversation';
+  return 'Nova conversa';
 }
 
 async function fetchLLMTitle() {
@@ -1481,7 +1481,7 @@ function renderSessionsList() {
   if (!sessions.length) {
     list.innerHTML = `<div class="sessions-empty">
       <span class="empty-icon">🗂️</span>
-      Your past conversations will appear here
+      Suas conversas anteriores aparecerão aqui
     </div>`;
     return;
   }
@@ -1491,8 +1491,8 @@ function renderSessionsList() {
     const isActive = realIdx === currentSessionIdx;
     const userMsgs = (s.messages || []).filter(m => m.role === 'user').length;
     return `<div class="session-item${isActive ? ' active' : ''}" onclick="loadSession(${realIdx})">
-      <div class="session-title">${escapeHtml(s.title || 'Untitled')}</div>
-      <div class="session-date">${formatDate(s.timestamp)} · ${userMsgs} message${userMsgs !== 1 ? 's' : ''}</div>
+      <div class="session-title">${escapeHtml(s.title || 'Sem título')}</div>
+      <div class="session-date">${formatDate(s.timestamp)} · ${userMsgs} mensage${userMsgs !== 1 ? 'ns' : 'm'}</div>
     </div>`;
   }).join('');
 }
@@ -1645,7 +1645,7 @@ function showSessionCompleteBanner() {
   if (!banner) {
     banner = document.createElement('div');
     banner.id = 'session-complete';
-    banner.innerHTML = '✓ Problem complete';
+    banner.innerHTML = '✓ Problema concluído';
     document.getElementById('messages').appendChild(banner);
   }
   banner.classList.add('visible');
@@ -1839,7 +1839,7 @@ async function toggleRecording(targetId = 'txt', micId = 'mic-btn') {
     document.getElementById('rec-pill').classList.add('visible');
 
   } catch (err) {
-    alert('Microphone error: ' + err.message);
+    alert('Erro no microfone: ' + err.message);
   }
 }
 
@@ -1871,7 +1871,7 @@ async function doTranscribe() {
     }
   } catch (err) {
     resetMicBtn();
-    console.error('Transcribe failed', err);
+    console.error('Falha na transcrição', err);
   }
 }
 
@@ -1972,7 +1972,7 @@ async function startLearning() {
     if (data.result !== 'valid') {
       setCheckingBadge(false);
       document.getElementById('start-btn').disabled = false;
-      showProblemTextError('Please input a valid problem or question.');
+      showProblemTextError('Por favor, insira um problema ou pergunta válida.');
       return;
     }
   } catch (err) {
@@ -2010,7 +2010,7 @@ async function startLearning() {
     const res = await fetch('/teacher', { method: 'POST', body: form });
     if (!res.ok) {
       const errText = await res.text();
-      throw new Error(`Teacher failed: ${res.status} ${errText}`);
+      throw new Error(`O Professor falhou: ${res.status} ${errText}`);
     }
 
     const data = await res.json();
@@ -2068,7 +2068,7 @@ async function send() {
 
     if (!res.ok) {
       const errText = await res.text();
-      throw new Error(`Teacher failed: ${res.status} ${errText}`);
+      throw new Error(`O Professor falhou: ${res.status} ${errText}`);
     }
 
     const data = await res.json();

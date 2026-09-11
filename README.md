@@ -1,136 +1,153 @@
-# Port-a-Prof: Deeper learning, wherever you are 💭
-### Expanding access to AI-powered education, with no compromise to learning quality.
-*An entry to [The Gemma 4 Good Hackathon](https://www.kaggle.com/competitions/gemma-4-good-hackathon)*
+# Port-a-Prof: Aprendizado mais profundo, onde você estiver 💭
+### Expandindo o acesso à educação com IA, sem comprometer a qualidade do aprendizado.
+*Um projeto para o [The Gemma 4 Good Hackathon](https://www.kaggle.com/competitions/gemma-4-good-hackathon)*
 
 ---
 
-Port-a-Prof is an offline AI learning assistant designed to foster deep engagement with schoolwork.
+Port-a-Prof é um assistente de aprendizado offline com IA projetado para promover um engajamento profundo com o trabalho escolar.
 
-Powered by a QLoRA fine-tuned variant of Gemma 4 E2B IT, it runs entirely on-device, keeping student data private while supporting text, audio, and image inputs.
+Alimentado por uma variante do Gemma 4 E2B IT ajustada com QLoRA, ele funciona inteiramente no dispositivo, mantendo os dados do aluno privados enquanto suporta entradas de texto, áudio e imagem.
 
-The vision behind Port-a-Prof is to provide high-quality learning assistance to students regardless of location, connectivity, or financial circumstance — including through device access initiatives where donated devices are distributed to communities with Port-a-Prof pre-installed, making personalised learning support accessible to students who have historically been left out of it.
+A visão por trás do Port-a-Prof é fornecer assistência de aprendizado de alta qualidade a alunos, independentemente de sua localização, conectividade ou circunstância financeira — inclusive por meio de iniciativas de acesso a dispositivos, nas quais dispositivos doados são distribuídos para comunidades com o Port-a-Prof pré-instalado, tornando o suporte de aprendizado personalizado acessível a alunos que historicamente ficaram de fora.
 
-This repository includes:
-- **Dataset generation** — scripts to generate seed questions and a multi-turn student-teacher dialogue dataset for fine-tuning, via Ollama
-- **Fine-tuning** — a QLoRA training notebook built on Hugging Face Transformers, PEFT, TRL, and bitsandbytes
-- **App** — a proof-of-concept interface built with FastAPI and a single-page HTML frontend, containerised with Docker
+Este repositório inclui:
+- **Geração de dataset** — scripts para gerar perguntas iniciais e um conjunto de dados de diálogos aluno-professor de múltiplos turnos para ajuste fino (fine-tuning), via Ollama.
+- **Fine-tuning** — um notebook de treinamento QLoRA construído no Hugging Face Transformers, PEFT, TRL e bitsandbytes.
+- **App** — uma interface de prova de conceito construída com FastAPI e um frontend HTML de página única, em contêiner com Docker.
 
- 
 ---
- 
-## Project Structure
- 
+
+## Estrutura do Projeto
+
 ```
 PORT-A-PROF/
-├── app/                        # Proof-of-concept app
-│   ├── models/                 # GGUF model files (see below)
-│   ├── static/                 # Static assets
+├── app/                        # App de prova de conceito
+│   ├── models/                 # Arquivos de modelo GGUF (veja abaixo)
+│   ├── static/                 # Arquivos estáticos
 │   ├── Dockerfile
 │   ├── docker-compose.yml
 │   ├── index.html
-|   |── logo.png
-│   ├── port-a-prof.py          # FastAPI backend
-│   └── README.md               # App setup instructions
+│   ├── logo.png
+│   ├── port-a-prof.py          # Backend FastAPI
+│   └── README.md               # Instruções de configuração do App
 │
-├── dataset-generation/         # Synthetic training data pipeline
-│   ├── dataset/                # Generated trajectory output
-│   ├── questions/              # Generated seed questions
-│   ├── generate_questions.py   # Step 1: generate seed questions via Ollama
-│   └── generate_dataset.py     # Step 2: generate student-teacher dialogues via Ollama
+├── dataset-generation/         # Pipeline de dados de treinamento sintético
+│   ├── dataset/                # Saída das trajetórias geradas
+│   ├── questions/              # Perguntas iniciais geradas
+│   ├── generate_questions.py   # Passo 1: gerar perguntas iniciais via Ollama
+│   └── generate_dataset.py     # Passo 2: gerar diálogos aluno-professor via Ollama
 │
-├── fine-tuning/                # QLoRA fine-tuning
+├── fine-tuning/                # Ajuste fino (fine-tuning) QLoRA
 │   ├── dataset/
 │   └── port-a-prof_QLoRA.ipynb
 │
 ├── README.md
 └── requirements.txt
 ```
- 
+
 ---
- 
-## Quickstart
- 
-### 1. Install dependencies
- 
+
+## Início Rápido
+
+### 1. Instalar dependências
+
 ```bash
 pip install -r requirements.txt
 ```
- 
-> **PyTorch** must be installed separately — see [pytorch.org/get-started/locally](https://pytorch.org/get-started/locally/)
- 
+
+> **PyTorch** deve ser instalado separadamente — veja [pytorch.org/get-started/locally](https://pytorch.org/get-started/locally/)
+
 ---
- 
-### 2. Dataset Generation (requires Ollama)
- 
-[Ollama](https://ollama.com) must be running locally before running either generation script.
- 
-The following models are used by default — these can be changed to suit your preferences:
- 
-- **[gemma3:12b-it-qat](https://ollama.com/library/gemma3:12b-it-qat)** — seed question and solution generation (`generate_questions.py`)
-- **[gemma4:e4b](https://ollama.com/library/gemma4:e4b)** — student-teacher dialogue generation (`generate_dataset.py`)
+
+### 2. Geração de Dataset (requer Ollama)
+
+O [Ollama](https://ollama.com) deve estar rodando localmente antes de executar qualquer script de geração.
+
+Os seguintes modelos são usados por padrão — eles podem ser alterados para se adequarem às suas preferências:
+
+- **[gemma3:12b-it-qat](https://ollama.com/library/gemma3:12b-it-qat)** — geração de perguntas e soluções iniciais (`generate_questions.py`)
+- **[gemma4:e4b](https://ollama.com/library/gemma4:e4b)** — geração de diálogo aluno-professor (`generate_dataset.py`)
 ```bash
-# Step 1 — generate seed questions
+# Passo 1 — gerar perguntas iniciais
 python dataset-generation/generate_questions.py
- 
-# Step 2 — generate student-teacher dialogues
+
+# Passo 2 — gerar diálogos aluno-professor
 python dataset-generation/generate_dataset.py
 ```
- 
+
 ---
- 
-### 3. Fine-tuning
- 
-The fine-tuned model is designed for use as part of the Port-a-Prof system pipeline, not in isolation — it expects structured input to function correctly.
- 
-### Input Format
- 
-The model is trained on structured prompts with the following schema:
- 
+
+### 3. Fine-tuning (Ajuste Fino)
+
+O modelo com ajuste fino é projetado para uso como parte do pipeline do sistema Port-a-Prof, não isoladamente — ele espera uma entrada estruturada para funcionar corretamente.
+
+### Formato de Entrada
+
+O modelo é treinado em prompts estruturados com o seguinte esquema:
+
 ```
 <bos><|turn>user
 ## PROBLEM
-{problem text}
- 
+{texto do problema}
+
 ## STUDENT_ATTEMPT
-{student's attempt or question}
- 
+{tentativa ou dúvida do aluno}
+
 ## STATUS
-{assessment of where the student is}
- 
+{avaliação de onde o aluno está}
+
 ## TEACHER_ROLE
 {partial_worked_step | redirect | confirm_and_advance | session_close | partial_worked_step}
- 
-## SUPPORT                          ← only present when TEACHER_ROLE is partial_worked_step
+
+## SUPPORT                          ← presente apenas quando TEACHER_ROLE for partial_worked_step
 {low | medium | high}<turn|>
 <|turn>model
 ```
- 
-- **PROBLEM** — the original question or task posed to the student
-- **STUDENT_ATTEMPT** — the student's work, response, or where they are stuck
-- **STATUS** — a diagnostic summary of the student's current understanding
-- **TEACHER_ROLE** — the instructional strategy the model should adopt
-- **SUPPORT** — the level of support to provide (`low`, `medium`, or `high`) in a partial worked step
 
-### Getting the Model
- 
-You can either:
- 
-1. **Fine-tune it yourself** — open `fine-tuning/port-a-prof_QLoRA.ipynb` and follow the cells. The notebook produces a merged, full-precision model saved to `./port_a_prof_finetuned` in Hugging Face safetensors format, which can then be quantised and converted to GGUF using [llama.cpp](https://github.com/ggerganov/llama.cpp).
-2. **Download the pre-converted GGUF** — grab the Q4_K_M quantised model directly from [Hugging Face](https://huggingface.co/bianca-lilyyy128/port-a-prof-Q4_K_M).
-To run the app you will also need the Gemma 4 E2B multimodal projector, available [here](https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/blob/main/mmproj-F16.gguf).
+- **PROBLEM** — a pergunta original ou tarefa apresentada ao aluno
+- **STUDENT_ATTEMPT** — o trabalho do aluno, resposta ou onde ele travou
+- **STATUS** — um resumo diagnóstico da compreensão atual do aluno
+- **TEACHER_ROLE** — a estratégia de instrução que o modelo deve adotar
+- **SUPPORT** — o nível de suporte a fornecer (`low`, `medium` ou `high`) em uma etapa parcialmente resolvida
 
----
- 
-### 4. Running the App
- 
-See **`app/README.md`** for full instructions on configuring and running the Docker container.
- 
-(Dependencies are handled by the Dockerfile — no separate `pip install` required.)
+### Obtendo o Modelo
+
+Você pode optar por:
+
+1. **Fazer o fine-tuning você mesmo** — abra `fine-tuning/port-a-prof_QLoRA.ipynb` e siga as células. O notebook produz um modelo mesclado e de precisão total, salvo em `./port_a_prof_finetuned` no formato safetensors do Hugging Face, que pode então ser quantizado e convertido para GGUF usando o [llama.cpp](https://github.com/ggerganov/llama.cpp).
+2. **Baixar o GGUF pré-convertido** — pegue o modelo quantizado Q4_K_M diretamente do [Hugging Face](https://huggingface.co/bianca-lilyyy128/port-a-prof-Q4_K_M).
+Para executar o app, você também precisará do projetor multimodal Gemma 4 E2B, disponível [aqui](https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/blob/main/mmproj-F16.gguf).
 
 ---
 
-### License
+### 4. Executando o App
 
-This project is released under the Creative Commons Attribution 4.0 International License (CC BY 4.0) in accordance with competition requirements.
+Veja o **`app/README.md`** para instruções completas sobre como configurar e executar o contêiner Docker.
 
-The underlying Gemma base model and derivative weights remain subject to Google's Gemma Terms of Use.
+(As dependências são tratadas pelo Dockerfile — nenhum `pip install` separado é necessário.)
+
+---
+
+## ❤️ Apoie este projeto
+
+Se este projeto foi útil para você e quiser apoiar o desenvolvimento, pode fazer uma doação voluntária via PIX.
+
+### 🇧🇷 PIX
+
+<p align="center">
+  <img src="./qrcode-chave-pix.png" width="250" alt="QR Code PIX">
+</p>
+
+**Chave PIX:**
+
+```text
+b3652001-9daa-4131-ad05-6ea1f59e1721
+```
+
+---
+
+### Licença
+
+Este projeto é lançado sob a licença Creative Commons Attribution 4.0 International License (CC BY 4.0), de acordo com os requisitos da competição.
+
+O modelo base subjacente do Gemma e seus pesos derivados permanecem sujeitos aos Termos de Uso do Gemma do Google.

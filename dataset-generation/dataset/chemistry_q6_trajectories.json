@@ -1,13 +1,13 @@
 {
-  "problem": "You have a 10.0 M stock solution of hydrochloric acid (HCl). You need to prepare 500.0 mL of a 0.500 M HCl solution. How many milliliters of the stock solution are required, and what volume of water must be added to achieve the desired concentration?",
-  "topic": "chemistry",
-  "subtopic": "dilution and concentration calculations",
+  "problem": "Você tem uma solução-mãe de 10.0 M de ácido clorídrico (HCl). Você precisa preparar 500,0 mL de uma solução de HCl 0,500 M. Quantos mililitros da solução estoque são necessários, e que volume de água deve ser adicionado para alcançar a concentração desejada?",
+  "topic": "química",
+  "subtopic": "Cálculos de diluição e concentração",
   "solution_steps": [
-    "Determine the required volume of stock solution using the dilution equation: M1V1 = M2V2, where M1 is the initial concentration, V1 is the initial volume (what we need to find), M2 is the final concentration, and V2 is the final volume.",
-    "Substitute the known values into the equation: 10.0 M * V1 = 0.500 M * 500.0 mL.",
-    "Solve for V1: V1 = (0.500 M * 500.0 mL) / 10.0 M = 25.0 mL of stock solution.",
-    "Calculate the volume of water needed by subtracting the volume of stock solution from the desired final volume: Volume of water = Final volume - Volume of stock solution = 500.0 mL - 25.0 mL = 475.0 mL.",
-    "Therefore, 25.0 mL of the 10.0 M HCl stock solution must be mixed with 475.0 mL of water to prepare 500.0 mL of a 0.500 M HCl solution."
+    "Determinar o volume necessário de solução-mãe usando a equação de diluição: M1V1 = M2V2, onde M1 é a concentração inicial, V1 é o volume inicial (o que precisamos de encontrar), M2 é a concentração final, e V2 é o volume final.",
+    "Substitua os valores conhecidos na equação: 10,0 M * V1 = 0,500 M * 500,0 mL.",
+    "Resolva para V1: V1 = (0,500 M * 500,0 ml) / 10,0 M = 25,0 ml de solução-mãe.",
+    "Calcule o volume de água necessário subtraindo o volume de solução estoque do volume final desejado: Volume de água = Volume final - Volume de solução estoque = 500,0 mL - 25,0 mL = 475,0 mL.",
+    "Portanto, 25,0 mL da solução-mãe de HCl de 10,0 M devem ser misturados com 475,0 mL de água para preparar 500,0 mL de uma solução de HCl de 0,500 M."
   ],
   "trajectories": [
     {
@@ -17,37 +17,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really lost on this one. I know we're diluting a strong acid, but I don't know what formula to use, or how to even start figuring out how much of the stock solution I need."
+              "content": "Estou mesmo perdido. Eu sei que estamos diluindo um ácido forte, mas eu não sei que fórmula usar, ou como mesmo começar a descobrir o quanto da solução de estoque que eu preciso."
             }
           ],
           "internal_state": {
-            "current_status": "The student expressed general confusion about the problem, stating they are lost and do not know what formula to use or how to begin figuring out the required volume of the stock solution.",
+            "current_status": "O aluno expressou confusão geral sobre o problema, afirmando que estão perdidos e não sabem que fórmula usar ou como começar a descobrir o volume necessário da solução de estoque.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "When you dilute a solution, the key concept is that the total number of moles of solute remains constant. You are simply adding solvent, like water, which changes the volume but not the amount of solute present.\n\nThis relationship is described by the dilution equation: $$M_1V_1 = M_2V_2$$ \n\nHere, $M_1$ is the initial concentration, $V_1$ is the initial volume, $M_2$ is the final concentration, and $V_2$ is the final volume. The units must be consistent, so it is often easiest to keep the volume in milliliters (mL).\n\nIn your problem, you start with a 10.0 M stock solution of HCl and want to end up with a 0.500 M solution of HCl at a total volume of 500.0 mL. We know $M_1$, $M_2$, and $V_2$. To find the required volume of the stock solution, $V_1$, which variable should we isolate in the equation?"
+          "target_teacher_response": "Quando você dilui uma solução, o conceito chave é que o número total de moles de soluto permanece constante. Você está simplesmente adicionando solvente, como água, que muda o volume, mas não a quantidade de soluto presente.\n\nEsta relação é descrita pela equação de diluição: $$M 1V 1 = M 2V 2$$\n\nAqui, $M 1$ é a concentração inicial, $V 1$ é o volume inicial, $M 2$ é a concentração final, e $V 2$ é o volume final. As unidades devem ser consistentes, por isso é frequentemente mais fácil manter o volume em mililitros (mL).\n\nEm seu problema, você começa com uma solução estoque de 10,0 M de HCl e quer acabar com uma solução de 0,500 M de HCl em um volume total de 500,0 ml. Sabemos $M 1$, $M 2$, e $V 2$. Para encontrar o volume necessário da solução de estoque, $V 1$, que variável devemos isolar na equação?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really lost on this one. I know we're diluting a strong acid, but I don't know what formula to use, or how to even start figuring out how much of the stock solution I need."
+              "content": "Estou mesmo perdido. Eu sei que estamos diluindo um ácido forte, mas eu não sei que fórmula usar, ou como mesmo começar a descobrir o quanto da solução de estoque que eu preciso."
             },
             {
               "role": "teacher",
-              "content": "When you dilute a solution, the key concept is that the total number of moles of solute remains constant. You are simply adding solvent, like water, which changes the volume but not the amount of solute present.\n\nThis relationship is described by the dilution equation: $$M_1V_1 = M_2V_2$$ \n\nHere, $M_1$ is the initial concentration, $V_1$ is the initial volume, $M_2$ is the final concentration, and $V_2$ is the final volume. The units must be consistent, so it is often easiest to keep the volume in milliliters (mL).\n\nIn your problem, you start with a 10.0 M stock solution of HCl and want to end up with a 0.500 M solution of HCl at a total volume of 500.0 mL. We know $M_1$, $M_2$, and $V_2$. To find the required volume of the stock solution, $V_1$, which variable should we isolate in the equation?"
+              "content": "Quando você dilui uma solução, o conceito chave é que o número total de moles de soluto permanece constante. Você está simplesmente adicionando solvente, como água, que muda o volume, mas não a quantidade de soluto presente.\n\nEsta relação é descrita pela equação de diluição: $$M 1V 1 = M 2V 2$$\n\nAqui, $M 1$ é a concentração inicial, $V 1$ é o volume inicial, $M 2$ é a concentração final, e $V 2$ é o volume final. As unidades devem ser consistentes, por isso é frequentemente mais fácil manter o volume em mililitros (mL).\n\nEm seu problema, você começa com uma solução estoque de 10,0 M de HCl e quer acabar com uma solução de 0,500 M de HCl em um volume total de 500,0 ml. Sabemos $M 1$, $M 2$, e $V 2$. Para encontrar o volume necessário da solução de estoque, $V 1$, que variável devemos isolar na equação?"
             },
             {
               "role": "student",
-              "content": "I think I know the formula, $M_1V_1 = M_2V_2$, but when I look at the problem, I have all these numbers—10.0 M, 0.500 M, 500.0 mL—and I don't know how to plug them in to get $V_1$ by myself. Which numbers go where?"
+              "content": "Eu acho que sei a fórmula, $M 1V 1 = M 2V 2$, mas quando eu olho para o problema, eu tenho todos esses números—10.0 M, 0.500 M, 500.0 ml—e eu não sei como conectá-los para obter $V 1$ por mim mesmo. Que números vão para onde?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly recalls the dilution formula, M1V1 = M2V2, and identifies all the necessary numerical values (10.0 M, 0.500 M, 500.0 mL). However, the student struggles with the procedural step of correctly substituting these given values into the equation to solve for the unknown variable, V1.",
+            "current_status": "O aluno recorda corretamente a fórmula de diluição, M1V1 = M2V2, e identifica todos os valores numéricos necessários (10,0 M, 0,500 M, 500,0 mL). No entanto, o aluno luta com o passo processual de substituir corretamente esses valores dados na equação para resolver a variável desconhecida, V1.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "Since we are solving for the initial volume, $V_1$, we need to rearrange the equation algebraically.\n\nStart with the relationship: $$M_1V_1 = M_2V_2$$\n\nTo isolate $V_1$, you must divide both sides of the equation by $M_1$. This gives you the expression: $$V_1 = \\frac{{M_2V_2}}{{M_1}}$$\n\nNow, identify the values for $M_2$, $V_2$, and $M_1$ from the problem description and substitute them into this rearranged formula. What values should you use for the numerator ($M_2V_2$)? "
+          "target_teacher_response": "Como estamos resolvendo para o volume inicial, $V 1$, precisamos reorganizar a equação algebricamente.\n\nComece com o relacionamento: $$M 1V 1 = M 2V 2$$\n\nPara isolar $V 1$, você deve dividir ambos os lados da equação por $M 1$. Isto dá-lhe a expressão: $$V 1 = \\frac{{M 2V 2}}{{M 1}}$\n\nAgora, identifique os valores de $M 2$, $V 2$, e $M 1$ a partir da descrição do problema e substitua-os nesta fórmula rearranjada. Que valores você deve usar para o numerador ($M 2V 2$)?"
         }
       ]
     },
@@ -58,37 +58,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, I used the dilution equation, M1V1 = M2V2. I plugged in the numbers: 10.0 M * V1 = 0.500 M * 500.0 mL. And when I solved for V1, I got V1 = 1250 mL. Does that sound right?"
+              "content": "Usei a equação de diluição M1V1 = M2V2. Eu conectei os números: 10,0 M * V1 = 0,500 M * 500,0 mL. E quando resolvi para V1, recebi V1 = 1250 mL. Parece-te bem?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly set up the dilution equation using the initial concentration, initial volume, final concentration, and final volume, but they made a calculation error when solving for the initial volume (V1), stating the result is 1250 mL instead of the correct 25.0 mL.",
+            "current_status": "O aluno estabeleceu corretamente a equação de diluição usando a concentração inicial, volume inicial, concentração final e volume final, mas cometeu um erro de cálculo ao resolver o volume inicial (V1), indicando que o resultado é de 1250 mL em vez do correto de 25,0 mL.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly set up the equation, but the value you found for V1 is incorrect. When you solved for V1, you appear to have multiplied the values instead of dividing by the initial concentration, M1. Please recheck the algebraic step where you isolated V1."
+          "target_teacher_response": "Você configurou corretamente a equação, mas o valor encontrado para V1 está incorreto. Quando você resolveu para V1, você parece ter multiplicado os valores em vez de dividir pela concentração inicial, M1. Verifique novamente o passo algébrico onde você isolou V1."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, I used the dilution equation, M1V1 = M2V2. I plugged in the numbers: 10.0 M * V1 = 0.500 M * 500.0 mL. And when I solved for V1, I got V1 = 1250 mL. Does that sound right?"
+              "content": "Usei a equação de diluição M1V1 = M2V2. Eu conectei os números: 10,0 M * V1 = 0,500 M * 500,0 mL. E quando resolvi para V1, recebi V1 = 1250 mL. Parece-te bem?"
             },
             {
               "role": "teacher",
-              "content": "You correctly set up the equation, but the value you found for V1 is incorrect. When you solved for V1, you appear to have multiplied the values instead of dividing by the initial concentration, M1. Please recheck the algebraic step where you isolated V1."
+              "content": "Você configurou corretamente a equação, mas o valor encontrado para V1 está incorreto. Quando você resolveu para V1, você parece ter multiplicado os valores em vez de dividir pela concentração inicial, M1. Verifique novamente o passo algébrico onde você isolou V1."
             },
             {
               "role": "student",
-              "content": "Wait, if I solve for V1, I need to divide the right side by M1. So, V1 = (0.500 M * 500.0 mL) / 10.0 M. That gives me 25.0 mL. So, 25.0 mL of the stock solution. But now I have the volume of the stock, and I know the final volume is 500.0 mL. How do I figure out how much water to add?"
+              "content": "Espere, se eu resolver para V1, eu preciso dividir o lado direito por M1. Assim, V1 = (0,500 M * 500,0 ml) / 10,0 M. Isso me dá 25,0 ml. Assim, 25,0 mL da solução-mãe. Mas agora tenho o volume do estoque, e sei que o volume final é de 500,0 mL. Como faço para descobrir quanta água adicionar?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly applies the dilution equation and calculates that 25.0 mL of the stock solution is required. The student then correctly identifies the next step is to calculate the volume of water by subtracting the stock volume from the final desired volume of 500.0 mL.",
+            "current_status": "O aluno aplica corretamente a equação de diluição e calcula que 25,0 mL da solução-mãe é necessária. O aluno então identifica corretamente o próximo passo é calcular o volume de água subtraindo o volume de estoque do volume final desejado de 500,0 mL.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You correctly determined the required volume of the stock solution, **V₁**. \n\nTo find the volume of water needed, you must recognize that the total final volume, **V₂**, is the sum of the initial volume of the stock solution and the volume of water added. \n\nTherefore, the relationship is: $$V_{water} = V_{final} - V_{stock}$$ \n\nSubstitute the known values for the final volume and the volume of the stock solution into this expression. What value do you get for the volume of water?"
+          "target_teacher_response": "Você corretamente determinou o volume necessário da solução de estoque, **V1**.\n\nPara encontrar o volume de água necessário, você deve reconhecer que o volume final total, **V2**, é a soma do volume inicial da solução de estoque e do volume de água adicionada.\n\nPortanto, a relação é: $$V {water} = V {final} - V {stock}$$\n\nSubstitua nesta expressão os valores conhecidos para o volume final e o volume da solução de reserva. Qual é o valor do volume de água?"
         }
       ]
     },
@@ -99,37 +99,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I found that I need 25.0 mL of the stock solution. To get the total volume up to 500.0 mL, I just have to subtract that from the final volume, so 500.0 mL minus 25.0 mL."
+              "content": "Descobri que preciso de 25,0 ml da solução de reserva. Para obter o volume total até 500,0 mL, eu só tenho que subtrair isso do volume final, então 500,0 mL menos 25,0 mL."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly determined that 25.0 mL of the stock solution is required and accurately calculated the volume of water needed by subtracting the stock volume from the final volume (500.0 mL minus 25.0 mL).",
+            "current_status": "O aluno determinou corretamente que 25,0 mL da solução estoque é necessário e calculou com precisão o volume de água necessário subtraindo o volume estoque do volume final (500,0 mL menos 25,0 mL).",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You have correctly determined that the volume of water needed is the difference between the final volume and the volume of the stock solution. What is the resulting volume of water in milliliters?"
+          "target_teacher_response": "Você determinou corretamente que o volume de água necessário é a diferença entre o volume final e o volume da solução de estoque. Qual é o volume de água resultante em mililitros?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I found that I need 25.0 mL of the stock solution. To get the total volume up to 500.0 mL, I just have to subtract that from the final volume, so 500.0 mL minus 25.0 mL."
+              "content": "Descobri que preciso de 25,0 ml da solução de reserva. Para obter o volume total até 500,0 mL, eu só tenho que subtrair isso do volume final, então 500,0 mL menos 25,0 mL."
             },
             {
               "role": "teacher",
-              "content": "You have correctly determined that the volume of water needed is the difference between the final volume and the volume of the stock solution. What is the resulting volume of water in milliliters?"
+              "content": "Você determinou corretamente que o volume de água necessário é a diferença entre o volume final e o volume da solução de estoque. Qual é o volume de água resultante em mililitros?"
             },
             {
               "role": "student",
-              "content": "If I subtract 25.0 mL from the total 500.0 mL, I get 475.0 mL. That's the volume of water I need to add."
+              "content": "Se eu subtrair 25,0 mL do total de 500,0 mL, eu recebo 475,0 mL. É o volume de água que preciso adicionar."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculated the volume of water needed by subtracting the required stock volume (25.0 mL) from the final desired volume (500.0 mL), resulting in 475.0 mL.",
+            "current_status": "O aluno calculou corretamente o volume de água necessário subtraindo o volume de estoque necessário (25,0 mL) do volume final desejado (500,0 mL), resultando em 475,0 mL.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is correct. You will need 475.0 mL of water. Do you have any other problems you would like to work on?"
+          "target_teacher_response": "Correto. Você vai precisar de 475.0 ml de água. Tem outros problemas em que gostaria de trabalhar?"
         }
       ]
     },
@@ -140,37 +140,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I figured out how much of the stock solution we need. Using the dilution formula, I got that we need 25.0 mL of the 10.0 M solution. But now I'm stuck on the second part: how do I figure out what volume of water I actually need to add to reach the final 500.0 mL volume? Is there a specific calculation for that?"
+              "content": "Acho que descobri de quanto da solução de ações precisamos. Usando a fórmula de diluição, obtive que precisamos de 25,0 mL da solução de 10,0 M. Mas agora eu estou preso na parte segundo: como faço para descobrir que volume de água eu realmente preciso adicionar para chegar ao volume final de 500,0 mL? Existe um cálculo específico para isso?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly determined that 25.0 mL of the stock solution is required. The student is now correctly identifying a conceptual gap and is asking for the specific calculation needed to determine the volume of water required to reach the final 500.0 mL volume.",
+            "current_status": "O aluno determinou corretamente que 25,0 mL da solução-mãe é necessária. O aluno está agora identificando corretamente uma lacuna conceitual e está pedindo o cálculo específico necessário para determinar o volume de água necessário para atingir o volume final de 500,0 mL.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The total volume of the final solution is determined by the volume of the solute and the volume of the solvent added.\n\nTo find the required volume of water, you must calculate the difference between the desired final volume and the volume of the stock solution you just determined.\n\nThe relationship is: \n$$\\text{Volume of water} = \\text{Final volume} - \\text{Volume of stock solution}$$ \n\nSubstitute the known values for the final volume and the volume of stock solution into this expression. What value do you get for the volume of water?"
+          "target_teacher_response": "O volume total da solução final é determinado pelo volume do soluto e pelo volume do solvente adicionado.\n\nPara encontrar o volume necessário de água, você deve calcular a diferença entre o volume final desejado e o volume da solução de estoque que você acabou de determinar.\n\nA relação é:\n$$\\text{Volume de água} = \\text{Volume final} - \\text{Volume de solução de estoque}$$\n\nSubstitua nesta expressão os valores conhecidos para o volume final e o volume de solução de reserva. Qual é o valor do volume de água?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I figured out how much of the stock solution we need. Using the dilution formula, I got that we need 25.0 mL of the 10.0 M solution. But now I'm stuck on the second part: how do I figure out what volume of water I actually need to add to reach the final 500.0 mL volume? Is there a specific calculation for that?"
+              "content": "Acho que descobri de quanto da solução de ações precisamos. Usando a fórmula de diluição, obtive que precisamos de 25,0 mL da solução de 10,0 M. Mas agora eu estou preso na parte segundo: como faço para descobrir que volume de água eu realmente preciso adicionar para chegar ao volume final de 500,0 mL? Existe um cálculo específico para isso?"
             },
             {
               "role": "teacher",
-              "content": "The total volume of the final solution is determined by the volume of the solute and the volume of the solvent added.\n\nTo find the required volume of water, you must calculate the difference between the desired final volume and the volume of the stock solution you just determined.\n\nThe relationship is: \n$$\\text{Volume of water} = \\text{Final volume} - \\text{Volume of stock solution}$$ \n\nSubstitute the known values for the final volume and the volume of stock solution into this expression. What value do you get for the volume of water?"
+              "content": "O volume total da solução final é determinado pelo volume do soluto e pelo volume do solvente adicionado.\n\nPara encontrar o volume necessário de água, você deve calcular a diferença entre o volume final desejado e o volume da solução de estoque que você acabou de determinar.\n\nA relação é:\n$$\\text{Volume de água} = \\text{Volume final} - \\text{Volume de solução de estoque}$$\n\nSubstitua nesta expressão os valores conhecidos para o volume final e o volume de solução de reserva. Qual é o valor do volume de água?"
             },
             {
               "role": "student",
-              "content": "Wait, so I need to calculate 500.0 mL minus 25.0 mL. I tried it, and I got 450.0 mL. Does that mean I need 450.0 mL of water?"
+              "content": "Espera, preciso de calcular 500,0 ml menos 25,0 ml. Eu tentei, e eu tenho 450,0 ml. Isso significa que preciso de 450,0 ml de água?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the need to subtract the volume of the stock solution (25.0 mL) from the final volume (500.0 mL) but made a calculation error, stating the resulting volume of water is 450.0 mL instead of the correct 475.0 mL.",
+            "current_status": "O aluno identificou corretamente a necessidade de subtrair o volume da solução estoque (25,0 mL) do volume final (500,0 mL), mas cometeu um erro de cálculo, afirmando que o volume resultante da água é 450,0 mL em vez do correto 475,0 mL.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly set up the expression as Final volume minus Volume of stock solution. However, when you calculated 500.0 mL minus 25.0 mL, the result you stated is incorrect. Please recheck the subtraction of 25.0 mL from 500.0 mL."
+          "target_teacher_response": "Você configura corretamente a expressão como volume final menos Volume de solução de estoque. No entanto, quando você calculou 500,0 mL menos 25,0 mL, o resultado que afirmou está incorreto. Verifique novamente a subtração de 25,0 mL de 500,0 mL."
         }
       ]
     },
@@ -181,67 +181,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to figure out how much of the super concentrated stock solution I need, but I don't know what formula to use for dilutions. Is there a specific equation I should be starting with?"
+              "content": "Eu tenho que descobrir o quanto da solução de estoque super concentrada eu preciso, mas eu não sei que fórmula usar para diluições. Há alguma equação específica com a qual eu deva começar?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the goal of determining the required volume of the stock solution but is currently struggling with the foundational knowledge of which specific formula or equation should be used for dilution calculations.",
+            "current_status": "O aluno identifica corretamente o objetivo de determinar o volume necessário da solução de estoque, mas atualmente está lutando com o conhecimento fundamental de qual fórmula específica ou equação deve ser usada para cálculos de diluição.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "When dealing with dilutions, the amount of solute remains constant, which means the initial amount multiplied by the initial volume equals the final amount multiplied by the final volume. \n\nThis relationship is represented by the equation: $$M_1V_1 = M_2V_2$$ \n\nHere, $M_1$ is the **initial concentration** and $V_1$ is the **initial volume** of the stock solution. \n$M_2$ is the **final concentration** and $V_2$ is the **final volume** of the diluted solution. \n\nIdentify the values for $M_1$, $M_2$, and $V_2$ from the problem statement, and then rearrange the equation to solve for $V_1$. What is the expression you need to calculate $V_1$?"
+          "target_teacher_response": "Ao tratar das diluições, a quantidade de soluto permanece constante, o que significa que a quantidade inicial multiplicada pelo volume inicial é igual à quantidade final multiplicada pelo volume final.\n\nEssa relação é representada pela equação: $$M 1V 1 = M 2V 2$$\n\nAqui, $M 1$ é a concentração inicial** e $V 1$ é o volume inicial** da solução estoque.\n$M 2$ é a concentração final** e $V 2$ é o volume final** da solução diluída.\n\nIdentificar os valores de $M 1$, $M 2$, e $V 2$ a partir da instrução do problema, e então reorganizar a equação para resolver $V 1$. Qual é a expressão que você precisa para calcular $V 1$?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to figure out how much of the super concentrated stock solution I need, but I don't know what formula to use for dilutions. Is there a specific equation I should be starting with?"
+              "content": "Eu tenho que descobrir o quanto da solução de estoque super concentrada eu preciso, mas eu não sei que fórmula usar para diluições. Há alguma equação específica com a qual eu deva começar?"
             },
             {
               "role": "teacher",
-              "content": "When dealing with dilutions, the amount of solute remains constant, which means the initial amount multiplied by the initial volume equals the final amount multiplied by the final volume. \n\nThis relationship is represented by the equation: $$M_1V_1 = M_2V_2$$ \n\nHere, $M_1$ is the **initial concentration** and $V_1$ is the **initial volume** of the stock solution. \n$M_2$ is the **final concentration** and $V_2$ is the **final volume** of the diluted solution. \n\nIdentify the values for $M_1$, $M_2$, and $V_2$ from the problem statement, and then rearrange the equation to solve for $V_1$. What is the expression you need to calculate $V_1$?"
+              "content": "Ao tratar das diluições, a quantidade de soluto permanece constante, o que significa que a quantidade inicial multiplicada pelo volume inicial é igual à quantidade final multiplicada pelo volume final.\n\nEssa relação é representada pela equação: $$M 1V 1 = M 2V 2$$\n\nAqui, $M 1$ é a concentração inicial** e $V 1$ é o volume inicial** da solução estoque.\n$M 2$ é a concentração final** e $V 2$ é o volume final** da solução diluída.\n\nIdentificar os valores de $M 1$, $M 2$, e $V 2$ a partir da instrução do problema, e então reorganizar a equação para resolver $V 1$. Qual é a expressão que você precisa para calcular $V 1$?"
             },
             {
               "role": "student",
-              "content": "I'm still a little confused about what numbers go where. The problem gives us three different concentrations and two different volumes. Which number is M1, and which number is M2? And how do I know which volume is V1 and which is V2?"
+              "content": "Ainda estou um pouco confuso sobre quais números vão para onde. O problema dá-nos três concentrações diferentes e dois volumes diferentes. Qual é o número M1 e qual é o número M2? E como eu sei qual volume é V1 e qual é V2?"
             }
           ],
           "internal_state": {
-            "current_status": "The student is confused about assigning the numerical values from the problem to the variables in the dilution equation. They are struggling to distinguish which given concentration and volume represent the initial state (M1 and V1) and which represent the final state (M2 and V2).",
+            "current_status": "O aluno está confuso quanto à atribuição dos valores numéricos do problema às variáveis da equação de diluição. Eles estão lutando para distinguir qual concentração e volume representam o estado inicial (M1 e V1) e que representam o estado final (M2 e V2).",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "Let's look back at the problem statement and match the variables to the physical quantities. \n\nRemember, $M_1$ is the concentration of the **stock solution**, and $V_1$ is the volume of the **stock solution** we are trying to find.\n\nFrom the problem, the stock solution is 10.0 M HCl, so $M_1$ is **10.0 M**.\n\n$M_2$ is the **final concentration** of the diluted solution, which the problem states must be **0.500 M**.\n\n$V_2$ is the **final volume** of the diluted solution, which is the total volume required, **500.0 mL**.\n\nSince we are solving for $V_1$, we can rearrange the equation to $V_1 = \\frac{{M_2V_2}}{{M_1}}$.\n\nNow, substitute the values we just identified into this setup and calculate $V_1$."
+          "target_teacher_response": "Vamos olhar para trás na instrução do problema e combinar as variáveis com as quantidades físicas.\n\nLembre-se, $M 1$ é a concentração da solução **stock, e $V 1$ é o volume da solução **stock** que estamos tentando encontrar.\n\nA partir do problema, a solução de estoque é 10.0 M HCl, então $M 1$ é **10.0 M**.\n\n$M 2$ é a concentração final ** da solução diluída, que o problema afirma ser **0,500 M**.\n\n$V 2$ é o ** volume final** da solução diluída, que é o volume total necessário, **500,0 mL**.\n\nComo estamos resolvendo $V 1$, podemos reorganizar a equação para $V 1 = \\frac{{M 2V 2}}{{M 1}$.\n\nAgora, substitua os valores que acabamos de identificar nesta configuração e calcule $V 1$."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to figure out how much of the super concentrated stock solution I need, but I don't know what formula to use for dilutions. Is there a specific equation I should be starting with?"
+              "content": "Eu tenho que descobrir o quanto da solução de estoque super concentrada eu preciso, mas eu não sei que fórmula usar para diluições. Há alguma equação específica com a qual eu deva começar?"
             },
             {
               "role": "teacher",
-              "content": "When dealing with dilutions, the amount of solute remains constant, which means the initial amount multiplied by the initial volume equals the final amount multiplied by the final volume. \n\nThis relationship is represented by the equation: $$M_1V_1 = M_2V_2$$ \n\nHere, $M_1$ is the **initial concentration** and $V_1$ is the **initial volume** of the stock solution. \n$M_2$ is the **final concentration** and $V_2$ is the **final volume** of the diluted solution. \n\nIdentify the values for $M_1$, $M_2$, and $V_2$ from the problem statement, and then rearrange the equation to solve for $V_1$. What is the expression you need to calculate $V_1$?"
+              "content": "Ao tratar das diluições, a quantidade de soluto permanece constante, o que significa que a quantidade inicial multiplicada pelo volume inicial é igual à quantidade final multiplicada pelo volume final.\n\nEssa relação é representada pela equação: $$M 1V 1 = M 2V 2$$\n\nAqui, $M 1$ é a concentração inicial** e $V 1$ é o volume inicial** da solução estoque.\n$M 2$ é a concentração final** e $V 2$ é o volume final** da solução diluída.\n\nIdentificar os valores de $M 1$, $M 2$, e $V 2$ a partir da instrução do problema, e então reorganizar a equação para resolver $V 1$. Qual é a expressão que você precisa para calcular $V 1$?"
             },
             {
               "role": "student",
-              "content": "I'm still a little confused about what numbers go where. The problem gives us three different concentrations and two different volumes. Which number is M1, and which number is M2? And how do I know which volume is V1 and which is V2?"
+              "content": "Ainda estou um pouco confuso sobre quais números vão para onde. O problema dá-nos três concentrações diferentes e dois volumes diferentes. Qual é o número M1 e qual é o número M2? E como eu sei qual volume é V1 e qual é V2?"
             },
             {
               "role": "teacher",
-              "content": "Let's look back at the problem statement and match the variables to the physical quantities. \n\nRemember, $M_1$ is the concentration of the **stock solution**, and $V_1$ is the volume of the **stock solution** we are trying to find.\n\nFrom the problem, the stock solution is 10.0 M HCl, so $M_1$ is **10.0 M**.\n\n$M_2$ is the **final concentration** of the diluted solution, which the problem states must be **0.500 M**.\n\n$V_2$ is the **final volume** of the diluted solution, which is the total volume required, **500.0 mL**.\n\nSince we are solving for $V_1$, we can rearrange the equation to $V_1 = \\frac{{M_2V_2}}{{M_1}}$.\n\nNow, substitute the values we just identified into this setup and calculate $V_1$."
+              "content": "Vamos olhar para trás na instrução do problema e combinar as variáveis com as quantidades físicas.\n\nLembre-se, $M 1$ é a concentração da solução **stock, e $V 1$ é o volume da solução **stock** que estamos tentando encontrar.\n\nA partir do problema, a solução de estoque é 10.0 M HCl, então $M 1$ é **10.0 M**.\n\n$M 2$ é a concentração final ** da solução diluída, que o problema afirma ser **0,500 M**.\n\n$V 2$ é o ** volume final** da solução diluída, que é o volume total necessário, **500,0 mL**.\n\nComo estamos resolvendo $V 1$, podemos reorganizar a equação para $V 1 = \\frac{{M 2V 2}}{{M 1}$.\n\nAgora, substitua os valores que acabamos de identificar nesta configuração e calcule $V 1$."
             },
             {
               "role": "student",
-              "content": "I think I see the formula, but I'm really lost on how to plug in the numbers. I have to put 0.500, 500.0, 10.0 into that fraction, but I don't know if I should multiply the top numbers first or if I should do something else. Can you just show me how to set up the calculation?"
+              "content": "Acho que vejo a fórmula, mas estou mesmo perdido em como ligar os números. Eu tenho que colocar 0,500, 500.0, 10,0 naquela fração, mas eu não sei se eu deveria multiplicar os números superiores primeiro ou se eu deveria fazer outra coisa. Podes mostrar-me como se faz o cálculo?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the three numerical values (0.500, 500.0, and 10.0) needed for the calculation but is struggling with the proper order of operations. The student is unsure whether to multiply the two numbers in the numerator first or if there is a different method for setting up the calculation.",
+            "current_status": "O aluno identifica corretamente os três valores numéricos (0,500, 500,0 e 10,0) necessários para o cálculo, mas está lutando com a ordem adequada das operações. O aluno não tem certeza se deve multiplicar os dois números no numerador primeiro ou se existe um método diferente para configurar o cálculo.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We established that we need to calculate $V_1$ using the rearranged formula: $$V_1 = \\frac{{M_2V_2}}{{M_1}}$$ \n\nFirst, let's substitute the values we identified: $M_2$ is **0.500 M**, $V_2$ is **500.0 mL**, and $M_1$ is **10.0 M**.\n\nSubstituting these gives us: $$V_1 = \\frac{{0.500 \\text{ M} \\cdot 500.0 \\text{ mL}}}{{10.0 \\text{ M}}}$$ \n\nWe must first calculate the numerator, which is the product of the final concentration and the final volume. What is the result of $0.500 \\text{ M} \\cdot 500.0 \\text{ mL}$?"
+          "target_teacher_response": "Estabelecemos que precisamos calcular $V 1$ usando a fórmula reorganizada: $$V 1 = \\frac{{M 2V 2}}{{M 1}$$\n\nPrimeiro, vamos substituir os valores identificados: $M 2$ é **0,500 M**, $V 2$ é **500,0 mL**, e $M 1$ é **10,0 M**.\n\nSubstituindo estes nos dá: $$V 1 = \\frac{{0.500 \\text{ M} \\cdot 500.0 \\text{ mL}} {{{10.0 \\text{ M}}$$\n\nDevemos primeiro calcular o numerador, que é o produto da concentração final e do volume final. Qual é o resultado de $0,500 \\text{ M} \\cdot 500.0 \\text{ ml}$?"
         }
       ]
     }

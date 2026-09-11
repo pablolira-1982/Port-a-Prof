@@ -1,67 +1,67 @@
 {
-  "category": "coding",
+  "category": "programação",
   "model": "gemma3:12b-it-qat",
   "generated_at": "2026-05-03T12:10:31.242555",
   "total": 6,
   "questions": [
     {
-      "subtopic": "simple if/else branch selection",
-      "question": "Given the following pseudocode: `age = 17; if age >= 18 then print \"Eligible\" else print \"Not eligible\"`, what will be printed to the console?",
+      "subtopic": "seleção simples se/outro ramo",
+      "question": "Dado o seguinte pseudocódigo: `idade = 17; se idade >= 18 anos, em seguida, imprimir \"Eligível\" outro imprimir \"Não elegível\"`, o que será impresso no console?",
       "solution": [
-        "1. Evaluate the condition `age >= 18`. Since `age` is 17, this becomes `17 >= 18`.",
-        "2. The comparison `17 >= 18` is false.",
-        "3. Because the condition is false, the `else` block will execute, which prints \"Not eligible\"."
+        "1. Avaliar a condição 'idade >= 18'. Desde 'idade' é 17, isso se torna '17 >= 18'.",
+        "2. A comparação '17 >= 18' é falsa.",
+        "3. Como a condição é falsa, o bloco 'else' será executado, que imprime \"Não elegível\"."
       ]
     },
     {
-      "subtopic": "basic boolean expressions (without nesting)",
-      "question": "Consider the following boolean expressions: `a = (10 > 5)`; `b = (8 == 8)`; `c = (3 < 10)`. What is the final value of `d = a AND b OR c`?",
+      "subtopic": "expressões booleanas básicas (sem aninhamento)",
+      "question": "Considere as seguintes expressões booleanas: `a = (10 > 5)`; `b = (8 == 8)`; `c = (3 < 10)`. Qual é o valor final de `d = a AND b OR c`?",
       "solution": [
-        "1. Evaluate `a = (10 > 5)`: Since 10 is greater than 5, `a` is `true`.",
-        "2. Evaluate `b = (8 == 8)`: Since 8 is equal to 8, `b` is `true`.",
-        "3. Evaluate `c = (3 < 10)`: Since 3 is less than 10, `c` is `true`.",
-        "4. Evaluate `a AND b`: `true AND true` is `true`.",
-        "5. Evaluate `(a AND b) OR c`: `true OR true` is `true`.",
-        "6. Therefore, `d = a AND b OR c` evaluates to `true`."
+        "1. Avaliar `a = (10 > 5)`: Uma vez que 10 é maior que 5, `a` é 'verdadeiro'.",
+        "2. Avaliar `b = (8 == 8)`: Uma vez que 8 é igual a 8, `b` é `verdadeiro`.",
+        "3. Avaliar «c = (3 < 10)»: Como 3 é menor que 10, \"c\" é \"verdadeiro\".",
+        "4. Avaliar 'a E b': 'verdadeiro e verdadeiro' é 'verdadeiro'.",
+        "5. Avaliar `(a E b) OU c`: 'verdadeiro OU verdadeiro' é 'verdadeiro'.",
+        "6. Portanto, 'd = a AND b OR c' avalia para 'verdadeiro'."
       ]
     },
     {
-      "subtopic": "short fixed loops with at most 3 iterations",
-      "question": "Consider the following pseudocode: `total = 0; for i from 1 to 3 do total = total + i * 2; end for`. What is the final value of `total` after the loop completes?",
+      "subtopic": "curtos laços fixos com no máximo 3 iterações",
+      "question": "Considere o seguinte pseudocódigo: `total = 0; para i de 1 a 3 do total = total + i * 2; fim para`. Qual é o valor final do 'total' após o ciclo terminar?",
       "solution": [
-        "1. Initialization: `total = 0`",
-        "2. First iteration (i = 1): `total = total + i * 2 = 0 + 1 * 2 = 2`",
-        "3. Second iteration (i = 2): `total = total + i * 2 = 2 + 2 * 2 = 2 + 4 = 6`",
-        "4. Third iteration (i = 3): `total = total + i * 2 = 6 + 3 * 2 = 6 + 6 = 12`",
-        "5. Final value: `total = 12`"
+        "1. Inicialização: `total = 0`",
+        "2. Primeira iteração (i = 1): «total = total + i * 2 = 0 + 1 * 2»",
+        "3. Iteração segundo (i = 2): `total = total + i * 2 = 2 + 2 * 2 = 2 + 4 = 6»",
+        "4. Terceira iteração (i = 3): «total = total + i * 2 = 6 + 3 * 2 = 6 + 6 = 12»",
+        "5. Valor final: «total = 12»"
       ]
     },
     {
-      "subtopic": "simple function output (with no loops)",
-      "question": "Consider the following pseudocode: `function calculate(a, b, c): return (a * b) + c;`. Given that `a = 3`, `b = 7`, and `c = 10`, what will the function `calculate(a, b, c)` return?",
+      "subtopic": "saída simples da função (sem loops)",
+      "question": "Considere o seguinte pseudocódigo: `function calcula(a, b, c): return (a * b) + c;`. Dado que `a = 3`, `b = 7` e `c = 10`, qual será a função `calcular(a, b, c)` retornar?",
       "solution": [
-        "1. Calculate `a * b`: 3 * 7 = 21",
-        "2. Add `c` to the result: 21 + 10 = 31",
-        "3. The function returns the final result: 31"
+        "1. Calcular `a * b`: 3 * 7 = 21",
+        "2. Adicione 'c' ao resultado: 21 + 10 = 31",
+        "3. A função retorna o resultado final: 31"
       ]
     },
     {
-      "subtopic": "tracing sequential assignments",
-      "question": "Given `a = 10; b = a * 2; c = b - 5; d = c / 3`, what is the final value of `d`?",
+      "subtopic": "traçar atribuições sequenciais",
+      "question": "Dado `a = 10; b = a * 2; c = b - 5; d = c / 3`, qual é o valor final de `d`?",
       "solution": [
-        "1. `a` is initialized to 10.",
-        "2. `b` is calculated as `a * 2`, so `b = 10 * 2 = 20`.",
-        "3. `c` is calculated as `b - 5`, so `c = 20 - 5 = 15`.",
-        "4. `d` is calculated as `c / 3`, so `d = 15 / 3 = 5`."
+        "1. 'a' é inicializado para 10.",
+        "2. «b» é calculado como «a * 2», por isso «b = 10 * 2 = 20».",
+        "3. 'c' é calculado como 'b - 5', assim 'c = 20 - 5 = 15'.",
+        "4. 'd' é calculado como 'c / 3', então `d = 15 / 3 = 5`."
       ]
     },
     {
-      "subtopic": "modulo operations",
-      "question": "Given `a = 17`, `b = 5`, and `result = (a % b + b) % a`, what is the value of `result`?",
+      "subtopic": "operações de módulo",
+      "question": "Dado «a = 17», «b = 5» e «result = (a % b + b) % a», qual é o valor de «result»?",
       "solution": [
-        "1. Calculate `a % b`: `17 % 5 = 2` (17 divided by 5 is 3 with a remainder of 2).",
-        "2. Calculate `a % b + b`: `2 + 5 = 7`.",
-        "3. Calculate `(a % b + b) % a`: `7 % 17 = 7` (7 divided by 17 is 0 with a remainder of 7)."
+        "1. Calcular «a % b»: «17 % 5 = 2 » (17 dividido por 5 é 3 com um resto de 2).",
+        "2. Calcular `a % b + b`: `2 + 5 = 7`.",
+        "3. Calcular `(a % b + b) % a`: `7 % 17 = 7` (7 dividido por 17 é 0 com um resto de 7)."
       ]
     }
   ]

@@ -1,15 +1,15 @@
 {
-  "problem": "Copper(II) sulfate (CuSO₄) reacts with sodium hydroxide (NaOH) to produce copper(II) hydroxide (Cu(OH)₂) and sodium sulfate (Na₂SO₄). If 150.0 grams of CuSO₄ reacts completely, what mass of Cu(OH)₂ will be produced?",
-  "topic": "chemistry",
-  "subtopic": "stoichiometry from balanced equations",
+  "problem": "Sulfato de cobre (II) (CuSO4) reage com hidróxido de sódio (NaOH) para produzir hidróxido de cobre (Cu(OH)2) e sulfato de sódio (Na2SO4). Se 150.0 gramas de CuSO4 reagir completamente, que massa de Cu(OH)2 será produzida?",
+  "topic": "química",
+  "subtopic": "estequiometria a partir de equações equilibradas",
   "solution_steps": [
-    "Calculate the molar mass of CuSO₄: 63.55 (Cu) + 32.07 (S) + 4 * 16.00 (O) = 159.62 g/mol.",
-    "Convert grams of CuSO₄ to moles: 150.0 g / 159.62 g/mol = 0.939 moles CuSO₄.",
-    "Write the balanced chemical equation: CuSO₄(aq) + 2NaOH(aq) → Cu(OH)₂(s) + Na₂SO₄(aq).",
-    "Determine the mole ratio of Cu(OH)₂ to CuSO₄ from the balanced equation: 1 mole Cu(OH)₂ / 1 mole CuSO₄.",
-    "Calculate moles of Cu(OH)₂ produced: 0.939 moles CuSO₄ * (1 mole Cu(OH)₂ / 1 mole CuSO₄) = 0.939 moles Cu(OH)₂.",
-    "Calculate the molar mass of Cu(OH)₂: 63.55 (Cu) + 2 * (16.00 (O) + 1.01 (H)) = 97.62 g/mol.",
-    "Convert moles of Cu(OH)₂ to grams: 0.939 moles * 97.62 g/mol = 91.5 grams Cu(OH)₂."
+    "Calcular a massa molar de CuSO4: 63,55 (Cu) + 32,07 (S) + 4 * 16.00 (O) = 159,62 g/mol.",
+    "Converter gramas de CuSO4 em moles: 150,0 g / 159,62 g/mol = 0,939 moles CuSO4.",
+    "Escreva a equação química equilibrada: CuSO4(aq) + 2NaOH(aq) → Cu(OH)2(s) + Na2SO4(aq).",
+    "Determinar a razão molar de Cu(OH)2 para CuSO4 a partir da equação equilibrada: 1 mole Cu(OH)2 / 1 mole CuSO4.",
+    "Calcular as moles de Cu(OH)2 produzidas: 0,939 moles CuSO4 * (1 mole Cu(OH)2 / 1 mole CuSO4) = 0,939 moles Cu(OH)2.",
+    "Calcular a massa molar de Cu(OH)2: 63,55 (Cu) + 2 * (16,00 (O) + 1,01 (H)) = 97,62 g/mol.",
+    "Converter moles de Cu(OH)2 para gramas: 0,939 moles * 97,62 g/mol = 91,5 gramas Cu(OH)2."
   ],
   "trajectories": [
     {
@@ -19,37 +19,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm looking at this stoichiometry problem, and I honestly don't know where to begin. I know I have the mass of CuSO₄, and I need the mass of Cu(OH)₂, but how do I even connect those two things?"
+              "content": "Estou a olhar para este problema de estequiometria, e honestamente não sei por onde começar. Eu sei que eu tenho a massa de CuSO4, e eu preciso da massa de Cu(OH)2, mas como eu ainda conecto essas duas coisas?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the given mass (CuSO₄) and the desired mass (Cu(OH)₂), but they are struggling conceptually with how to establish the connection between the two substances in the stoichiometry problem.",
+            "current_status": "O aluno identifica corretamente a massa dada (CuSO4) e a massa desejada (Cu(OH)2), mas eles estão lutando conceitualmente com a forma de estabelecer a conexão entre as duas substâncias no problema da estequiometria.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "This problem requires using the principles of stoichiometry, which is the relationship between the amounts of reactants and products in a balanced chemical equation.\n\nWhen you are given the mass of one substance and asked to find the mass of another, you must always use the mole ratio derived from the balanced equation to connect them. This is because chemical reactions involve specific ratios of atoms, which translates into a ratio of moles.\n\nFor the reaction: CuSO₄(aq) + 2NaOH(aq) → Cu(OH)₂(s) + Na₂SO₄(aq),\nthe coefficients tell us that 1 mole of CuSO₄ will produce 1 mole of Cu(OH)₂. This ratio is the key to solving the problem.\n\nTo start, you must convert the given mass of CuSO₄ into moles. What is the first calculation you need to perform to find the number of moles of CuSO₄?"
+          "target_teacher_response": "Este problema requer o uso dos princípios da estequiometria, que é a relação entre as quantidades de reagentes e produtos em uma equação química equilibrada.\n\nQuando você recebe a massa de uma substância e pede para encontrar a massa de outra, você deve sempre usar a relação molar derivada da equação equilibrada para conectá-los. Isso ocorre porque as reações químicas envolvem proporções específicas de átomos, o que se traduz em uma proporção de moles.\n\nPara a reacção: CuSO4(aq) + 2NaOH(aq) → Cu(OH)2(s) + Na2SO4(aq),\nos coeficientes nos dizem que 1 mol de CuSO4 irá produzir 1 mol de Cu(OH)2. Esta relação é a chave para resolver o problema.\n\nPara começar, você deve converter a massa dada de CuSO4 em moles. Qual é o primeiro cálculo que você precisa realizar para encontrar o número de moles de CuSO4?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm looking at this stoichiometry problem, and I honestly don't know where to begin. I know I have the mass of CuSO₄, and I need the mass of Cu(OH)₂, but how do I even connect those two things?"
+              "content": "Estou a olhar para este problema de estequiometria, e honestamente não sei por onde começar. Eu sei que eu tenho a massa de CuSO4, e eu preciso da massa de Cu(OH)2, mas como eu ainda conecto essas duas coisas?"
             },
             {
               "role": "teacher",
-              "content": "This problem requires using the principles of stoichiometry, which is the relationship between the amounts of reactants and products in a balanced chemical equation.\n\nWhen you are given the mass of one substance and asked to find the mass of another, you must always use the mole ratio derived from the balanced equation to connect them. This is because chemical reactions involve specific ratios of atoms, which translates into a ratio of moles.\n\nFor the reaction: CuSO₄(aq) + 2NaOH(aq) → Cu(OH)₂(s) + Na₂SO₄(aq),\nthe coefficients tell us that 1 mole of CuSO₄ will produce 1 mole of Cu(OH)₂. This ratio is the key to solving the problem.\n\nTo start, you must convert the given mass of CuSO₄ into moles. What is the first calculation you need to perform to find the number of moles of CuSO₄?"
+              "content": "Este problema requer o uso dos princípios da estequiometria, que é a relação entre as quantidades de reagentes e produtos em uma equação química equilibrada.\n\nQuando você recebe a massa de uma substância e pede para encontrar a massa de outra, você deve sempre usar a relação molar derivada da equação equilibrada para conectá-los. Isso ocorre porque as reações químicas envolvem proporções específicas de átomos, o que se traduz em uma proporção de moles.\n\nPara a reacção: CuSO4(aq) + 2NaOH(aq) → Cu(OH)2(s) + Na2SO4(aq),\nos coeficientes nos dizem que 1 mol de CuSO4 irá produzir 1 mol de Cu(OH)2. Esta relação é a chave para resolver o problema.\n\nPara começar, você deve converter a massa dada de CuSO4 em moles. Qual é o primeiro cálculo que você precisa realizar para encontrar o número de moles de CuSO4?"
             },
             {
               "role": "student",
-              "content": "Okay, I get that the mole ratio is the key, and I know I have to start with moles. But when I look at the problem, I just have 150.0 grams of CuSO₄. How do I actually turn that mass into moles? I'm not sure what formula I'm supposed to use here."
+              "content": "Está bem, percebo que a proporção de toupeiras é a chave, e sei que tenho de começar por toupeiras. Mas quando eu olho para o problema, eu só tenho 150.0 gramas de CuSO4. Como faço para transformar essa massa em toupeiras? Não sei que fórmula devo usar aqui."
             }
           ],
           "internal_state": {
-            "current_status": "The student understands that the initial step requires converting the given mass of CuSO₄ into moles and recognizes the importance of the mole ratio. However, the student struggles with the specific formula or procedure needed to perform this mass-to-mole conversion.",
+            "current_status": "O aluno entende que o passo inicial requer a conversão da massa dada de CuSO4 em moles e reconhece a importância da relação de mole. No entanto, o aluno luta com a fórmula específica ou procedimento necessário para realizar esta conversão massa-mole.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To convert a given mass into moles, you must use the molar mass of the substance. The relationship is defined by the formula:\n$$\\text{Moles} = \\frac{\\text{Given Mass}}{\\text{Molar Mass}}$$\n\nFor the copper(II) sulfate, the calculation you need to perform is:\n$$\\text{Moles of CuSO}_4 = \\frac{150.0 \\text{ g}}{\\text{Molar Mass of CuSO}_4}$$\n\nRemember that the molar mass is the sum of the atomic masses of all atoms in the formula. Calculate the molar mass of CuSO₄ and then determine the number of moles. What value do you get for the moles of CuSO₄?"
+          "target_teacher_response": "Para converter uma determinada massa em moles, você deve usar a massa molar da substância. A relação é definida pela fórmula:\n$$\\text{Moles} = \\frac{\\text{Given Mass} {\\text{Molar Mass}}$\n\nPara o sulfato de cobre (II), o cálculo que você precisa realizar é:\n$$\\text{Moles of CuSO} 4 = \\frac{150.0\\text{ g}}{\\text{Molar Mass of CuSO} 4}$$\n\nLembre-se que a massa molar é a soma das massas atômicas de todos os átomos na fórmula. Calcular a massa molar de CuSO4 e, em seguida, determinar o número de moles. Qual o valor que você ganha para as toupeiras de CuSO4?"
         }
       ]
     },
@@ -60,37 +60,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I figured out that 150 grams of CuSO₄ gives me 0.939 moles. Since the ratio is 1:1, I have 0.939 moles of Cu(OH)₂. Now I need the mass. The molar mass of Cu(OH)₂ is 97.62 g/mol, so I just multiply 0.939 by 97.62. That gives me 91.5 grams."
+              "content": "Descobri que 150 gramas de CuSO4 me dão 0,939 moles. Como a proporção é 1:1, eu tenho 0,939 moles de Cu(OH)2. Agora preciso da missa. A massa molar de Cu(OH)2 é 97,62 g/mol, então eu só multiplicar 0,939 por 97,62. Isso dá-me 91,5 gramas."
             }
           ],
           "internal_state": {
-            "current_status": "The student successfully completed the stoichiometry calculation, first determining 0.939 moles of CuSO₄ and then using the 1:1 mole ratio to find 0.939 moles of Cu(OH)₂. The student correctly multiplied these moles by the molar mass of Cu(OH)₂ (97.62 g/mol) to arrive at the final mass of 91.5 grams.",
+            "current_status": "O aluno completou com sucesso o cálculo da estequiometria, determinando primeiramente 0,939 moles de CuSO4 e, em seguida, usando a razão de 1:1 mole para encontrar 0,939 moles de Cu(OH)2. O aluno corretamente multiplicou estas moles pela massa molar de Cu(OH)2 (97,62 g/mol) para chegar à massa final de 91,5 gramas.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly determined that 0.939 moles of Cu(OH)₂ are produced. However, when you calculated the final mass, you used the value 97.62 g/mol for the molar mass of Cu(OH)₂. Please check the calculation for the molar mass of Cu(OH)₂ itself."
+          "target_teacher_response": "Você corretamente determinou que 0,939 moles de Cu(OH)2 são produzidos. No entanto, quando você calculou a massa final, você usou o valor 97,62 g/mol para a massa molar de Cu(OH)2. Verifique o cálculo da massa molar do próprio Cu(OH)2."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I figured out that 150 grams of CuSO₄ gives me 0.939 moles. Since the ratio is 1:1, I have 0.939 moles of Cu(OH)₂. Now I need the mass. The molar mass of Cu(OH)₂ is 97.62 g/mol, so I just multiply 0.939 by 97.62. That gives me 91.5 grams."
+              "content": "Descobri que 150 gramas de CuSO4 me dão 0,939 moles. Como a proporção é 1:1, eu tenho 0,939 moles de Cu(OH)2. Agora preciso da missa. A massa molar de Cu(OH)2 é 97,62 g/mol, então eu só multiplicar 0,939 por 97,62. Isso dá-me 91,5 gramas."
             },
             {
               "role": "teacher",
-              "content": "You correctly determined that 0.939 moles of Cu(OH)₂ are produced. However, when you calculated the final mass, you used the value 97.62 g/mol for the molar mass of Cu(OH)₂. Please check the calculation for the molar mass of Cu(OH)₂ itself."
+              "content": "Você corretamente determinou que 0,939 moles de Cu(OH)2 são produzidos. No entanto, quando você calculou a massa final, você usou o valor 97,62 g/mol para a massa molar de Cu(OH)2. Verifique o cálculo da massa molar do próprio Cu(OH)2."
             },
             {
               "role": "student",
-              "content": "Oh, right. I was supposed to check the molar mass calculation itself. Let's see... Copper is 63.55 grams, and for the hydroxide part, I have two oxygens at 16.00 grams each, and two hydrogens at 1.01 gram each. So, 63.55 plus 2 times 16.00 plus 2 times 1.01... that gives me 97.62 g/mol. So, I have 0.939 moles and the molar mass is 97.62 g/mol. Now, I just need to find the mass. Do I just multiply the moles by the molar mass, or is there another step I need to do?"
+              "content": "Certo. Era suposto eu verificar o cálculo de massa molar. Vejamos... Cobre é 63.55 gramas, e para a parte de hidróxido, eu tenho dois oxigênios em 16.00 gramas cada, e dois hidrogênios em 1.01 grama cada. Então, 63.55 mais 2 vezes 16.00 mais 2 vezes 1.01... que me dá 97.62 g/mol. Então, eu tenho 0,939 moles e a massa molar é 97,62 g/mol. Agora, só preciso de encontrar a massa. Eu apenas multiplico as toupeiras pela massa molar, ou há outro passo que eu preciso fazer?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly recalculates the molar mass of Cu(OH)₂ as 97.62 g/mol and confirms the amount of product is 0.939 moles. The student then correctly identifies the final step needed, recognizing that the mass must be found by multiplying the moles by the molar mass.",
+            "current_status": "O aluno recalcula corretamente a massa molar de Cu(OH)2 em 97,62 g/mol e confirma a quantidade de produto de 0,939 moles. O aluno então identifica corretamente o passo final necessário, reconhecendo que a massa deve ser encontrada multiplicando as molares pela massa molar.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To find the mass of a substance when you know the number of moles and the molar mass, you must use the relationship:\n$$\\text{Mass} = \\text{Moles} \\times \\text{Molar Mass}$$\n\nSubstitute the calculated moles of Cu(OH)₂ and the molar mass of Cu(OH)₂ into this equation to find the final mass. What value should you use for the molar mass?"
+          "target_teacher_response": "Para encontrar a massa de uma substância quando você sabe o número de moles e a massa molar, você deve usar a relação:\n$$\\text{Mass} = \\text{Moles} \\times \\text{Molar Mass}$$\n\nSubstitua os moles calculados de Cu(OH)2 e a massa molar de Cu(OH)2 nesta equação para encontrar a massa final. Que valor você deve usar para a massa molar?"
         }
       ]
     },
@@ -101,37 +101,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I have 0.939 moles of Cu(OH)₂. Since the molar mass of Cu(OH)₂ is 97.62 g/mol, I guess I just need to multiply those two numbers to get the mass in grams."
+              "content": "Ok, então eu tenho 0,939 moles de Cu(OH)2. Como a massa molar de Cu(OH)2 é 97,62 g/mol, eu acho que eu só preciso multiplicar esses dois números para obter a massa em gramas."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that the mass of Cu(OH)₂ is found by multiplying the calculated moles (0.939 moles) by the molar mass (97.62 g/mol) to obtain the final mass in grams.",
+            "current_status": "O aluno identifica corretamente que a massa de Cu(OH)2 é encontrada multiplicando as moles calculadas (0,939 moles) pela massa molar (97,62 g/mol) para obter a massa final em gramas.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You have correctly determined the moles of Cu(OH)₂ and its molar mass. What calculation do you need to perform to convert the calculated moles into the final mass of Cu(OH)₂?"
+          "target_teacher_response": "Você determinou corretamente as molas de Cu(OH)2 e sua massa molar. Que cálculo você precisa realizar para converter os moles calculados na massa final de Cu(OH)2?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I have 0.939 moles of Cu(OH)₂. Since the molar mass of Cu(OH)₂ is 97.62 g/mol, I guess I just need to multiply those two numbers to get the mass in grams."
+              "content": "Ok, então eu tenho 0,939 moles de Cu(OH)2. Como a massa molar de Cu(OH)2 é 97,62 g/mol, eu acho que eu só preciso multiplicar esses dois números para obter a massa em gramas."
             },
             {
               "role": "teacher",
-              "content": "You have correctly determined the moles of Cu(OH)₂ and its molar mass. What calculation do you need to perform to convert the calculated moles into the final mass of Cu(OH)₂?"
+              "content": "Você determinou corretamente as molas de Cu(OH)2 e sua massa molar. Que cálculo você precisa realizar para converter os moles calculados na massa final de Cu(OH)2?"
             },
             {
               "role": "student",
-              "content": "If I multiply 0.939 moles by 97.62 grams per mole, I get 91.5 grams. So, 91.5 grams of Cu(OH)₂ will be produced."
+              "content": "Se eu multiplicar 0,939 moles por 97,62 gramas por mole, eu recebo 91,5 gramas. Assim, 91,5 gramas de Cu(OH)2 serão produzidos."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly performs the final calculation by multiplying the calculated moles of Cu(OH)₂ (0.939 moles) by its molar mass (97.62 g/mol), accurately determining that 91.5 grams of Cu(OH)₂ will be produced.",
+            "current_status": "O aluno realiza corretamente o cálculo final multiplicando as moles calculadas de Cu(OH)2 (0,939 moles) por sua massa molar (97,62 g/mol), determinando com precisão que 91,5 gramas de Cu(OH)2 serão produzidos.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That calculation is correct. You successfully determined that 91.5 grams of Cu(OH)₂ will be produced. Do you have any other problems you'd like to work on?"
+          "target_teacher_response": "Esse cálculo está correto. Você determinou com sucesso que 91,5 gramas de Cu(OH)2 serão produzidos. Tens mais algum problema em que queiras trabalhar?"
         }
       ]
     },
@@ -142,37 +142,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I figured out that if I start with 150.0 grams of CuSO₄, I have about 0.939 moles of it. The equation is CuSO₄ + 2NaOH -> Cu(OH)₂ + Na₂SO₄. Since I know the moles of CuSO₄, how do I figure out the moles of Cu(OH)₂ that will be produced? I'm not sure if I need to use the coefficients in the equation for that."
+              "content": "Eu descobri que se eu começar com 150.0 gramas de CuSO4, eu tenho cerca de 0,939 moles dele. A equação é CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4. Já que conheço as verrugas de CuSO4, como descubro as verrugas de Cu(OH)2 que serão produzidas? Eu não tenho certeza se eu preciso usar os coeficientes na equação para isso."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculated the initial moles of CuSO4 and wrote the balanced chemical equation. The student's current struggle is determining the correct procedure for using the coefficients in the balanced equation to calculate the required moles of Cu(OH)2.",
+            "current_status": "O aluno calculou corretamente as moles iniciais de CuSO4 e escreveu a equação química equilibrada. A luta atual do aluno está determinando o procedimento correto para usar os coeficientes na equação balanceada para calcular as moles necessárias de Cu(OH)2.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The balanced equation tells us the relationship between the reactants and products. To find the moles of a product, you must use the mole ratio derived from the coefficients in the balanced equation.\n\nThe mole ratio between Cu(OH)₂ and CuSO₄ is represented by the expression: $$\\frac{1 \\text{ mol Cu(OH)}_2}{1 \\text{ mol CuSO}_4}$$ \n\nUse this ratio to set up a calculation that converts the moles of CuSO₄ you found into moles of Cu(OH)₂. What is the next calculation you need to perform?"
+          "target_teacher_response": "A equação equilibrada nos diz a relação entre os reagentes e produtos. Para encontrar as moles de um produto, você deve usar a razão molar derivada dos coeficientes na equação equilibrada.\n\nA relação molar entre Cu(OH)2 e CuSO4 é representada pela expressão: $$\\frac{1 \\text{ mol Cu(OH)} 2}{1 \\text{ mol CuSO} 4}$$\n\nUse esta proporção para configurar um cálculo que converte as moles de CuSO4 que você encontrou em moles de Cu(OH)2. Qual é o próximo cálculo que você precisa realizar?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I figured out that if I start with 150.0 grams of CuSO₄, I have about 0.939 moles of it. The equation is CuSO₄ + 2NaOH -> Cu(OH)₂ + Na₂SO₄. Since I know the moles of CuSO₄, how do I figure out the moles of Cu(OH)₂ that will be produced? I'm not sure if I need to use the coefficients in the equation for that."
+              "content": "Eu descobri que se eu começar com 150.0 gramas de CuSO4, eu tenho cerca de 0,939 moles dele. A equação é CuSO4 + 2NaOH -> Cu(OH)2 + Na2SO4. Já que conheço as verrugas de CuSO4, como descubro as verrugas de Cu(OH)2 que serão produzidas? Eu não tenho certeza se eu preciso usar os coeficientes na equação para isso."
             },
             {
               "role": "teacher",
-              "content": "The balanced equation tells us the relationship between the reactants and products. To find the moles of a product, you must use the mole ratio derived from the coefficients in the balanced equation.\n\nThe mole ratio between Cu(OH)₂ and CuSO₄ is represented by the expression: $$\\frac{1 \\text{ mol Cu(OH)}_2}{1 \\text{ mol CuSO}_4}$$ \n\nUse this ratio to set up a calculation that converts the moles of CuSO₄ you found into moles of Cu(OH)₂. What is the next calculation you need to perform?"
+              "content": "A equação equilibrada nos diz a relação entre os reagentes e produtos. Para encontrar as moles de um produto, você deve usar a razão molar derivada dos coeficientes na equação equilibrada.\n\nA relação molar entre Cu(OH)2 e CuSO4 é representada pela expressão: $$\\frac{1 \\text{ mol Cu(OH)} 2}{1 \\text{ mol CuSO} 4}$$\n\nUse esta proporção para configurar um cálculo que converte as moles de CuSO4 que você encontrou em moles de Cu(OH)2. Qual é o próximo cálculo que você precisa realizar?"
             },
             {
               "role": "student",
-              "content": "If I set up the calculation as 0.939 moles of CuSO₄ multiplied by the ratio, I get 0.939 times 2, which equals 1.878 moles of Cu(OH)₂. So, that should be the amount produced."
+              "content": "Se eu configurar o cálculo como 0,939 moles de CuSO4 multiplicado pela razão, eu recebo 0,939 vezes 2, que é igual a 1,878 moles de Cu(OH)2. Então, essa deve ser a quantidade produzida."
             }
           ],
           "internal_state": {
-            "current_status": "The student attempts to calculate the moles of Cu(OH)₂ by multiplying the initial moles of CuSO₄ (0.939 moles) by 2, incorrectly using the coefficient of 2 from the balanced equation instead of the correct mole ratio of 1 to 1, and concludes that 1.878 moles of Cu(OH)₂ will be produced.",
+            "current_status": "O aluno tenta calcular as moles de Cu(OH)2 multiplicando as moles iniciais de CuSO4 (0,939 moles) por 2, usando incorretamente o coeficiente de 2 da equação equilibrada em vez da razão correta de mole de 1 para 1, e conclui que 1.878 moles de Cu(OH)2 serão produzidos.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly set up the calculation using the mole ratio, but when you calculated 0.939 times 2, you used the coefficient for NaOH instead of the correct ratio coefficient. Please re-examine the mole ratio expression provided and use only the coefficients relating Cu(OH)₂ and CuSO₄ for your calculation."
+          "target_teacher_response": "Você corretamente configurou o cálculo usando a razão molar, mas quando você calculou 0,939 vezes 2, você usou o coeficiente de NaOH em vez do coeficiente de razão correto. Por favor, re-examine a expressão da razão mola fornecida e use apenas os coeficientes relacionados Cu(OH)2 e CuSO4 para o seu cálculo."
         }
       ]
     },
@@ -183,67 +183,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the mass of Cu(OH)₂ that is produced when 150.0 grams of CuSO₄ reacts. I'm not sure if I should start by converting the grams to moles, or if I need to figure out the balanced equation first. Where do I even begin setting up the calculation?"
+              "content": "Eu devo encontrar a massa de Cu(OH)2 que é produzida quando 150.0 gramas de CuSO4 reage. Eu não tenho certeza se eu deveria começar convertendo o gramas para moles, ou se eu preciso descobrir a equação equilibrada primeiro. Onde é que começo a fazer os cálculos?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the goal of the problem, which is to find the mass of copper(II) hydroxide produced from 150.0 grams of copper(II) sulfate. The student is currently struggling with the initial setup and sequence of the calculation, specifically questioning whether to start by balancing the chemical equation or by converting the given mass to moles.",
+            "current_status": "O aluno identifica corretamente o objetivo do problema, que é encontrar a massa de hidróxido de cobre (II) produzido a partir de 150,0 gramas de sulfato de cobre (II). O aluno está atualmente lutando com a configuração inicial e a sequência do cálculo, questionando especificamente se deve começar pelo equilíbrio da equação química ou convertendo a massa dada para moles.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "Before calculating any moles, you must first establish the chemical relationship between the reactants and products. \n\nWrite the balanced chemical equation for the reaction between CuSO₄ and NaOH. This equation will allow you to determine the **mole ratio** of the substances involved.\n\nOnce you have the balanced equation, you can use it to set up the stoichiometry calculation. What is the balanced equation for this reaction?"
+          "target_teacher_response": "Antes de calcular quaisquer moles, você deve primeiro estabelecer a relação química entre os reagentes e produtos.\n\nEscreva a equação química equilibrada para a reação entre CuSO4 e NaOH. Esta equação permitirá determinar a proporção de **mole** das substâncias envolvidas.\n\nUma vez que você tem a equação equilibrada, você pode usá-la para configurar o cálculo da estequiometria. Qual é a equação equilibrada para esta reação?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the mass of Cu(OH)₂ that is produced when 150.0 grams of CuSO₄ reacts. I'm not sure if I should start by converting the grams to moles, or if I need to figure out the balanced equation first. Where do I even begin setting up the calculation?"
+              "content": "Eu devo encontrar a massa de Cu(OH)2 que é produzida quando 150.0 gramas de CuSO4 reage. Eu não tenho certeza se eu deveria começar convertendo o gramas para moles, ou se eu preciso descobrir a equação equilibrada primeiro. Onde é que começo a fazer os cálculos?"
             },
             {
               "role": "teacher",
-              "content": "Before calculating any moles, you must first establish the chemical relationship between the reactants and products. \n\nWrite the balanced chemical equation for the reaction between CuSO₄ and NaOH. This equation will allow you to determine the **mole ratio** of the substances involved.\n\nOnce you have the balanced equation, you can use it to set up the stoichiometry calculation. What is the balanced equation for this reaction?"
+              "content": "Antes de calcular quaisquer moles, você deve primeiro estabelecer a relação química entre os reagentes e produtos.\n\nEscreva a equação química equilibrada para a reação entre CuSO4 e NaOH. Esta equação permitirá determinar a proporção de **mole** das substâncias envolvidas.\n\nUma vez que você tem a equação equilibrada, você pode usá-la para configurar o cálculo da estequiometria. Qual é a equação equilibrada para esta reação?"
             },
             {
               "role": "student",
-              "content": "I'm really stuck on this. You asked me to write the balanced equation, but I don't even know what the coefficients are supposed to be. Where do I get the numbers for the mole ratio, and how do I figure out the molar masses for everything? It feels like I'm missing the key pieces of information to even start the calculation."
+              "content": "Estou mesmo preso nisto. Você me pediu para escrever a equação equilibrada, mas eu nem sei quais os coeficientes são supostos ser. Onde eu consigo os números para a proporção de toupeira, e como eu descubro as massas molares para tudo? Parece que estou a perder as informações para começar o cálculo."
             }
           ],
           "internal_state": {
-            "current_status": "The student expressed significant confusion regarding the initial steps of the stoichiometry problem, specifically struggling with how to determine the coefficients for the balanced chemical equation and how to calculate the necessary molar masses.",
+            "current_status": "O aluno expressou confusão significativa quanto aos passos iniciais do problema da estequiometria, especificamente lutando com a forma de determinar os coeficientes para a equação química equilibrada e como calcular as massas molares necessárias.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "The balanced equation, which you must determine first, provides the **mole ratio**\n\nOnce you have the balanced equation, you can set up the stoichiometry calculation using the following variables:\n\n1. **Given Mass**: The initial amount of CuSO₄ is $150.0$ grams.\n2. **Molar Mass of CuSO₄**: You must calculate the molar mass using the atomic weights of Cu, S, and O.\n3. **Mole Ratio**: This is derived directly from the coefficients in the balanced equation, which tells you the moles of Cu(OH)₂ produced per mole of CuSO₄ reacted.\n\nWe can set up the calculation as:\n$$\\text{Moles of Cu(OH)}_2 = \\text{Moles of CuSO}_4 \\times \\frac{\\text{Coefficient of Cu(OH)}_2}{\\text{Coefficient of CuSO}_4}$$ \n\nSubstitute the calculated moles of CuSO₄ and the coefficients from the balanced equation into this setup, and then continue by converting the resulting moles of Cu(OH)₂ into grams using its molar mass. What is the next step in the calculation?"
+          "target_teacher_response": "A equação equilibrada, que você deve determinar primeiro, fornece a proporção de **mole**\n\nUma vez que você tem a equação equilibrada, você pode configurar o cálculo da estequiometria usando as seguintes variáveis:\n\n1. **Dada massa**: O valor inicial de CuSO4 é de $150.0$ gramas.\n2. ** Massa molar de CuSO4**: Você deve calcular a massa molar usando os pesos atômicos de Cu, S e O.\n3. ** Razão molar**: Isto é derivado diretamente dos coeficientes na equação equilibrada, que lhe diz as moles de Cu(OH)2 produzidas por mole de CuSO4 reagiram.\n\nPodemos definir o cálculo como:\n$$\\text{Moles of Cu(OH)} 2 = \\text{Moles of CuSO} 4 \\times \\frac{\\text{Coeficiente de Cu(OH)} 2}{\\text{Coeficiente de CuSO} 4}$$\n\nSubstitua os moles calculados de CuSO4 e os coeficientes da equação balanceada para esta configuração, e então continue convertendo os moles resultantes de Cu(OH)2 em gramas usando sua massa molar. Qual é o próximo passo no cálculo?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the mass of Cu(OH)₂ that is produced when 150.0 grams of CuSO₄ reacts. I'm not sure if I should start by converting the grams to moles, or if I need to figure out the balanced equation first. Where do I even begin setting up the calculation?"
+              "content": "Eu devo encontrar a massa de Cu(OH)2 que é produzida quando 150.0 gramas de CuSO4 reage. Eu não tenho certeza se eu deveria começar convertendo o gramas para moles, ou se eu preciso descobrir a equação equilibrada primeiro. Onde é que começo a fazer os cálculos?"
             },
             {
               "role": "teacher",
-              "content": "Before calculating any moles, you must first establish the chemical relationship between the reactants and products. \n\nWrite the balanced chemical equation for the reaction between CuSO₄ and NaOH. This equation will allow you to determine the **mole ratio** of the substances involved.\n\nOnce you have the balanced equation, you can use it to set up the stoichiometry calculation. What is the balanced equation for this reaction?"
+              "content": "Antes de calcular quaisquer moles, você deve primeiro estabelecer a relação química entre os reagentes e produtos.\n\nEscreva a equação química equilibrada para a reação entre CuSO4 e NaOH. Esta equação permitirá determinar a proporção de **mole** das substâncias envolvidas.\n\nUma vez que você tem a equação equilibrada, você pode usá-la para configurar o cálculo da estequiometria. Qual é a equação equilibrada para esta reação?"
             },
             {
               "role": "student",
-              "content": "I'm really stuck on this. You asked me to write the balanced equation, but I don't even know what the coefficients are supposed to be. Where do I get the numbers for the mole ratio, and how do I figure out the molar masses for everything? It feels like I'm missing the key pieces of information to even start the calculation."
+              "content": "Estou mesmo preso nisto. Você me pediu para escrever a equação equilibrada, mas eu nem sei quais os coeficientes são supostos ser. Onde eu consigo os números para a proporção de toupeira, e como eu descubro as massas molares para tudo? Parece que estou a perder as informações para começar o cálculo."
             },
             {
               "role": "teacher",
-              "content": "The balanced equation, which you must determine first, provides the **mole ratio**\n\nOnce you have the balanced equation, you can set up the stoichiometry calculation using the following variables:\n\n1. **Given Mass**: The initial amount of CuSO₄ is $150.0$ grams.\n2. **Molar Mass of CuSO₄**: You must calculate the molar mass using the atomic weights of Cu, S, and O.\n3. **Mole Ratio**: This is derived directly from the coefficients in the balanced equation, which tells you the moles of Cu(OH)₂ produced per mole of CuSO₄ reacted.\n\nWe can set up the calculation as:\n$$\\text{Moles of Cu(OH)}_2 = \\text{Moles of CuSO}_4 \\times \\frac{\\text{Coefficient of Cu(OH)}_2}{\\text{Coefficient of CuSO}_4}$$ \n\nSubstitute the calculated moles of CuSO₄ and the coefficients from the balanced equation into this setup, and then continue by converting the resulting moles of Cu(OH)₂ into grams using its molar mass. What is the next step in the calculation?"
+              "content": "A equação equilibrada, que você deve determinar primeiro, fornece a proporção de **mole**\n\nUma vez que você tem a equação equilibrada, você pode configurar o cálculo da estequiometria usando as seguintes variáveis:\n\n1. **Dada massa**: O valor inicial de CuSO4 é de $150.0$ gramas.\n2. ** Massa molar de CuSO4**: Você deve calcular a massa molar usando os pesos atômicos de Cu, S e O.\n3. ** Razão molar**: Isto é derivado diretamente dos coeficientes na equação equilibrada, que lhe diz as moles de Cu(OH)2 produzidas por mole de CuSO4 reagiram.\n\nPodemos definir o cálculo como:\n$$\\text{Moles of Cu(OH)} 2 = \\text{Moles of CuSO} 4 \\times \\frac{\\text{Coeficiente de Cu(OH)} 2}{\\text{Coeficiente de CuSO} 4}$$\n\nSubstitua os moles calculados de CuSO4 e os coeficientes da equação balanceada para esta configuração, e então continue convertendo os moles resultantes de Cu(OH)2 em gramas usando sua massa molar. Qual é o próximo passo no cálculo?"
             },
             {
               "role": "student",
-              "content": "I honestly don't know where to go from here. You gave me the setup, but I'm not sure how to plug everything in. Can you just show me how to do the calculation? I feel like I'm missing the whole process."
+              "content": "Sinceramente, não sei para onde ir a partir daqui. Deste-me a armação, mas não sei como ligar tudo. Podes mostrar-me como fazer os cálculos? Sinto que estou a perder todo o processo."
             }
           ],
           "internal_state": {
-            "current_status": "The student expresses significant frustration and confusion, stating that despite being given the calculation setup and variables, they do not know how to plug everything in and instead asks the teacher to show them the entire calculation process.",
+            "current_status": "O aluno expressa significativa frustração e confusão, afirmando que, apesar de ter sido dada a configuração do cálculo e variáveis, ele não sabe como conectar tudo e pede ao professor para mostrar-lhes todo o processo de cálculo.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We have established that the moles of Cu(OH)₂ produced are equal to the moles of CuSO₄ reacted, which is $0.939$ moles.\n\nTo find the mass of Cu(OH)₂, we must use its molar mass, which is $97.62$ g/mol. We set up the conversion using the formula: \n$$\\text{Mass} = \\text{Moles} \\times \\text{Molar Mass}$$ \n\nSubstituting the values, we get: \n$$\\text{Mass of Cu(OH)}_2 = 0.939 \\text{ moles} \\times 97.62 \\text{ g/mol}$$ \n\nCalculate the final mass of Cu(OH)₂ in grams."
+          "target_teacher_response": "Estabelecemos que as moles de Cu(OH)2 produzidas são iguais às moles de CuSO4 reagiram, o que equivale a US$ 0,939$ moles.\n\nPara encontrar a massa de Cu(OH)2, devemos usar sua massa molar, que é de $97,62$ g/mol. Nós configuramos a conversão usando a fórmula:\n$$\\text{Mass} = \\text{Moles} \\times \\text{Molar Mass}$$\n\nSubstituindo os valores, temos:\n$$\\text{Mass de Cu(OH)} 2 = 0,939 \\text{ moles} \\times 97,62 \\text{ g/mol}$$\n\nCalcular a massa final de Cu(OH)2 em gramas."
         }
       ]
     }

@@ -1,16 +1,16 @@
 {
-  "problem": "A 25-foot ladder leans against a wall, forming an angle of 68 degrees with the ground. Determine the distance from the base of the ladder to the wall. Round your answer to the nearest foot.",
-  "topic": "geometry",
-  "subtopic": "determining the hypotenuse using cosine ratio",
+  "problem": "Uma escada 25-pé inclina-se contra uma parede, formando um ângulo de 68 graus com o chão. Determinar a distância da base da escada para a parede. Reúna a sua resposta para o pé mais próximo.",
+  "topic": "geometria",
+  "subtopic": "determinação da hipotenusa usando a relação cosseno",
   "solution_steps": [
-    "Identify the knowns: Adjacent side = distance from base of ladder to wall (let's call it 'x'), Hypotenuse = 25 feet, Angle = 68 degrees.",
-    "Recall the cosine ratio: cos(angle) = Adjacent / Hypotenuse",
-    "Substitute the known values into the cosine ratio: cos(68°) = x / 25",
-    "Calculate cos(68°): cos(68°) ≈ 0.3746",
-    "Rewrite the equation: 0.3746 = x / 25",
-    "Solve for x: x = 0.3746 * 25",
-    "Calculate x: x ≈ 9.365",
-    "Round to the nearest foot: x ≈ 9 feet"
+    "Identificar os conhecidos: Lado adjacente = distância da base da escada para a parede (vamos chamá-lo de 'x'), Hipotenusa = 25 pés, Ângulo = 68 graus.",
+    "Recordar a razão do cosseno: cos( ângulo) = Adjacente / Hipotenusa",
+    "Substitua os valores conhecidos na relação cosseno: cos(68°) = x / 25",
+    "Calcular o cos( 68°): cos( 68°)",
+    "Reescrever a equação: 0,3746 = x / 25",
+    "Resolver para x: x = 0,3746 * 25",
+    "Calcular x: x = 9,365",
+    "Redonda para o péU mais próximo: x □ 9 pés"
   ],
   "trajectories": [
     {
@@ -20,37 +20,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this ladder problem. I know it's a right triangle, but I don't know which trig function I should use to relate the angle, the ladder length, and the distance on the ground."
+              "content": "Não sei por onde começar com este problema da escada. Eu sei que é um triângulo retângulo, mas eu não sei qual função trig eu deveria usar para relacionar o ângulo, o comprimento da escada, e a distância no chão."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that the problem involves a right triangle, but they are struggling with the conceptual step of determining which trigonometric function is appropriate to relate the given angle, the hypotenuse, and the unknown adjacent side.",
+            "current_status": "O aluno identifica corretamente que o problema envolve um triângulo retângulo, mas está lutando com o passo conceitual de determinar qual função trigonométrica é apropriada para relacionar o ângulo dado, a hipotenusa e o lado adjacente desconhecido.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "When you are dealing with a right triangle and you know an angle, you must use the trigonometric ratios to find the relationship between the sides. \n\nThese ratios, often remembered by the acronym SOH CAH TOA, relate the angle to the sides: \n\n$$\\text{SOH}: \\sin(\\theta) = \\frac{\\text{Opposite}}{\\text{Hypotenuse}}$$ \n\n$$\\text{CAH}: \\cos(\\theta) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}}$$ \n\n$$\\text{TOA}: \\tan(\\theta) = \\frac{\\text{Opposite}}{\\text{Adjacent}}$$ \n\nIn the context of the ladder, the ladder itself is the hypotenuse (25 feet), the angle is 68 degrees, and the distance from the base to the wall is the side adjacent to the angle. Since we are relating the Adjacent side and the Hypotenuse, which ratio should we use?"
+          "target_teacher_response": "Quando você está lidando com um triângulo retângulo e você conhece um ângulo, você deve usar as razões trigonométricas para encontrar a relação entre os lados.\n\nEssas relações, muitas vezes lembradas pela sigla SOH CAH TOA, relacionam o ângulo com os lados:\n\n$$\\text{SOH}: \\sin(\\theta) = \\frac{\\text{Opposite}}{\\text{Hypotenuse}$\n\n$$\\text{CAH}: \\cos(\\theta) = \\frac{\\text{Adjacente}}{\\text{Hypotenuse}$\n\n$$\\text{TOA}:\\tan(\\theta) = \\frac{\\text{Opposite}}{\\text{Adjacente}$\n\nNo contexto da escada, a escada em si é a hipotenusa (25 pés), o ângulo é de 68 graus, e a distância da base para a parede é o lado adjacente ao ângulo. Uma vez que estamos relacionando o lado adjacente e a Hipotenusa, que relação devemos usar?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this ladder problem. I know it's a right triangle, but I don't know which trig function I should use to relate the angle, the ladder length, and the distance on the ground."
+              "content": "Não sei por onde começar com este problema da escada. Eu sei que é um triângulo retângulo, mas eu não sei qual função trig eu deveria usar para relacionar o ângulo, o comprimento da escada, e a distância no chão."
             },
             {
               "role": "teacher",
-              "content": "When you are dealing with a right triangle and you know an angle, you must use the trigonometric ratios to find the relationship between the sides. \n\nThese ratios, often remembered by the acronym SOH CAH TOA, relate the angle to the sides: \n\n$$\\text{SOH}: \\sin(\\theta) = \\frac{\\text{Opposite}}{\\text{Hypotenuse}}$$ \n\n$$\\text{CAH}: \\cos(\\theta) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}}$$ \n\n$$\\text{TOA}: \\tan(\\theta) = \\frac{\\text{Opposite}}{\\text{Adjacent}}$$ \n\nIn the context of the ladder, the ladder itself is the hypotenuse (25 feet), the angle is 68 degrees, and the distance from the base to the wall is the side adjacent to the angle. Since we are relating the Adjacent side and the Hypotenuse, which ratio should we use?"
+              "content": "Quando você está lidando com um triângulo retângulo e você conhece um ângulo, você deve usar as razões trigonométricas para encontrar a relação entre os lados.\n\nEssas relações, muitas vezes lembradas pela sigla SOH CAH TOA, relacionam o ângulo com os lados:\n\n$$\\text{SOH}: \\sin(\\theta) = \\frac{\\text{Opposite}}{\\text{Hypotenuse}$\n\n$$\\text{CAH}: \\cos(\\theta) = \\frac{\\text{Adjacente}}{\\text{Hypotenuse}$\n\n$$\\text{TOA}:\\tan(\\theta) = \\frac{\\text{Opposite}}{\\text{Adjacente}$\n\nNo contexto da escada, a escada em si é a hipotenusa (25 pés), o ângulo é de 68 graus, e a distância da base para a parede é o lado adjacente ao ângulo. Uma vez que estamos relacionando o lado adjacente e a Hipotenusa, que relação devemos usar?"
             },
             {
               "role": "student",
-              "content": "Okay, so we established that we need to use cosine because we are relating the adjacent side and the hypotenuse. But now I have the ratio, cos(angle) = Adjacent / Hypotenuse. How do I actually set up the equation using the numbers we have, like the 68 degrees and the 25 feet?"
+              "content": "Ok, então estabelecemos que precisamos usar cosseno porque estamos relacionando o lado adjacente e a hipotenusa. Mas agora eu tenho a proporção, cos(ângulo) = Adjacente / Hipotenusa. Como posso realmente configurar a equação usando os números que temos, como os 68 graus e os 25 pés?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly recalled that cosine is the appropriate ratio because it relates the adjacent side and the hypotenuse. The student is now asking for guidance on how to substitute the known values, 68 degrees and 25 feet, into the established trigonometric equation.",
+            "current_status": "O aluno lembrou corretamente que o cosseno é a proporção adequada, pois relaciona o lado adjacente e a hipotenusa. O aluno está agora pedindo orientação sobre como substituir os valores conhecidos, 68 graus e 25 pés, na equação trigonométrica estabelecida.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You correctly identified the ratio. Now, we must substitute the known values into the formula. \n\nRemember that the angle is **68 degrees**, the adjacent side is the unknown distance, which we can call $x$, and the hypotenuse is **25 feet**.\n\nTherefore, the equation we need to solve is: $$\\cos(68^\\circ) = \\frac{x}{25}$$ \n\nTo find the distance $x$, you need to isolate it. What operation should you perform on both sides of the equation to get $x$ by itself?"
+          "target_teacher_response": "Identificaste correctamente a proporção. Agora, devemos substituir os valores conhecidos na fórmula.\n\nLembre-se que o ângulo é **68 graus**, o lado adjacente é a distância desconhecida, que podemos chamar de $x$, e a hipotenusa é **25 pés**.\n\nPortanto, a equação que precisamos resolver é: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nPara encontrar a distância $x$, você precisa isolá-lo. Que operação você deve executar em ambos os lados da equação para obter $x$ por si só?"
         }
       ]
     },
@@ -61,37 +61,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I used the cosine ratio, so cos(68) equals x over 25. I calculated cos(68) to be about 0.37. Then I solved for x by dividing 25 by 0.37, and I got 67.5."
+              "content": "Eu usei a razão de cosseno, então cos(68) é igual a x sobre 25. Calculei cos(68) para ser cerca de 0,37. Então eu resolvi para x dividindo 25 por 0,37, e eu tenho 67.5."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the cosine ratio and set up the equation as cos(68) equals x over 25. However, when solving for x, the student made an algebraic error by dividing 25 by the cosine value (0.37) instead of multiplying 25 by the cosine value.",
+            "current_status": "O aluno identificou corretamente a relação cosseno e configurou a equação como cos(68) igual a x acima de 25. No entanto, ao resolver para x, o aluno cometeu um erro algébrico dividindo 25 pelo valor cosseno (0,37) em vez de multiplicar 25 pelo valor cosseno.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly set up the equation as cos(68) = x / 25. However, when you solved for x, you calculated $25 / 0.37$. Can you check what operation is needed to isolate x when the equation is written as $0.37 = x / 25$?"
+          "target_teacher_response": "Você corretamente configura a equação como cos(68) = x / 25. No entanto, quando você resolveu para x, você calculou $25 / 0,37$. Você pode verificar qual operação é necessária para isolar x quando a equação é escrita como $0,37 = x / 25$?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I used the cosine ratio, so cos(68) equals x over 25. I calculated cos(68) to be about 0.37. Then I solved for x by dividing 25 by 0.37, and I got 67.5."
+              "content": "Eu usei a razão de cosseno, então cos(68) é igual a x sobre 25. Calculei cos(68) para ser cerca de 0,37. Então eu resolvi para x dividindo 25 por 0,37, e eu tenho 67.5."
             },
             {
               "role": "teacher",
-              "content": "You correctly set up the equation as cos(68) = x / 25. However, when you solved for x, you calculated $25 / 0.37$. Can you check what operation is needed to isolate x when the equation is written as $0.37 = x / 25$?"
+              "content": "Você corretamente configura a equação como cos(68) = x / 25. No entanto, quando você resolveu para x, você calculou $25 / 0,37$. Você pode verificar qual operação é necessária para isolar x quando a equação é escrita como $0,37 = x / 25$?"
             },
             {
               "role": "student",
-              "content": "Wait, if the equation is cos(68) = x / 25, then to get x by itself, I need to multiply 0.37 by 25, right? So, 0.37 times 25 is about 9.36. But what do I do with 9.36? Do I just round it, or is there another step I need to do to find the final answer?"
+              "content": "Espere, se a equação é cos(68) = x / 25, então para obter x por si só, eu preciso multiplicar 0,37 por 25, certo? Então, 0,37 vezes 25 é cerca de 9,36. Mas o que faço com 9.36? Eu apenas contorná-lo, ou há outro passo que eu preciso fazer para encontrar a resposta final?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that to solve for x, they must multiply the cosine value (0.37) by 25, resulting in 9.36. The student then correctly recognizes that the final step involves determining whether to round the answer or if additional calculations are required.",
+            "current_status": "O aluno identifica corretamente que para resolver para x, eles devem multiplicar o valor cosseno (0,37) por 25, resultando em 9,36. O aluno reconhece então corretamente que o passo final envolve determinar se deve arredondar a resposta ou se são necessários cálculos adicionais.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You correctly determined that to isolate x, you must multiply both sides of the equation by **25**. \n\nNow that you have calculated the value for x, you need to address the final instruction of the problem. The problem asks you to round your answer to the nearest foot. \n\nTherefore, the final step is to round the calculated value of x, which is approximately 9.365, to the nearest whole number. What is the rounded value for x?"
+          "target_teacher_response": "Você corretamente determinou que para isolar x, você deve multiplicar ambos os lados da equação por **25**.\n\nAgora que você calculou o valor para x, você precisa abordar a instrução final do problema. O problema pede que você rode sua resposta para o pé mais próximo.\n\nPortanto, o passo final é arredondar o valor calculado de x, que é aproximadamente 9.365, para o número inteiro mais próximo. Qual é o valor arredondado para x?"
         }
       ]
     },
@@ -102,37 +102,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so we know the cosine of the angle is the adjacent side divided by the hypotenuse. If we plug in the numbers, it looks like the distance we want is 25 times the cosine of 68 degrees."
+              "content": "Sabemos que o cosseno do ângulo é o lado adjacente dividido pela hipotenusa. Se ligarmos os números, parece que a distância que queremos é 25 vezes o cosseno de 68 graus."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly recalled that the cosine of the angle is the adjacent side divided by the hypotenuse, and accurately rearranged the formula to determine that the unknown distance is equal to 25 times the cosine of 68 degrees.",
+            "current_status": "O aluno lembrou corretamente que o cosseno do ângulo é o lado adjacente dividido pela hipotenusa, e rearranjou com precisão a fórmula para determinar que a distância desconhecida é igual a 25 vezes o cosseno de 68 graus.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You have correctly set up the relationship using the cosine ratio. What value do you need to find to solve for the distance from the base of the ladder to the wall?"
+          "target_teacher_response": "Você configurou corretamente o relacionamento usando a relação de cosseno. Que valor você precisa encontrar para resolver para a distância da base da escada para a parede?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so we know the cosine of the angle is the adjacent side divided by the hypotenuse. If we plug in the numbers, it looks like the distance we want is 25 times the cosine of 68 degrees."
+              "content": "Sabemos que o cosseno do ângulo é o lado adjacente dividido pela hipotenusa. Se ligarmos os números, parece que a distância que queremos é 25 vezes o cosseno de 68 graus."
             },
             {
               "role": "teacher",
-              "content": "You have correctly set up the relationship using the cosine ratio. What value do you need to find to solve for the distance from the base of the ladder to the wall?"
+              "content": "Você configurou corretamente o relacionamento usando a relação de cosseno. Que valor você precisa encontrar para resolver para a distância da base da escada para a parede?"
             },
             {
               "role": "student",
-              "content": "If I calculate 25 times the cosine of 68 degrees, I get about 9.365. Since we have to round to the nearest foot, the distance from the base of the ladder to the wall is 9 feet."
+              "content": "Se eu calcular 25 vezes o cosseno de 68 graus, eu tenho cerca de 9.365. Uma vez que temos que dar a volta para o pé mais próximo, a distância da base da escada para a parede é 9 pésU."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculates 25 times the cosine of 68 degrees, obtaining approximately 9.365. The student then correctly rounds this value to the nearest foot, concluding that the distance from the base of the ladder to the wall is 9 feet.",
+            "current_status": "O aluno calcula corretamente 25 vezes o cosseno de 68 graus, obtendo aproximadamente 9,365. O aluno então corretamente arredonda esse valor para o pé mais próximo, concluindo que a distância da base da escada para a parede é 9 pés.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is correct. The distance from the base of the ladder to the wall is 9 feet. Do you have any other problems you would like to work on?"
+          "target_teacher_response": "Correto. A distância entre a base da escada e a parede é de 9 pés. Tem outros problemas em que gostaria de trabalhar?"
         }
       ]
     },
@@ -143,37 +143,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I know we have the hypotenuse, which is 25 feet, and the angle is 68 degrees. Since I need the distance from the base, which is next to the angle, I think I should use cosine, right? So, it looks like cos(68) equals the distance divided by 25. Is that the right setup?"
+              "content": "Sei que temos a hipotenusa, que é 25 pés, e o ângulo é 68 graus. Como preciso da distância da base, que é ao lado do ângulo, acho que devo usar cosseno, certo? Então, parece que cos(68) é igual à distância dividida por 25. É essa a configuração certa?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the known values (hypotenuse = 25 feet, angle = 68 degrees) and correctly determined that the cosine ratio is appropriate for finding the adjacent side. They accurately set up the equation as cos(68) equals the distance divided by 25.",
+            "current_status": "O aluno identificou corretamente os valores conhecidos (hipotenusa = 25 pés, ângulo = 68 graus) e determinou corretamente que a relação cosseno é adequada para encontrar o lado adjacente. Eles definiram a equação com precisão como cos(68) igual à distância dividida por 25.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You correctly identified that the relationship involves the cosine function, as it relates the **adjacent** side to the **hypotenuse**.\n\nThe correct relationship is: $$\\cos(68^\\circ) = \\frac{x}{25}$$ \n\nNow, you need to isolate the variable $x$. What operation should you perform on both sides of the equation to solve for $x$?"
+          "target_teacher_response": "Você identificou corretamente que a relação envolve a função cossena, pois relaciona o lado ** adjacente ao ** hipotenusa**.\n\nA relação correta é: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nAgora, você precisa isolar a variável $x$. Que operação você deve executar em ambos os lados da equação para resolver por $x$?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I know we have the hypotenuse, which is 25 feet, and the angle is 68 degrees. Since I need the distance from the base, which is next to the angle, I think I should use cosine, right? So, it looks like cos(68) equals the distance divided by 25. Is that the right setup?"
+              "content": "Sei que temos a hipotenusa, que é 25 pés, e o ângulo é 68 graus. Como preciso da distância da base, que é ao lado do ângulo, acho que devo usar cosseno, certo? Então, parece que cos(68) é igual à distância dividida por 25. É essa a configuração certa?"
             },
             {
               "role": "teacher",
-              "content": "You correctly identified that the relationship involves the cosine function, as it relates the **adjacent** side to the **hypotenuse**.\n\nThe correct relationship is: $$\\cos(68^\\circ) = \\frac{x}{25}$$ \n\nNow, you need to isolate the variable $x$. What operation should you perform on both sides of the equation to solve for $x$?"
+              "content": "Você identificou corretamente que a relação envolve a função cossena, pois relaciona o lado ** adjacente ao ** hipotenusa**.\n\nA relação correta é: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nAgora, você precisa isolar a variável $x$. Que operação você deve executar em ambos os lados da equação para resolver por $x$?"
             },
             {
               "role": "student",
-              "content": "Okay, so if cos(68) = x/25, then I need to multiply both sides by 25. So, x equals 25 times cos(68). I get 25 times 0.3746, which gives me 9.365. So the distance is about 9 feet."
+              "content": "Ok, então se cos(68) = x/25, então eu preciso multiplicar ambos os lados por 25. Então, x é igual a 25 vezes cos(68). Eu tenho 25 vezes 0.3746, o que me dá 9.365. Então a distância é de cerca de 9 pés."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly isolated the variable x by multiplying both sides of the equation by 25. They then accurately calculated 25 times 0.3746, resulting in 9.365, and correctly rounded the final distance to 9 feet.",
+            "current_status": "O aluno isolou corretamente a variável x multiplicando ambos os lados da equação por 25. Eles então calcularam com precisão 25 vezes 0,3746, resultando em 9,365, e corretamente arredondaram a distância final para 9 pés.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly isolated $x$ by multiplying both sides by 25. However, when you calculated 25 times 0.3746, you seem to have rounded the value of cos(68) too early, which led to an inaccurate product."
+          "target_teacher_response": "Você isolou corretamente $x$ multiplicando ambos os lados por 25. No entanto, quando você calculou 25 vezes 0.3746, você parece ter arredondado o valor de cos(68) muito cedo, o que levou a um produto impreciso."
         }
       ]
     },
@@ -184,67 +184,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this ladder problem. We have the angle and the ladder length, but I don't know which trig function connects the angle, the hypotenuse, and the distance on the ground. Can you help me set up the equation?"
+              "content": "Não sei por onde começar com este problema da escada. Nós temos o ângulo e o comprimento da escada, mas eu não sei qual função trig conecta o ângulo, a hipotenusa, e a distância no chão. Podes ajudar-me a definir a equação?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the known values, including the angle and the hypotenuse, but is struggling with selecting the appropriate trigonometric function to relate the angle, the hypotenuse, and the unknown adjacent side.",
+            "current_status": "O aluno identifica corretamente os valores conhecidos, incluindo o ângulo e a hipotenusa, mas está lutando para selecionar a função trigonométrica apropriada para relacionar o ângulo, a hipotenusa e o lado adjacente desconhecido.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The setup requires relating the **angle** to the **hypotenuse** and the **adjacent** side. \n\nWe use the cosine ratio, which is defined as the ratio of the **adjacent** side to the **hypotenuse**.\n\n$$ \\cos(\\text{angle}) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}} $$ \n\nIn this problem, the angle is 68 degrees, the hypotenuse is 25 feet, and the adjacent side is the distance we are trying to find. \n\nSubstitute these known values into the ratio: $\\cos(68^\\circ) = \\frac{x}{25}$.\n\nNow, solve this equation for $x$. What is the next step?"
+          "target_teacher_response": "A configuração requer relacionar o ** ângulo** com o ** hipotenusa** e o ** lado adjacente**.\n\nUsamos a razão cosseno, que é definida como a razão do lado ** adjacente ** à ** hipotenusa **.\n\n$$ \\cos(\\text{angle}) = \\frac{\\text{Adicente}} {\\text{Hypotenuse}} $$\n\nNeste problema, o ângulo é de 68 graus, a hipotenusa é de 25 pés, e o lado adjacente é a distância que estamos tentando encontrar.\n\nSubstitua estes valores conhecidos pela razão: $\\cos(68^\\circ) = \\frac{x}{25}$.\n\nAgora, resolva esta equação por $x$. Qual é o próximo passo?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this ladder problem. We have the angle and the ladder length, but I don't know which trig function connects the angle, the hypotenuse, and the distance on the ground. Can you help me set up the equation?"
+              "content": "Não sei por onde começar com este problema da escada. Nós temos o ângulo e o comprimento da escada, mas eu não sei qual função trig conecta o ângulo, a hipotenusa, e a distância no chão. Podes ajudar-me a definir a equação?"
             },
             {
               "role": "teacher",
-              "content": "The setup requires relating the **angle** to the **hypotenuse** and the **adjacent** side. \n\nWe use the cosine ratio, which is defined as the ratio of the **adjacent** side to the **hypotenuse**.\n\n$$ \\cos(\\text{angle}) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}} $$ \n\nIn this problem, the angle is 68 degrees, the hypotenuse is 25 feet, and the adjacent side is the distance we are trying to find. \n\nSubstitute these known values into the ratio: $\\cos(68^\\circ) = \\frac{x}{25}$.\n\nNow, solve this equation for $x$. What is the next step?"
+              "content": "A configuração requer relacionar o ** ângulo** com o ** hipotenusa** e o ** lado adjacente**.\n\nUsamos a razão cosseno, que é definida como a razão do lado ** adjacente ** à ** hipotenusa **.\n\n$$ \\cos(\\text{angle}) = \\frac{\\text{Adicente}} {\\text{Hypotenuse}} $$\n\nNeste problema, o ângulo é de 68 graus, a hipotenusa é de 25 pés, e o lado adjacente é a distância que estamos tentando encontrar.\n\nSubstitua estes valores conhecidos pela razão: $\\cos(68^\\circ) = \\frac{x}{25}$.\n\nAgora, resolva esta equação por $x$. Qual é o próximo passo?"
             },
             {
               "role": "student",
-              "content": "I'm still confused about what these values represent. You mentioned the angle is 68 degrees, and the hypotenuse is 25 feet, but where exactly does the 'adjacent' side come from? Is it just a random variable, or is there something in the problem description that tells us what that distance is?"
+              "content": "Ainda estou confuso sobre o que estes valores representam. Você mencionou que o ângulo é de 68 graus, e a hipotenusa é de 25 pés, mas de onde exatamente vem o lado \"aditivo\"? É apenas uma variável aleatória, ou há algo na descrição do problema que nos diz o que é essa distância?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the known values (68 degrees and 25 feet) but struggles with the conceptual meaning of the 'adjacent' side. The student questions whether the adjacent side is a variable or if its value must be explicitly stated in the problem description.",
+            "current_status": "O aluno identifica corretamente os valores conhecidos (68 graus e 25 pés) mas luta com o significado conceitual do lado \"adjacente\". O aluno questiona se o lado adjacente é uma variável ou se seu valor deve ser explicitamente indicado na descrição do problema.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "Let's revisit the problem setup. The ladder forms a right triangle with the wall and the ground. \n\nWe established the equation: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nIn this context, the **angle** is given as $68^\\circ$, which is the angle between the ladder and the ground.\n\nThe **hypotenuse** is the longest side, which is the length of the ladder, given as **25 feet**.\n\nThe **adjacent** side, represented by $x$, is the distance from the base of the ladder to the wall. This is the unknown distance we need to find, and it is represented by the variable $x$ in our equation.\n\nNow that we have defined the variables, substitute the **angle** and the **hypotenuse** into the equation, and solve for $x$. What is the next step?"
+          "target_teacher_response": "Vamos rever a configuração do problema. A escada forma um triângulo retângulo com a parede e o chão.\n\nEstabelecemos a equação: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nNeste contexto, o **ângulo** é dado como $68^\\circ$, que é o ângulo entre a escada e o chão.\n\nO **hypotenuse** é o lado mais longo, que é o comprimento da escada, dado como **25 pés**.\n\nO lado ** adjacente **, representado por $x$, é a distância da base da escada para a parede. Essa é a distância desconhecida que precisamos encontrar, e ela é representada pela variável $x$ em nossa equação.\n\nAgora que definimos as variáveis, substituamos o **ângulo** e o **hipotenusa** na equação, e resolvemos por $x$. Qual é o próximo passo?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this ladder problem. We have the angle and the ladder length, but I don't know which trig function connects the angle, the hypotenuse, and the distance on the ground. Can you help me set up the equation?"
+              "content": "Não sei por onde começar com este problema da escada. Nós temos o ângulo e o comprimento da escada, mas eu não sei qual função trig conecta o ângulo, a hipotenusa, e a distância no chão. Podes ajudar-me a definir a equação?"
             },
             {
               "role": "teacher",
-              "content": "The setup requires relating the **angle** to the **hypotenuse** and the **adjacent** side. \n\nWe use the cosine ratio, which is defined as the ratio of the **adjacent** side to the **hypotenuse**.\n\n$$ \\cos(\\text{angle}) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}} $$ \n\nIn this problem, the angle is 68 degrees, the hypotenuse is 25 feet, and the adjacent side is the distance we are trying to find. \n\nSubstitute these known values into the ratio: $\\cos(68^\\circ) = \\frac{x}{25}$.\n\nNow, solve this equation for $x$. What is the next step?"
+              "content": "A configuração requer relacionar o ** ângulo** com o ** hipotenusa** e o ** lado adjacente**.\n\nUsamos a razão cosseno, que é definida como a razão do lado ** adjacente ** à ** hipotenusa **.\n\n$$ \\cos(\\text{angle}) = \\frac{\\text{Adicente}} {\\text{Hypotenuse}} $$\n\nNeste problema, o ângulo é de 68 graus, a hipotenusa é de 25 pés, e o lado adjacente é a distância que estamos tentando encontrar.\n\nSubstitua estes valores conhecidos pela razão: $\\cos(68^\\circ) = \\frac{x}{25}$.\n\nAgora, resolva esta equação por $x$. Qual é o próximo passo?"
             },
             {
               "role": "student",
-              "content": "I'm still confused about what these values represent. You mentioned the angle is 68 degrees, and the hypotenuse is 25 feet, but where exactly does the 'adjacent' side come from? Is it just a random variable, or is there something in the problem description that tells us what that distance is?"
+              "content": "Ainda estou confuso sobre o que estes valores representam. Você mencionou que o ângulo é de 68 graus, e a hipotenusa é de 25 pés, mas de onde exatamente vem o lado \"aditivo\"? É apenas uma variável aleatória, ou há algo na descrição do problema que nos diz o que é essa distância?"
             },
             {
               "role": "teacher",
-              "content": "Let's revisit the problem setup. The ladder forms a right triangle with the wall and the ground. \n\nWe established the equation: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nIn this context, the **angle** is given as $68^\\circ$, which is the angle between the ladder and the ground.\n\nThe **hypotenuse** is the longest side, which is the length of the ladder, given as **25 feet**.\n\nThe **adjacent** side, represented by $x$, is the distance from the base of the ladder to the wall. This is the unknown distance we need to find, and it is represented by the variable $x$ in our equation.\n\nNow that we have defined the variables, substitute the **angle** and the **hypotenuse** into the equation, and solve for $x$. What is the next step?"
+              "content": "Vamos rever a configuração do problema. A escada forma um triângulo retângulo com a parede e o chão.\n\nEstabelecemos a equação: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nNeste contexto, o **ângulo** é dado como $68^\\circ$, que é o ângulo entre a escada e o chão.\n\nO **hypotenuse** é o lado mais longo, que é o comprimento da escada, dado como **25 pés**.\n\nO lado ** adjacente **, representado por $x$, é a distância da base da escada para a parede. Essa é a distância desconhecida que precisamos encontrar, e ela é representada pela variável $x$ em nossa equação.\n\nAgora que definimos as variáveis, substituamos o **ângulo** e o **hipotenusa** na equação, e resolvemos por $x$. Qual é o próximo passo?"
             },
             {
               "role": "student",
-              "content": "I'm really lost on how to solve this equation. We have cos(68 degrees) equal to x over 25, but I don't know what to do next. Can you walk me through the algebra? I don't know how to get x by itself."
+              "content": "Estou realmente perdido em como resolver esta equação. Nós temos cos(68 graus) igual a x sobre 25, mas eu não sei o que fazer a seguir. Podes explicar-me a álgebra? Eu não sei como obter x sozinho."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly recalled the trigonometric equation, cos(68 degrees) equals x over 25, but is currently struggling with the algebraic steps necessary to isolate the variable x.",
+            "current_status": "O aluno lembrou corretamente a equação trigonométrica, cos(68 graus) igual a x sobre 25, mas atualmente está lutando com os passos algébricos necessários para isolar a variável x.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We need to isolate $x$ in the equation: $$\\cos(68^\\circ) = \\frac{x}{25}$$ \n\nCurrently, $x$ is being divided by **25**. To get $x$ by itself, we must perform the inverse operation, which is multiplication. We need to multiply both sides of the equation by **25**.\n\n$$\\cos(68^\\circ) \\times 25 = \\frac{x}{25} \\times 25$$\n\nOn the right side, the $\\frac{x}{25}$ and the **25** cancel out, leaving just $x$. This simplifies the equation to: $$x = 25 \\times \\cos(68^\\circ)$$\n\nNow that $x$ is isolated, use a calculator to find the value of $\\cos(68^\\circ)$ and then multiply that result by **25**. What do you get for $x$?"
+          "target_teacher_response": "Precisamos isolar $x$ na equação: $$\\cos(68^\\circ) = \\frac{x}{25}$$\n\nAtualmente, $x$ está sendo dividido por **25**. Para obter $x$ por si só, devemos realizar a operação inversa, que é multiplicação. Precisamos multiplicar ambos os lados da equação por **25**.\n\n$$\\cos(68^\\circ) \\times 25 = \\frac{x} {25} \\times 25$$\n\nDo lado direito, o $\\frac{x}{25}$ e o **25** cancelam, deixando apenas $x$. Isso simplifica a equação para: $$x = 25 \\times \\cos(68^\\circ)$$\n\nAgora que $x$ é isolado, use uma calculadora para encontrar o valor de $\\cos(68^\\circ)$ e então multiplique esse resultado por **25**. O que ganhas por $x$?"
         }
       ]
     }

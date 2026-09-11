@@ -1,14 +1,14 @@
 {
-  "problem": "A landscaping company charges $45 for a design fee plus $12 per square foot of lawn. Another company charges only $27 for a design fee and $15 per square foot. For what area, in square feet, will the two companies charge the same amount?",
-  "topic": "algebra",
-  "subtopic": "solving a linear equation with variables on both sides",
+  "problem": "Uma empresa de paisagismo cobra $45 por uma taxa de design mais $12 por pé quadrado de gramado. Outra empresa cobra apenas $27 por uma taxa de design e $15 por pé quadrado. Para que área, em pés quadrados, as duas empresas cobram o mesmo valor?",
+  "topic": "álgebra",
+  "subtopic": "resolvendo uma equação linear com variáveis em ambos os lados",
   "solution_steps": [
-    "Let 'x' represent the area in square feet.",
-    "Set up the equation representing the total cost for each company: 45 + 12x = 27 + 15x.",
-    "Subtract 12x from both sides: 45 = 27 + 3x.",
-    "Subtract 27 from both sides: 18 = 3x.",
-    "Divide both sides by 3: x = 6.",
-    "The area for which the two companies charge the same amount is 6 square feet."
+    "Deixe 'x' representar a área em pés quadrados.",
+    "Configurar a equação que representa o custo total para cada empresa: 45 + 12x = 27 + 15x.",
+    "Subtrair 12x de ambos os lados: 45 = 27 + 3x.",
+    "Subtrair 27 de ambos os lados: 18 = 3x.",
+    "Dividir ambos os lados por 3: x = 6.",
+    "A área para a qual as duas empresas cobram o mesmo montante é de 6 pés quadrados."
   ],
   "trajectories": [
     {
@@ -18,37 +18,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure how I should even start with this problem. It's comparing two different costs, and I don't know what I'm supposed to set up."
+              "content": "Nem sei como devo começar com este problema. Está a comparar dois custos diferentes, e não sei o que devo preparar."
             }
           ],
           "internal_state": {
-            "current_status": "The student recognizes that the problem requires comparing two different costs but is currently struggling with how to translate this comparison into a mathematical equation or starting point.",
+            "current_status": "O aluno reconhece que o problema requer comparar dois custos diferentes, mas atualmente está lutando com a forma de traduzir esta comparação em uma equação matemática ou ponto de partida.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "When a problem asks for the point where two quantities or costs are the same, you are looking for the value that makes two expressions equal to each other. This concept requires setting up an equation where the total cost of the first company equals the total cost of the second company.\n\nIn general, if you have two functions, say $C_1$ and $C_2$, that represent costs based on a variable like area $x$, finding where they are the same means solving the equation: $$C_1 = C_2$$ \n\nRemember that the total cost for each company is composed of a fixed design fee (the constant) plus a variable cost that depends on the area $x$. For the first company, the cost is $45 + 12x$, and for the second company, the cost is $27 + 15x$. To find the area where they charge the same amount, we must set these two expressions equal to each other.\n\nGiven this setup, what equation should you write to represent the point where the total cost of the first company equals the total cost of the second company?"
+          "target_teacher_response": "Quando um problema pede o ponto onde duas quantidades ou custos são os mesmos, você está procurando o valor que faz duas expressões iguais uma à outra. Este conceito requer a criação de uma equação em que o custo total da primeira empresa seja igual ao custo total da empresa segundo.\n\nEm geral, se você tem duas funções, digamos $C 1$ e $C 2$, que representam custos baseados em uma variável como área $x$, encontrar onde eles são os mesmos significa resolver a equação: $$C 1 = C 2$$\n\nLembre-se que o custo total para cada empresa é composto por uma taxa de design fixo (a constante) mais um custo variável que depende da área $x$. Para a primeira empresa, o custo é de $45 + 12x$, e para a empresa segundoU, o custo é de $27 + 15x$. Para encontrar a área onde eles cobram o mesmo valor, devemos definir essas duas expressões iguais uma à outra.\n\nDada esta configuração, que equação você deve escrever para representar o ponto onde o custo total da primeira empresa é igual ao custo total da empresa segundoU?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure how I should even start with this problem. It's comparing two different costs, and I don't know what I'm supposed to set up."
+              "content": "Nem sei como devo começar com este problema. Está a comparar dois custos diferentes, e não sei o que devo preparar."
             },
             {
               "role": "teacher",
-              "content": "When a problem asks for the point where two quantities or costs are the same, you are looking for the value that makes two expressions equal to each other. This concept requires setting up an equation where the total cost of the first company equals the total cost of the second company.\n\nIn general, if you have two functions, say $C_1$ and $C_2$, that represent costs based on a variable like area $x$, finding where they are the same means solving the equation: $$C_1 = C_2$$ \n\nRemember that the total cost for each company is composed of a fixed design fee (the constant) plus a variable cost that depends on the area $x$. For the first company, the cost is $45 + 12x$, and for the second company, the cost is $27 + 15x$. To find the area where they charge the same amount, we must set these two expressions equal to each other.\n\nGiven this setup, what equation should you write to represent the point where the total cost of the first company equals the total cost of the second company?"
+              "content": "Quando um problema pede o ponto onde duas quantidades ou custos são os mesmos, você está procurando o valor que faz duas expressões iguais uma à outra. Este conceito requer a criação de uma equação em que o custo total da primeira empresa seja igual ao custo total da empresa segundo.\n\nEm geral, se você tem duas funções, digamos $C 1$ e $C 2$, que representam custos baseados em uma variável como área $x$, encontrar onde eles são os mesmos significa resolver a equação: $$C 1 = C 2$$\n\nLembre-se que o custo total para cada empresa é composto por uma taxa de design fixo (a constante) mais um custo variável que depende da área $x$. Para a primeira empresa, o custo é de $45 + 12x$, e para a empresa segundoU, o custo é de $27 + 15x$. Para encontrar a área onde eles cobram o mesmo valor, devemos definir essas duas expressões iguais uma à outra.\n\nDada esta configuração, que equação você deve escrever para representar o ponto onde o custo total da primeira empresa é igual ao custo total da empresa segundoU?"
             },
             {
               "role": "student",
-              "content": "Okay, I see that we need to set the two cost expressions equal to each other, so 45 + 12x = 27 + 15x. But now that I have the equation, I don't know what to do next. How do I actually solve for x? I feel like I'm stuck on the algebra part."
+              "content": "Ok, eu vejo que nós precisamos definir as duas expressões de custo iguais entre si, então 45 + 12x = 27 + 15x. Mas agora que tenho a equação, não sei o que fazer a seguir. Como posso realmente resolver para x? Sinto que estou preso na parte da álgebra."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies and sets up the initial equation by equating the two cost expressions, resulting in 45 + 12x = 27 + 15x. However, the student indicates a conceptual gap regarding the algebraic steps needed to solve the equation for the variable x.",
+            "current_status": "O aluno identifica e configura corretamente a equação inicial, equiparando as duas expressões de custo, resultando em 45 + 12x = 27 + 15x. No entanto, o aluno indica uma lacuna conceitual em relação aos passos algébricos necessários para resolver a equação da variável x.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The goal is to isolate the variable $x$ on one side of the equation and the constant numbers on the other. \n\nTo start moving terms, we need to gather all the terms containing $x$ on one side. \n\nSince the coefficient of $x$ on the right side (15) is larger than the coefficient on the left side (12), it is easiest to subtract $12x$ from both sides of the equation. This will keep the $x$ coefficient positive and simplify the process.\n\nStarting with the equation $45 + 12x = 27 + 15x$, what does the equation look like after subtracting $12x$ from both sides?"
+          "target_teacher_response": "O objetivo é isolar a variável $x$ de um lado da equação e os números constantes do outro.\n\nPara começar a mover termos, precisamos reunir todos os termos contendo $x$ em um lado.\n\nComo o coeficiente de $x$ no lado direito (15) é maior que o coeficiente no lado esquerdo (12), é mais fácil subtrair $12x$ de ambos os lados da equação. Isso manterá o coeficiente $x$ positivo e simplificará o processo.\n\nComeçando pela equação $45 + 12x = 27 + 15x$, como é a equação depois de subtrair $12x$ de ambos os lados?"
         }
       ]
     },
@@ -59,37 +59,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I set the costs equal: 45 plus 12x equals 27 plus 15x. If I subtract 12x from both sides, I get 45 equals 27 plus 3x. Now I subtract 27 from both sides, so 45 minus 27 equals 3x. That means 28 equals 3x."
+              "content": "Eu defini os custos iguais: 45 mais 12x é igual a 27 mais 15x. Se eu subtrair 12x de ambos os lados, eu fico 45 igual a 27 mais 3x. Agora eu subtraio 27 de ambos os lados, então 45 menos 27 é igual a 3x. Isso significa que 28 é igual a 3x."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly set up the initial equation and successfully subtracted 12x from both sides. However, when subtracting 27 from both sides, the student made a calculation error, determining that 45 minus 27 equals 28, which leads to the incorrect equation 28 equals 3x.",
+            "current_status": "O aluno configurou corretamente a equação inicial e subtraiu com sucesso 12x de ambos os lados. No entanto, ao subtrair 27 de ambos os lados, o aluno cometeu um erro de cálculo, determinando que 45 menos 27 é igual a 28, o que leva à equação incorreta 28 igual a 3x.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly set up the equation and isolated the variable term, but when you calculated 45 minus 27, the result you used was 28. Can you check that subtraction again?"
+          "target_teacher_response": "Você corretamente configurou a equação e isolou o termo variável, mas quando calculou 45 menos 27, o resultado que usou foi 28. Podes verificar a subtracção outra vez?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I set the costs equal: 45 plus 12x equals 27 plus 15x. If I subtract 12x from both sides, I get 45 equals 27 plus 3x. Now I subtract 27 from both sides, so 45 minus 27 equals 3x. That means 28 equals 3x."
+              "content": "Eu defini os custos iguais: 45 mais 12x é igual a 27 mais 15x. Se eu subtrair 12x de ambos os lados, eu fico 45 igual a 27 mais 3x. Agora eu subtraio 27 de ambos os lados, então 45 menos 27 é igual a 3x. Isso significa que 28 é igual a 3x."
             },
             {
               "role": "teacher",
-              "content": "You correctly set up the equation and isolated the variable term, but when you calculated 45 minus 27, the result you used was 28. Can you check that subtraction again?"
+              "content": "Você corretamente configurou a equação e isolou o termo variável, mas quando calculou 45 menos 27, o resultado que usou foi 28. Podes verificar a subtracção outra vez?"
             },
             {
               "role": "student",
-              "content": "Oh, I see where I went wrong with the subtraction. 45 minus 27 is 18. So now I have 18 equals 3x. What do I do with this? I'm not sure how to get x by itself."
+              "content": "Estou a ver onde errei com a subtracção. 45 menos 27 é 18. Então agora eu tenho 18 igual a 3x. O que faço com isto? Eu não sou certo como começar x sozinho."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the previous subtraction error, calculating 45 minus 27 as 18, which leads to the equation 18 = 3x. The student is now struggling with the conceptual step of isolating the variable x.",
+            "current_status": "O aluno identificou corretamente o erro de subtração anterior, calculando 45 menos 27 como 18, o que leva à equação 18 = 3x. O aluno está lutando agora com o passo conceitual de isolar a variável x.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You have correctly simplified the equation to $$18 = 3x$$. \nTo isolate the variable **x**, you need to perform the inverse operation of multiplication. \nSince $3$ is currently multiplying **x**, you must divide both sides of the equation by **3** to maintain the equality. \nWhat does the equation look like after dividing both sides by 3?"
+          "target_teacher_response": "Você simplificou corretamente a equação para $$18 = 3x$$.\nPara isolar a variável **x**, você precisa realizar a operação inversa da multiplicação.\nComo $3$ está multiplicando **x**, você deve dividir ambos os lados da equação por **3** para manter a igualdade.\nComo é a equação depois de dividir ambos os lados por 3?"
         }
       ]
     },
@@ -100,37 +100,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "If I move the 27 over to the left and subtract 12x from both sides, I get 18 on the left and 3x on the right. Is that correct?"
+              "content": "Se eu mover o 27 para a esquerda e subtrair 12x de ambos os lados, eu fico 18 à esquerda e 3x à direita. Correto?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly performed the algebraic steps by first subtracting 12x from both sides and then subtracting 27 from the left side, accurately arriving at the intermediate equation 18 = 3x.",
+            "current_status": "O aluno realizou corretamente os passos algébricos subtraindo primeiramente 12x de ambos os lados e subtraindo 27 do lado esquerdo, chegando com precisão à equação intermediária 18 = 3x.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You have correctly simplified the equation to $18 = 3x$. What operation should you perform to solve for x?"
+          "target_teacher_response": "Você simplificou corretamente a equação para $18 = 3x$. Que operação você deve executar para resolver para x?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "If I move the 27 over to the left and subtract 12x from both sides, I get 18 on the left and 3x on the right. Is that correct?"
+              "content": "Se eu mover o 27 para a esquerda e subtrair 12x de ambos os lados, eu fico 18 à esquerda e 3x à direita. Correto?"
             },
             {
               "role": "teacher",
-              "content": "You have correctly simplified the equation to $18 = 3x$. What operation should you perform to solve for x?"
+              "content": "Você simplificou corretamente a equação para $18 = 3x$. Que operação você deve executar para resolver para x?"
             },
             {
               "role": "student",
-              "content": "If I divide 18 by 3, I get 6. So the area must be 6 square feet."
+              "content": "Se eu dividir 18 por 3, eu tenho 6. Então a área deve ser 6 pés quadrados."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that the next step is to divide 18 by 3, resulting in 6, and accurately concludes that the area for which the companies charge the same amount is 6 square feet.",
+            "current_status": "O aluno identifica corretamente que o próximo passo é dividir 18 por 3, resultando em 6, e conclui com precisão que a área pela qual as empresas cobram o mesmo valor é 6 pés quadrados.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is correct. The two companies charge the same amount at an area of 6 square feet. Do you have any other problems you'd like to work on?"
+          "target_teacher_response": "Correto. As duas empresas cobram o mesmo montante numa área de 6 pés quadrados. Tens mais algum problema em que queiras trabalhar?"
         }
       ]
     },
@@ -141,37 +141,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I think we need to set the two cost functions equal to each other to find the area where they match. It looks like the first company charges 45 plus 12 times the area, and the second charges 27 plus 15 times the area. So, I'm setting up 45 + 12x = 27 + 15x. Now what do I do with the x terms?"
+              "content": "Acho que temos de definir as duas funções de custo iguais uma à outra para encontrar a área onde elas combinam. Parece que a primeira empresa cobra 45 mais 12 vezes a área, e o segundo cobra 27 mais 15 vezes a área. Então, eu estou configurando 45 + 12x = 27 + 15x. Agora o que eu faço com os termos x?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the need to set the two cost functions equal to each other and accurately set up the initial equation, 45 + 12x = 27 + 15x.",
+            "current_status": "O aluno identificou corretamente a necessidade de definir as duas funções de custo iguais entre si e definir com precisão a equação inicial, 45 + 12x = 27 + 15x.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To solve for x, you need to gather the variable terms on one side and the constant terms on the other. \n\nStart by subtracting $12x$ from both sides of the equation. This will simplify the variable terms and leave you with an equation that still contains the variable $x$. What does the equation look like now?"
+          "target_teacher_response": "Para resolver x, você precisa reunir os termos variáveis de um lado e os termos constantes do outro.\n\nComece subtraindo $12x$ de ambos os lados da equação. Isso irá simplificar os termos variáveis e deixá-lo com uma equação que ainda contém a variável $x$. Como é a equação agora?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I think we need to set the two cost functions equal to each other to find the area where they match. It looks like the first company charges 45 plus 12 times the area, and the second charges 27 plus 15 times the area. So, I'm setting up 45 + 12x = 27 + 15x. Now what do I do with the x terms?"
+              "content": "Acho que temos de definir as duas funções de custo iguais uma à outra para encontrar a área onde elas combinam. Parece que a primeira empresa cobra 45 mais 12 vezes a área, e o segundo cobra 27 mais 15 vezes a área. Então, eu estou configurando 45 + 12x = 27 + 15x. Agora o que eu faço com os termos x?"
             },
             {
               "role": "teacher",
-              "content": "To solve for x, you need to gather the variable terms on one side and the constant terms on the other. \n\nStart by subtracting $12x$ from both sides of the equation. This will simplify the variable terms and leave you with an equation that still contains the variable $x$. What does the equation look like now?"
+              "content": "Para resolver x, você precisa reunir os termos variáveis de um lado e os termos constantes do outro.\n\nComece subtraindo $12x$ de ambos os lados da equação. Isso irá simplificar os termos variáveis e deixá-lo com uma equação que ainda contém a variável $x$. Como é a equação agora?"
             },
             {
               "role": "student",
-              "content": "If I subtract 12x from both sides, I get 45 = 27 - 12x + 15x. Combining the x terms gives me 45 = 27 + 3x."
+              "content": "Se eu subtrair 12x de ambos os lados, eu fico 45 = 27 - 12x + 15x. Combinando os termos x me dá 45 = 27 + 3x."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly followed the teacher's instruction to subtract 12x from both sides of the equation and accurately combined the variable terms, simplifying the equation to 45 = 27 + 3x.",
+            "current_status": "O aluno seguiu corretamente a instrução do professor para subtrair 12x de ambos os lados da equação e combinou com precisão os termos variáveis, simplificando a equação para 45 = 27 + 3x.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You need to be careful when subtracting $12x$ from the right side. Remember that $12x$ only affects the $15x$ term, and the constant $27$ should remain separate from the variable terms."
+          "target_teacher_response": "Você precisa ter cuidado ao subtrair $12x$ do lado direito. Lembre-se que $12x$ só afeta o termo $15x$, e a constante $27$ deve permanecer separada dos termos variáveis."
         }
       ]
     },
@@ -182,67 +182,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm having trouble figuring out how to even start this. We have two different companies, and we need to find the area where they charge the same amount. Should I just set the two cost equations equal to each other?"
+              "content": "Estou com dificuldade em descobrir como começar isto. Temos duas empresas diferentes, e precisamos encontrar a área onde elas cobram o mesmo montante. Devo apenas definir as duas equações de custo iguais uma à outra?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the goal of the problem, which is finding the area where the two companies charge the same amount. They propose the appropriate method by suggesting that they set the two cost equations equal to each other.",
+            "current_status": "O aluno identifica corretamente o objetivo do problema, que é encontrar a área onde as duas empresas cobram o mesmo valor. Eles propõem o método apropriado, sugerindo que eles definem as duas equações de custo iguais uma à outra.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To find the area where the charges are the same, you need to set the total cost expression for the first company equal to the total cost expression for the second company.\n\nRemember that the total cost is the sum of the **design fee** and the cost based on the **area**.\n\nSet up the equation like this:\n$$45 + 12x = 27 + 15x$$\n\nHere, $x$ represents the area in square feet. Now, simplify the equation by moving the variable terms to one side and the constant terms to the other. What is the next step you should take?"
+          "target_teacher_response": "Para encontrar a área onde as taxas são as mesmas, você precisa definir a expressão de custo total para a primeira empresa igual à expressão de custo total para a empresa segundoU.\n\nLembre-se que o custo total é a soma da taxa de design ** e do custo com base na área ****.\n\nConfigure a equação assim:\n$$45 + 12x = 27 + 15x$$\n\nAqui, $x$ representa a área em pés quadrados. Agora, simplificar a equação movendo os termos variáveis para um lado e os termos constantes para o outro. Qual é o próximo passo que você deve dar?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm having trouble figuring out how to even start this. We have two different companies, and we need to find the area where they charge the same amount. Should I just set the two cost equations equal to each other?"
+              "content": "Estou com dificuldade em descobrir como começar isto. Temos duas empresas diferentes, e precisamos encontrar a área onde elas cobram o mesmo montante. Devo apenas definir as duas equações de custo iguais uma à outra?"
             },
             {
               "role": "teacher",
-              "content": "To find the area where the charges are the same, you need to set the total cost expression for the first company equal to the total cost expression for the second company.\n\nRemember that the total cost is the sum of the **design fee** and the cost based on the **area**.\n\nSet up the equation like this:\n$$45 + 12x = 27 + 15x$$\n\nHere, $x$ represents the area in square feet. Now, simplify the equation by moving the variable terms to one side and the constant terms to the other. What is the next step you should take?"
+              "content": "Para encontrar a área onde as taxas são as mesmas, você precisa definir a expressão de custo total para a primeira empresa igual à expressão de custo total para a empresa segundoU.\n\nLembre-se que o custo total é a soma da taxa de design ** e do custo com base na área ****.\n\nConfigure a equação assim:\n$$45 + 12x = 27 + 15x$$\n\nAqui, $x$ representa a área em pés quadrados. Agora, simplificar a equação movendo os termos variáveis para um lado e os termos constantes para o outro. Qual é o próximo passo que você deve dar?"
             },
             {
               "role": "student",
-              "content": "I'm really lost on this. You showed us the equation, but I don't know what these numbers even mean. Where do the 45, 12, 27, and 15 come from? And what exactly is this 'x' supposed to represent in the context of the problem?"
+              "content": "Estou mesmo perdido nisto. Mostraste-nos a equação, mas não sei o que significam estes números. De onde vêm os 45, 12, 27 e 15? E o que exatamente esse 'x' supostamente representa no contexto do problema?"
             }
           ],
           "internal_state": {
-            "current_status": "The student is struggling with the conceptual meaning of the numbers and variables used in the equation. The student does not understand the origin of the constants (45, 12, 27, and 15) or the variable x in the context of the landscaping problem.",
+            "current_status": "O aluno está lutando com o significado conceitual dos números e variáveis usadas na equação. O aluno não entende a origem das constantes (45, 12, 27 e 15) ou a variável x no contexto do problema de paisagismo.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "The equation $45 + 12x = 27 + 15x$ is built directly from the information given in the problem description.\n\nLet's define the variables first:\n\n$x$ represents the **area** in square feet, which is the variable we are solving for.\n\nFor the first company, the total cost is the sum of the **design fee** of **45** and the cost based on the area, which is **12** multiplied by $x$.\n\nFor the second company, the total cost is the sum of the **design fee** of **27** and the cost based on the area, which is **15** multiplied by $x$.\n\nNow that you understand where the values come from, substitute the variable terms to one side and the constant terms to the other, and tell me what the resulting equation is."
+          "target_teacher_response": "A equação $45 + 12x = 27 + 15x$ é construída diretamente a partir da informação dada na descrição do problema.\n\nVamos definir as variáveis primeiro:\n\n$x$ representa a **área** em pés quadrados, que é a variável para a qual estamos resolvendo.\n\nPara a primeira empresa, o custo total é a soma da taxa de **design** de **45** e o custo baseado na área, que é **12** multiplicado por $x$.\n\nPara a empresa segundo, o custo total é a soma da taxa de **design** de **27** e o custo baseado na área, que é **15** multiplicado por $x$.\n\nAgora que você entende de onde os valores vêm, substitua os termos variáveis para um lado e os termos constantes para o outro, e me diga qual é a equação resultante."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm having trouble figuring out how to even start this. We have two different companies, and we need to find the area where they charge the same amount. Should I just set the two cost equations equal to each other?"
+              "content": "Estou com dificuldade em descobrir como começar isto. Temos duas empresas diferentes, e precisamos encontrar a área onde elas cobram o mesmo montante. Devo apenas definir as duas equações de custo iguais uma à outra?"
             },
             {
               "role": "teacher",
-              "content": "To find the area where the charges are the same, you need to set the total cost expression for the first company equal to the total cost expression for the second company.\n\nRemember that the total cost is the sum of the **design fee** and the cost based on the **area**.\n\nSet up the equation like this:\n$$45 + 12x = 27 + 15x$$\n\nHere, $x$ represents the area in square feet. Now, simplify the equation by moving the variable terms to one side and the constant terms to the other. What is the next step you should take?"
+              "content": "Para encontrar a área onde as taxas são as mesmas, você precisa definir a expressão de custo total para a primeira empresa igual à expressão de custo total para a empresa segundoU.\n\nLembre-se que o custo total é a soma da taxa de design ** e do custo com base na área ****.\n\nConfigure a equação assim:\n$$45 + 12x = 27 + 15x$$\n\nAqui, $x$ representa a área em pés quadrados. Agora, simplificar a equação movendo os termos variáveis para um lado e os termos constantes para o outro. Qual é o próximo passo que você deve dar?"
             },
             {
               "role": "student",
-              "content": "I'm really lost on this. You showed us the equation, but I don't know what these numbers even mean. Where do the 45, 12, 27, and 15 come from? And what exactly is this 'x' supposed to represent in the context of the problem?"
+              "content": "Estou mesmo perdido nisto. Mostraste-nos a equação, mas não sei o que significam estes números. De onde vêm os 45, 12, 27 e 15? E o que exatamente esse 'x' supostamente representa no contexto do problema?"
             },
             {
               "role": "teacher",
-              "content": "The equation $45 + 12x = 27 + 15x$ is built directly from the information given in the problem description.\n\nLet's define the variables first:\n\n$x$ represents the **area** in square feet, which is the variable we are solving for.\n\nFor the first company, the total cost is the sum of the **design fee** of **45** and the cost based on the area, which is **12** multiplied by $x$.\n\nFor the second company, the total cost is the sum of the **design fee** of **27** and the cost based on the area, which is **15** multiplied by $x$.\n\nNow that you understand where the values come from, substitute the variable terms to one side and the constant terms to the other, and tell me what the resulting equation is."
+              "content": "A equação $45 + 12x = 27 + 15x$ é construída diretamente a partir da informação dada na descrição do problema.\n\nVamos definir as variáveis primeiro:\n\n$x$ representa a **área** em pés quadrados, que é a variável para a qual estamos resolvendo.\n\nPara a primeira empresa, o custo total é a soma da taxa de **design** de **45** e o custo baseado na área, que é **12** multiplicado por $x$.\n\nPara a empresa segundo, o custo total é a soma da taxa de **design** de **27** e o custo baseado na área, que é **15** multiplicado por $x$.\n\nAgora que você entende de onde os valores vêm, substitua os termos variáveis para um lado e os termos constantes para o outro, e me diga qual é a equação resultante."
             },
             {
               "role": "student",
-              "content": "I honestly don't get it. You keep talking about moving things across the equals sign, but I have no idea how to do that. Can you just show me, step by step, how to actually solve the equation? I'm totally lost."
+              "content": "Sinceramente, não percebo. Estás sempre a falar em mover as coisas para o outro lado, mas não faço ideia de como fazer isso. Podes mostrar-me, passo a passo, como resolver a equação? Estou completamente perdido."
             }
           ],
           "internal_state": {
-            "current_status": "The student is struggling with the fundamental concept of algebraic manipulation, specifically how to move variables and constants across the equals sign. The student has expressed feeling totally lost and has requested a step-by-step demonstration of how to solve the equation.",
+            "current_status": "O aluno está lutando com o conceito fundamental de manipulação algébrica, especificamente como mover variáveis e constantes através do sinal de iguais. O aluno expressou-se totalmente perdido e solicitou uma demonstração passo a passo de como resolver a equação.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We need to isolate the variable $x$ on one side and the constant numbers on the other. \n\nStart by gathering the variable terms, $12x$ and $15x$, on the side with the larger coefficient, which is the right side. To move $12x$ from the left side, you must subtract $12x$ from both sides of the equation.\n\n$$45 + 12x - 12x = 27 + 15x - 12x$$ \n\nThis simplifies the equation to:\n$$45 = 27 + 3x$$ \n\nNow, we need to get the constant numbers, 45 and 27, onto opposite sides. To move the **27** from the right side, you must subtract **27** from both sides. What is the resulting equation?"
+          "target_teacher_response": "Precisamos isolar a variável $x$ de um lado e os números constantes do outro.\n\nComece por reunir os termos variáveis, $12x$ e $15x$, no lado com o coeficiente maior, que é o lado direito. Para mover $12x$ do lado esquerdo, você deve subtrair $12x$ de ambos os lados da equação.\n\n$$45 + 12x - 12x = 27 + 15x - 12x$\n\nIsso simplifica a equação para:\n$$45 = 27 + 3x$$\n\nAgora, precisamos obter os números constantes, 45 e 27, em lados opostos. Para mover o **27** do lado direito, você deve subtrair **27** de ambos os lados. Qual é a equação resultante?"
         }
       ]
     }

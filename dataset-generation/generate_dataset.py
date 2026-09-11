@@ -1,17 +1,15 @@
 """
-Port-a-Prof student-teacher synthetic dataset generator.
+Gerador de dataset sintético aluno-professor do Port-a-Prof.
 
-Reads the question files (e.g. questions/algebra.json) output by
-generate_questions.py and generates synthetic multi-turn 
-student-teacher learning trajectories
-for supervised fine-tuning.
+Lê os arquivos de perguntas (ex.: questions/algebra.json) produzidos por
+generate_questions.py e gera trajetórias sintéticas de aprendizagem aluno-professor
+em múltiplos turnos para ajuste fino supervisionado.
 
-Each generated trajectory simulates a student-teacher interaction
-where a student progresses through a problem with varying levels of
-understanding, mistakes, and teacher support.
+Cada trajetória gerada simula uma interação aluno-professor em que um aluno avança
+em um problema com diferentes níveis de compreensão, erros e suporte do professor.
 
-── Input format ── 
-Each category JSON file must have the structure:
+── Formato de entrada ──
+Cada arquivo JSON de categoria deve ter a estrutura:
 
 {
   "category": "algebra",
@@ -24,59 +22,60 @@ Each category JSON file must have the structure:
   ]
 }
 
-The solution steps act as internal ground-truth reasoning references
-used to guide dialogue generation and validate student behaviour.
+Os passos da solução atuam como referência interna correta de raciocínio,
+usada para orientar a geração do diálogo e validar o comportamento do aluno.
 
-── Dataset generation pipeline ── 
-For every problem, the generator instantiates five fixed trajectory
-templates defined in TRAJECTORY_TEMPLATES.
+── Pipeline de geração do dataset ──
+Para cada problema, o gerador instancia cinco modelos fixos de trajetória
+definidos em TRAJECTORY_TEMPLATES.
 
-Each trajectory contains 2–3 conversational turns.
+Cada trajetória contém 2 a 3 turnos conversacionais.
 
-For every turn, the system performs two sequential LLM operations:
+Para cada turno, o sistema executa duas operações sequenciais com LLM:
 
-1. Dialogue generation
+1. Geração do diálogo
    generate_pair()
 
-   Generates:
-   - one student message
-   - one teacher response
+   Gera:
+   - uma mensagem do aluno
+   - uma resposta do professor
 
-   Generation is conditioned on:
-   - the problem
-   - internal solution steps
-   - conversation history
-   - the trajectory template
-   - teacher role + support level constraints
+   A geração é condicionada por:
+   - o problema
+   - os passos internos da solução
+   - o histórico da conversa
+   - o modelo de trajetória
+   - as restrições de papel do professor + nível de suporte
 
-2. Internal state labelling
+2. Rotulagem do estado interno
    label_state()
 
-   After each student turn, the system generates a structured
-   supervision label describing the student's latest learning state.
+   Após cada turno do aluno, o sistema gera um rótulo estruturado
+   de supervisão que descreve o estado de aprendizagem mais recente do aluno.
 
-   Labels include:
+   Os rótulos incluem:
    - current_status
-       Third-person description of the student's current understanding,
-       misconception, procedural mistake, or progress.
+       Descrição em terceira pessoa da compreensão atual, concepção equivocada,
+       erro de procedimento ou progresso do aluno.
 
    - teacher_role
-       Strategy used by the teacher
+       Estratégia usada pelo professor
        (redirect, partial_worked_step, inject_info, confirm_and_advance, session_close).
 
-   - support (for partial worked step only)
+   - support (apenas para partial_worked_step)
        low / medium / high.
 
-These internal state labels are used as the supervision signal during Port-a-Prof's
-fine-tuning so the model learns the behaviour/style of each teaching role.
+Esses rótulos de estado interno são usados como sinal de supervisão durante o
+ajuste fino do Port-a-Prof, para que o modelo aprenda o comportamento/estilo de
+cada papel pedagógico.
 
-Please note that thinking mode is enabled for both dialogue generation and state
-labelling to encourage more coherent multi-turn interactions, more
-accurate identification of student misconceptions, and stronger
-consistency with the ground-truth solution steps.
+Observe que o modo de raciocínio é habilitado tanto na geração do diálogo quanto
+na rotulagem de estado para incentivar interações de múltiplos turnos mais
+coerentes, identificação mais precisa de concepções equivocadas do aluno e maior
+consistência com os passos corretos da solução.
 
-── Output format ── 
-One output file is generated per problem:
+── Formato de saída ──
+Um arquivo de saída é gerado por problema:
 
 output/<category>_q<n>_trajectories.json
 
@@ -101,26 +100,26 @@ Structure:
   ]
 }
 
-Each entry represents one supervised training example.
+Cada entrada representa um exemplo de treinamento supervisionado.
 
-── Robustness and validation ── 
-All LLM calls pass through call_with_retry() with automatic retries.
+── Robustez e validação ──
+Todas as chamadas ao LLM passam por call_with_retry() com novas tentativas automáticas.
 
-extract_json() automatically handles common malformed outputs:
-- markdown-wrapped JSON
-- invalid LaTeX escape sequences
-- partially corrupted JSON formatting
+extract_json() trata automaticamente saídas malformadas comuns:
+- JSON envolto em markdown
+- sequências de escape LaTeX inválidas
+- formatação JSON parcialmente corrompida
 
-Any failures are logged to:
+Quaisquer falhas são registradas em:
 failures_<timestamp>.json
 
 ── CLI ── 
-python generate_dataset.py                         # generate trajectories for all questions
-python generate_dataset.py --limit 5               # process only the first 5 questions
-python generate_dataset.py --skip-existing         # skip questions with existing output files
-python generate_dataset.py --workers 3             # build trajectories in parallel using 3 workers
-python generate_dataset.py --verbose               # print prompts, raw model outputs, and parsed JSON
-python generate_dataset.py --model gemma4:e4b      # override the default model (gemma4:e4b) with another ollama model
+python generate_dataset.py                         # gera trajetórias para todas as perguntas
+python generate_dataset.py --limit 5               # processa apenas as primeiras 5 perguntas
+python generate_dataset.py --skip-existing         # pula perguntas com arquivos de saída existentes
+python generate_dataset.py --workers 3             # cria trajetórias em paralelo usando 3 workers
+python generate_dataset.py --verbose               # imprime prompts, saídas brutas do modelo e JSON interpretado
+python generate_dataset.py --model gemma4:e4b      # substitui o modelo padrão (gemma4:e4b) por outro modelo Ollama
 """
 
 import argparse
@@ -135,7 +134,7 @@ from pathlib import Path
 from typing import Optional
 from tqdm import tqdm
 
-# Global configuration for Ollama inference, generation settings, paths, and runtime behaviour
+# Configuração global de inferência do Ollama, geração, caminhos e comportamento em execução
 OLLAMA_BASE     = "http://localhost:11434"
 MODEL           = "gemma4:e4b"
 INPUT_DIR       = Path(r"questions")
@@ -149,7 +148,7 @@ PRINT_LOCK   = threading.Lock()
 FAILURE_LOG  = [] 
 FAILURE_LOCK = threading.Lock()
 
-# Records any generation, parsing, and validation failures for later inspection
+# Registra falhas de geração, parsing e validação para inspeção posterior
 def log_failure(q_label: str, subtopic: str, failure_type: str, detail: str):
     with FAILURE_LOCK:
         FAILURE_LOG.append({
@@ -159,121 +158,121 @@ def log_failure(q_label: str, subtopic: str, failure_type: str, detail: str):
             "detail":       detail,
         })
 
-# Behaviour definitions for fixed teacher roles used during dialogue generation
+# Definições de comportamento para os papéis fixos do professor usados na geração de diálogo
 ROLE_DESCRIPTIONS = {
     "session_close": (
-        "Confirm the student's final answer is correct in a short, friendly sentence. "
-        "Then ask if they have any other problems they'd like to work on. "
-        "Do NOT introduce new content, re-explain steps, or ask further questions about the problem."
+        "Confirme que a resposta final do aluno está correta em uma frase curta e amigável. "
+        "Depois pergunte se ele tem outros problemas em que gostaria de trabalhar. "
+        "NÃO introduza conteúdo novo, não reexplique passos e não faça novas perguntas sobre o problema."
     ),
     "inject_info": (
-        "Explain the relevant concept, rule, or theory required to solve the problem clearly and simply. "
-        "Use LaTeX formatting for equations. Use short paragraphs, line breaks, and **bold text** where helpful. "
-        "Do NOT solve the problem or carry out any solution steps — only provide the underlying concepts and theory required to solve it. "
-        "At the end of the explanation, link back to the current problem, then provide one guiding question that helps the "
-        "student apply the theory to progress through the problem."
+        "Explique de forma clara e simples o conceito, regra ou teoria relevante necessária para resolver o problema. "
+        "Use formatação LaTeX para equações. Use parágrafos curtos, quebras de linha e **texto em negrito** quando ajudar. "
+        "NÃO resolva o problema nem execute passos da solução — forneça apenas os conceitos e a teoria necessários. "
+        "No final da explicação, conecte-a ao problema atual e faça uma pergunta orientadora que ajude o aluno "
+        "a aplicar a teoria para avançar no problema."
     ),
     "redirect": (
-        "The student has made a specific arithmetic or procedural error. "
-        "Draw their attention to the exact step or value that is wrong — "
-        "name the operation or expression directly, but do not state the correct value or redo the calculation. "
-        "Ask the student to check or redo that specific step themselves. "
-        "Maximum two sentences."
+        "O aluno cometeu um erro aritmético ou procedural específico. "
+        "Chame a atenção dele para o passo ou valor exato que está errado — "
+        "nomeie diretamente a operação ou expressão, mas não diga o valor correto nem refaça o cálculo. "
+        "Peça ao aluno que confira ou refaça esse passo específico por conta própria. "
+        "No máximo duas frases."
     ),
     "confirm_and_advance": (
-        "Confirm what the student did right in a friendly but not effusive tone, focusing on the method or reasoning. "
-        "Do NOT reteach, explain, or introduce new concepts. "
-        "Do NOT affirm or praise the student for recalling or repeating information provided by the teacher in ## CONVERSATION HISTORY. "
-        "Do NOT provide any worked steps, calculations, or partial results. "
-        "Ask one clear next-step question that is direct and actionable but does not include the answer or perform the step. "
-        "Maximum two sentences."
+        "Confirme o que o aluno fez corretamente em tom amigável, mas sem exagero, focando no método ou raciocínio. "
+        "NÃO ensine novamente, explique ou introduza novos conceitos. "
+        "NÃO afirme nem elogie o aluno por lembrar ou repetir informações dadas pelo professor em ## HISTÓRICO DA CONVERSA. "
+        "NÃO forneça passos resolvidos, cálculos ou resultados parciais. "
+        "Faça uma pergunta clara sobre o próximo passo, direta e acionável, mas sem incluir a resposta nem executar o passo. "
+        "No máximo duas frases."
     ),
 }
 
-# Specifications to control support intensity for partial worked step
+# Especificações para controlar a intensidade do suporte em partial_worked_step
 SUPPORT_DESCRIPTIONS = {
     "partial_worked_step": {
         "low": (
-            "Do NOT praise, affirm or tell the student they are correct under any circumstance. Focus only on what is needed to progress the student through the problem. "
-            "Write the equation, expression, or relationship for the specific milestone the student is currently working on, using only symbolic or variable form — "
-            "do NOT substitute any specific values from the problem. "
-            "The milestone should represent a meaningful piece of logic — not a single trivial step that would be obvious without guidance."
-            "Use $$ ... $$ for standalone equations and $ ... $ for inline math references within a sentence. "
-            "Use **bold text** to highlight key terms or values and separate distinct ideas with \\n for clarity. "
-            "Include clear, concise explanations where appropriate. "
-            "End with one clear next action for the student."
+            "NÃO elogie, afirme ou diga ao aluno que ele está correto em nenhuma circunstância. Foque apenas no necessário para o aluno avançar no problema. "
+            "Escreva a equação, expressão ou relação para o marco específico em que o aluno está trabalhando, usando apenas forma simbólica ou com variáveis — "
+            "NÃO substitua valores específicos do problema. "
+            "O marco deve representar uma parte significativa da lógica — não um passo trivial que seria óbvio sem orientação."
+            "Use $$ ... $$ para equações isoladas e $ ... $ para referências matemáticas inline dentro de uma frase. "
+            "Use **texto em negrito** para destacar termos ou valores importantes e separe ideias distintas com \\n para clareza. "
+            "Inclua explicações claras e concisas quando apropriado. "
+            "Termine com uma próxima ação clara para o aluno."
         ),
         "medium": (
-            "Do NOT praise, affirm or tell the student they are correct under any circumstance. Focus only on what is needed to progress the student through the problem. "
-            "Do NOT repeat or restate anything from the teacher dialouge in ## CONVERSATION HISTORY unless necessary. "
-            "Link directly to the symbolic setup already provided and extend it — "
-            "identify and define the relevant variables from the problem, include any necessary reasoning "
-            "for how they are obtained, but do NOT substitute, simplify, or compute. "
-            "Use $$ ... $$ for standalone equations and $ ... $ for inline math references within a sentence. "
-            "Use **bold text** to highlight key terms or values and separate distinct ideas with \\n for clarity. "
-            "End by asking the student to substitute and continue from the setup."
+            "NÃO elogie, afirme ou diga ao aluno que ele está correto em nenhuma circunstância. Foque apenas no necessário para o aluno avançar no problema. "
+            "NÃO repita nem reformule nada do diálogo do professor em ## HISTÓRICO DA CONVERSA, a menos que seja necessário. "
+            "Conecte diretamente à configuração simbólica já fornecida e estenda-a — "
+            "identifique e defina as variáveis relevantes do problema, incluindo qualquer raciocínio necessário "
+            "sobre como elas são obtidas, mas NÃO substitua, simplifique nem calcule. "
+            "Use $$ ... $$ para equações isoladas e $ ... $ para referências matemáticas inline dentro de uma frase. "
+            "Use **texto em negrito** para destacar termos ou valores importantes e separe ideias distintas com \\n para clareza. "
+            "Termine pedindo ao aluno que substitua os valores e continue a partir da configuração."
         ),
         "high": (
-            "Do not praise, affirm or tell the student they are correct under any circumstance. Focus only on what is needed to progress the student through the problem. "
-            "Do not repeat or restate anything from the teacher dialouge in ## CONVERSATION HISTORY unless necessary. "
-            "Using the variables and setup already defined, work through the evaluation. "
-            "Include a brief explanation for any non-obvious operations or transformations. "
-            "Use $$ ... $$ for standalone equations and $ ... $ for inline math references within a sentence. "
-            "Use **bold text** to highlight key terms or values and separate distinct lines of working with \\n for clarity. "
-            "Stop before one final small action (e.g. the last arithmetic operation, final rearrangement, or final value). "
-            "End with one clear instruction asking the student to complete that remaining action."
+            "NÃO elogie, afirme ou diga ao aluno que ele está correto em nenhuma circunstância. Foque apenas no necessário para o aluno avançar no problema. "
+            "NÃO repita nem reformule nada do diálogo do professor em ## HISTÓRICO DA CONVERSA, a menos que seja necessário. "
+            "Usando as variáveis e a configuração já definidas, conduza a avaliação. "
+            "Inclua uma breve explicação para operações ou transformações que não sejam óbvias. "
+            "Use $$ ... $$ para equações isoladas e $ ... $ para referências matemáticas inline dentro de uma frase. "
+            "Use **texto em negrito** para destacar termos ou valores importantes e separe linhas distintas de desenvolvimento com \\n para clareza. "
+            "Pare antes de uma pequena ação final (por exemplo, a última operação aritmética, rearranjo final ou valor final). "
+            "Termine com uma instrução clara pedindo ao aluno que complete essa ação restante."
         ),
     },
 }
 
-# Coding-specific support behaviour rules using inline code formatting instead of LaTeX
+# Regras de suporte específicas para programação usando formatação inline de código em vez de LaTeX
 SUPPORT_DESCRIPTIONS_CODING = {
     "partial_worked_step": {
         "low": (
-            "Do NOT praise, affirm or tell the student they are correct under any circumstance. Focus only on what is needed to progress the student through the problem. "
-            "Write the relevant construct, expression, or condition for the specific milestone the student is currently working on, using only variable names — "
-            "do not substitute any specific values from the problem. "
-            "The milestone should represent a meaningful piece of logic — not a single trivial step that would be obvious without guidance."
-            "Use inline backticks (`...`) for all code, variable names, and operators. "
-            "Do NOT use LaTeX or code blocks under any circumstances. "
-            "Use **bold text** to highlight key terms and separate distinct ideas with \\n for clarity. "
-            "Include clear, concise explanations where appropriate. "
-            "End with one clear next action for the student."
+            "NÃO elogie, afirme ou diga ao aluno que ele está correto em nenhuma circunstância. Foque apenas no necessário para o aluno avançar no problema. "
+            "Escreva a construção, expressão ou condição relevante para o marco específico em que o aluno está trabalhando, usando apenas nomes de variáveis — "
+            "não substitua valores específicos do problema. "
+            "O marco deve representar uma parte significativa da lógica — não um passo trivial que seria óbvio sem orientação."
+            "Use crases inline (`...`) para todo código, nomes de variáveis e operadores. "
+            "NÃO use LaTeX nem blocos de código em nenhuma circunstância. "
+            "Use **texto em negrito** para destacar termos importantes e separe ideias distintas com \\n para clareza. "
+            "Inclua explicações claras e concisas quando apropriado. "
+            "Termine com uma próxima ação clara para o aluno."
         ),
         "medium": (
-            "Do NOT praise, affirm or tell the student they are correct under any circumstance. Focus only on what is needed to progress the student through the problem. "
-            "Do NOT repeat or restate anything from the teacher dialouge in ## CONVERSATION HISTORY unless necessary. "
-            "Link directly to the construct already provided and extend it — "
-            "identify and define the relevant variables from the problem, include any necessary reasoning "
-            "for how they are obtained, but do not evaluate, resolve, or compute the result. "
-            "Use inline backticks (`...`) for all code, variable names, and operators. "
-            "Do NOT use LaTeX or code blocks under any circumstances. "
-            "Use **bold text** to highlight key terms and separate distinct ideas with \\n for clarity. "
-            "End by asking the student to evaluate or continue from the construct."
+            "NÃO elogie, afirme ou diga ao aluno que ele está correto em nenhuma circunstância. Foque apenas no necessário para o aluno avançar no problema. "
+            "NÃO repita nem reformule nada do diálogo do professor em ## HISTÓRICO DA CONVERSA, a menos que seja necessário. "
+            "Conecte diretamente à construção já fornecida e estenda-a — "
+            "identifique e defina as variáveis relevantes do problema, incluindo qualquer raciocínio necessário "
+            "sobre como elas são obtidas, mas não avalie, resolva nem calcule o resultado. "
+            "Use crases inline (`...`) para todo código, nomes de variáveis e operadores. "
+            "NÃO use LaTeX nem blocos de código em nenhuma circunstância. "
+            "Use **texto em negrito** para destacar termos importantes e separe ideias distintas com \\n para clareza. "
+            "Termine pedindo ao aluno que avalie ou continue a partir da construção."
         ),
         "high": (
-            "Do NOT praise, affirm or tell the student they are correct under any circumstance. Focus only on what is needed to progress the student through the problem. "
-            "Do NOT repeat or restate anything from the teacher dialouge in ## CONVERSATION HISTORY unless necessary. "
-            "Using the variables and construct already defined, work through the evaluation. "
-            "Include a brief explanation for any non-obvious operations or transformations. "
-            "Use inline backticks (`...`) for all code, variable names, and operators. "
-            "Do NOT use LaTeX or code blocks under any circumstances. "
-            "Use **bold text** to highlight key terms and separate distinct lines of working with \\n for clarity. "
-            "Stop before one final small action (e.g. the last condition check, assignment, or return value). "
-            "End with one clear instruction asking the student to complete that remaining action."
+            "NÃO elogie, afirme ou diga ao aluno que ele está correto em nenhuma circunstância. Foque apenas no necessário para o aluno avançar no problema. "
+            "NÃO repita nem reformule nada do diálogo do professor em ## HISTÓRICO DA CONVERSA, a menos que seja necessário. "
+            "Usando as variáveis e a construção já definidas, conduza a avaliação. "
+            "Inclua uma breve explicação para operações ou transformações que não sejam óbvias. "
+            "Use crases inline (`...`) para todo código, nomes de variáveis e operadores. "
+            "NÃO use LaTeX nem blocos de código em nenhuma circunstância. "
+            "Use **texto em negrito** para destacar termos importantes e separe linhas distintas de desenvolvimento com \\n para clareza. "
+            "Pare antes de uma pequena ação final (por exemplo, a última verificação de condição, atribuição ou valor de retorno). "
+            "Termine com uma instrução clara pedindo ao aluno que complete essa ação restante."
         ),
     },
 }
 
-# Fixed student-learning trajectory templates used to synthesise multi-turn conversations
+# Modelos fixos de trajetória de aprendizagem usados para sintetizar conversas de múltiplos turnos
 TRAJECTORY_TEMPLATES = [
     {
         "trajectory_id": "traj_1",
         "student_path": [
-            "The student states that they are unsure how to begin the problem.",
-            "The student acknowledges the teacher's explanation but is unsure how to apply it to this specific problem. "
-            "They ask the teacher to help them with the step. "
-            "The final answer does not appear."
+            "O aluno afirma que não sabe como começar o problema.",
+            "O aluno reconhece a explicação do professor, mas não sabe como aplicá-la a este problema específico. "
+            "Ele pede ajuda ao professor com o passo. "
+            "A resposta final não aparece."
         ],
         "teacher_turns": [
             {"role": "inject_info",         "support": None},
@@ -283,13 +282,13 @@ TRAJECTORY_TEMPLATES = [
     {
         "trajectory_id": "traj_2",
         "student_path": [
-            "The student attempts an early meaningful milestone but makes a procedural error — "
-            "a wrong sign, incorrect arithmetic, or a silly calculation mistake. "
-            "The final answer does not appear.",
-            "The student corrects their procedural error from the \"student\" turn of ## CONVERSATION HISTORY, "
-            "arriving at the correct value for that step. "
-            "They then express uncertainty about what to do next and ask for help setting up the next step. "
-            "The final answer does not appear."
+            "O aluno tenta um marco inicial significativo, mas comete um erro procedural — "
+            "um sinal errado, aritmética incorreta ou um erro simples de cálculo. "
+            "A resposta final não aparece.",
+            "O aluno corrige seu erro procedural do turno \"student\" em ## HISTÓRICO DA CONVERSA, "
+            "chegando ao valor correto para esse passo. "
+            "Depois expressa incerteza sobre o que fazer em seguida e pede ajuda para montar o próximo passo. "
+            "A resposta final não aparece."
         ],
         "teacher_turns": [
             {"role": "redirect", "support": None},
@@ -299,12 +298,12 @@ TRAJECTORY_TEMPLATES = [
     {
         "trajectory_id": "traj_3",
         "student_path": [
-            "The student is near the end of the solution and correctly completes the second-to-last meaningful milestone. "
-            "This may involve finding the last needed intermediate value, substituting known values into the final expression, or setting up the final calculation. "
-            "They stop before computing or stating the final answer. "
-            "The final answer does not appear.",
-            "The student completes the final calculation or reasoning step and states the correct final answer. "
-            "The final answer must exactly match the final result implied by the internal solution steps."
+            "O aluno está perto do fim da solução e completa corretamente o penúltimo marco significativo. "
+            "Isso pode envolver encontrar o último valor intermediário necessário, substituir valores conhecidos na expressão final ou montar o cálculo final. "
+            "Ele para antes de calcular ou declarar a resposta final. "
+            "A resposta final não aparece.",
+            "O aluno completa o cálculo final ou o passo final de raciocínio e declara a resposta final correta. "
+            "A resposta final deve coincidir exatamente com o resultado final indicado pelos passos internos da solução."
         ],
         "teacher_turns": [
             {"role": "confirm_and_advance", "support": None},
@@ -314,12 +313,12 @@ TRAJECTORY_TEMPLATES = [
     {
         "trajectory_id": "traj_4",
         "student_path": [
-            "The student correctly completes the first meaningful milestone and then asks for help setting up the next step.",
-            "The student utilises the setup given in the \"teacher\" turn of ## CONVERSATION HISTORY, "
-            "but makes an arithmetic or logic mistake during their evaluation of the step — "
-            "for example, combining the wrong terms, applying the wrong operation, "
-            "or miscalculating — resulting in an incorrect value for that step. "
-            "The final answer does not appear."
+            "O aluno completa corretamente o primeiro marco significativo e depois pede ajuda para montar o próximo passo.",
+            "O aluno usa a configuração dada no turno \"teacher\" em ## HISTÓRICO DA CONVERSA, "
+            "mas comete um erro aritmético ou lógico durante a avaliação do passo — "
+            "por exemplo, combina os termos errados, aplica a operação errada "
+            "ou calcula incorretamente — resultando em um valor incorreto para esse passo. "
+            "A resposta final não aparece."
         ],
         "teacher_turns": [
             {"role": "partial_worked_step", "support": "low"},
@@ -328,20 +327,20 @@ TRAJECTORY_TEMPLATES = [
     },
     {   "trajectory_id": "traj_5",
         "student_path": [
-            "The student does not know how to begin the problem. "
-            "They ask for some help with the set-up.",
+            "O aluno não sabe como começar o problema. "
+            "Ele pede ajuda com a montagem.",
 
-            "The student has made ZERO progress from the teacher's explanation in ## CONVERSATION HISTORY — "
-            "they show no understanding of what was provided. "
-            "They do NOT know how to obtain the required variables and ask where the values come from. "
-            "The student has NOT performed any calculations. "
-            "The final answer does NOT appear.",
+            "O aluno fez progresso ZERO a partir da explicação do professor em ## HISTÓRICO DA CONVERSA — "
+            "ele não demonstra compreensão do que foi fornecido. "
+            "Ele NÃO sabe como obter as variáveis necessárias e pergunta de onde vêm os valores. "
+            "O aluno NÃO realizou nenhum cálculo. "
+            "A resposta final NÃO aparece.",
 
-            "The student has made ZERO progress from the teacher's explanation in ## CONVERSATION HISTORY — "
-            "they show no understanding of what was provided. "
-            "They do NOT know how to carry out the evaluation and ask to be shown how to work through it. "
-            "The student has NOT performed any calculations. "
-            "The final answer does NOT appear.",
+            "O aluno fez progresso ZERO a partir da explicação do professor em ## HISTÓRICO DA CONVERSA — "
+            "ele não demonstra compreensão do que foi fornecido. "
+            "Ele NÃO sabe como realizar a avaliação e pede para ver como desenvolvê-la. "
+            "O aluno NÃO realizou nenhum cálculo. "
+            "A resposta final NÃO aparece.",
         ],
         "teacher_turns": [
             {"role": "partial_worked_step", "support": "low"},
@@ -367,7 +366,7 @@ def _vprint(header: str, body: str, colour: str = "", tag: str = "") -> None:
         print(body)
         print()
 
-# Sends a generation request to Ollama and returns the cleaned raw model output
+# Envia uma requisição de geração ao Ollama e retorna a saída bruta limpa do modelo
 def call_ollama(prompt: str, tag: str = "", thinking: bool = False) -> str:
     if VERBOSE:
         _vprint("PROMPT →", prompt, "prompt", tag)
@@ -390,13 +389,13 @@ def call_ollama(prompt: str, tag: str = "", thinking: bool = False) -> str:
     data = resp.json()
     raw  = data["response"]
 
-    # Log thinking if present
+    # Registra o raciocínio se estiver presente
     if thinking and VERBOSE:
         scratchpad = data.get("thinking", "").strip()
         if scratchpad:
-            _vprint("THINKING SCRATCHPAD ←", scratchpad, "", tag)
+            _vprint("RASCUNHO DE RACIOCÍNIO ←", scratchpad, "", tag)
 
-    # Strip special tokens
+    # Remove tokens especiais
     SPECIAL_TOKENS = [
         "<end_of_turn>",
         "</end_of_turn>", 
@@ -410,10 +409,10 @@ def call_ollama(prompt: str, tag: str = "", thinking: bool = False) -> str:
 
     raw = raw.strip()
     if VERBOSE:
-        _vprint("RAW MODEL OUTPUT ←", raw, "raw", tag)
+        _vprint("SAÍDA BRUTA DO MODELO ←", raw, "raw", tag)
     return raw
 
-# Repairs invalid single-backslash LaTeX escapes before JSON parsing
+# Repara escapes LaTeX inválidos com barra única antes de interpretar o JSON
 def _fix_latex_escapes(s: str) -> str:
     _KEEP = frozenset({'"', '\\', '/', 'n', 'u'})
     result = []
@@ -422,17 +421,17 @@ def _fix_latex_escapes(s: str) -> str:
         if s[i] == '\\' and i + 1 < len(s):
             next_char = s[i + 1]
             if next_char == '\\':
-                # Already double-backslash — keep and skip both chars
+                # Já tem barra dupla — mantém e pula ambos os caracteres
                 result.append('\\\\')
                 i += 2
             elif next_char in _KEEP:
-                # Intentional JSON escape — keep as-is
+                # Escape JSON intencional — mantém como está
                 result.append('\\')
                 result.append(next_char)
                 i += 2
             else:
-                # Single-backslash LaTeX — double the backslash only,
-                # let the next char be processed normally on the next iteration
+                # LaTeX com barra única — duplica apenas a barra,
+                # deixando o próximo caractere ser processado normalmente na próxima iteração
                 result.append('\\\\')
                 i += 1
         else:
@@ -440,7 +439,7 @@ def _fix_latex_escapes(s: str) -> str:
             i += 1
     return ''.join(result)
 
-# Recursively extracts all string values from a parsed JSON object
+# Extrai recursivamente todos os valores de string de um objeto JSON interpretado
 def _scan_string_values(obj) -> list:
     strings = []
     if isinstance(obj, dict):
@@ -453,7 +452,7 @@ def _scan_string_values(obj) -> list:
         strings.append(obj)
     return strings
 
-# Detects silent LaTeX corruption caused by invalid JSON escape parsing
+# Detecta corrupção silenciosa de LaTeX causada por parsing de escapes JSON inválidos
 def _check_post_parse_corruption(obj) -> list:
     _CORRUPT = {'\x08': r'\b', '\x0c': r'\f', '\r': r'\r', '\t': r'\t'}
     issues = []
@@ -461,12 +460,12 @@ def _check_post_parse_corruption(obj) -> list:
         for char, name in _CORRUPT.items():
             if char in s:
                 issues.append(
-                    f"string contains {name} control char "
-                    f"(likely unescaped LaTeX e.g. \\{name[1:]}ext / \\frac / \\rho / \\beta)"
+                    f"string contém caractere de controle {name} "
+                    f"(provável LaTeX sem escape, ex. \\{name[1:]}ext / \\frac / \\rho / \\beta)"
                 )
     return issues
 
-# Extracts and validates one JSON object from raw model output
+# Extrai e valida um objeto JSON da saída bruta do modelo
 def extract_json(text: str):
     fenced = re.search(r"```(?:json)?\s*([\s\S]+?)```", text)
     candidate = fenced.group(1).strip() if fenced else text.strip()
@@ -480,17 +479,17 @@ def extract_json(text: str):
         except json.JSONDecodeError:
             return None
 
-    # Attempt 1: parse as-is
+    # Tentativa 1: interpretar como está
     result = _try_parse(candidate)
     if result is not None:
         return result
 
-    # Attempt 2: fix single-backslash LaTeX (e.g. \ge → \\ge) and retry
+    # Tentativa 2: corrigir LaTeX com barra única (ex.: \ge → \\ge) e tentar novamente
     result = _try_parse(_fix_latex_escapes(candidate))
     if result is not None:
         return result
 
-    # Fallback: find first JSON-looking object and repeat both attempts
+    # Fallback: encontrar o primeiro objeto com aparência de JSON e repetir as duas tentativas
     start = candidate.find("{")
     end = candidate.rfind("}")
     if start != -1 and end != -1 and end > start:
@@ -503,7 +502,7 @@ def extract_json(text: str):
             return result
     return None
 
-# Executes an Ollama generation call with retry and validation handling
+# Executa uma chamada de geração ao Ollama com nova tentativa e validação
 def call_with_retry(prompt: str, validator=None, label: str = "", tag: str = "", q_label: str = "", subtopic: str = "", thinking: bool = False):
     last_error = ""
     for attempt in range(1, MAX_RETRIES + 1):
@@ -511,9 +510,9 @@ def call_with_retry(prompt: str, validator=None, label: str = "", tag: str = "",
             raw    = call_ollama(prompt, tag=tag, thinking=thinking)
             result = extract_json(raw)
             if result is None:
-                raise ValueError("No valid JSON found in response")
+                raise ValueError("Nenhum JSON válido encontrado na resposta")
             if validator and not validator(result):
-                raise ValueError(f"Validation failed ({type(result).__name__})")
+                raise ValueError(f"Validação falhou ({type(result).__name__})")
             if VERBOSE:
                 _vprint(f"PARSED [{label}] ✓", json.dumps(result, indent=2), "parsed", tag)
             return result
@@ -521,15 +520,15 @@ def call_with_retry(prompt: str, validator=None, label: str = "", tag: str = "",
             last_error = str(e)
             if VERBOSE:
                 with PRINT_LOCK:
-                    print(f"        [{tag or label}] attempt {attempt}/{MAX_RETRIES} failed: {e}")
+                    print(f"        [{tag or label}] tentativa {attempt}/{MAX_RETRIES} falhou: {e}")
             if attempt < MAX_RETRIES:
                 time.sleep(2 * attempt)
-    # All retries exhausted — log the failure
+    # Todas as tentativas esgotadas — registra a falha
     if q_label:
-        log_failure(q_label, subtopic, label, f"{tag}: all {MAX_RETRIES} attempts failed: {last_error}")
+        log_failure(q_label, subtopic, label, f"{tag}: todas as {MAX_RETRIES} tentativas falharam: {last_error}")
     return None
 
-# Builds the behavioural specification for one student-teacher interaction pair
+# Monta a especificação comportamental de um par de interação aluno-professor
 def _pair_spec(template: dict, pair_index: int, is_coding: bool = False) -> str:
     student_spec = template["student_path"][pair_index]
     turn         = template["teacher_turns"][pair_index]
@@ -545,7 +544,7 @@ def _pair_spec(template: dict, pair_index: int, is_coding: bool = False) -> str:
         lines.append(f'  "teacher": [{role}]')
     return "\n".join(lines)
 
-# Generates one student message and one teacher response for a trajectory step
+# Gera uma mensagem do aluno e uma resposta do professor para um passo da trajetória
 def generate_pair(
     problem: str,
     steps: list,
@@ -557,7 +556,7 @@ def generate_pair(
     q_label: str = "",
     subtopic: str = "",
 ) -> Optional[dict]:
-    """Returns {"student": "...", "teacher": "..."}"""
+    """Retorna {"student": "...", "teacher": "..."}"""
     steps_str    = "\n".join(steps)
     pair_spec    = _pair_spec(template, pair_index, is_coding=is_coding)
     current_role = template["teacher_turns"][pair_index]["role"]
@@ -565,7 +564,7 @@ def generate_pair(
     context = ""
     if previous_dialogue:
         context = (
-            "\n## CONVERSATION HISTORY\n"
+            "\n## HISTÓRICO DA CONVERSA\n"
             + "\n".join(
                 f'  "{m["role"]}": {m["content"]}'
                 for m in previous_dialogue
@@ -574,96 +573,97 @@ def generate_pair(
         )
 
     answer_rule = (
-        "The student MUST state the correct final answer in their turn."
+        "O aluno DEVE declarar a resposta final correta em seu turno."
         if current_role == "session_close" else
-        "The student must NOT state the correct final answer in their turn. "
+        "O aluno NÃO deve declarar a resposta final correta em seu turno. "
 
     )
 
     if is_chemistry:
         teacher_rules = """
-## TEACHER RULES
-- Do not open with praise or encouragement. Never start with "Great", "Good job", "Well done", "Nice work", "Excellent", or any generic affirmation.
-- Respond to the student's exact wording; do not give a generic or templated reply.
-- Be clear, engaged, and conversational while remaining precise.
-- Never give the final answer directly.
-- Keep responses concise and targeted. Do not restate known information.
-- Ground all explanations in the current problem using actual values or expressions.
-- Write all LaTeX with single backslashes: $$\\ge$$, $$\\le$$, $$\\frac{{a}}{{b}}$$
-- Use LaTeX for equations: $$ ... $$ for standalone equations and $ ... $ for inline math references within a sentence.
-- Use \\n for line breaks. Do not include literal newlines inside strings.
-- Escape double quotes inside strings as \\"
-- All chemical formulas must use Unicode subscripts only: H₂O, CuSO₄, Cu(OH)₂
-- NEVER praise or tell the student they are correct for identifying trivial quanitites that are blatantly provided in a problem"""
+## REGRAS DO PROFESSOR
+- Não comece com elogio ou incentivo. Nunca inicie com "Ótimo", "Bom trabalho", "Muito bem", "Boa", "Excelente" ou qualquer afirmação genérica.
+- Responda à formulação exata do aluno; não dê uma resposta genérica ou padronizada.
+- Seja claro, envolvido e conversacional, mantendo precisão.
+- Nunca dê a resposta final diretamente.
+- Mantenha respostas concisas e direcionadas. Não reafirme informações já conhecidas.
+- Fundamente todas as explicações no problema atual usando valores ou expressões reais.
+- Escreva todo LaTeX com barras simples: $$\\ge$$, $$\\le$$, $$\\frac{{a}}{{b}}$$
+- Use LaTeX para equações: $$ ... $$ para equações isoladas e $ ... $ para referências matemáticas inline dentro de uma frase.
+- Use \\n para quebras de linha. Não inclua quebras de linha literais dentro de strings.
+- Faça escape de aspas duplas dentro de strings como \\"
+- Todas as fórmulas químicas devem usar apenas subscritos Unicode: H₂O, CuSO₄, Cu(OH)₂
+- NUNCA elogie ou diga ao aluno que ele está correto por identificar quantidades triviais fornecidas explicitamente no problema"""
     elif is_coding:
         teacher_rules = """\
-## TEACHER RULES
-- Do not open with praise or encouragement. Never start with "Great", "Good job", "Well done", "Nice work", "Excellent", or any generic affirmation.
-- Respond to the student's exact wording; do not give a generic or templated reply.
-- Be clear, engaged, and conversational while remaining precise.
-- Never give the final answer directly.
-- Keep responses concise and targeted. Do not restate known information.
-- Ground all explanations in the current problem using actual values or expressions.
-- Use inline backticks for ALL code, variable names, keywords, and operators: `age`, `if`, `else`, `>=`.
-- Do NOT use LaTeX.
-- Use ONLY inline backticks (`...`) for code. Do NOT use code blocks (``` ... ```) under any circumstances.
-- Every piece of code must fit on a single line inside backticks. If it doesn't fit, break it into separate inline references.
-- Use \\n for line breaks. Do not include literal newlines inside strings.
-- Escape double quotes inside strings as \\"
-- NEVER praise or tell the student they are correct for identifying trivial quanitites that are blatantly provided in a problem"""
+## REGRAS DO PROFESSOR
+- Não comece com elogio ou incentivo. Nunca inicie com "Ótimo", "Bom trabalho", "Muito bem", "Boa", "Excelente" ou qualquer afirmação genérica.
+- Responda à formulação exata do aluno; não dê uma resposta genérica ou padronizada.
+- Seja claro, envolvido e conversacional, mantendo precisão.
+- Nunca dê a resposta final diretamente.
+- Mantenha respostas concisas e direcionadas. Não reafirme informações já conhecidas.
+- Fundamente todas as explicações no problema atual usando valores ou expressões reais.
+- Use crases inline para TODO código, nomes de variáveis, palavras-chave e operadores: `age`, `if`, `else`, `>=`.
+- NÃO use LaTeX.
+- Use APENAS crases inline (`...`) para código. NÃO use blocos de código (``` ... ```) em nenhuma circunstância.
+- Todo trecho de código deve caber em uma única linha dentro das crases. Se não couber, divida em referências inline separadas.
+- Use \\n para quebras de linha. Não inclua quebras de linha literais dentro de strings.
+- Faça escape de aspas duplas dentro de strings como \\"
+- NUNCA elogie ou diga ao aluno que ele está correto por identificar quantidades triviais fornecidas explicitamente no problema"""
     else:
         teacher_rules = """\
-## TEACHER RULES
-- Do not open with praise or encouragement. Never start with "Great", "Good job", "Well done", "Nice work", "Excellent", or any generic affirmation.
-- Respond to the student's exact wording; do not give a generic or templated reply.
-- Be clear, engaged, and conversational while remaining precise.
-- Never give the final answer directly.
-- Keep responses concise and targeted. Do not restate known information.
-- Ground all explanations in the current problem using actual values or expressions.
-- Write all LaTeX with single backslashes: $$\\ge$$, $$\\le$$, $$\\frac{{a}}{{b}}$$
-- Use LaTeX for equations: $$ ... $$ for standalone equations and $ ... $ for inline math references within a sentence.
-- Use \\n for line breaks. Do not include literal newlines inside strings.
-- Escape double quotes inside strings as \\" 
-- NEVER praise or tell the student they are correct for identifying trivial quanitites that are blatantly provided in a problem"""
+## REGRAS DO PROFESSOR
+- Não comece com elogio ou incentivo. Nunca inicie com "Ótimo", "Bom trabalho", "Muito bem", "Boa", "Excelente" ou qualquer afirmação genérica.
+- Responda à formulação exata do aluno; não dê uma resposta genérica ou padronizada.
+- Seja claro, envolvido e conversacional, mantendo precisão.
+- Nunca dê a resposta final diretamente.
+- Mantenha respostas concisas e direcionadas. Não reafirme informações já conhecidas.
+- Fundamente todas as explicações no problema atual usando valores ou expressões reais.
+- Escreva todo LaTeX com barras simples: $$\\ge$$, $$\\le$$, $$\\frac{{a}}{{b}}$$
+- Use LaTeX para equações: $$ ... $$ para equações isoladas e $ ... $ para referências matemáticas inline dentro de uma frase.
+- Use \\n para quebras de linha. Não inclua quebras de linha literais dentro de strings.
+- Faça escape de aspas duplas dentro de strings como \\" 
+- NUNCA elogie ou diga ao aluno que ele está correto por identificar quantidades triviais fornecidas explicitamente no problema"""
 
-    prompt = f"""You are generating a conversational student-teacher dataset.
+    prompt = f"""Você está gerando um conjunto de dados conversacional aluno-professor.
 
-## CONTEXT
-Problem: {problem}
+## CONTEXTO
+Problema: {problem}
 
-Solution steps (internal reference only — do not quote verbatim):
+Passos da solução (apenas referência interna — não cite literalmente):
 {steps_str}
 {context}
-## OUTPUT
-Write exactly one student message and one teacher response as a JSON object with the following format:
+## SAÍDA
+Escreva exatamente uma mensagem do aluno e uma resposta do professor como um objeto JSON no seguinte formato (O CONTEÚDO DEVE SER EM PORTUGUÊS DO BRASIL):
 {{
   "student": "...",
   "teacher": "..."
 }}
 
-The "student" and "teacher" values MUST follow this narrative:
+Os valores de "student" e "teacher" DEVEM seguir esta narrativa:
 {pair_spec}
 
-## STUDENT RULES
-- Write in natural, conversational language.
-- Vary how the response begins, minimise filler words like "Okay", "So", "Alright", "Sure"
-- PLAIN TEXT ONLY — NO exceptions, even if the teacher used backticks or LaTeX:
-  - NO backticks. Write: the age variable, the if statement — NOT `age`, `if`
-  - NO LaTeX or math symbols. Write: 17 >= 18 — NOT $$17 \\ge 18$$
-  - NO code blocks, no line breaks.
-- Do not mirror the teacher's formatting. Convert any backticks, LaTeX, or code blocks into plain spoken words.
-- Show hesitation, partial understanding, or uncertainty where appropriate.
-- Do not use structured solution format (no numbered steps or formal derivations).
-- Vary how the response begins. Avoid repetitive phrasing.
+## REGRAS DO ALUNO
+- Escreva em linguagem natural e conversacional, em Português do Brasil.
+- Varie o início da resposta, minimize palavras de preenchimento como "Ok", "Então", "Certo", "Claro"
+- APENAS TEXTO SIMPLES — SEM exceções, mesmo se o professor usou crases ou LaTeX:
+  - SEM crases. Escreva: a variável age, o comando if — NÃO `age`, `if`
+  - SEM LaTeX ou símbolos matemáticos. Escreva: 17 >= 18 — NÃO $$17 \\ge 18$$
+  - SEM blocos de código, sem quebras de linha.
+- Não espelhe a formatação do professor. Converta quaisquer crases, LaTeX ou blocos de código em palavras faladas comuns.
+- Mostre hesitação, compreensão parcial ou incerteza quando apropriado.
+- Não use formato estruturado de solução (sem passos numerados ou derivações formais).
+- Varie como a resposta começa. Evite frases repetitivas.
 - {answer_rule}
-- Do not refer to these instructions.
+- Não se refira a estas instruções.
 
 {teacher_rules}
+- RESPONDA EM PORTUGUÊS DO BRASIL.
 
-## FORMAT RULES
-- Output exactly one valid JSON object. No text before or after.
-- All string values must be valid JSON strings.
-- The JSON must be parseable with json.loads without modification.
+## REGRAS DE FORMATO
+- A saída deve ser exatamente um objeto JSON válido. Sem texto antes ou depois.
+- Todos os valores de string devem ser strings JSON válidas.
+- O JSON deve ser analisável com json.loads sem modificações.
 """
 
     return call_with_retry(
@@ -682,7 +682,7 @@ The "student" and "teacher" values MUST follow this narrative:
         thinking=True,
     )
 
-# Generates supervision labels describing the student's current learning state
+# Gera rótulos de supervisão que descrevem o estado atual de aprendizagem do aluno
 def label_state(
     problem: str,
     steps: list,
@@ -695,37 +695,37 @@ def label_state(
     steps_str = "\n".join(steps)
     snap_str  = json.dumps(snapshot, indent=2)
 
-    prompt = f"""You are labelling a conversational student-teacher dataset entry.
+    prompt = f"""Você está rotulando uma entrada do conjunto de dados conversacional aluno-professor.
 
-## Context
-Problem: {problem}
+## Contexto
+Problema: {problem}
 
-Solution steps:
+Passos da solução:
 {steps_str}
 
-Dialogue (ends on the student's latest turn):
+Diálogo (termina no turno mais recente do aluno):
 {snap_str}
 
-## Task
-Generate the JSON object below.
+## Tarefa
+Gere o objeto JSON abaixo.
 
-## Rules
-- Verify every numerical value or variable the student states against the solution steps before writing current_status.
-- If any value does not match the solution steps, current_status must identify it as an error.
-- Write current_status in third person. Describe only what the student most recently did, understood, or struggled with.
+## Regras
+- Verifique cada valor numérico ou variável que o aluno afirma contra os passos da solução antes de escrever current_status.
+- Se algum valor não coincidir com os passos da solução, current_status deve identificá-lo como erro.
+- Escreva current_status em terceira pessoa (em PORTUGUÊS DO BRASIL). Descreva apenas o que o aluno fez, entendeu ou teve dificuldade por último.
 
-## Formatting — STRICT PLAIN TEXT ONLY
-Do NOT mirror the teacher's formatting. Convert any backticks, LaTeX, or code blocks into natural language.
-The current_status field must contain plain prose. No exceptions:
-- No LaTeX. No $$ ... $$ No \\ge, \\frac, \\text, or any backslash commands.
-- Write math as plain text - Example: 17 >= 18, not $$17 \\ge 18$$
-- No backticks. No inline code. No code blocks.
-- Write code/variable names as plain words: the age variable, the if statement — not `age`, `if`.
+## Formatação — APENAS TEXTO SIMPLES ESTRITO
+NÃO espelhe a formatação do professor. Converta crases, LaTeX ou blocos de código em linguagem natural.
+O campo current_status deve conter prosa simples. Sem exceções:
+- Sem LaTeX. Sem $$ ... $$ Sem \\ge, \\frac, \\text ou quaisquer comandos com barra invertida.
+- Escreva matemática como texto simples - Exemplo: 17 >= 18, não $$17 \\ge 18$$
+- Sem crases. Sem código inline. Sem blocos de código.
+- Escreva variáveis/código como palavras simples: a variável age, o comando if — não `age`, `if`.
 
-## Output format
-Output only the JSON object. No text before or after.
+## Formato de saída
+Retorne apenas o objeto JSON. Sem texto antes ou depois.
 {{
-  "current_status": "<1–2 sentences. Third person. Identify what the student most recently did, understood, or struggled with — including any specific misconceptions, conceptual gaps or calculation errors.>"
+  "current_status": "<1–2 frases. Terceira pessoa. Identifique o que o aluno fez, entendeu ou teve dificuldade mais recentemente — incluindo quaisquer concepções errôneas específicas, lacunas conceituais ou erros de cálculo (em Português do Brasil).>"
 }}"""
 
     result = call_with_retry(
@@ -742,7 +742,7 @@ Output only the JSON object. No text before or after.
         result["support"]    = expected_support if expected_support else "none"
     return result
 
-# Build one trajectory (called in parallel)
+# Monta uma trajetória (chamada em paralelo)
 def build_trajectory(problem: str, steps: list, template: dict, is_coding: bool = False, is_chemistry: bool = False, q_label: str = "", subtopic: str = "") -> Optional[dict]:
     tid            = template["trajectory_id"]
     teacher_turns  = template["teacher_turns"]
@@ -777,7 +777,7 @@ def build_trajectory(problem: str, steps: list, template: dict, is_coding: bool 
         "entries":       entries,
     }
 
-# Generates and saves all trajectories for a single problem
+# Gera e salva todas as trajetórias para um único problema
 def process_question(
     problem: str,
     steps: list,
@@ -809,11 +809,11 @@ def process_question(
     trajectories.sort(key=lambda t: order.get(t["trajectory_id"], 99))
 
     if not trajectories:
-        log_failure(q_label, subtopic, "question", "No trajectories built")
+        log_failure(q_label, subtopic, "question", "Nenhuma trajetória construída")
         return False
 
     if len(trajectories) < len(TRAJECTORY_TEMPLATES):
-        log_failure(q_label, subtopic, "partial", f"Only {len(trajectories)}/{len(TRAJECTORY_TEMPLATES)} trajectories built")
+        log_failure(q_label, subtopic, "partial", f"Apenas {len(trajectories)}/{len(TRAJECTORY_TEMPLATES)} trajetórias construídas")
 
     output = {
         "problem":        problem,
@@ -826,7 +826,7 @@ def process_question(
         json.dump(output, f, indent=2, ensure_ascii=False)
     return True
 
-# Processes all questions within one category dataset file
+# Processa todas as perguntas dentro de um arquivo de dataset de categoria
 def process_category_file(source_path: Path, output_dir: Path, skip_existing: bool, workers: int, limit: Optional[int] = None) -> tuple[int, int]:
     with open(source_path, encoding="utf-8") as f:
         data = json.load(f)
@@ -877,18 +877,18 @@ def process_category_file(source_path: Path, output_dir: Path, skip_existing: bo
 
     return success, failed
 
-# Command line entry point for full trajectory dataset generation
+# Ponto de entrada de linha de comando para geração completa do dataset de trajetórias
 def main():
     global MODEL, VERBOSE
-    parser = argparse.ArgumentParser(description="Generate teaching trajectory datasets")
+    parser = argparse.ArgumentParser(description="Gera datasets de trajetórias de ensino")
     parser.add_argument("--limit",         type=int,  default=None,
-                        help="Max number of questions to process across all category files")
+                        help="Número máximo de perguntas a processar em todos os arquivos de categoria")
     parser.add_argument("--skip-existing", action="store_true")
     parser.add_argument("--input-dir",     type=Path, default=INPUT_DIR)
     parser.add_argument("--output-dir",    type=Path, default=OUTPUT_DIR)
     parser.add_argument("--model",         type=str,  default=MODEL)
     parser.add_argument("--workers",       type=int,  default=3,
-                        help="Parallel workers for trajectory generation (default: 3)")
+                        help="Workers paralelos para geração de trajetórias (padrão: 3)")
     parser.add_argument("--verbose",       action="store_true")
     args = parser.parse_args()
     MODEL   = args.model
@@ -900,10 +900,10 @@ def main():
         available = [m["name"] for m in r.json().get("models", [])]
         base      = MODEL.split(":")[0]
         if not any(base in m for m in available):
-            print(f"WARNING: '{MODEL}' not found. Available: {available}")
-            print(f"  Pull with: ollama pull {MODEL}")
+            print(f"AVISO: '{MODEL}' não encontrado. Disponíveis: {available}")
+            print(f"  Baixe com: ollama pull {MODEL}")
     except requests.ConnectionError:
-        print("ERROR: Ollama is not running. Start with: ollama serve")
+        print("ERRO: Ollama não está em execução. Inicie com: ollama serve")
         return
 
     category_files = sorted(args.input_dir.glob("*.json"))
@@ -912,15 +912,15 @@ def main():
         for f in category_files
     )
 
-    print(f"Model:      {MODEL}")
-    print(f"Input:      {args.input_dir}/  ({len(category_files)} category files, {total_questions} questions)")
-    print(f"Output:     {args.output_dir}/")
-    print(f"Workers:    {args.workers} parallel trajectories per question")
-    print(f"Templates:  {len(TRAJECTORY_TEMPLATES)} fixed")
+    print(f"Modelo:     {MODEL}")
+    print(f"Entrada:    {args.input_dir}/  ({len(category_files)} arquivos de categoria, {total_questions} perguntas)")
+    print(f"Saída:      {args.output_dir}/")
+    print(f"Workers:    {args.workers} trajetórias paralelas por pergunta")
+    print(f"Modelos:    {len(TRAJECTORY_TEMPLATES)} fixos")
     if args.limit:
-        print(f"Limit:      {args.limit} questions")
+        print(f"Limite:     {args.limit} perguntas")
     if VERBOSE:
-        print("Verbose:    ON")
+        print("Verboso:    ATIVO")
 
     total_success = total_failed = 0
     remaining = args.limit  # None means unlimited
@@ -941,17 +941,17 @@ def main():
             remaining -= (s + f)
 
     print(f"\n{'═' * 60}")
-    print(f"Done.  {total_success} succeeded, {total_failed} failed.")
-    print(f"Outputs in '{args.output_dir}/'")
+    print(f"Concluído. {total_success} com sucesso, {total_failed} com falha.")
+    print(f"Saídas em '{args.output_dir}/'")
 
     # Write failure log
     log_path = args.output_dir / f"failures_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     if FAILURE_LOG:
         with open(log_path, "w", encoding="utf-8") as lf:
             json.dump(FAILURE_LOG, lf, indent=2, ensure_ascii=False)
-        print(f"Failure log  → {log_path}  ({len(FAILURE_LOG)} entries)")
+        print(f"Log de falhas → {log_path}  ({len(FAILURE_LOG)} entradas)")
     else:
-        print("No failures logged.")
+        print("Nenhuma falha registrada.")
 
 if __name__ == '__main__':
     main()

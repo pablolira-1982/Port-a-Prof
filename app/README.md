@@ -1,104 +1,103 @@
-# Port-a-Prof: Deeper Learning, Wherever You Are 💭
+# Port-a-Prof: Aprendizado mais profundo, onde você estiver 💭
 
-An offline AI teaching app powered by a fine-tuned Gemma 4 E2B model. Supports text, image, and voice input. Runs entirely on your machine — no cloud use, no API keys! 
-
----
-
-## Requirements
-
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running (For reference I use Docker version 28.3.2, build 578ccf6)
-- Internet connection for the **first run only** (to pull the llama.cpp image)
+Um app offline de ensino com IA alimentado por um modelo Gemma 4 E2B com fine-tuning (ajuste fino). Suporta entrada de texto, imagem e voz. Roda inteiramente na sua máquina — sem uso de nuvem, sem chaves de API! 
 
 ---
 
-## Setup
+## Requisitos
 
-### 1. Add the model files
-**Models required:**
-- `port-a-prof-Q4_K_M.gguf` — fine-tuned teaching model ([download](https://huggingface.co/bianca-lilyyy128/port-a-prof-Q4_K_M))
-- `mmproj-F16.gguf` — Gemma 4 E2B multimodal projector ([download](https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/blob/main/mmproj-F16.gguf))
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) instalado e rodando (Para referência, uso o Docker versão 28.3.2, build 578ccf6)
+- Conexão com a Internet **apenas na primeira execução** (para baixar a imagem do llama.cpp)
 
+---
 
-These must be downloaded and placed inside the `models/` folder:
+## Configuração
+
+### 1. Adicionar os arquivos do modelo
+**Modelos necessários:**
+- `port-a-prof-Q4_K_M.gguf` — modelo de ensino treinado ([download](https://drive.google.com/file/d/1iSB_zN36mrmRCr8SUT2fMxHmAAWviwVe/view?usp=sharing))
+- `mmproj-F16.gguf` — projetor multimodal Gemma 4 E2B ([download](https://drive.google.com/file/d/1tWI93dfLVuj3vkBu_ZjY7iQbDZYD-3lx/view?usp=sharing))
+
+Esses arquivos devem ser baixados e colocados dentro da pasta `models/`:
 ```
 models/
-├── port-a-prof-Q4_K_M.gguf  ← fine-tuned teaching model
-└── mmproj-F16.gguf          ← Gemma 4 E2B multimodal projector
+├── port-a-prof-Q4_K_M.gguf  ← modelo de ensino treinado
+└── mmproj-F16.gguf          ← projetor multimodal Gemma 4 E2B
 ```
 
-### 2. Start the app
-Open a terminal, navigate to this folder, and start the app:
-```
-cd path/to/app
+### 2. Iniciar o app
+Abra um terminal, navegue até esta pasta e inicie o app:
+```bash
+cd caminho/para/o/app
 docker compose up
 ```
 
-Wait about **1 minute** for the model to load into memory. You'll know it's ready when you see the chat template print out followed by:
+Aguarde cerca de **1 minuto** para que o modelo seja carregado na memória. Você saberá que ele está pronto quando vir a impressão do template de chat, seguida de:
 ```
 llama-server  | srv          main: model loaded
 llama-server  | srv          main: server is listening on http://0.0.0.0:8080
 llama-server  | srv          update_slots: all slots are idle
 ```
 
-### 3. Open the app
-Visit **http://localhost:8001** in your browser.
+### 3. Abrir o app
+Acesse **http://localhost:8001** no seu navegador.
 
-> Note: the terminal will also print `http://0.0.0.0:8080` — this is an internal address for the model server and is not meant to be visited directly. Always use **http://localhost:8001**.
+> Nota: o terminal também exibirá `http://0.0.0.0:8080` — este é um endereço interno do servidor do modelo e não se destina a ser acessado diretamente. Sempre use **http://localhost:8001**.
 
 ---
 
-## Starting and stopping
+## Iniciando e parando
 
-| Situation | Command |
+| Situação | Comando |
 |---|---|
-| Normal start | `docker compose up` |
-| After changing `port-a-prof.py`, `index.html`, or `Dockerfile` (Docker caches images so won't pick up changes without this) | `docker compose up --build` |
-| Stop the app | Press `Ctrl+C` in the terminal |
+| Início normal | `docker compose up` |
+| Após alterar `port-a-prof.py`, `index.html` ou `Dockerfile` (o Docker faz cache das imagens, então não vai pegar as alterações sem isso) | `docker compose up --build` |
+| Parar o app | Pressione `Ctrl+C` no terminal |
 
 ---
 
-## Viewing logs
+## Visualizando logs
 
-The startup terminal mixes both containers' output, and colour coding may not render correctly during startup depending on your terminal. For a clearer view, open a second terminal window once the app is running and follow the Port-a-Prof logs:
+O terminal de inicialização mistura a saída dos dois contêineres e a codificação de cores pode não renderizar corretamente durante a inicialização, dependendo do seu terminal. Para uma visão mais clara, abra uma segunda janela do terminal assim que o app estiver rodando e siga os logs do Port-a-Prof:
 
 ```bash
 docker logs -f port-a-prof
 ```
 
-This is **highly recommended** — the app logs are colour-coded and formatted to clearly show each phase of the teaching pipeline (solution generation, student diagnosis, role selection, and teacher response), along with intermediate outputs and thinking blocks for interpretability.
+Isto é **altamente recomendado** — os logs do app são codificados por cores e formatados para mostrar claramente cada fase do pipeline de ensino (geração da solução, diagnóstico do aluno, seleção do papel e resposta do professor), além de saídas intermediárias e blocos de raciocínio (thinking) para interpretação.
 
-For the model server:
+Para o servidor do modelo:
 ```bash
 docker logs -f llama-server
 ```
 
 ---
 
-## Using the app
+## Usando o app
 
-1. **Enter a problem** — type it, speak it, or upload a photo
-2. **Optionally describe where you're stuck** in the second field
-3. **Thinking Mode** — when on, Port-a-Prof uses Gemma 4 E2B's native thinking tokens to reason through the problem internally before responding. This gives more accurate results for complex problems but is slower. Turn it off for simpler problems where speed matters more.
-4. Press **Start learning** and wait for the first response
-5. Work through the problem step by step — Port-a-Prof will guide you without just giving the answer
-
----
-
-## Offline use
-
-After the first run, the app works **fully offline**. The only thing that requires internet is pulling the llama.cpp Docker image on first start, which is cached automatically after that.
+1. **Insira um problema** — digite-o, fale-o ou envie uma foto.
+2. **Opcionalmente, descreva onde você travou** no segundo campo.
+3. **Modo Raciocínio (Thinking Mode)** — quando ativado, o Port-a-Prof usa os tokens de raciocínio nativos do Gemma 4 E2B para pensar sobre o problema internamente antes de responder. Isso gera resultados mais precisos para problemas complexos, mas é mais lento. Desligue-o para problemas mais simples onde a velocidade importa mais.
+4. Clique em **Começar a aprender** e espere pela primeira resposta.
+5. Trabalhe o problema passo a passo — o Port-a-Prof irá guiá-lo sem apenas dar a resposta final.
 
 ---
 
-## Acknowledgements
+## Uso offline
 
-Thanks so much for trying Port-a-Prof 😊 This project is built on [Gemma 4 E2B](https://ai.google.dev/gemma) — Google's open-weight edge model that opens up so many exciting possibilities for improving accessibility, particularly in education.
+Após a primeira execução, o app funciona **totalmente offline**. A única coisa que requer internet é o download inicial da imagem Docker do llama.cpp, que será feito cache automaticamente.
 
-Thanks also to the teams behind the tools that make it run:
+---
 
-| Library | Use |
+## Agradecimentos
+
+Muito obrigado por testar o Port-a-Prof 😊 Este projeto é construído sobre o [Gemma 4 E2B](https://ai.google.dev/gemma) — modelo aberto do Google que possibilita muitas oportunidades incríveis para melhorar a acessibilidade, particularmente na educação.
+
+Obrigado também às equipes por trás das ferramentas que o fazem funcionar:
+
+| Biblioteca | Uso |
 |---|---|
-| [llama.cpp](https://github.com/ggml-org/llama.cpp) | Local model inference server |
-| [KaTeX](https://katex.org) | Maths notation rendering |
-| [marked](https://marked.js.org) | Markdown rendering |
-| [DM Sans](https://fonts.google.com/specimen/DM+Sans) | UI font |
+| [llama.cpp](https://github.com/ggml-org/llama.cpp) | Servidor de inferência do modelo local |
+| [KaTeX](https://katex.org) | Renderização de notação matemática |
+| [marked](https://marked.js.org) | Renderização de Markdown |
+| [DM Sans](https://fonts.google.com/specimen/DM+Sans) | Fonte da UI |

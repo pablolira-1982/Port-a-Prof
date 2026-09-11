@@ -1,11 +1,11 @@
 {
-  "problem": "A carnival game involves spinning a wheel with three equally sized sections. If the wheel lands on red, you win $5; on blue, you win $2; and on green, you lose $1. What is the expected value of playing this game?",
-  "topic": "probability",
-  "subtopic": "calculating expected value for a discrete probability distribution",
+  "problem": "Um jogo de carnaval envolve girar uma roda com três seções iguais. Se a roda cair no vermelho, você ganha $5; no azul, você ganha $2; e no verde, você perde $1. Qual é o valor esperado para jogar este jogo?",
+  "topic": "probabilidade",
+  "subtopic": "calculando o valor esperado para uma distribuição discreta de probabilidade",
   "solution_steps": [
-    "Define the possible outcomes and their corresponding probabilities: Red ($5 win), Blue ($2 win), Green (-$1 loss). Since the sections are equally sized, each outcome has a probability of 1/3.",
-    "Calculate the expected value for each outcome: Expected Value (Red) = $5 * (1/3) = $5/3; Expected Value (Blue) = $2 * (1/3) = $2/3; Expected Value (Green) = -$1 * (1/3) = -$1/3.",
-    "Calculate the total expected value by summing the expected values of each outcome: Total Expected Value = ($5/3) + ($2/3) + (-$1/3) = $6/3 = $2."
+    "Defina os resultados possíveis e suas probabilidades correspondentes: Vermelho ($5 vitória), Azul ($2 vitória), Verde (-$1 perda). Como as seções são igualmente dimensionadas, cada resultado tem uma probabilidade de 1/3.",
+    "Calcular o valor esperado para cada resultado: Valor esperado (vermelho) = $5 * (1/3) = $5/3; Valor esperado (azul) = $2 * (1/3) = $2/3; Valor esperado (verde) = -$1 * (1/3) = -$1/3.",
+    "Calcular o valor esperado total somando os valores esperados de cada desfecho: Total Valor esperado = ($5/3) + ($/3) + (-$1/3) = $6/3 = $2."
   ],
   "trajectories": [
     {
@@ -15,37 +15,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this expected value problem. It's a carnival game, and I just see the three outcomes, but I don't know how to combine the money amounts with the chances of winning or losing."
+              "content": "Não sei por onde começar com este problema de valor esperado. É um jogo de carnaval, e eu só vejo os três resultados, mas eu não sei como combinar os montantes de dinheiro com as chances de ganhar ou perder."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the three possible outcomes of the game but expressed confusion about the conceptual process of combining the monetary values with the associated probabilities to calculate the expected value.",
+            "current_status": "O aluno identificou corretamente os três possíveis resultados do jogo, mas expressou confusão sobre o processo conceitual de combinar os valores monetários com as probabilidades associadas para calcular o valor esperado.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "The concept we need here is the **Expected Value** (E(X)). Essentially, the expected value tells us the average outcome we would expect if we played the game many, many times. It's a weighted average of all possible outcomes.\n\nTo calculate the expected value, you must multiply each possible outcome value by its probability of occurring, and then sum all those results. The general formula is:\n$$E(X) = \\sum [x_i \\cdot P(x_i)]$$\n\nHere, $x_i$ represents the value of an outcome (like winning $5 or losing $1), and $P(x_i)$ is the probability of that outcome happening. Remember that the probabilities must all add up to 1.\n\nFor this carnival game, the possible outcomes are winning $5, winning $2, or losing $1. Given that the sections are equally sized, we know the probability for each outcome. Using this formula, what expression should you set up for the total expected value?"
+          "target_teacher_response": "O conceito que precisamos aqui é o **Valor esperado** (E(X)). Essencialmente, o valor esperado nos diz o resultado médio que esperaríamos se jogássemos o jogo muitas, muitas vezes. É uma média ponderada de todos os resultados possíveis.\n\nPara calcular o valor esperado, você deve multiplicar cada valor de resultado possível pela sua probabilidade de ocorrer, e então somar todos esses resultados. A fórmula geral é:\n$$E(X) = \\sum [x i \\cdot P(x i)]$$\n\nAqui, $x i$ representa o valor de um resultado (como ganhar $5 ou perder $1), e $P(x i)$ é a probabilidade desse resultado acontecer. Lembre-se que as probabilidades devem somar todos até 1.\n\nPara este jogo de carnaval, os resultados possíveis são ganhar $5, ganhar $2, ou perder $1. Dado que as seções são igualmente dimensionadas, sabemos a probabilidade para cada resultado. Usando esta fórmula, que expressão você deve configurar para o valor total esperado?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure where to start with this expected value problem. It's a carnival game, and I just see the three outcomes, but I don't know how to combine the money amounts with the chances of winning or losing."
+              "content": "Não sei por onde começar com este problema de valor esperado. É um jogo de carnaval, e eu só vejo os três resultados, mas eu não sei como combinar os montantes de dinheiro com as chances de ganhar ou perder."
             },
             {
               "role": "teacher",
-              "content": "The concept we need here is the **Expected Value** (E(X)). Essentially, the expected value tells us the average outcome we would expect if we played the game many, many times. It's a weighted average of all possible outcomes.\n\nTo calculate the expected value, you must multiply each possible outcome value by its probability of occurring, and then sum all those results. The general formula is:\n$$E(X) = \\sum [x_i \\cdot P(x_i)]$$\n\nHere, $x_i$ represents the value of an outcome (like winning $5 or losing $1), and $P(x_i)$ is the probability of that outcome happening. Remember that the probabilities must all add up to 1.\n\nFor this carnival game, the possible outcomes are winning $5, winning $2, or losing $1. Given that the sections are equally sized, we know the probability for each outcome. Using this formula, what expression should you set up for the total expected value?"
+              "content": "O conceito que precisamos aqui é o **Valor esperado** (E(X)). Essencialmente, o valor esperado nos diz o resultado médio que esperaríamos se jogássemos o jogo muitas, muitas vezes. É uma média ponderada de todos os resultados possíveis.\n\nPara calcular o valor esperado, você deve multiplicar cada valor de resultado possível pela sua probabilidade de ocorrer, e então somar todos esses resultados. A fórmula geral é:\n$$E(X) = \\sum [x i \\cdot P(x i)]$$\n\nAqui, $x i$ representa o valor de um resultado (como ganhar $5 ou perder $1), e $P(x i)$ é a probabilidade desse resultado acontecer. Lembre-se que as probabilidades devem somar todos até 1.\n\nPara este jogo de carnaval, os resultados possíveis são ganhar $5, ganhar $2, ou perder $1. Dado que as seções são igualmente dimensionadas, sabemos a probabilidade para cada resultado. Usando esta fórmula, que expressão você deve configurar para o valor total esperado?"
             },
             {
               "role": "student",
-              "content": "I understand the formula, $E(X) = \\sum [x_i \\cdot P(x_i)]$, but looking at the actual numbers—$5, $2, and -$1—and the probabilities, I'm still confused about how to put it all together into one single expression. Which values go where?"
+              "content": "Eu entendo a fórmula, $E(X) = \\sum [x i \\cdot P(x i)]$, mas olhando para os números reais—$5, $2, e -$1—e as probabilidades, eu ainda estou confuso sobre como juntar tudo em uma única expressão. Que valores vão para onde?"
             }
           ],
           "internal_state": {
-            "current_status": "The student confirms understanding of the expected value formula, E(X) = sum [x_i * P(x_i)], but struggles with the practical application of the formula. Specifically, the student is confused about how to correctly substitute the given numerical outcomes ($5, $2, and -$1) and their corresponding probabilities into a single, complete mathematical expression.",
+            "current_status": "O aluno confirma a compreensão da fórmula de valor esperado, E(X) = soma [x i * P(x i)], mas luta com a aplicação prática da fórmula. Especificamente, o aluno está confuso sobre como substituir corretamente os resultados numéricos dados ($5, $2, e -$1) e suas probabilidades correspondentes em uma única expressão matemática completa.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You need to set up the sum by pairing each outcome value with its corresponding probability. The expression must include three distinct terms, one for each section of the wheel.\n\nRemember that the structure is: (Outcome 1 value times Outcome 1 probability) + (Outcome 2 value times Outcome 2 probability) + (Outcome 3 value times Outcome 3 probability).\n\nUsing the variables $V_R$ for the red outcome value, $V_B$ for the blue outcome value, and $V_G$ for the green outcome value, and $P$ for the probability of any single outcome, the total expected value $E(X)$ is represented by the expression:\n$$E(X) = (V_R \\cdot P) + (V_B \\cdot P) + (V_G \\cdot P)$$\n\nNow, substitute the specific monetary values for $V_R$, $V_B$, and $V_G$ into this expression. What do you get?"
+          "target_teacher_response": "Você precisa configurar a soma emparelhando cada valor de resultado com sua probabilidade correspondente. A expressão deve incluir três termos distintos, um para cada seção da roda.\n\nLembre-se que a estrutura é: (Resultado 1 valor vezes Resultado 1 probabilidade) + (Resultado 2 valor vezes Resultado 2 probabilidade) + (Resultado 3 valor vezes Resultado 3 probabilidade).\n\nUsando as variáveis $V R$ para o valor do desfecho vermelho, $V B$ para o valor do desfecho azul, e $V G$ para o valor do desfecho verde, e $P$ para a probabilidade de qualquer resultado único, o valor total esperado $E(X)$ é representado pela expressão:\n$$E(X) = (V R \\cdot P) + (V B \\cdot P) + (V G \\cdot P)$\n\nAgora, substitua os valores monetários específicos por $V R$, $V B$, e $V G$ nesta expressão. O que ganhas?"
         }
       ]
     },
@@ -56,37 +56,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I got the expected value by adding up the individual expected values. So, it's 5/3 for red, 2/3 for blue, and then for green, I'll use 1/3. Adding them all up: 5/3 + 2/3 + 1/3 equals 8/3."
+              "content": "Acho que consegui o valor esperado somando os valores esperados individuais. Então, é 5/3 para vermelho, 2/3 para azul, e então para verde, eu vou usar 1/3. Adicionando-os todos: 5/3 + 2/3 + 1/3 é igual a 8/3."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculates the expected values for red (5/3) and blue (2/3). However, when calculating the expected value for green, the student incorrectly uses 1/3 instead of the negative value of -$1/3, which leads to an incorrect total expected value of 8/3.",
+            "current_status": "O aluno calcula corretamente os valores esperados para vermelho (5/3) e azul (2/3). No entanto, ao calcular o valor esperado para o verde, o aluno usa incorretamente 1/3 em vez do valor negativo de -1/3, o que leva a um valor esperado total incorreto de 8/3.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You calculated the expected value for green using 1/3. Remember that landing on green means you lose $1, so what should the value you use for the green outcome be?"
+          "target_teacher_response": "Você calculou o valor esperado para o verde usando 1/3. Lembra-se de que pousar no verde significa que você perde $1, então qual deve ser o valor que você usar para o resultado verde?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I got the expected value by adding up the individual expected values. So, it's 5/3 for red, 2/3 for blue, and then for green, I'll use 1/3. Adding them all up: 5/3 + 2/3 + 1/3 equals 8/3."
+              "content": "Acho que consegui o valor esperado somando os valores esperados individuais. Então, é 5/3 para vermelho, 2/3 para azul, e então para verde, eu vou usar 1/3. Adicionando-os todos: 5/3 + 2/3 + 1/3 é igual a 8/3."
             },
             {
               "role": "teacher",
-              "content": "You calculated the expected value for green using 1/3. Remember that landing on green means you lose $1, so what should the value you use for the green outcome be?"
+              "content": "Você calculou o valor esperado para o verde usando 1/3. Lembra-se de que pousar no verde significa que você perde $1, então qual deve ser o valor que você usar para o resultado verde?"
             },
             {
               "role": "student",
-              "content": "Okay, so if I use -$1 for green, then the expected value for green is -$1/3. So now I have 5/3 plus 2/3 plus -1/3. I'm not sure how to combine these fractions to get the total expected value. Do I just add them all up?"
+              "content": "Ok, então se eu usar -$1 para verde, então o valor esperado para verde é -$1/3. Então agora eu tenho 5/3 mais 2/3 mais -1/3. Não sei como combinar essas frações para obter o valor total esperado. Adiciono-os todos?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly incorporates the negative value for the green outcome, setting up the total expected value as 5/3 plus 2/3 plus -1/3. The student is now unsure how to combine these fractions but correctly asks if simple addition is the appropriate method for finding the total expected value.",
+            "current_status": "O aluno incorpora corretamente o valor negativo para o resultado verde, configurando o valor total esperado como 5/3 mais 2/3 mais -1/3. O aluno não tem certeza de como combinar essas frações, mas pergunta corretamente se a adição simples é o método apropriado para encontrar o valor total esperado.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The total expected value (E) is found by summing the expected value for each outcome. Since all outcomes are equally likely, we can express this relationship as:\n$$E = \\frac{{V_{red}}}{3} + \\frac{{V_{blue}}}{3} + \\frac{{V_{green}}}{3}$$ \n\nHere, $V$ represents the **value** associated with the outcome (the amount won or lost), and $3$ represents the **total number of equally likely outcomes**. Substitute the specific values for $V_{red}$, $V_{blue}$, and $V_{green}$ into the equation and simplify the resulting sum of fractions."
+          "target_teacher_response": "O valor esperado total (E) é encontrado somando o valor esperado para cada resultado. Como todos os resultados são igualmente prováveis, podemos expressar esta relação como:\n$$E = \\frac{{V {red}}}{3} +\\frac{{V {blue}}}{3} +\\frac{{V {green}}}{3}$$\n\nAqui, $V$ representa o **valor** associado ao resultado (o valor ganho ou perdido), e $3$ representa o **número total de resultados igualmente prováveis**. Substitua os valores específicos de $V {red}$, $V {blue}$, e $V {green}$ na equação e simplifique a soma resultante de frações."
         }
       ]
     },
@@ -97,37 +97,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "So, I figured out the expected value for each color: Red is 5/3, Blue is 2/3, and Green is -1/3. To get the total expected value, I just have to add those three together, right? It's (5/3) + (2/3) + (-1/3)."
+              "content": "Então, eu descobri o valor esperado para cada cor: vermelho é 5/3, azul é 2/3, e verde é -1/3. Para obter o valor total esperado, eu só tenho que adicionar esses três juntos, certo? É (5/3) + (2/3) + (-1/3)."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculated the expected value for each outcome (Red is 5/3, Blue is 2/3, and Green is -1/3) and correctly identified that the total expected value is found by summing these three individual expected values.",
+            "current_status": "O aluno calculou corretamente o valor esperado para cada desfecho (vermelho é 5/3, azul é 2/3 e verde é -1/3) e identificou corretamente que o valor esperado total é encontrado somando esses três valores esperados individuais.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You have correctly set up the sum of the expected values for all three outcomes. What value do you get when you combine those fractions?"
+          "target_teacher_response": "Você configurou corretamente a soma dos valores esperados para os três resultados. Que valor você tem quando combina essas frações?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "So, I figured out the expected value for each color: Red is 5/3, Blue is 2/3, and Green is -1/3. To get the total expected value, I just have to add those three together, right? It's (5/3) + (2/3) + (-1/3)."
+              "content": "Então, eu descobri o valor esperado para cada cor: vermelho é 5/3, azul é 2/3, e verde é -1/3. Para obter o valor total esperado, eu só tenho que adicionar esses três juntos, certo? É (5/3) + (2/3) + (-1/3)."
             },
             {
               "role": "teacher",
-              "content": "You have correctly set up the sum of the expected values for all three outcomes. What value do you get when you combine those fractions?"
+              "content": "Você configurou corretamente a soma dos valores esperados para os três resultados. Que valor você tem quando combina essas frações?"
             },
             {
               "role": "student",
-              "content": "If I add those up, 5/3 plus 2/3 plus negative 1/3, I get 6/3, which simplifies to 2. So the expected value is $2."
+              "content": "Se eu somar esses, 5/3 mais 2/3 mais 1/3 negativo, eu recebo 6/3, o que simplifica para 2. Assim, o valor esperado é de $2."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculates the sum of the individual expected values (5/3 + 2/3 + (-1/3)) to be 6/3, which simplifies to 2, and accurately concludes that the total expected value is $2.",
+            "current_status": "O aluno calcula corretamente a soma dos valores esperados individuais (5/3 + 2/3 + (-1/3)) para ser 6/3, o que simplifica para 2, e conclui com precisão que o valor esperado total é de $2.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is correct. The expected value of playing the game is $2. Do you have any other problems you'd like to work on?"
+          "target_teacher_response": "Correto. O valor esperado para jogar o jogo é de $2. Tens mais algum problema em que queiras trabalhar?"
         }
       ]
     },
@@ -138,37 +138,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I get that the expected value is basically multiplying the outcome value by its probability. So, for red, it's 5 times 1/3, and for blue, it's 2 times 1/3. But how do I figure out the total expected value? Do I just add up those three results?"
+              "content": "Acho que entendo que o valor esperado está basicamente multiplicando o valor do resultado por sua probabilidade. Então, para vermelho, é 5 vezes 1/3, e para azul, é 2 vezes 1/3. Mas como eu descubro o valor total esperado? Devo somar esses três resultados?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly defines expected value as the product of an outcome and its probability, demonstrating this with red (5 times 1/3) and blue (2 times 1/3). They also correctly hypothesize that the total expected value is found by summing these individual expected values.",
+            "current_status": "O aluno define corretamente o valor esperado como o produto de um resultado e sua probabilidade, demonstrando isso com vermelho (5 vezes 1/3) e azul (2 vezes 1/3). Eles também corretamente hipotetizam que o valor total esperado é encontrado somando esses valores individuais esperados.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To find the expected value of an outcome, you calculate the product of the **value** and its **probability**. \n\nFor the red outcome, the expected value is calculated as: $$ \\text{Value}_{\\text{Red}} \\cdot \\text{P}(\\text{Red}) $$ \n\nRemember to apply this structure to the blue and green outcomes as well. What is the expression for the expected value of the blue outcome?"
+          "target_teacher_response": "Para encontrar o valor esperado de um resultado, você calcula o produto do **valor** e sua **probabilidade**.\n\nPara o resultado vermelho, o valor esperado é calculado como: $$ \\text{Value} {\\text{Red}} \\cdot\\text{P}(\\text{Red}) $$\n\nLembre-se de aplicar esta estrutura para os resultados azul e verde também. Qual é a expressão para o valor esperado do resultado azul?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I get that the expected value is basically multiplying the outcome value by its probability. So, for red, it's 5 times 1/3, and for blue, it's 2 times 1/3. But how do I figure out the total expected value? Do I just add up those three results?"
+              "content": "Acho que entendo que o valor esperado está basicamente multiplicando o valor do resultado por sua probabilidade. Então, para vermelho, é 5 vezes 1/3, e para azul, é 2 vezes 1/3. Mas como eu descubro o valor total esperado? Devo somar esses três resultados?"
             },
             {
               "role": "teacher",
-              "content": "To find the expected value of an outcome, you calculate the product of the **value** and its **probability**. \n\nFor the red outcome, the expected value is calculated as: $$ \\text{Value}_{\\text{Red}} \\cdot \\text{P}(\\text{Red}) $$ \n\nRemember to apply this structure to the blue and green outcomes as well. What is the expression for the expected value of the blue outcome?"
+              "content": "Para encontrar o valor esperado de um resultado, você calcula o produto do **valor** e sua **probabilidade**.\n\nPara o resultado vermelho, o valor esperado é calculado como: $$ \\text{Value} {\\text{Red}} \\cdot\\text{P}(\\text{Red}) $$\n\nLembre-se de aplicar esta estrutura para os resultados azul e verde também. Qual é a expressão para o valor esperado do resultado azul?"
             },
             {
               "role": "student",
-              "content": "Wait, so for blue, it's 2 times 1/3. I think I should just add the 2 and the 1/3 together, so that gives me 2 plus 1/3, which is 7/3."
+              "content": "Espere, então para azul, é 2 vezes 1/3. Eu acho que eu deveria apenas adicionar o 2 e o 1/3 juntos, então isso me dá 2 mais 1/3, que é 7/3."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the components for the blue outcome (2 and 1/3) but demonstrates a conceptual error by adding the value and the probability (2 plus 1/3 = 7/3) instead of multiplying them to find the expected value.",
+            "current_status": "O aluno identifica corretamente os componentes para o desfecho azul (2 e 1/3) mas demonstra um erro conceitual adicionando o valor e a probabilidade (2 mais 1/3 = 7/3) em vez de multiplicá-los para encontrar o valor esperado.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You calculated the expected value for the blue outcome by adding the values. Remember that the expected value is found by multiplying the value by its probability. Can you check the operation you used for the blue outcome?"
+          "target_teacher_response": "Você calculou o valor esperado para o resultado azul adicionando os valores. Lembre-se que o valor esperado é encontrado multiplicando o valor por sua probabilidade. Pode verificar a operação que usou para o resultado azul?"
         }
       ]
     },
@@ -179,67 +179,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really lost on this expected value problem. I know we have three outcomes, but I don't know how to even start setting up the calculation. What should I be doing first?"
+              "content": "Estou mesmo perdido neste problema de valor esperado. Sei que temos três resultados, mas nem sei como começar a estabelecer o cálculo. O que devo fazer primeiro?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that there are three possible outcomes for the game but is struggling with the initial setup of the expected value calculation and is asking for guidance on where to begin.",
+            "current_status": "O aluno identifica corretamente que existem três possíveis resultados para o jogo, mas está lutando com a configuração inicial do cálculo de valor esperado e está pedindo orientação sobre por onde começar.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To find the expected value of a random event, you need to calculate the weighted average of all possible outcomes.\n\nThe formula for the expected value, E(X), is the sum of each outcome's value multiplied by its probability: $$E(X) = \\sum [x_i \\cdot P(x_i)]$$ \n\nHere, $x_i$ represents the **value** of an outcome, and $P(x_i)$ represents the **probability** of that outcome occurring.\n\nIdentify the value and probability for the first outcome (Red) and write out the first term of the sum."
+          "target_teacher_response": "Para encontrar o valor esperado de um evento aleatório, você precisa calcular a média ponderada de todos os resultados possíveis.\n\nA fórmula para o valor esperado, E(X), é a soma do valor de cada resultado multiplicado por sua probabilidade: $$E(X) = \\sum [x i \\cdot P(x i)]$$\n\nAqui, $x i$ representa o **valor** de um resultado, e $P(x i)$ representa a **probabilidade** desse resultado ocorrendo.\n\nIdentificar o valor e a probabilidade para o primeiro resultado (Vermelho) e indicar o primeiro termo da soma."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really lost on this expected value problem. I know we have three outcomes, but I don't know how to even start setting up the calculation. What should I be doing first?"
+              "content": "Estou mesmo perdido neste problema de valor esperado. Sei que temos três resultados, mas nem sei como começar a estabelecer o cálculo. O que devo fazer primeiro?"
             },
             {
               "role": "teacher",
-              "content": "To find the expected value of a random event, you need to calculate the weighted average of all possible outcomes.\n\nThe formula for the expected value, E(X), is the sum of each outcome's value multiplied by its probability: $$E(X) = \\sum [x_i \\cdot P(x_i)]$$ \n\nHere, $x_i$ represents the **value** of an outcome, and $P(x_i)$ represents the **probability** of that outcome occurring.\n\nIdentify the value and probability for the first outcome (Red) and write out the first term of the sum."
+              "content": "Para encontrar o valor esperado de um evento aleatório, você precisa calcular a média ponderada de todos os resultados possíveis.\n\nA fórmula para o valor esperado, E(X), é a soma do valor de cada resultado multiplicado por sua probabilidade: $$E(X) = \\sum [x i \\cdot P(x i)]$$\n\nAqui, $x i$ representa o **valor** de um resultado, e $P(x i)$ representa a **probabilidade** desse resultado ocorrendo.\n\nIdentificar o valor e a probabilidade para o primeiro resultado (Vermelho) e indicar o primeiro termo da soma."
             },
             {
               "role": "student",
-              "content": "I'm still confused about what goes into the formula. You said we need the value and the probability, but where do I even find those numbers? Are they just given in the problem, or do I have to figure them out somehow?"
+              "content": "Ainda estou confuso sobre o que entra na fórmula. Você disse que precisamos do valor e da probabilidade, mas onde posso encontrar esses números? São apenas dadas no problema, ou tenho de as descobrir de alguma forma?"
             }
           ],
           "internal_state": {
-            "current_status": "The student is struggling with the conceptual understanding of the variables required for the expected value formula. Specifically, the student is confused about the source of the values and probabilities, questioning whether these numbers are explicitly given in the problem or if they must be calculated.",
+            "current_status": "O aluno está lutando com a compreensão conceitual das variáveis necessárias para a fórmula de valor esperado. Especificamente, o aluno está confuso quanto à fonte dos valores e probabilidades, questionando se esses números são explicitamente dados no problema ou se devem ser calculados.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "We need to extract the values and probabilities directly from the problem description. \n\nFor the outcome of landing on Red, the **value** ($x_i$) is the amount won, which is **$5**. \n\nThe **probability** ($P(x_i)$) is the chance of that outcome happening. Since the wheel has three equally sized sections (Red, Blue, Green), the probability of landing on Red is $\\frac{1}{3}$.\n\nSo, the first term of the sum is $5 \\cdot \\frac{1}{3}$. \n\nNow, identify the value and probability for the Blue outcome and write out the second term of the sum."
+          "target_teacher_response": "Precisamos extrair os valores e probabilidades diretamente da descrição do problema.\n\nPara o resultado da aterrissagem em Vermelho, o valor ** ($x i$) é o valor ganho, que é **$5**.\n\nA ** probabilidade** ($P(x i)$) é a chance de que o resultado aconteça. Como a roda tem três seções de tamanho igual (Vermelho, Azul, Verde), a probabilidade de pouso no Vermelho é de $\\frac{1}{3}$.\n\nAssim, o primeiro termo da soma é $5 \\cdot \\frac{1}{3}$.\n\nAgora, identifique o valor e probabilidade para o resultado Azul e escreva o termo segundo da soma."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really lost on this expected value problem. I know we have three outcomes, but I don't know how to even start setting up the calculation. What should I be doing first?"
+              "content": "Estou mesmo perdido neste problema de valor esperado. Sei que temos três resultados, mas nem sei como começar a estabelecer o cálculo. O que devo fazer primeiro?"
             },
             {
               "role": "teacher",
-              "content": "To find the expected value of a random event, you need to calculate the weighted average of all possible outcomes.\n\nThe formula for the expected value, E(X), is the sum of each outcome's value multiplied by its probability: $$E(X) = \\sum [x_i \\cdot P(x_i)]$$ \n\nHere, $x_i$ represents the **value** of an outcome, and $P(x_i)$ represents the **probability** of that outcome occurring.\n\nIdentify the value and probability for the first outcome (Red) and write out the first term of the sum."
+              "content": "Para encontrar o valor esperado de um evento aleatório, você precisa calcular a média ponderada de todos os resultados possíveis.\n\nA fórmula para o valor esperado, E(X), é a soma do valor de cada resultado multiplicado por sua probabilidade: $$E(X) = \\sum [x i \\cdot P(x i)]$$\n\nAqui, $x i$ representa o **valor** de um resultado, e $P(x i)$ representa a **probabilidade** desse resultado ocorrendo.\n\nIdentificar o valor e a probabilidade para o primeiro resultado (Vermelho) e indicar o primeiro termo da soma."
             },
             {
               "role": "student",
-              "content": "I'm still confused about what goes into the formula. You said we need the value and the probability, but where do I even find those numbers? Are they just given in the problem, or do I have to figure them out somehow?"
+              "content": "Ainda estou confuso sobre o que entra na fórmula. Você disse que precisamos do valor e da probabilidade, mas onde posso encontrar esses números? São apenas dadas no problema, ou tenho de as descobrir de alguma forma?"
             },
             {
               "role": "teacher",
-              "content": "We need to extract the values and probabilities directly from the problem description. \n\nFor the outcome of landing on Red, the **value** ($x_i$) is the amount won, which is **$5**. \n\nThe **probability** ($P(x_i)$) is the chance of that outcome happening. Since the wheel has three equally sized sections (Red, Blue, Green), the probability of landing on Red is $\\frac{1}{3}$.\n\nSo, the first term of the sum is $5 \\cdot \\frac{1}{3}$. \n\nNow, identify the value and probability for the Blue outcome and write out the second term of the sum."
+              "content": "Precisamos extrair os valores e probabilidades diretamente da descrição do problema.\n\nPara o resultado da aterrissagem em Vermelho, o valor ** ($x i$) é o valor ganho, que é **$5**.\n\nA ** probabilidade** ($P(x i)$) é a chance de que o resultado aconteça. Como a roda tem três seções de tamanho igual (Vermelho, Azul, Verde), a probabilidade de pouso no Vermelho é de $\\frac{1}{3}$.\n\nAssim, o primeiro termo da soma é $5 \\cdot \\frac{1}{3}$.\n\nAgora, identifique o valor e probabilidade para o resultado Azul e escreva o termo segundo da soma."
             },
             {
               "role": "student",
-              "content": "I think I got the first two terms, but I'm really lost on how to finish it. There's still a third outcome, Green, and I don't know what to do with it or how to put everything together into a final answer. Can you show me the next step?"
+              "content": "Acho que consegui os dois primeiros termos, mas estou mesmo perdido em como acabar. Ainda há um terceiro resultado, Green, e eu não sei o que fazer com ele ou como juntar tudo em uma resposta final. Podes mostrar-me o próximo passo?"
             }
           ],
           "internal_state": {
-            "current_status": "The student successfully identified the terms for the Red and Blue outcomes but is now struggling with the final steps. The student is confused about how to incorporate the third outcome, Green, and how to combine all three calculated terms to find the final total expected value.",
+            "current_status": "O aluno identificou com sucesso os termos para os resultados Vermelho e Azul, mas agora está lutando com os passos finais. O aluno está confuso sobre como incorporar o terceiro resultado, Green, e como combinar os três termos calculados para encontrar o valor total final esperado.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We have one remaining outcome: Green. Following the pattern, the **value** ($x_i$) for Green is the amount lost, which is **-$1**. \n\nThe **probability** ($P(x_i)$) of landing on Green is also $\\frac{1}{3}$, since all sections are equally sized.\n\nTherefore, the third term of the sum is $$-1 \\cdot \\frac{1}{3}$$ \n\nNow we have all three terms: $5 \\cdot \\frac{1}{3}$, $2 \\cdot \\frac{1}{3}$, and $-1 \\cdot \\frac{1}{3}$.\n\nTo find the total expected value, we sum these three terms: $$E(X) = \\left(5 \\cdot \\frac{1}{3}\\right) + \\left(2 \\cdot \\frac{1}{3}\\right) + \\left(-1 \\cdot \\frac{1}{3}\\right)$$ \n\nFirst, calculate the product of the three terms, and then add them together. What is the sum of these three fractions?"
+          "target_teacher_response": "Resta-nos um resultado: Verde. Seguindo o padrão, o valor ** ($x i$) para Verde é o valor perdido, que é **-1**.\n\nA probabilidade** ($P(x i)$) de aterrissagem em Green também é $\\frac{1}{3}$, uma vez que todas as seções são igualmente dimensionadas.\n\nPortanto, o terceiro termo da soma é $$-1 \\cdot \\frac{1}{3}$$\n\nAgora temos todos os três termos: $5 \\cdot \\frac{1}{3}$, $2 \\cdot \\frac{1}{3}$, e $-1 \\cdot \\frac{1}{3}$.\n\nPara encontrar o valor total esperado, somamos estes três termos: $$E(X) = \\left(5 \\cdot \\frac{1}{3}\\right) + \\left(2 \\cdot \\frac{1}{3}\\right) + \\left(-1 \\cdot \\frac{1}{3}\\right)$\n\nPrimeiro, calcular o produto dos três termos, e depois adicioná-los juntos. Qual é a soma dessas três frações?"
         }
       ]
     }

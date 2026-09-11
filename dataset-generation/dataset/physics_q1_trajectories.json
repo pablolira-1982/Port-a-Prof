@@ -1,15 +1,15 @@
 {
-  "problem": "A rocket accelerates from rest at a constant 5.0 m/s² for 10.0 seconds, then coasts at a constant velocity. How far does the rocket travel from the start during the first 15.0 seconds?",
-  "topic": "physics",
-  "subtopic": "constant-acceleration motion",
+  "problem": "Um foguete acelera de repouso a uma constante de 5,0 m/s2 para 10.0 segundos, em seguida, costa a uma velocidade constante. Quão longe o foguete viaja desde o início durante o primeiro 15.0 segundos?",
+  "topic": "física",
+  "subtopic": "movimento de aceleração constante",
   "solution_steps": [
-    "Calculate the distance traveled during acceleration: d₁ = v₀t + (1/2)at², where v₀ = 0 m/s, a = 5.0 m/s², and t = 10.0 s.",
-    "Substitute the values: d₁ = (0 m/s)(10.0 s) + (1/2)(5.0 m/s²)(10.0 s)² = 0 + (2.5 m/s²)(100 s²) = 250 m.",
-    "Calculate the final velocity after acceleration: v = v₀ + at, where v₀ = 0 m/s, a = 5.0 m/s², and t = 10.0 s.",
-    "Substitute the values: v = 0 m/s + (5.0 m/s²)(10.0 s) = 50 m/s.",
-    "Calculate the distance traveled during coasting: d₂ = vt, where v = 50 m/s and t = 15.0 s - 10.0 s = 5.0 s.",
-    "Substitute the values: d₂ = (50 m/s)(5.0 s) = 250 m.",
-    "Calculate the total distance traveled: d = d₁ + d₂ = 250 m + 250 m = 500 m."
+    "Calcular a distância percorrida durante a aceleração: d1 = v0t + (1/2)at2, onde v0 = 0 m/s, a = 5,0 m/s2 e t = 10,0 s.",
+    "Substituir os valores: d1 = (0 m/s)(10,0 s) + (1/2)(5.0 m/s2)(10,0 s)2 = 0 + (2,5 m/s2)(100 s2) = 250 m.",
+    "Calcular a velocidade final após aceleração: v = v0 + em, onde v0 = 0 m/s, a = 5,0 m/s2 e t = 10,0 s.",
+    "Substituir os valores: v = 0 m/s + (5,0 m/s2) (10,0 s) = 50 m/s.",
+    "Calcular a distância percorrida durante a costa: d2 = vt, onde v = 50 m/s e t = 15,0 s - 10,0 s = 5,0 s.",
+    "Substituir os valores: d2 = (50 m/s)(5.0 s) = 250 m.",
+    "Calcular a distância total percorrida: d = d1 + d2 = 250 m + 250 m = 500 m."
   ],
   "trajectories": [
     {
@@ -19,37 +19,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really stuck on this problem. I know we have to find the total distance, but I don't know how to start because the rocket changes what it's doing halfway through the time period."
+              "content": "Estou mesmo preso neste problema. Sei que temos de encontrar a distância total, mas não sei como começar porque o foguete muda o que está a fazer a meio do período de tempo."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that the goal is to find the total distance but is conceptually stuck on how to begin solving the problem because the rocket changes its motion type halfway through the time period.",
+            "current_status": "O aluno identifica corretamente que o objetivo é encontrar a distância total, mas está conceitualmente preso em como começar a resolver o problema porque o foguete muda seu tipo de movimento a meio do período de tempo.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "The key concept here is recognizing that motion problems often require breaking down the journey into distinct phases, especially when the acceleration changes. \n\nWhen an object moves with **constant acceleration**, we use the standard kinematic equations. For example, the distance traveled ($$d$$) is related to the initial velocity ($$v_0$$), acceleration ($$a$$), and time ($$t$$) by the formula: $$d = v_0t + \\frac{1}{2}at^2$$. Similarly, if the object moves at a **constant velocity** (meaning $$a=0$$), the distance is simply the velocity multiplied by the time: $$d = vt$$.\n\nRemember that the final velocity of the first phase becomes the initial velocity of the second phase. We must calculate the distance for each phase separately and then combine them.\n\nGiven that the rocket accelerates for 10.0 seconds and then coasts for the remaining 5.0 seconds, what is the initial velocity of the coasting phase, and what formula should you use to find the distance covered during that time?"
+          "target_teacher_response": "O conceito chave aqui é reconhecer que os problemas de movimento muitas vezes exigem quebrar a jornada em fases distintas, especialmente quando a aceleração muda.\n\nQuando um objeto se move com ** aceleração constante**, usamos as equações cinemáticas padrão. Por exemplo, a distância percorrida ($$d$$) está relacionada à velocidade inicial ($$v 0$$), aceleração ($$a$$), e tempo ($$t$$) pela fórmula: $$d = v 0t + \\frac{1}{2}at^2$$. Da mesma forma, se o objeto se move em uma **velocidade constante** (significando $$a=0$$), a distância é simplesmente a velocidade multiplicada pelo tempo: $$d = vt$$.\n\nLembre-se que a velocidade final da primeira fase torna-se a velocidade inicial da fase segundo. Devemos calcular a distância para cada fase separadamente e então combiná-los.\n\nDado que o foguete acelera para 10.0 segundos e, em seguida, coabita para os restantes 5.0 segundos, qual é a velocidade inicial da fase de costa, e que fórmula você deve usar para encontrar a distância percorrida durante esse tempo?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really stuck on this problem. I know we have to find the total distance, but I don't know how to start because the rocket changes what it's doing halfway through the time period."
+              "content": "Estou mesmo preso neste problema. Sei que temos de encontrar a distância total, mas não sei como começar porque o foguete muda o que está a fazer a meio do período de tempo."
             },
             {
               "role": "teacher",
-              "content": "The key concept here is recognizing that motion problems often require breaking down the journey into distinct phases, especially when the acceleration changes. \n\nWhen an object moves with **constant acceleration**, we use the standard kinematic equations. For example, the distance traveled ($$d$$) is related to the initial velocity ($$v_0$$), acceleration ($$a$$), and time ($$t$$) by the formula: $$d = v_0t + \\frac{1}{2}at^2$$. Similarly, if the object moves at a **constant velocity** (meaning $$a=0$$), the distance is simply the velocity multiplied by the time: $$d = vt$$.\n\nRemember that the final velocity of the first phase becomes the initial velocity of the second phase. We must calculate the distance for each phase separately and then combine them.\n\nGiven that the rocket accelerates for 10.0 seconds and then coasts for the remaining 5.0 seconds, what is the initial velocity of the coasting phase, and what formula should you use to find the distance covered during that time?"
+              "content": "O conceito chave aqui é reconhecer que os problemas de movimento muitas vezes exigem quebrar a jornada em fases distintas, especialmente quando a aceleração muda.\n\nQuando um objeto se move com ** aceleração constante**, usamos as equações cinemáticas padrão. Por exemplo, a distância percorrida ($$d$$) está relacionada à velocidade inicial ($$v 0$$), aceleração ($$a$$), e tempo ($$t$$) pela fórmula: $$d = v 0t + \\frac{1}{2}at^2$$. Da mesma forma, se o objeto se move em uma **velocidade constante** (significando $$a=0$$), a distância é simplesmente a velocidade multiplicada pelo tempo: $$d = vt$$.\n\nLembre-se que a velocidade final da primeira fase torna-se a velocidade inicial da fase segundo. Devemos calcular a distância para cada fase separadamente e então combiná-los.\n\nDado que o foguete acelera para 10.0 segundos e, em seguida, coabita para os restantes 5.0 segundos, qual é a velocidade inicial da fase de costa, e que fórmula você deve usar para encontrar a distância percorrida durante esse tempo?"
             },
             {
               "role": "student",
-              "content": "I understand the formulas for both phases, but I'm not sure how to connect them. I know the acceleration phase ends at 10.0 seconds, and the coasting phase starts right after. How do I make sure the velocity I calculate at 10.0 seconds is the correct starting point for the second part of the journey?"
+              "content": "Entendo as fórmulas para ambas as fases, mas não sei como as ligar. Eu sei que a fase de aceleração termina em 10.0 segundos, e a fase de costa começa logo após. Como faço para ter certeza de que a velocidade que calculo em 10.0 segundos é o ponto de partida correto para a parte segundoU da viagem?"
             }
           ],
           "internal_state": {
-            "current_status": "The student understands the kinematic formulas for both acceleration and constant velocity motion. However, they are struggling with the conceptual connection between the two phases, specifically asking how to ensure that the final velocity calculated at the 10.0 second mark correctly serves as the initial velocity for the subsequent coasting phase.",
+            "current_status": "O aluno entende as fórmulas cinemáticas para aceleração e movimento de velocidade constante. No entanto, eles estão lutando com a conexão conceitual entre as duas fases, especificamente perguntando como garantir que a velocidade final calculada na marca 10.0 segundoU serve corretamente como a velocidade inicial para a fase de costa posterior.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You are correct that the final velocity of the first phase becomes the initial velocity of the second phase. To find that initial velocity ($$v$$) at the 10.0 second mark, you must use the kinematic equation that relates final velocity to initial velocity, acceleration, and time. The relationship is: $$v = v_0 + at$$. \n\nHere, the initial velocity ($$v_0$$) is 0 m/s, the acceleration ($$a$$) is 5.0 m/s², and the time ($$t$$) is 10.0 s. Substitute these specific values into the equation and calculate the velocity at the end of the acceleration phase. What value do you get for $$v$$?"
+          "target_teacher_response": "Você está correto que a velocidade final da primeira fase se torna a velocidade inicial da fase segundo. Para encontrar essa velocidade inicial ($$v$$) na marca 10.0 segundo, você deve usar a equação cinemática que relaciona velocidade final com velocidade inicial, aceleração e tempo. A relação é: $$v = v 0 + a$$.\n\nAqui, a velocidade inicial ($$v 0$$) é 0 m/s, a aceleração ($$a$$) é 5,0 m/s2, e o tempo ($$t$$) é 10,0 s. Substitua esses valores específicos na equação e calcule a velocidade no final da fase de aceleração. Qual o valor de $$v$$?"
         }
       ]
     },
@@ -60,37 +60,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I figured out the distance during acceleration is 250 meters. For the coasting part, I used the final velocity of 50 m/s and multiplied it by the total time, 15 seconds. So, the total distance is 250 plus 750, which gives me 1000 meters."
+              "content": "Descobri que a distância durante a aceleração é de 250 metros. Para a parte de costa, usei a velocidade final de 50 m/s e multipliquei-a pelo tempo total, 15 segundos. Então, a distância total é 250 mais 750, o que me dá 1000 metros."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly stated the distance during acceleration is 250 meters, but for the coasting phase, they incorrectly multiplied the final velocity (50 m/s) by the total time (15 seconds) instead of the coasting time (5 seconds), leading to an erroneous total distance calculation of 1000 meters.",
+            "current_status": "O aluno corretamente afirmou que a distância durante a aceleração é 250 metros, mas para a fase de costa, eles incorretamente multiplicaram a velocidade final (50 m/s) pelo tempo total (15 segundos) em vez do tempo de costa (5 segundosU), levando a um erro total de cálculo de distância de 1000 metros.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You calculated the distance during coasting by multiplying the final velocity by 15 seconds. However, the coasting phase only occurs after the initial 10 seconds of acceleration. You need to use the correct duration for the second segment."
+          "target_teacher_response": "Você calculou a distância durante a costa multiplicando a velocidade final por 15 segundos. No entanto, a fase de deslocamento só ocorre após os 10 segundos inicial de aceleração. Você precisa usar a duração correta para o segmento segundo."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I figured out the distance during acceleration is 250 meters. For the coasting part, I used the final velocity of 50 m/s and multiplied it by the total time, 15 seconds. So, the total distance is 250 plus 750, which gives me 1000 meters."
+              "content": "Descobri que a distância durante a aceleração é de 250 metros. Para a parte de costa, usei a velocidade final de 50 m/s e multipliquei-a pelo tempo total, 15 segundos. Então, a distância total é 250 mais 750, o que me dá 1000 metros."
             },
             {
               "role": "teacher",
-              "content": "You calculated the distance during coasting by multiplying the final velocity by 15 seconds. However, the coasting phase only occurs after the initial 10 seconds of acceleration. You need to use the correct duration for the second segment."
+              "content": "Você calculou a distância durante a costa multiplicando a velocidade final por 15 segundos. No entanto, a fase de deslocamento só ocorre após os 10 segundos inicial de aceleração. Você precisa usar a duração correta para o segmento segundo."
             },
             {
               "role": "student",
-              "content": "Okay, so I see the mistake was using the wrong time for the coasting part. If the total time is 15 seconds and the acceleration lasts 10 seconds, then the coasting time is 5 seconds. Using the 50 m/s final velocity and 5 seconds, the distance for the coasting part is 250 meters. Now I have 250 meters for the acceleration and 250 meters for the coasting. But how do I combine these two distances to get the total distance? Do I just add them together?"
+              "content": "Vejo que o erro foi usar o tempo errado para a parte de costa. Se o tempo total for 15 segundos e a aceleração durar 10 segundos, então o tempo de costa é 5 segundosU. Usando a velocidade final de 50 m/s e 5 segundos, a distância para a parte de costa é de 250 metros. Agora tenho 250 metros para a aceleração e 250 metros para a costa. Mas como combino estas duas distâncias para obter a distância total? Adiciono-os?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified that the coasting time is 5 seconds and accurately calculated the coasting distance as 250 meters. Furthermore, the student correctly concluded that the total distance must be found by adding the distance traveled during acceleration and the distance traveled during coasting.",
+            "current_status": "O aluno identificou corretamente que o tempo de costa é de 5 segundos e calculou com precisão a distância de costa como 250 metros. Além disso, o aluno concluiu corretamente que a distância total deve ser encontrada adicionando-se a distância percorrida durante a aceleração e a distância percorrida durante a costa.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The total distance traveled is the sum of the distances covered during each distinct phase of motion.\n\nTo find the total distance, you must add the distance covered during acceleration ($d_1$) and the distance covered during coasting ($d_2$).\n\n$$d_{total} = d_1 + d_2$$\n\nRemember that $d_1$ is calculated using the acceleration phase parameters, and $d_2$ is calculated using the constant velocity parameters. Substitute the expressions for $d_1$ and $d_2$ into the equation above, and then calculate the final value for $d_{total}$."
+          "target_teacher_response": "A distância total percorrida é a soma das distâncias percorridas durante cada fase de movimento distinta.\n\nPara encontrar a distância total, você deve adicionar a distância percorrida durante a aceleração ($d 1$) e a distância percorrida durante a costa ($d 2$).\n\n$$d {total} = d 1 + d 2$$\n\nLembre-se que $d 1$ é calculado usando os parâmetros de fase de aceleração, e $d 2$ é calculado usando os parâmetros de velocidade constante. Substitua as expressões para $d 1$ e $d 2$ na equação acima, e depois calcule o valor final para $d {total}$."
         }
       ]
     },
@@ -101,37 +101,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think the distance during the coasting phase is 250 m. So, to find the total distance the rocket traveled, I just have to add the distance from the acceleration phase to this value."
+              "content": "Acho que a distância durante a fase costeira é de 250 m. Então, para encontrar a distância total que o foguete viajou, eu só tenho que adicionar a distância da fase de aceleração para este valor."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the distance traveled during the coasting phase as 250 m and demonstrates understanding that the total distance must be found by summing the distance from the acceleration phase and the distance from the coasting phase.",
+            "current_status": "O aluno identifica corretamente a distância percorrida durante a fase de costamento como 250 m e demonstra entender que a distância total deve ser encontrada somando a distância da fase de aceleração e a distância da fase de costamento.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You correctly determined the distance traveled during the coasting phase using the constant velocity. What is the final step needed to determine the total distance the rocket traveled?"
+          "target_teacher_response": "Você corretamente determinou a distância percorrida durante a fase de costa usando a velocidade constante. Qual é o passo final necessário para determinar a distância total que o foguete percorreu?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think the distance during the coasting phase is 250 m. So, to find the total distance the rocket traveled, I just have to add the distance from the acceleration phase to this value."
+              "content": "Acho que a distância durante a fase costeira é de 250 m. Então, para encontrar a distância total que o foguete viajou, eu só tenho que adicionar a distância da fase de aceleração para este valor."
             },
             {
               "role": "teacher",
-              "content": "You correctly determined the distance traveled during the coasting phase using the constant velocity. What is the final step needed to determine the total distance the rocket traveled?"
+              "content": "Você corretamente determinou a distância percorrida durante a fase de costa usando a velocidade constante. Qual é o passo final necessário para determinar a distância total que o foguete percorreu?"
             },
             {
               "role": "student",
-              "content": "If I add the 250 meters from the acceleration phase to the 250 meters from the coasting phase, the total distance the rocket traveled is 500 meters."
+              "content": "Se eu adicionar o 250 metros da fase de aceleração para o 250 metros da fase de costa, a distância total que o foguete viajou é 500 metros."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the distance traveled during the acceleration phase as 250 meters and the distance traveled during the coasting phase as 250 meters. The student then correctly sums these two values to determine the total distance traveled by the rocket is 500 meters.",
+            "current_status": "O aluno identifica corretamente a distância percorrida durante a fase de aceleração como 250 metros e a distância percorrida durante a fase de costa como 250 metros. O aluno então soma corretamente estes dois valores para determinar a distância total percorrida pelo foguete é 500 metrosU.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is correct. The total distance traveled by the rocket is 500 meters. Do you have any other problems you would like to work on?"
+          "target_teacher_response": "Correto. A distância total percorrida pelo foguete é de 500 metros. Tem outros problemas em que gostaria de trabalhar?"
         }
       ]
     },
@@ -142,37 +142,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I figured out that during the first 10 seconds, the distance it traveled was 250 meters. It was a bit tricky remembering the formula for distance when starting from rest, but I think I got that part right. Now that I know the distance, how do I figure out the velocity it reached right at the 10-second mark? That's what I need for the next part."
+              "content": "Descobri que durante os primeiros 10 segundos, a distância que percorreu foi 250 metros. Foi um pouco complicado lembrar a fórmula para a distância ao começar do descanso, mas eu acho que eu entendi essa parte certa. Agora que eu sei a distância, como eu descubro a velocidade que ele atingiu na marca 10-segundo? É disso que preciso para a próxima parte."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly stated that the distance traveled during the first 10 seconds was 250 meters. The student then correctly identified that the next step is to calculate the final velocity reached at the 10-second mark.",
+            "current_status": "O aluno afirmou corretamente que a distância percorrida durante os primeiros 10 segundos foi de 250 metros. O aluno identificou corretamente que o próximo passo é calcular a velocidade final alcançada na marca 10-segundoU.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To determine the final velocity ($v$) after the acceleration phase, you need to use the kinematic equation that relates initial velocity, acceleration, and time.\n\nThe relationship is: $$v = v_0 + at$$\n\nHere, $v_0$ is the initial velocity, $a$ is the acceleration, and $t$ is the time elapsed during the acceleration. \n\nSubstitute the given values for $v_0$, $a$, and $t$ into this equation to find the velocity at the end of the first 10 seconds."
+          "target_teacher_response": "Para determinar a velocidade final ($v$) após a fase de aceleração, você precisa usar a equação cinemática que relaciona velocidade inicial, aceleração e tempo.\n\nA relação é: $$v = v 0 + a$$\n\nAqui, $v 0$ é a velocidade inicial, $a$ é a aceleração, e $t$ é o tempo decorrido durante a aceleração.\n\nSubstitua os valores dados por $v 0$, $a$ e $t$ nesta equação para encontrar a velocidade no final dos primeiros 10 segundos."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so I figured out that during the first 10 seconds, the distance it traveled was 250 meters. It was a bit tricky remembering the formula for distance when starting from rest, but I think I got that part right. Now that I know the distance, how do I figure out the velocity it reached right at the 10-second mark? That's what I need for the next part."
+              "content": "Descobri que durante os primeiros 10 segundos, a distância que percorreu foi 250 metros. Foi um pouco complicado lembrar a fórmula para a distância ao começar do descanso, mas eu acho que eu entendi essa parte certa. Agora que eu sei a distância, como eu descubro a velocidade que ele atingiu na marca 10-segundo? É disso que preciso para a próxima parte."
             },
             {
               "role": "teacher",
-              "content": "To determine the final velocity ($v$) after the acceleration phase, you need to use the kinematic equation that relates initial velocity, acceleration, and time.\n\nThe relationship is: $$v = v_0 + at$$\n\nHere, $v_0$ is the initial velocity, $a$ is the acceleration, and $t$ is the time elapsed during the acceleration. \n\nSubstitute the given values for $v_0$, $a$, and $t$ into this equation to find the velocity at the end of the first 10 seconds."
+              "content": "Para determinar a velocidade final ($v$) após a fase de aceleração, você precisa usar a equação cinemática que relaciona velocidade inicial, aceleração e tempo.\n\nA relação é: $$v = v 0 + a$$\n\nAqui, $v 0$ é a velocidade inicial, $a$ é a aceleração, e $t$ é o tempo decorrido durante a aceleração.\n\nSubstitua os valores dados por $v 0$, $a$ e $t$ nesta equação para encontrar a velocidade no final dos primeiros 10 segundos."
             },
             {
               "role": "student",
-              "content": "Using the formula v = v₀ + at, I plugged in the values: v₀ was zero, a was 5.0 m/s², and t was 10.0 seconds. When I calculated it, I got 15.0 m/s. Does that sound right? I'm not sure about the calculation part."
+              "content": "Usando a fórmula v = v0 + at, plugei os valores: v0 foi zero, a foi 5,0 m/s2, e t foi 10,0 segundos. Quando o calculei, recebi 15,0 m/s. Parece-te bem? Não tenho a certeza sobre o cálculo."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the kinematic formula v = v₀ + at and substituted the appropriate values (v₀ = 0, a = 5.0 m/s², t = 10.0 s). However, the student calculated the final velocity as 15.0 m/s, which is a calculation error.",
+            "current_status": "O aluno identificou corretamente a fórmula cinemática v = v0 + e substituiu os valores apropriados (v0 = 0, a = 5,0 m/s2, t = 10,0 s). No entanto, o aluno calculou a velocidade final em 15,0 m/s, o que é um erro de cálculo.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly identified the values for $v_0$, $a$, and $t$. However, when evaluating the expression $v_0 + at$, you need to ensure you are performing the multiplication of $a$ and $t$ before adding $v_0$. Please check the product of $5.0$ m/s² and $10.0$ s."
+          "target_teacher_response": "Você identificou corretamente os valores de $v 0$, $a$ e $t$. No entanto, ao avaliar a expressão $v 0 + at$, você precisa garantir que está realizando a multiplicação de $a$ e $t$ antes de adicionar $v 0$. Por favor, verifique o produto de $5.0$ m/s2 e $10.0$ s."
         }
       ]
     },
@@ -183,67 +183,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really confused about how to start this problem. It changes motion, so I don't know if I should use one formula or several. Where do I even begin to figure out the total distance?"
+              "content": "Estou muito confuso sobre como começar este problema. Muda de movimento, então não sei se devo usar uma ou várias fórmulas. Onde é que começo a perceber a distância total?"
             }
           ],
           "internal_state": {
-            "current_status": "The student is struggling with the conceptual framework of the problem, correctly identifying that because the motion changes (from acceleration to constant velocity), a single formula is insufficient to determine the total distance traveled.",
+            "current_status": "O aluno está lutando com a estrutura conceitual do problema, identificando corretamente que, devido às mudanças de movimento (da aceleração à velocidade constante), uma única fórmula é insuficiente para determinar a distância total percorrida.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "Since the motion happens in two distinct phases, you need to calculate the distance for each phase separately and then add them together.\n\nFor the first phase, when the rocket is accelerating from rest, you need to use the kinematic equation that relates distance, initial velocity, acceleration, and time. The formula for distance traveled ($$d$$) is:\n$$d = d_1 = v_0t + \\frac{1}{2}at^2$$\n\nRemember that $v_0$ is the **initial velocity**, $a$ is the **acceleration**, and $t$ is the **time** for this first phase. Substitute the values given for the acceleration phase into this equation to find $d_1$. What is the value of $d_1$?"
+          "target_teacher_response": "Como o movimento acontece em duas fases distintas, você precisa calcular a distância para cada fase separadamente e depois adicioná-los juntos.\n\nPara a primeira fase, quando o foguete está acelerando do repouso, você precisa usar a equação cinemática que relaciona distância, velocidade inicial, aceleração e tempo. A fórmula para distância percorrida ($$d$$) é:\n$$d = d 1 = v 0t + \\frac{1}{2}at^2$$\n\nLembre-se que $v 0$ é a velocidade inicial**, $a$ é a aceleração**, e $t$ é o tempo** para esta primeira fase. Substitua os valores dados para a fase de aceleração nesta equação para encontrar $d 1$. Qual é o valor de $d 1$?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really confused about how to start this problem. It changes motion, so I don't know if I should use one formula or several. Where do I even begin to figure out the total distance?"
+              "content": "Estou muito confuso sobre como começar este problema. Muda de movimento, então não sei se devo usar uma ou várias fórmulas. Onde é que começo a perceber a distância total?"
             },
             {
               "role": "teacher",
-              "content": "Since the motion happens in two distinct phases, you need to calculate the distance for each phase separately and then add them together.\n\nFor the first phase, when the rocket is accelerating from rest, you need to use the kinematic equation that relates distance, initial velocity, acceleration, and time. The formula for distance traveled ($$d$$) is:\n$$d = d_1 = v_0t + \\frac{1}{2}at^2$$\n\nRemember that $v_0$ is the **initial velocity**, $a$ is the **acceleration**, and $t$ is the **time** for this first phase. Substitute the values given for the acceleration phase into this equation to find $d_1$. What is the value of $d_1$?"
+              "content": "Como o movimento acontece em duas fases distintas, você precisa calcular a distância para cada fase separadamente e depois adicioná-los juntos.\n\nPara a primeira fase, quando o foguete está acelerando do repouso, você precisa usar a equação cinemática que relaciona distância, velocidade inicial, aceleração e tempo. A fórmula para distância percorrida ($$d$$) é:\n$$d = d 1 = v 0t + \\frac{1}{2}at^2$$\n\nLembre-se que $v 0$ é a velocidade inicial**, $a$ é a aceleração**, e $t$ é o tempo** para esta primeira fase. Substitua os valores dados para a fase de aceleração nesta equação para encontrar $d 1$. Qual é o valor de $d 1$?"
             },
             {
               "role": "student",
-              "content": "Wait, I'm stuck on this formula. You mentioned $v_0$, $a$, and $t$, but where do I even find those numbers? The problem gives me a bunch of information, but I don't know which numbers go into which variable."
+              "content": "Espera, estou preso nesta fórmula. Mencionou $v 0$, $a$, e $t$, mas onde posso encontrar esses números? O problema me dá um monte de informações, mas eu não sei quais números vão para qual variável."
             }
           ],
           "internal_state": {
-            "current_status": "The student is struggling with the conceptual step of assigning the correct numerical values from the problem description to the variables (initial velocity, acceleration, and time) required by the kinematic formula. They understand that the variables are needed but are unsure how to map the given information to the specific variables in the equation.",
+            "current_status": "O aluno está lutando com a etapa conceitual de atribuir os valores numéricos corretos da descrição do problema às variáveis (velocidade inicial, aceleração e tempo) exigidas pela fórmula cinemática. Eles entendem que as variáveis são necessárias, mas não têm certeza de como mapear as informações dadas às variáveis específicas da equação.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "We need to identify the values for the variables in the context of the acceleration phase. \n\nFor the initial velocity, $v_0$, we are told the rocket starts from rest, so **$v_0$** is **0 m/s**.\n\nNext, the acceleration, $a$, is given as a constant **5.0 m/s²**.\n\nFinally, the time, $t$, for this first phase is the duration of the acceleration, which is **10.0 seconds**.\n\nNow that you have identified the values for $v_0$, $a$, and $t$, substitute them into the equation for $d_1$: $$d_1 = v_0t + \\frac{1}{2}at^2$$ and calculate the distance traveled during acceleration."
+          "target_teacher_response": "Precisamos identificar os valores das variáveis no contexto da fase de aceleração.\n\nPara a velocidade inicial, $v 0$, diz-se que o foguete começa a partir do repouso, então **$v 0$** é **0 m/s**.\n\nEm seguida, a aceleração, $a$, é dada como uma constante **5.0 m/s2**.\n\nFinalmente, o tempo, $t$, para esta primeira fase é a duração da aceleração, que é **10.0 segundos**.\n\nAgora que você identificou os valores de $v 0$, $a$ e $t$, substitua-os na equação por $d 1$: $$d 1 = v 0t + \\frac{1}{2}at^2$$$ e calcule a distância percorrida durante a aceleração."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm really confused about how to start this problem. It changes motion, so I don't know if I should use one formula or several. Where do I even begin to figure out the total distance?"
+              "content": "Estou muito confuso sobre como começar este problema. Muda de movimento, então não sei se devo usar uma ou várias fórmulas. Onde é que começo a perceber a distância total?"
             },
             {
               "role": "teacher",
-              "content": "Since the motion happens in two distinct phases, you need to calculate the distance for each phase separately and then add them together.\n\nFor the first phase, when the rocket is accelerating from rest, you need to use the kinematic equation that relates distance, initial velocity, acceleration, and time. The formula for distance traveled ($$d$$) is:\n$$d = d_1 = v_0t + \\frac{1}{2}at^2$$\n\nRemember that $v_0$ is the **initial velocity**, $a$ is the **acceleration**, and $t$ is the **time** for this first phase. Substitute the values given for the acceleration phase into this equation to find $d_1$. What is the value of $d_1$?"
+              "content": "Como o movimento acontece em duas fases distintas, você precisa calcular a distância para cada fase separadamente e depois adicioná-los juntos.\n\nPara a primeira fase, quando o foguete está acelerando do repouso, você precisa usar a equação cinemática que relaciona distância, velocidade inicial, aceleração e tempo. A fórmula para distância percorrida ($$d$$) é:\n$$d = d 1 = v 0t + \\frac{1}{2}at^2$$\n\nLembre-se que $v 0$ é a velocidade inicial**, $a$ é a aceleração**, e $t$ é o tempo** para esta primeira fase. Substitua os valores dados para a fase de aceleração nesta equação para encontrar $d 1$. Qual é o valor de $d 1$?"
             },
             {
               "role": "student",
-              "content": "Wait, I'm stuck on this formula. You mentioned $v_0$, $a$, and $t$, but where do I even find those numbers? The problem gives me a bunch of information, but I don't know which numbers go into which variable."
+              "content": "Espera, estou preso nesta fórmula. Mencionou $v 0$, $a$, e $t$, mas onde posso encontrar esses números? O problema me dá um monte de informações, mas eu não sei quais números vão para qual variável."
             },
             {
               "role": "teacher",
-              "content": "We need to identify the values for the variables in the context of the acceleration phase. \n\nFor the initial velocity, $v_0$, we are told the rocket starts from rest, so **$v_0$** is **0 m/s**.\n\nNext, the acceleration, $a$, is given as a constant **5.0 m/s²**.\n\nFinally, the time, $t$, for this first phase is the duration of the acceleration, which is **10.0 seconds**.\n\nNow that you have identified the values for $v_0$, $a$, and $t$, substitute them into the equation for $d_1$: $$d_1 = v_0t + \\frac{1}{2}at^2$$ and calculate the distance traveled during acceleration."
+              "content": "Precisamos identificar os valores das variáveis no contexto da fase de aceleração.\n\nPara a velocidade inicial, $v 0$, diz-se que o foguete começa a partir do repouso, então **$v 0$** é **0 m/s**.\n\nEm seguida, a aceleração, $a$, é dada como uma constante **5.0 m/s2**.\n\nFinalmente, o tempo, $t$, para esta primeira fase é a duração da aceleração, que é **10.0 segundos**.\n\nAgora que você identificou os valores de $v 0$, $a$ e $t$, substitua-os na equação por $d 1$: $$d 1 = v 0t + \\frac{1}{2}at^2$$$ e calcule a distância percorrida durante a aceleração."
             },
             {
               "role": "student",
-              "content": "I understand the formula, but I still don't know how to plug in the numbers. It has two parts, $v_0t$ and $\\frac{1}{2}at^2$. Which part do I calculate first? Can you just show me how to work through the math?"
+              "content": "Entendo a fórmula, mas ainda não sei como ligar os números. Tem duas partes, $v 0t$ e $\\frac{1}{2}at^2$. Qual parte devo calcular primeiro? Podes mostrar-me como fazer as contas?"
             }
           ],
           "internal_state": {
-            "current_status": "The student has successfully identified the kinematic formula and the values for the variables, but they are currently struggling with the procedural execution of the calculation. The student is confused about the order of operations for the two parts of the equation, v₀t and one-half * a * t squared, and is requesting explicit step-by-step mathematical guidance.",
+            "current_status": "O aluno identificou com sucesso a fórmula cinemática e os valores para as variáveis, mas eles estão atualmente lutando com a execução processual do cálculo. O aluno está confuso sobre a ordem de operações para as duas partes da equação, v0t e uma metade * a * t ao quadrado, e está solicitando orientação matemática passo a passo explícita.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We will calculate the two parts separately. Let's start with the first term, $v_0t$. We established that $v_0$ is **0 m/s**, and $t$ is **10.0 seconds**. \n\nSubstituting these values into the first term gives us: $$v_0t = (0 \\text{ m/s})(10.0 \\text{ s})$$\n\nNow, calculate the value of $v_0t$. \n\nNext, we will calculate the second term, $\\frac{1}{2}at^2$. We use $a = \\mathbf{5.0 \\text{ m/s}^2}$ and $t = \\mathbf{10.0 \\text{ seconds}}$.\n\nFirst, calculate $t^2$: $$t^2 = (10.0 \\text{ s})^2 = 100 \\text{ s}^2$$\n\nNow, substitute $t^2$ and $a$ into the second term: $$\\frac{1}{2}at^2 = \\frac{1}{2}(5.0 \\text{ m/s}^2)(100 \\text{ s}^2)$$ \n\nCalculate the product of $\\frac{1}{2}$, $5.0$, and $100$. What is the value of the second term?"
+          "target_teacher_response": "Vamos calcular as duas partes separadamente. Vamos começar com o primeiro termo, $v 0t$. Estabelecemos que $v 0$ é **0 m/s**, e $t$ é **10.0 segundos**.\n\nSubstituindo estes valores para o primeiro termo nos dá: $$v 0t = (0 \\text{ m/s})(10.0 \\text{ s})$$\n\nAgora, calcule o valor de $v 0t$.\n\nEm seguida, vamos calcular o termo segundo, $\\frac{1}{2}at^2$. Usamos $a = \\mathbf{5.0 \\text{ m/s}^2}$ e $t = \\mathbf{10.0 \\text{ segundos}}$.\n\nPrimeiro, calcular $t^2$: $$t^2 = (10.0 \\text{ s})^2 = 100 \\text{ s}^2$$\n\nAgora, substitua $t^2$ e $a$ no termo segundo: $$\\frac{1}{2}at^2 = \\frac{1}{2}(5.0 \\text{ m/s}^2)(100 \\text{ s}^2)$\n\nCalcular o produto de $\\frac{1}{2}$, $5.0$, e $100$. Qual é o valor do termo segundo?"
         }
       ]
     }

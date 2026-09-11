@@ -1,85 +1,85 @@
 {
-  "category": "geometry",
+  "category": "geometria",
   "model": "gemma3:12b-it-qat",
   "generated_at": "2026-05-09T10:15:20.865972",
   "total": 6,
   "questions": [
     {
-      "subtopic": "finding the circumference of a circle from a given area",
-      "question": "A circular garden has an area of 113.04 square feet. What is the circumference of the garden, rounded to the nearest tenth of a foot?",
+      "subtopic": "encontrar a circunferência de um círculo de uma determinada área",
+      "question": "Um jardim circular tem uma área de 113.04 pés quadrados. Qual é a circunferência do jardim, arredondado para o décimo mais próximo de um pé?",
       "solution": [
-        "1. Recall the formula for the area of a circle: A = πr², where A is the area and r is the radius.",
-        "2. Substitute the given area into the formula: 113.04 = πr².",
-        "3. Divide both sides by π: r² = 113.04 / π ≈ 36.",
-        "4. Take the square root of both sides: r = √36 = 6 feet.",
-        "5. Recall the formula for the circumference of a circle: C = 2πr, where C is the circumference and r is the radius.",
-        "6. Substitute the radius into the circumference formula: C = 2π(6) = 12π.",
-        "7. Calculate the circumference: C ≈ 12 * 3.14159 ≈ 37.69908 feet.",
-        "8. Round the circumference to the nearest tenth: C ≈ 37.7 feet."
+        "1. Lembre-se da fórmula para a área de um círculo: A = πr2, onde A é a área e r é o raio.",
+        "2. Substitua a área dada na fórmula: 113,04 = πr2.",
+        "3. Dividir ambos os lados por π: r2 = 113,04 / π □ 36.",
+        "4. Tome a raiz quadrada de ambos os lados: r = √36 = 6 pés.",
+        "5. Lembre-se da fórmula para a circunferência de um círculo: C = 2πr, onde C é a circunferência e r é o raio.",
+        "6. Substitua o raio na circunferência fórmula: C = 2π(6) = 12π.",
+        "7. Calcular a circunferência: C 12 * 3,14159 UUU.",
+        "8. Rodear a circunferência para o décimo mais próximo: C (37.7 pés)."
       ]
     },
     {
-      "subtopic": "determining the hypotenuse using cosine ratio",
-      "question": "A 25-foot ladder leans against a wall, forming an angle of 68 degrees with the ground. Determine the distance from the base of the ladder to the wall. Round your answer to the nearest foot.",
+      "subtopic": "determinação da hipotenusa usando a relação cosseno",
+      "question": "Uma escada 25-pé inclina-se contra uma parede, formando um ângulo de 68 graus com o chão. Determinar a distância da base da escada para a parede. Reúna a sua resposta para o pé mais próximo.",
       "solution": [
-        "1. Identify the knowns: Adjacent side = distance from base of ladder to wall (let's call it 'x'), Hypotenuse = 25 feet, Angle = 68 degrees.",
-        "2. Recall the cosine ratio: cos(angle) = Adjacent / Hypotenuse",
-        "3. Substitute the known values into the cosine ratio: cos(68°) = x / 25",
-        "4. Calculate cos(68°): cos(68°) ≈ 0.3746",
-        "5. Rewrite the equation: 0.3746 = x / 25",
-        "6. Solve for x: x = 0.3746 * 25",
-        "7. Calculate x: x ≈ 9.365",
-        "8. Round to the nearest foot: x ≈ 9 feet"
+        "1. Identificar os conhecidos: Lado adjacente = distância da base da escada para a parede (vamos chamá-lo 'x'), Hipotenusa = 25 pés, Ângulo = 68 graus.",
+        "2. Lembre-se da relação cosseno: cos(ângulo) = Adjacente / Hipotenusa",
+        "3. Substitua os valores conhecidos na relação cosseno: cos(68°) = x / 25",
+        "4. Calcular o cos( 68°): cos( 68°)",
+        "5. Reescrever a equação: 0,3746 = x / 25",
+        "6. Resolva para x: x = 0,3746 * 25",
+        "7. Calcular x: x = 9,365",
+        "8. Redonda para a péU mais próxima: x □ 9 pés"
       ]
     },
     {
-      "subtopic": "determining a missing endpoint using the midpoint formula",
-      "question": "Point M is the midpoint of the line segment AB, where A = (-2, 5) and M = (1, 1). Determine the coordinates of point B.",
+      "subtopic": "determinação de um ponto final em falta usando a fórmula do ponto médio",
+      "question": "O ponto M é o ponto médio do segmento de linha AB, onde A = (-2, 5) e M = (1, 1). Determinar as coordenadas do ponto B.",
       "solution": [
-        "1. Recall the midpoint formula: M = ((x₁ + x₂)/2, (y₁ + y₂)/2), where M is the midpoint, and (x₁, y₁) and (x₂, y₂) are the endpoints.",
-        "2. Let B have coordinates (x₂, y₂). We have M = ((−2 + x₂)/2, (5 + y₂)/2) = (1, 1).",
-        "3. Set the x-coordinates equal: (−2 + x₂)/2 = 1. Multiply both sides by 2: −2 + x₂ = 2. Add 2 to both sides: x₂ = 4.",
-        "4. Set the y-coordinates equal: (5 + y₂)/2 = 1. Multiply both sides by 2: 5 + y₂ = 2. Subtract 5 from both sides: y₂ = -3.",
-        "5. Therefore, the coordinates of point B are (4, -3)."
+        "1. Lembre-se da fórmula do ponto médio: M = ((x1 + x2)/2, (y1 + y2)/2), onde M é o ponto médio, e (x1, y1) e (x2, y2) são os objetivos.",
+        "2. Deixe B ter coordenadas (x2, y2). Temos M = ((−2 + x2)/2, (5 + y2)/2) = (1, 1).",
+        "3. Defina as coordenadas x iguais: (−2 + x2)/2 = 1. Multiplique ambos os lados por 2: −2 + x2 = 2. Adicionar 2 em ambos os lados: x2 = 4.",
+        "4. Defina as coordenadas y iguais: (5 + y2)/2 = 1. Multiplique ambos os lados por 2: 5 + y2 = 2. Subtrair 5 de ambos os lados: y2 = -3.",
+        "5. Portanto, as coordenadas do ponto B são (4, -3)."
       ]
     },
     {
-      "subtopic": "finding the missing side of a right triangle using Pythagoras theorem",
-      "question": "A ladder 13 feet long leans against a wall. The base of the ladder is 5 feet away from the wall; how high up the wall does the ladder reach?",
+      "subtopic": "encontrar o lado ausente de um triângulo retângulo usando o teorema de Pitágoras",
+      "question": "Uma escada 13 pés longa inclina-se contra uma parede. A base da escada fica a 5 pés longe da parede; a que altura a escada alcança?",
       "solution": [
-        "1. Let 'h' be the height the ladder reaches on the wall.",
-        "2. According to the Pythagorean theorem, a² + b² = c², where 'a' and 'b' are the legs of the right triangle and 'c' is the hypotenuse.",
-        "3. In this case, a = 5 feet (distance from the wall), b = h, and c = 13 feet (length of the ladder).",
-        "4. Substitute the values into the theorem: 5² + h² = 13²",
-        "5. Simplify: 25 + h² = 169",
-        "6. Subtract 25 from both sides: h² = 169 - 25",
-        "7. Calculate: h² = 144",
-        "8. Take the square root of both sides: h = √144",
-        "9. Therefore, h = 12 feet."
+        "1. Deixe 'h' ser a altura que a escada atinge na parede.",
+        "2. De acordo com o teorema de Pitágoras, a2 + b2 = c2, onde 'a' e 'b' são as pernas do triângulo retângulo e 'c' é a hipotenusa.",
+        "3. Neste caso, a = 5 pés (distância da parede), b = h, e c = 13 pés (comprimento da escada).",
+        "4. Substitua os valores no teorema: 52 + h2 = 132",
+        "5. Simplificar: 25 + h2 = 169",
+        "6. Subtrair 25 de ambos os lados: h2 = 169 - 25",
+        "7. Calcular: h2 = 144",
+        "8. Tome a raiz quadrada de ambos os lados: h = √144",
+        "9. Portanto, h = 12 pés."
       ]
     },
     {
-      "subtopic": "determining the length of a line segment using the distance formula",
-      "question": "Triangle ABC has vertices at A(2, -1), B(5, 3), and C(-1, 4). Determine the length of side AC of the triangle.",
+      "subtopic": "determinação do comprimento de um segmento de linha usando a fórmula de distância",
+      "question": "Triângulo ABC tem vértices em A(2, -1), B(5, 3) e C(-1, 4). Determinar o comprimento do AC lateral do triângulo.",
       "solution": [
-        "1. Recall the distance formula: d = √((x₂ - x₁)² + (y₂ - y₁)²).",
-        "2. Identify the coordinates of points A and C: A(2, -1) and C(-1, 4).",
-        "3. Substitute the coordinates into the distance formula: d = √((-1 - 2)² + (4 - (-1))²).",
-        "4. Simplify the expression inside the parentheses: d = √((-3)² + (5)²).",
-        "5. Calculate the squares: d = √(9 + 25).",
-        "6. Add the values: d = √34.",
-        "7. The length of side AC is √34 units."
+        "1. Lembre-se da fórmula da distância: d = ?((x2 - x1)2 + (y2 - y1)2).",
+        "2. Identificar as coordenadas dos pontos A e C: A(2, -1) e C(-1, 4).",
+        "3. Substitua as coordenadas na fórmula da distância: d = √((-1 - 2)2 + (4 - (-1))2).",
+        "4. Simplifique a expressão dentro dos parênteses: d = ?(-3)2 + (5)2).",
+        "5. Calcular os quadrados: d = ?(9 + 25).",
+        "6. Adicione os valores: d = √34.",
+        "7. O comprimento do AC lateral é de 34 unidades."
       ]
     },
     {
-      "subtopic": "finding the total interior angle sum of a polygon",
-      "question": "A regular dodecagon (12-sided polygon) is divided into 10 triangles by connecting its center to each vertex. What is the total measure of all interior angles of the dodecagon, in degrees?",
+      "subtopic": "encontrar a soma total do ângulo interior de um polígono",
+      "question": "Um dodecagon regular (12-sided polygon) é dividido em 10 triângulos conectando seu centro a cada vértice. Qual é a medida total de todos os ângulos interiores do dodecagon, em graus?",
       "solution": [
-        "1. Recall the formula for the sum of interior angles of a polygon with 'n' sides: (n - 2) * 180 degrees.",
-        "2. Identify the number of sides of the dodecagon: n = 12.",
-        "3. Substitute n = 12 into the formula: (12 - 2) * 180 degrees.",
-        "4. Simplify the expression inside the parentheses: 10 * 180 degrees.",
-        "5. Perform the multiplication: 1800 degrees."
+        "1. Lembre-se da fórmula para a soma dos ângulos interiores de um polígono com 'n' lados: (n - 2) * 180 graus.",
+        "2. Identificar o número de lados do dodecagon: n = 12.",
+        "3. Substituta n = 12 na fórmula: (12 - 2) * 180 graus.",
+        "4. Simplifique a expressão dentro dos parênteses: 10 * 180 graus.",
+        "5. Execute a multiplicação: 1800 graus."
       ]
     }
   ]

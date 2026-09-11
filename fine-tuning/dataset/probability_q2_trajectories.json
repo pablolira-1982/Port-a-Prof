@@ -1,12 +1,12 @@
 {
-  "problem": "A manufacturing process produces metal bolts, and 2% of them are defective. If a quality control inspector randomly selects 10 bolts, what is the probability that at least one bolt is defective?",
-  "topic": "probability",
-  "subtopic": "calculating probability using complementary events",
+  "problem": "Um processo de fabricação produz parafusos de metal, e 2% deles são defeituosos. Se um inspetor de controle de qualidade seleciona aleatoriamente 10 parafusos, qual é a probabilidade de pelo menos um parafuso estar defeituoso?",
+  "topic": "probabilidade",
+  "subtopic": "cálculo da probabilidade usando eventos complementares",
   "solution_steps": [
-    "Define the complementary event: The complementary event to 'at least one bolt is defective' is 'no bolts are defective'.",
-    "Calculate the probability of the complementary event: The probability of a single bolt not being defective is 1 - 0.02 = 0.98.",
-    "Calculate the probability of no defective bolts in 10 selections: Since the selections are independent, the probability of 10 non-defective bolts is 0.98^10 ≈ 0.81707.",
-    "Calculate the probability of at least one defective bolt:  The probability of at least one defective bolt is 1 minus the probability of no defective bolts: 1 - 0.81707 ≈ 0.18293."
+    "Defina o evento complementar: O evento complementar para \"pelo menos um parafuso é defeituoso\" é \"nenhum parafuso é defeituoso\".",
+    "Calcular a probabilidade do evento complementar: A probabilidade de um único parafuso não estar defeituoso é 1 - 0,02 = 0,98.",
+    "Calcule a probabilidade de não haver parafusos defeituosos em 10 seleções: Uma vez que as seleções são independentes, a probabilidade de 10 parafusos não defeituosos é de 0,98^10; 0,81707.",
+    "Calcular a probabilidade de pelo menos um parafuso defeituoso: A probabilidade de pelo menos um parafuso defeituoso é 1 menos a probabilidade de não haver parafusos defeituosos: 1 - 0.81707 ."
   ],
   "trajectories": [
     {
@@ -16,37 +16,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure how to approach this probability question. We need the chance of getting at least one defective bolt out of 10, and I don't know if there's a shortcut or a specific formula I should be using here."
+              "content": "Não sei como abordar esta questão de probabilidade. Precisamos da chance de obter pelo menos um parafuso defeituoso de 10, e eu não sei se há um atalho ou uma fórmula específica que eu deveria usar aqui."
             }
           ],
           "internal_state": {
-            "current_status": "The student is struggling with the initial approach to the problem, recognizing the need to find the probability of at least one defective bolt out of 10, but is unsure whether a shortcut or a specific formula should be used.",
+            "current_status": "O aluno está lutando com a abordagem inicial do problema, reconhecendo a necessidade de encontrar a probabilidade de pelo menos um parafuso defeituoso de 10, mas não está certo se um atalho ou uma fórmula específica deve ser usado.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "When you see phrases like \"at least one,\" it often signals that using the concept of **complementary probability** will simplify the calculation significantly.\n\nInstead of calculating the probability of getting exactly one defective bolt, plus the probability of getting exactly two, and so on, up to ten, we can use the complement.\n\nThe complementary event to \"at least one defective bolt\" is the event that *none* of the bolts are defective. The rule for complementary probability states that the probability of an event $A$ occurring is equal to 1 minus the probability of $A$ not occurring, which we write as $$P(A) = 1 - P(A^c)$$.\n\nIn the context of your problem, $P(A)$ is the probability of at least one defective bolt, and $P(A^c)$ is the probability that all 10 bolts are non-defective. To find $P(A^c)$, remember that since each selection is independent, you will multiply the probabilities for each individual bolt.\n\nGiven that 2% of bolts are defective, what is the probability that a single bolt is *not* defective, and how can you use that to find the probability that all 10 bolts are non-defective?"
+          "target_teacher_response": "Quando você vê frases como \"pelo menos uma\", muitas vezes sinaliza que usar o conceito de ** probabilidade complementar** irá simplificar o cálculo significativamente.\n\nEm vez de calcular a probabilidade de obter exatamente um parafuso defeituoso, mais a probabilidade de obter exatamente dois, e assim por diante, até dez, podemos usar o complemento.\n\nO evento complementar para \"pelo menos um parafuso defeituoso\" é o evento que * nenhum* dos parafusos são defeituosos. A regra para probabilidade complementar afirma que a probabilidade de um evento $A$ ocorrer é igual a 1 menos a probabilidade de $A$ não ocorrer, que escrevemos como $$P(A) = 1 - P(A^c)$$.\n\nNo contexto do seu problema, $P(A)$ é a probabilidade de pelo menos um parafuso defeituoso, e $P(A^c)$ é a probabilidade de que todos os 10 parafusos não sejam defeituosos. Para encontrar $P(A^c)$, lembre-se que, uma vez que cada seleção é independente, você multiplicará as probabilidades para cada parafuso individual.\n\nDado que 2% dos parafusos são defeituosos, qual é a probabilidade de um único parafuso ser * não * defeituoso, e como você pode usar isso para encontrar a probabilidade de que todos os 10 parafusos não são defeituosos?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm not sure how to approach this probability question. We need the chance of getting at least one defective bolt out of 10, and I don't know if there's a shortcut or a specific formula I should be using here."
+              "content": "Não sei como abordar esta questão de probabilidade. Precisamos da chance de obter pelo menos um parafuso defeituoso de 10, e eu não sei se há um atalho ou uma fórmula específica que eu deveria usar aqui."
             },
             {
               "role": "teacher",
-              "content": "When you see phrases like \"at least one,\" it often signals that using the concept of **complementary probability** will simplify the calculation significantly.\n\nInstead of calculating the probability of getting exactly one defective bolt, plus the probability of getting exactly two, and so on, up to ten, we can use the complement.\n\nThe complementary event to \"at least one defective bolt\" is the event that *none* of the bolts are defective. The rule for complementary probability states that the probability of an event $A$ occurring is equal to 1 minus the probability of $A$ not occurring, which we write as $$P(A) = 1 - P(A^c)$$.\n\nIn the context of your problem, $P(A)$ is the probability of at least one defective bolt, and $P(A^c)$ is the probability that all 10 bolts are non-defective. To find $P(A^c)$, remember that since each selection is independent, you will multiply the probabilities for each individual bolt.\n\nGiven that 2% of bolts are defective, what is the probability that a single bolt is *not* defective, and how can you use that to find the probability that all 10 bolts are non-defective?"
+              "content": "Quando você vê frases como \"pelo menos uma\", muitas vezes sinaliza que usar o conceito de ** probabilidade complementar** irá simplificar o cálculo significativamente.\n\nEm vez de calcular a probabilidade de obter exatamente um parafuso defeituoso, mais a probabilidade de obter exatamente dois, e assim por diante, até dez, podemos usar o complemento.\n\nO evento complementar para \"pelo menos um parafuso defeituoso\" é o evento que * nenhum* dos parafusos são defeituosos. A regra para probabilidade complementar afirma que a probabilidade de um evento $A$ ocorrer é igual a 1 menos a probabilidade de $A$ não ocorrer, que escrevemos como $$P(A) = 1 - P(A^c)$$.\n\nNo contexto do seu problema, $P(A)$ é a probabilidade de pelo menos um parafuso defeituoso, e $P(A^c)$ é a probabilidade de que todos os 10 parafusos não sejam defeituosos. Para encontrar $P(A^c)$, lembre-se que, uma vez que cada seleção é independente, você multiplicará as probabilidades para cada parafuso individual.\n\nDado que 2% dos parafusos são defeituosos, qual é a probabilidade de um único parafuso ser * não * defeituoso, e como você pode usar isso para encontrar a probabilidade de que todos os 10 parafusos não são defeituosos?"
             },
             {
               "role": "student",
-              "content": "I understand that we need to find the probability of a single bolt being good first, and then multiply that out. But when I look at the 10 bolts, I'm not sure how to set up the full expression for the probability that all 10 are good. Do I just raise that single probability to the power of 10, or is there something else I need to account for?"
+              "content": "Eu entendo que nós precisamos encontrar a probabilidade de um único parafuso ser bom primeiro, e depois multiplicá-lo. Mas quando olho para os 10 parafusos, não sei como configurar a expressão completa para a probabilidade de que todos os 10 são bons. Será que eu apenas aumentar essa única probabilidade para o poder de 10, ou há algo mais que eu preciso explicar?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly understands that they must first calculate the probability of a single bolt being non-defective and then use that value for all 10 selections. However, the student is seeking confirmation on whether raising this single probability to the power of 10 is the complete and correct mathematical expression for the probability of all 10 bolts being non-defective.",
+            "current_status": "O aluno entende corretamente que primeiro deve calcular a probabilidade de um único parafuso não ser defeituoso e, em seguida, usar esse valor para todas as 10 seleções. No entanto, o aluno está buscando confirmação sobre se elevar esta única probabilidade para o poder de 10 é a expressão matemática completa e correta para a probabilidade de todos os 10 parafusos não serem defeituosos.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "Since the selection of each bolt is an **independent event**, the probability of all 10 bolts being non-defective is found by multiplying the probability of a single bolt being non-defective by itself, 10 times.\n\nIf we let $p_{\\text{good}}$ represent the probability that a single bolt is non-defective, then the probability that all 10 bolts are non-defective, which we call $P(\\text{none defective})$, is given by the expression:\n$$P(\\text{none defective}) = (p_{\\text{good}})^{10}$$\n\nNow that you have the structure for $P(\\text{none defective})$, what is the next step in finding the probability of at least one defective bolt?"
+          "target_teacher_response": "Uma vez que a seleção de cada parafuso é um evento **independente, a probabilidade de todos os 10 parafusos serem não-defesivos é encontrada multiplicando a probabilidade de um único parafuso ser não-defesivo por si só, 10 vezes.\n\nSe deixarmos $p {\\text{good}}$ representar a probabilidade de que um único parafuso não seja defeituoso, então a probabilidade de que todos os 10 parafusos não sejam defeituosos, que chamamos de $P(\\text{none defection})$, é dada pela expressão:\n$$P(\\text{none defeed}) = (p {\\text{good})^{10}$$\n\nAgora que você tem a estrutura para $P(\\text{none defeed})$, qual é o próximo passo em encontrar a probabilidade de pelo menos um parafuso defeituoso?"
         }
       ]
     },
@@ -57,37 +57,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "The probability of all 10 bolts being good is 0.98 raised to the power of 10. I got that value to be 0.817. So, to find the probability of at least one being defective, I subtract that from 1. 1 - 0.817 equals 0.193. I think that's the answer."
+              "content": "A probabilidade de todos os 10 parafusos serem bons é de 0,98 elevado à potência de 10. Tenho esse valor para 0,817. Então, para encontrar a probabilidade de pelo menos um ser defeituoso, eu subtraio que de 1. 1 - 0,817 é igual a 0,193. Acho que essa é a resposta."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the complementary event and calculated the probability of no defective bolts as 0.817. However, when calculating the final probability by subtracting this value from 1, the student incorrectly determined that 1 minus 0.817 equals 0.193, when the correct result is 0.183.",
+            "current_status": "O aluno identificou corretamente o evento complementar e calculou a probabilidade de não haver parafusos defeituosos em 0,817. No entanto, ao calcular a probabilidade final subtraindo esse valor de 1, o aluno determinou incorretamente que 1 menos 0,817 equivale a 0,193, quando o resultado correto é 0,183.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You calculated the probability of at least one defective bolt by finding 1 minus 0.817, and you stated the result is 0.193. Please check the arithmetic for the subtraction of 0.817 from 1."
+          "target_teacher_response": "Você calculou a probabilidade de pelo menos um parafuso defeituoso encontrando 1 menos 0,817, e você afirmou que o resultado é 0,193. Por favor, verifique a aritmética para a subtração de 0,817 de 1."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "The probability of all 10 bolts being good is 0.98 raised to the power of 10. I got that value to be 0.817. So, to find the probability of at least one being defective, I subtract that from 1. 1 - 0.817 equals 0.193. I think that's the answer."
+              "content": "A probabilidade de todos os 10 parafusos serem bons é de 0,98 elevado à potência de 10. Tenho esse valor para 0,817. Então, para encontrar a probabilidade de pelo menos um ser defeituoso, eu subtraio que de 1. 1 - 0,817 é igual a 0,193. Acho que essa é a resposta."
             },
             {
               "role": "teacher",
-              "content": "You calculated the probability of at least one defective bolt by finding 1 minus 0.817, and you stated the result is 0.193. Please check the arithmetic for the subtraction of 0.817 from 1."
+              "content": "Você calculou a probabilidade de pelo menos um parafuso defeituoso encontrando 1 menos 0,817, e você afirmou que o resultado é 0,193. Por favor, verifique a aritmética para a subtração de 0,817 de 1."
             },
             {
               "role": "student",
-              "content": "Oh, right. 1 minus 0.817 is actually 0.183. So, I got the probability of at least one being defective by subtracting that from 1. But now I'm not sure what to do next. Is there some other step I need to calculate, or is this the final setup? I'm a little lost on how to finish this."
+              "content": "Certo. 1 menos 0,817 é realmente 0,183. Então, eu tenho a probabilidade de pelo menos um ser defeituoso subtraindo isso de 1. Mas agora não sei o que fazer a seguir. Existe algum outro passo que eu preciso calcular, ou esta é a configuração final? Estou um pouco perdido em como terminar isto."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly calculates 1 minus 0.817 to be 0.183, demonstrating an understanding of the complementary probability approach. However, the student expresses confusion about whether this calculation represents the final answer or if further steps are required to complete the problem.",
+            "current_status": "O aluno calcula corretamente 1 menos 0,817 para 0,183, demonstrando uma compreensão da abordagem de probabilidade complementar. No entanto, o aluno expressa confusão sobre se este cálculo representa a resposta final ou se são necessários outros passos para completar o problema.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The probability of an event, $P(A)$, can often be calculated using its **complementary event**, $P(A^c)$.\n\nIf $A$ is the event that 'at least one bolt is defective', then $A^c$ is the event that 'no bolts are defective'.\n\nTherefore, the relationship between these two probabilities is given by the equation:\n$$P(A) = 1 - P(A^c)$$\n\nIn this problem, $P(A^c)$ is the probability of selecting 10 bolts that are all non-defective. Substitute the expression for $P(A^c)$ into the equation above, and then calculate the final value."
+          "target_teacher_response": "A probabilidade de um evento, $P(A)$, pode muitas vezes ser calculada usando seu **evento complementar**, $P(A^c)$.\n\nSe $A$ é o evento que 'pelo menos um parafuso está defeituoso', então $A^c$ é o evento que 'nenhum parafuso está defeituoso'.\n\nPortanto, a relação entre essas duas probabilidades é dada pela equação:\n$$P(A) = 1 - P(A^c)$\n\nNeste problema, $P(A^c)$ é a probabilidade de selecionar 10 parafusos que não são defeituosos. Substitua a expressão para $P(A^c)$ na equação acima, e depois calcule o valor final."
         }
       ]
     },
@@ -98,37 +98,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so the probability that none of the 10 bolts are defective is about 0.817. So, to find the probability of at least one being defective, I just need to do 1 minus that number."
+              "content": "A probabilidade de nenhum dos 10 parafusos estar defeituoso é de cerca de 0,817. Então, para encontrar a probabilidade de pelo menos um ser defeituoso, eu só preciso fazer 1 menos esse número."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly stated that the probability of no defective bolts is approximately 0.817 and accurately concluded that the probability of at least one defective bolt is found by calculating 1 minus this value.",
+            "current_status": "O aluno afirmou corretamente que a probabilidade de não haver parafusos defeituosos é de aproximadamente 0,817 e concluiu com precisão que a probabilidade de pelo menos um parafuso defeituoso é encontrada calculando 1 menos este valor.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You have correctly found the probability of the complementary event. What value should you subtract this result from to find the probability of at least one defective bolt?"
+          "target_teacher_response": "Você encontrou corretamente a probabilidade do evento complementar. Que valor você deve subtrair deste resultado para encontrar a probabilidade de pelo menos um parafuso defeituoso?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "Okay, so the probability that none of the 10 bolts are defective is about 0.817. So, to find the probability of at least one being defective, I just need to do 1 minus that number."
+              "content": "A probabilidade de nenhum dos 10 parafusos estar defeituoso é de cerca de 0,817. Então, para encontrar a probabilidade de pelo menos um ser defeituoso, eu só preciso fazer 1 menos esse número."
             },
             {
               "role": "teacher",
-              "content": "You have correctly found the probability of the complementary event. What value should you subtract this result from to find the probability of at least one defective bolt?"
+              "content": "Você encontrou corretamente a probabilidade do evento complementar. Que valor você deve subtrair deste resultado para encontrar a probabilidade de pelo menos um parafuso defeituoso?"
             },
             {
               "role": "student",
-              "content": "If I take 1 minus 0.817, I get 0.183. So, the probability that at least one bolt is defective is about 0.183."
+              "content": "Se eu tomar 1 menos 0,817, eu tenho 0,183. Assim, a probabilidade de que pelo menos um parafuso seja defeituoso é de cerca de 0,183."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly applies the complementary probability rule by subtracting the probability of no defective bolts (0.817) from 1, calculating the final probability of at least one defective bolt to be 0.183.",
+            "current_status": "O aluno aplica corretamente a regra de probabilidade complementar subtraindo a probabilidade de não haver parafusos defeituosos (0,817) de 1, calculando a probabilidade final de pelo menos um parafuso defeituoso ser 0,183.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is the correct probability. Do you have any other problems you would like to work on?"
+          "target_teacher_response": "Essa é a probabilidade correta. Tem outros problemas em que gostaria de trabalhar?"
         }
       ]
     },
@@ -139,37 +139,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think if we want the probability of at least one defective bolt, it might be easier to calculate the opposite, right? So, the probability of none of them being defective. If we find that, we can just subtract it from 1. But how do I actually calculate the probability that all 10 bolts are non-defective?"
+              "content": "Acho que se quisermos a probabilidade de pelo menos um parafuso defeituoso, pode ser mais fácil calcular o oposto, certo? Então, a probabilidade de nenhum deles ser defeituoso. Se encontrarmos isso, podemos subtraí-lo de 1. Mas como faço para calcular a probabilidade de que todos os 10 parafusos não sejam defeituosos?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that calculating the probability of at least one defective bolt is best approached using the complementary event, which is the probability of none of the bolts being defective. The student understands the overall strategy of subtracting this complementary probability from 1, and is now asking for the method to calculate the probability of 10 independent non-defective selections.",
+            "current_status": "O aluno identifica corretamente que calcular a probabilidade de pelo menos um parafuso defeituoso é melhor abordado usando o evento complementar, que é a probabilidade de nenhum dos parafusos ser defeituoso. O aluno entende a estratégia geral de subtrair essa probabilidade complementar de 1, e agora está pedindo o método para calcular a probabilidade de 10 seleções independentes não defeituosas.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "The probability of selecting a single bolt that is not defective is $1 - 0.02 = 0.98$.\n\nSince the selections are independent events, the probability of all 10 bolts being non-defective is the product of the individual probabilities. You need to calculate:\n$$P(\\text{none defective}) = (P(\\text{not defective}))^{10}$$\n\nSubstitute the probability of a single non-defective bolt into the expression and calculate the value for $P(\\text{none defective})$.\n\nWhat is the value of $P(\\text{none defective})$?"
+          "target_teacher_response": "A probabilidade de selecionar um único parafuso que não seja defeituoso é de $1 - 0,02 = 0,98$.\n\nUma vez que as seleções são eventos independentes, a probabilidade de todos os 10 parafusos não serem defeituosos é o produto das probabilidades individuais. Você precisa calcular:\n$$P(\\text{none defeituosa}) = (P(\\text{not defeituosa})^{10}$$\n\nSubstitua a probabilidade de um único parafuso não defeituoso na expressão e calcule o valor de $P(\\text{none defeed})$.\n\nQual é o valor de $P(\\text{none defeed})$?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think if we want the probability of at least one defective bolt, it might be easier to calculate the opposite, right? So, the probability of none of them being defective. If we find that, we can just subtract it from 1. But how do I actually calculate the probability that all 10 bolts are non-defective?"
+              "content": "Acho que se quisermos a probabilidade de pelo menos um parafuso defeituoso, pode ser mais fácil calcular o oposto, certo? Então, a probabilidade de nenhum deles ser defeituoso. Se encontrarmos isso, podemos subtraí-lo de 1. Mas como faço para calcular a probabilidade de que todos os 10 parafusos não sejam defeituosos?"
             },
             {
               "role": "teacher",
-              "content": "The probability of selecting a single bolt that is not defective is $1 - 0.02 = 0.98$.\n\nSince the selections are independent events, the probability of all 10 bolts being non-defective is the product of the individual probabilities. You need to calculate:\n$$P(\\text{none defective}) = (P(\\text{not defective}))^{10}$$\n\nSubstitute the probability of a single non-defective bolt into the expression and calculate the value for $P(\\text{none defective})$.\n\nWhat is the value of $P(\\text{none defective})$?"
+              "content": "A probabilidade de selecionar um único parafuso que não seja defeituoso é de $1 - 0,02 = 0,98$.\n\nUma vez que as seleções são eventos independentes, a probabilidade de todos os 10 parafusos não serem defeituosos é o produto das probabilidades individuais. Você precisa calcular:\n$$P(\\text{none defeituosa}) = (P(\\text{not defeituosa})^{10}$$\n\nSubstitua a probabilidade de um único parafuso não defeituoso na expressão e calcule o valor de $P(\\text{none defeed})$.\n\nQual é o valor de $P(\\text{none defeed})$?"
             },
             {
               "role": "student",
-              "content": "Hmm, so I need to calculate 0.98 to the power of 10. I think if I just multiply 0.98 by 10, I get 9.8. So, I think the probability of none defective is 9.8."
+              "content": "Hmm, então eu preciso calcular 0,98 para o poder de 10. Eu acho que se eu multiplicar 0,98 por 10, eu fico 9,8. Então, eu acho que a probabilidade de nenhum defeito é de 9.8."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the need to calculate 0.98 to the power of 10, but demonstrates a conceptual error by confusing exponentiation with multiplication. The student incorrectly calculates the probability of none defective by multiplying 0.98 by 10, yielding 9.8.",
+            "current_status": "O aluno identifica corretamente a necessidade de calcular 0,98 ao poder de 10, mas demonstra um erro conceitual, confundindo exponenciação com multiplicação. O aluno calcula incorretamente a probabilidade de não ter defeito multiplicando 0,98 por 10, gerando 9,8.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You are calculating the probability of 10 independent events, which requires exponentiation, not simple multiplication. Please re-examine the expression $$(0.98)^{10}$$ and calculate the value of that power."
+          "target_teacher_response": "Você está calculando a probabilidade de 10 eventos independentes, o que requer exponenciação, não multiplicação simples. Por favor, reexamine a expressão $$(0,98)^{10}$$ e calcule o valor desse poder."
         }
       ]
     },
@@ -180,67 +180,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the probability that at least one of the 10 bolts is defective, but I honestly don't know where to start. Should I just calculate the probability of one defective bolt and multiply that out?"
+              "content": "Eu devo encontrar a probabilidade de que pelo menos um dos 10 parafusos é defeituoso, mas eu honestamente não sei por onde começar. Devo calcular a probabilidade de um parafuso defeituoso e multiplicar isso?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the goal of finding the probability of at least one defective bolt but is unsure how to proceed. The student proposes calculating the probability of a single defective bolt and multiplying it out, indicating a conceptual misunderstanding of how to calculate the probability of 'at least one' in a series of independent trials.",
+            "current_status": "O aluno identifica corretamente o objetivo de encontrar a probabilidade de pelo menos um parafuso defeituoso, mas não tem certeza de como proceder. O aluno propõe calcular a probabilidade de um único parafuso defeituoso e multiplicá-lo, indicando um equívoco conceitual de como calcular a probabilidade de \"pelo menos um\" em uma série de ensaios independentes.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "Calculating the probability for 'at least one' defective bolt by summing up $P(X=1) + P(X=2) + ... + P(X=10)$ is complicated. \n\nInstead, consider the complementary event. The probability of 'at least one defective' is equal to 1 minus the probability of the opposite outcome.\n\nThe complementary event here is that 'none of the bolts are defective'.\n\nTherefore, the relationship you need to use is:\n$$P(\\text{at least one defective}) = 1 - P(\\text{none are defective})$$\n\nFirst, define the probability of a single bolt being non-defective. If $p$ is the probability of a bolt being defective, what is the expression for the probability of a single bolt being non-defective?"
+          "target_teacher_response": "Calcular a probabilidade de 'pelo menos um' parafuso defeituoso somando $P(X=1) + P(X=2) + ... + P(X=10)$ é complicado.\n\nEm vez disso, considere o evento complementar. A probabilidade de 'pelo menos um defeito' é igual a 1 menos a probabilidade do resultado oposto.\n\nO acontecimento complementar aqui é que \"nenhum dos parafusos está defeituoso\".\n\nPortanto, a relação que você precisa usar é:\n$$P(\\text{pelo menos um defeituoso}) = 1 - P(\\text{none estão defeituosos})$$\n\nEm primeiro lugar, definir a probabilidade de um único parafuso não ser defeituoso. Se $p$ é a probabilidade de um parafuso estar defeituoso, qual é a expressão para a probabilidade de um único parafuso não ser defeituoso?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the probability that at least one of the 10 bolts is defective, but I honestly don't know where to start. Should I just calculate the probability of one defective bolt and multiply that out?"
+              "content": "Eu devo encontrar a probabilidade de que pelo menos um dos 10 parafusos é defeituoso, mas eu honestamente não sei por onde começar. Devo calcular a probabilidade de um parafuso defeituoso e multiplicar isso?"
             },
             {
               "role": "teacher",
-              "content": "Calculating the probability for 'at least one' defective bolt by summing up $P(X=1) + P(X=2) + ... + P(X=10)$ is complicated. \n\nInstead, consider the complementary event. The probability of 'at least one defective' is equal to 1 minus the probability of the opposite outcome.\n\nThe complementary event here is that 'none of the bolts are defective'.\n\nTherefore, the relationship you need to use is:\n$$P(\\text{at least one defective}) = 1 - P(\\text{none are defective})$$\n\nFirst, define the probability of a single bolt being non-defective. If $p$ is the probability of a bolt being defective, what is the expression for the probability of a single bolt being non-defective?"
+              "content": "Calcular a probabilidade de 'pelo menos um' parafuso defeituoso somando $P(X=1) + P(X=2) + ... + P(X=10)$ é complicado.\n\nEm vez disso, considere o evento complementar. A probabilidade de 'pelo menos um defeito' é igual a 1 menos a probabilidade do resultado oposto.\n\nO acontecimento complementar aqui é que \"nenhum dos parafusos está defeituoso\".\n\nPortanto, a relação que você precisa usar é:\n$$P(\\text{pelo menos um defeituoso}) = 1 - P(\\text{none estão defeituosos})$$\n\nEm primeiro lugar, definir a probabilidade de um único parafuso não ser defeituoso. Se $p$ é a probabilidade de um parafuso estar defeituoso, qual é a expressão para a probabilidade de um único parafuso não ser defeituoso?"
             },
             {
               "role": "student",
-              "content": "Wait, so if I need to find the probability of a single bolt being non-defective, where do I even get that number? The problem just tells me that 2% are defective, but it doesn't say what the probability of it *not* being defective is. I'm really confused about how to start with that first step."
+              "content": "Espera, então se eu precisar de encontrar a probabilidade de um único parafuso ser não-defeito, onde é que eu consigo esse número? O problema apenas me diz que 2% são defeituosos, mas não diz qual é a probabilidade de *não * ser defeituoso. Estou muito confuso sobre como começar com esse primeiro passo."
             }
           ],
           "internal_state": {
-            "current_status": "The student is confused about how to calculate the probability of a single bolt being non-defective. They correctly identify that the problem only provides the probability of being defective (2%) and are struggling with the conceptual step of deriving the probability of the complementary event.",
+            "current_status": "O aluno está confuso sobre como calcular a probabilidade de um único parafuso não ser defeituoso. Identificam corretamente que o problema apenas proporciona a probabilidade de ser defeituoso (2%) e estão lutando com o passo conceitual de derivar a probabilidade do evento complementar.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "The probability of a single bolt being non-defective is derived directly from the given information. \n\nWe are told that the probability of a bolt being defective is **2%**, which we write as $p = 0.02$.\n\nSince a bolt must either be defective or non-defective, the probability of it being non-defective, which we call $q$, is the complement of $p$. \n\nTherefore, the expression for $q$ is: $$q = 1 - p$$ \n\nSubstitute the value of $p$ into this expression to find the probability of a single bolt being non-defective. Once you have $q$, you can use it to set up the calculation for $P(\\text{none are defective})$. "
+          "target_teacher_response": "A probabilidade de um único parafuso não ser defeituoso deriva diretamente da informação fornecida.\n\nDiz-se que a probabilidade de um parafuso estar defeituoso é de **2%**, que escrevemos como $p = 0,02$.\n\nComo um parafuso deve ser defeituoso ou não defeituoso, a probabilidade de ser não defeituoso, que chamamos de $q$, é o complemento de $p$.\n\nPortanto, a expressão para $q$ é: $$q = 1 - p$$\n\nSubstitua o valor de $p$ nesta expressão para encontrar a probabilidade de um único parafuso não ser defeituoso. Uma vez que você tem $q$, você pode usá-lo para configurar o cálculo para $P(\\text{none estão defeituosos})$."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to find the probability that at least one of the 10 bolts is defective, but I honestly don't know where to start. Should I just calculate the probability of one defective bolt and multiply that out?"
+              "content": "Eu devo encontrar a probabilidade de que pelo menos um dos 10 parafusos é defeituoso, mas eu honestamente não sei por onde começar. Devo calcular a probabilidade de um parafuso defeituoso e multiplicar isso?"
             },
             {
               "role": "teacher",
-              "content": "Calculating the probability for 'at least one' defective bolt by summing up $P(X=1) + P(X=2) + ... + P(X=10)$ is complicated. \n\nInstead, consider the complementary event. The probability of 'at least one defective' is equal to 1 minus the probability of the opposite outcome.\n\nThe complementary event here is that 'none of the bolts are defective'.\n\nTherefore, the relationship you need to use is:\n$$P(\\text{at least one defective}) = 1 - P(\\text{none are defective})$$\n\nFirst, define the probability of a single bolt being non-defective. If $p$ is the probability of a bolt being defective, what is the expression for the probability of a single bolt being non-defective?"
+              "content": "Calcular a probabilidade de 'pelo menos um' parafuso defeituoso somando $P(X=1) + P(X=2) + ... + P(X=10)$ é complicado.\n\nEm vez disso, considere o evento complementar. A probabilidade de 'pelo menos um defeito' é igual a 1 menos a probabilidade do resultado oposto.\n\nO acontecimento complementar aqui é que \"nenhum dos parafusos está defeituoso\".\n\nPortanto, a relação que você precisa usar é:\n$$P(\\text{pelo menos um defeituoso}) = 1 - P(\\text{none estão defeituosos})$$\n\nEm primeiro lugar, definir a probabilidade de um único parafuso não ser defeituoso. Se $p$ é a probabilidade de um parafuso estar defeituoso, qual é a expressão para a probabilidade de um único parafuso não ser defeituoso?"
             },
             {
               "role": "student",
-              "content": "Wait, so if I need to find the probability of a single bolt being non-defective, where do I even get that number? The problem just tells me that 2% are defective, but it doesn't say what the probability of it *not* being defective is. I'm really confused about how to start with that first step."
+              "content": "Espera, então se eu precisar de encontrar a probabilidade de um único parafuso ser não-defeito, onde é que eu consigo esse número? O problema apenas me diz que 2% são defeituosos, mas não diz qual é a probabilidade de *não * ser defeituoso. Estou muito confuso sobre como começar com esse primeiro passo."
             },
             {
               "role": "teacher",
-              "content": "The probability of a single bolt being non-defective is derived directly from the given information. \n\nWe are told that the probability of a bolt being defective is **2%**, which we write as $p = 0.02$.\n\nSince a bolt must either be defective or non-defective, the probability of it being non-defective, which we call $q$, is the complement of $p$. \n\nTherefore, the expression for $q$ is: $$q = 1 - p$$ \n\nSubstitute the value of $p$ into this expression to find the probability of a single bolt being non-defective. Once you have $q$, you can use it to set up the calculation for $P(\\text{none are defective})$. "
+              "content": "A probabilidade de um único parafuso não ser defeituoso deriva diretamente da informação fornecida.\n\nDiz-se que a probabilidade de um parafuso estar defeituoso é de **2%**, que escrevemos como $p = 0,02$.\n\nComo um parafuso deve ser defeituoso ou não defeituoso, a probabilidade de ser não defeituoso, que chamamos de $q$, é o complemento de $p$.\n\nPortanto, a expressão para $q$ é: $$q = 1 - p$$\n\nSubstitua o valor de $p$ nesta expressão para encontrar a probabilidade de um único parafuso não ser defeituoso. Uma vez que você tem $q$, você pode usá-lo para configurar o cálculo para $P(\\text{none estão defeituosos})$."
             },
             {
               "role": "student",
-              "content": "So, I understand that the probability of one bolt not being defective is 0.98. But how do I use that number to find the probability that all ten bolts are not defective? Do I just multiply 0.98 by itself ten times, or is there a formula I need to use?"
+              "content": "Então, eu entendo que a probabilidade de um parafuso não ser defeituoso é 0,98. Mas como eu uso esse número para encontrar a probabilidade de que todos os dez parafusos não são defeituosos? Eu só multipliquei 0,98 por si só dez vezes, ou há uma fórmula que eu preciso usar?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the probability of a single bolt being non-defective as 0.98. The student is now seeking clarification on how to calculate the probability of ten independent events, questioning whether simple multiplication or a formal formula is required.",
+            "current_status": "O aluno identificou corretamente a probabilidade de um único parafuso não ser defesivo como 0,98. O aluno está agora buscando esclarecimentos sobre como calcular a probabilidade de dez eventos independentes, questionando se é necessária uma simples multiplicação ou uma fórmula formal.",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "Since the selection of each bolt is an independent event, the probability of all ten bolts being non-defective is found by multiplying the probability of a single non-defective bolt by itself ten times. \n\nWe established that the probability of a single bolt being non-defective is $q = 0.98$.\n\nTherefore, the probability of none of the 10 bolts being defective is: $$P(\\text{none are defective}) = q^{10} = (0.98)^{10}$$\n\nCalculate the value of $(0.98)^{10}$ and provide the result, keeping at least four decimal places."
+          "target_teacher_response": "Uma vez que a seleção de cada parafuso é um evento independente, a probabilidade de todos os dez parafusos não serem defeituosos é encontrada multiplicando a probabilidade de um único parafuso não defeituoso por si só dez vezes.\n\nEstabelecemos que a probabilidade de um único parafuso ser não-defesivo é de $q = 0,98$.\n\nPortanto, a probabilidade de nenhum dos 10 parafusos estar defeituoso é: $$P(\\text{none estão defeituosos}) = q^{10} = (0,98)^{10}$\n\nCalcular o valor de $(0,98)^{10}$ e fornecer o resultado, mantendo pelo menos quatro casas decimais."
         }
       ]
     }

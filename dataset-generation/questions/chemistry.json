@@ -1,73 +1,73 @@
 {
-  "category": "chemistry",
+  "category": "química",
   "model": "gemma3:12b-it-qat",
   "generated_at": "2026-05-03T12:17:32.847789",
   "total": 6,
   "questions": [
     {
-      "subtopic": "mole calculations and molar mass",
-      "question": "A chemist needs 15.0 grams of sodium chloride (NaCl) for an experiment. What volume (in milliliters) of a 2.50 M NaCl solution is required to deliver this mass, assuming the density of the solution is 1.07 g/mL?",
+      "subtopic": "cálculos molares e massa molar",
+      "question": "Um químico necessita de 15,0 gramas de cloreto de sódio (NaCl) para uma experiência. Que volume (em mililitros) de uma solução de NaCl 2,50 M é necessário para entregar esta massa, assumindo que a densidade da solução é 1,07 g/ml?",
       "solution": [
-        "1. Calculate the molar mass of NaCl: Na (22.99 g/mol) + Cl (35.45 g/mol) = 58.44 g/mol.",
-        "2. Determine the number of moles of NaCl needed: moles = mass / molar mass = 15.0 g / 58.44 g/mol = 0.256 mol.",
-        "3. Calculate the volume of the 2.50 M solution required: volume (L) = moles / molarity = 0.256 mol / 2.50 mol/L = 0.102 L.",
-        "4. Convert the volume from liters to milliliters: volume (mL) = volume (L) * 1000 mL/L = 0.102 L * 1000 mL/L = 102 mL."
+        "1. Calcular a massa molar de NaCl: Na (22,99 g/mol) + Cl (35,45 g/mol) = 58,44 g/mol.",
+        "2. Determinar o número de moles de NaCl necessários: moles = massa / massa molar = 15,0 g / 58,44 g/mol = 0,256 mol.",
+        "3. Calcular o volume da solução de 2,50 M necessária: volume (L) = moles / molaridade = 0,256 mol / 2,50 mol/L = 0,102 L.",
+        "4. Converter o volume de litros para mililitros: volume (mL) = volume (L) * 1000 ml/L = 0,102 L * 1000 ml/L = 102 ml."
       ]
     },
     {
-      "subtopic": "converting from mass to moles",
-      "question": "A chemist needs 0.750 moles of sodium chloride (NaCl) for a reaction. If sodium chloride has a molar mass of 58.44 g/mol, what mass of NaCl, in grams, must the chemist weigh out?",
+      "subtopic": "conversão de massa em moles",
+      "question": "Um químico precisa de 0,750 moles de cloreto de sódio (NaCl) para uma reação. Se o cloreto de sódio tem uma massa molar de 58,44 g/mol, que massa de NaCl, em gramas, deve o químico pesar?",
       "solution": [
-        "1. Identify the given information: desired moles of NaCl = 0.750 mol; molar mass of NaCl = 58.44 g/mol.",
-        "2. Recall the relationship between mass, moles, and molar mass: moles = mass / molar mass. Rearrange to solve for mass: mass = moles × molar mass.",
-        "3. Substitute the given values into the equation: mass = 0.750 mol × 58.44 g/mol = 43.83 g"
+        "1. Identificar as informações: moles desejados de NaCl = 0,750 mol; massa molar de NaCl = 58,44 g/mol.",
+        "2. Lembre-se da relação entre massa, moles e massa molar: moles = massa/massa molar. Rearranjo para resolver a massa: massa = moles × massa molar.",
+        "3. Substitua os valores dados na equação: massa = 0,750 mol × 58,44 g/mol = 43,83 g"
       ]
     },
     {
-      "subtopic": "stoichiometry from balanced equations",
-      "question": "Copper(II) sulfate (CuSO₄) reacts with sodium hydroxide (NaOH) to produce copper(II) hydroxide (Cu(OH)₂) and sodium sulfate (Na₂SO₄). If 150.0 grams of CuSO₄ reacts completely, what mass of Cu(OH)₂ will be produced?",
+      "subtopic": "estequiometria a partir de equações equilibradas",
+      "question": "Sulfato de cobre (II) (CuSO4) reage com hidróxido de sódio (NaOH) para produzir hidróxido de cobre (Cu(OH)2) e sulfato de sódio (Na2SO4). Se 150.0 gramas de CuSO4 reagir completamente, que massa de Cu(OH)2 será produzida?",
       "solution": [
-        "1. Calculate the molar mass of CuSO₄: 63.55 (Cu) + 32.07 (S) + 4 * 16.00 (O) = 159.62 g/mol.",
-        "2. Convert grams of CuSO₄ to moles: 150.0 g / 159.62 g/mol = 0.939 moles CuSO₄.",
-        "3. Write the balanced chemical equation: CuSO₄(aq) + 2NaOH(aq) → Cu(OH)₂(s) + Na₂SO₄(aq).",
-        "4. Determine the mole ratio of Cu(OH)₂ to CuSO₄ from the balanced equation: 1 mole Cu(OH)₂ / 1 mole CuSO₄.",
-        "5. Calculate moles of Cu(OH)₂ produced: 0.939 moles CuSO₄ * (1 mole Cu(OH)₂ / 1 mole CuSO₄) = 0.939 moles Cu(OH)₂.",
-        "6. Calculate the molar mass of Cu(OH)₂: 63.55 (Cu) + 2 * (16.00 (O) + 1.01 (H)) = 97.62 g/mol.",
-        "7. Convert moles of Cu(OH)₂ to grams: 0.939 moles * 97.62 g/mol = 91.5 grams Cu(OH)₂."
+        "1. Calcular a massa molar de CuSO4: 63,55 (Cu) + 32,07 (S) + 4 * 16.00 (O) = 159,62 g/mol.",
+        "2. Converta gramas de CuSO4 em moles: 150,0 g / 159,62 g/mol = 0,939 moles CuSO4.",
+        "3. Escreva a equação química equilibrada: CuSO4(aq) + 2NaOH(aq) → Cu(OH)2(s) + Na2SO4(aq).",
+        "4. Determine a relação molar de Cu(OH)2 para CuSO4 a partir da equação equilibrada: 1 mole Cu(OH)2 / 1 mole CuSO4.",
+        "5. Calcular as moles de Cu(OH)2 produzidas: 0,939 moles CuSO4 * (1 mole Cu(OH)2 / 1 mole CuSO4) = 0,939 moles Cu(OH)2.",
+        "6. Calcular a massa molar de Cu(OH)2: 63,55 (Cu) + 2 * (16,00 (O) + 1,01 (H)) = 97,62 g/mol.",
+        "7. Converta moles de Cu(OH)2 para gramas: 0,939 moles * 97,62 g/mol = 91,5 gramas Cu(OH)2."
       ]
     },
     {
-      "subtopic": "limiting reagent with simple mole ratios",
-      "question": "Sodium carbonate (Na₂CO₃) reacts with hydrochloric acid (HCl) to produce sodium chloride (NaCl), water (H₂O), and carbon dioxide (CO₂). If you start with 11.3 grams of Na₂CO₃ and 36.5 grams of HCl, what is the mass of NaCl produced?",
+      "subtopic": "reagente limitante com razões mole simples",
+      "question": "O carbonato de sódio (Na2CO3) reage com ácido clorídrico (HCl) para produzir cloreto de sódio (NaCl), água (H2O) e dióxido de carbono (CO2). Se você começar com 11,3 gramas de Na2CO3 e 36,5 gramas de HCl, qual é a massa de NaCl produzida?",
       "solution": [
-        "1. Determine the molar masses: Na₂CO₃ = 105.99 g/mol, HCl = 36.46 g/mol, NaCl = 58.44 g/mol.",
-        "2. Convert grams to moles: moles Na₂CO₃ = 11.3 g / 105.99 g/mol = 0.1064 mol; moles HCl = 36.5 g / 36.46 g/mol = 1.000 mol.",
-        "3. Write the balanced chemical equation: Na₂CO₃(s) + 2HCl(aq) → 2NaCl(aq) + H₂O(l) + CO₂(g).",
-        "4. Determine the limiting reagent:  From the balanced equation, 1 mole of Na₂CO₃ reacts with 2 moles of HCl. The mole ratio of Na₂CO₃ to HCl required is 1:2.  We have 0.1064 mol Na₂CO₃, which would require 0.1064 mol * 2 = 0.2128 mol HCl. Since we have 1.000 mol HCl, Na₂CO₃ is the limiting reagent.",
-        "5. Calculate moles of NaCl produced: Since 1 mole of Na₂CO₃ produces 2 moles of NaCl, 0.1064 mol Na₂CO₃ will produce 0.1064 mol * 2 = 0.2128 mol NaCl.",
-        "6. Convert moles of NaCl to grams: mass NaCl = 0.2128 mol * 58.44 g/mol = 12.42 g."
+        "1. Determinar as massas molares: Na2CO3 = 105,99 g/mol, HCl = 36,46 g/mol, NaCl = 58,44 g/mol.",
+        "2. Converta gramas em moles: moles Na2CO3 = 11,3 g / 105,99 g/mol = 0,1064 mol; moles HCl = 36,5 g / 36,46 g/mol = 1.000 mol.",
+        "3. Escreva a equação química equilibrada: Na2CO3(s) + 2HCl(aq) → 2NaCl(aq) + H2O(l) + CO2(g).",
+        "4. Determinar o reagente limitante: A partir da equação equilibrada, 1 mole de Na2CO3 reage com 2 moles de HCl. A relação molar de Na2CO3 para HCl necessária é 1:2. Temos 0,1064 mol Na2CO3, o que exigiria 0,1064 mol * 2 = 0,2128 mol HCl. Como temos 1.000 mol HCl, Na2CO3 é o reagente limitante.",
+        "5. Calcular moles de NaCl produzidos: Uma vez que 1 mole de Na2CO3 produz 2 moles de NaCl, 0,1064 mol Na2CO3 produzirá 0,1064 mol * 2 = 0,2128 mol NaCl.",
+        "6. Converter moles de NaCl para gramas: massa NaCl = 0,2128 mol * 58,44 g/mol = 12,42 g."
       ]
     },
     {
-      "subtopic": "simple pH calculations (strong acids/bases)",
-      "question": "What is the pH of a 0.025 M solution of hydrochloric acid (HCl)? Assume complete dissociation.",
+      "subtopic": "cálculos de pH simples (ácidos/bases fortes)",
+      "question": "Qual é o pH de uma solução de 0,025 M de ácido clorídrico (HCl)? Assumir dissociação completa.",
       "solution": [
-        "1. HCl is a strong acid and completely dissociates in water: HCl(aq) → H+(aq) + Cl-(aq).",
-        "2. Therefore, the concentration of H+ ions is equal to the initial concentration of HCl: [H+] = 0.025 M.",
-        "3. pH is calculated using the formula: pH = -log[H+].",
-        "4. Substituting the value of [H+]: pH = -log(0.025).",
-        "5. pH = 1.60"
+        "1. HCl é um ácido forte e completamente dissociada na água: HCl(aq) → H+(aq) + Cl-(aq).",
+        "2. Portanto, a concentração de íons H+ é igual à concentração inicial de HCl: [H+] = 0,025 M.",
+        "3. O pH é calculado usando a fórmula: pH = -log[H+].",
+        "4. Substituindo o valor de [H+]: pH = -log(0.025).",
+        "5. pH = 1,60"
       ]
     },
     {
-      "subtopic": "dilution and concentration calculations",
-      "question": "You have a 10.0 M stock solution of hydrochloric acid (HCl). You need to prepare 500.0 mL of a 0.500 M HCl solution. How many milliliters of the stock solution are required, and what volume of water must be added to achieve the desired concentration?",
+      "subtopic": "Cálculos de diluição e concentração",
+      "question": "Você tem uma solução-mãe de 10.0 M de ácido clorídrico (HCl). Você precisa preparar 500,0 mL de uma solução de HCl 0,500 M. Quantos mililitros da solução estoque são necessários, e que volume de água deve ser adicionado para alcançar a concentração desejada?",
       "solution": [
-        "1. Determine the required volume of stock solution using the dilution equation: M1V1 = M2V2, where M1 is the initial concentration, V1 is the initial volume (what we need to find), M2 is the final concentration, and V2 is the final volume.",
-        "2. Substitute the known values into the equation: 10.0 M * V1 = 0.500 M * 500.0 mL.",
-        "3. Solve for V1: V1 = (0.500 M * 500.0 mL) / 10.0 M = 25.0 mL of stock solution.",
-        "4. Calculate the volume of water needed by subtracting the volume of stock solution from the desired final volume: Volume of water = Final volume - Volume of stock solution = 500.0 mL - 25.0 mL = 475.0 mL.",
-        "5. Therefore, 25.0 mL of the 10.0 M HCl stock solution must be mixed with 475.0 mL of water to prepare 500.0 mL of a 0.500 M HCl solution."
+        "1. Determinar o volume necessário de solução-mãe usando a equação de diluição: M1V1 = M2V2, onde M1 é a concentração inicial, V1 é o volume inicial (o que precisamos encontrar), M2 é a concentração final, e V2 é o volume final.",
+        "2. Substitua os valores conhecidos na equação: 10,0 M * V1 = 0,500 M * 500,0 mL.",
+        "3. Resolva para V1: V1 = (0,500 M * 500,0 ml) / 10,0 M = 25,0 ml de solução-mãe.",
+        "4. Calcular o volume de água necessário subtraindo o volume de solução estoque do volume final desejado: Volume de água = Volume final - Volume de solução estoque = 500,0 mL - 25,0 mL = 475,0 mL.",
+        "5. Portanto, 25,0 mL da solução estoque de HCl de 10,0 M devem ser misturados com 475,0 mL de água para preparar 500,0 mL de solução de HCl de 0,500 M."
       ]
     }
   ]

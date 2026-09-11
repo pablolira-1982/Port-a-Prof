@@ -1,8 +1,8 @@
 """
-Generates high-school level seed questions and accompanying solution steps for
-producing Port-a-Prof's training dataset, using Gemma 3 12B IT QAT via Ollama.
+Gera perguntas-base de nível ensino médio e os passos de solução correspondentes
+para produzir o dataset de treinamento do Port-a-Prof, usando Gemma 3 12B IT QAT via Ollama.
 
-Outputs:
+Saídas:
 - coding.json
 - calculus.json
 - algebra.json
@@ -11,121 +11,121 @@ Outputs:
 - probability.json
 - geometry.json
 
-Run with:
+Execute com:
 python generate_questions.py
 """
 
-# Imports required for JSON output, Ollama API calls, timestamps, and file paths
+# Imports necessários para saída JSON, chamadas à API do Ollama, timestamps e caminhos
 import json
 import requests
 from datetime import datetime
 from pathlib import Path
 
-# Global configuration for the local Ollama endpoint, model, and output directory
+# Configuração global do endpoint local do Ollama, modelo e diretório de saída
 OLLAMA_URL = "http://localhost:11434/api/chat"
 MODEL = "gemma3:12b-it-qat"
 OUTPUT_DIR = Path("questions")  
 
-# Subject categories and subtopics used to guide synthetic question generation
+# Categorias de matérias e subtópicos usados para orientar a geração sintética de perguntas
 CATEGORIES: dict[str, list[str]] = {
-    "coding": [
-        "simple if/else branch selection",
-        "basic boolean expressions (without nesting)",
-        "short fixed loops with at most 3 iterations",
-        "simple function output (with no loops)",
-        "tracing sequential assignments",
-        "modulo operations"
+    "programação": [
+        "seleção simples de ramo if/else",
+        "expressões booleanas básicas (sem aninhamento)",
+        "laços fixos curtos com no máximo 3 iterações",
+        "saída de função simples (sem laços)",
+        "rastreamento de atribuições sequenciais",
+        "operações de módulo"
     ],
-    "calculus": [
-        "basic derivatives",
-        "derivative at a point",
-        "evaluating definite integrals",
-        "finding distance from velocity",
-        "simple exponential growth",
-        "finding critical points from a simple derivative"
+    "cálculo": [
+        "derivadas básicas",
+        "derivada em um ponto",
+        "avaliação de integrais definidas",
+        "encontrar distância a partir da velocidade",
+        "crescimento exponencial simples",
+        "encontrar pontos críticos a partir de uma derivada simples"
     ],
-    "algebra": [
-        "solving a quadratic by factoring",                                      
-        "solving a linear equation with variables on both sides",                
-        "solving a linear system by elimination given two explicit equations", 
-        "solving a proportion word problem using cross multiplication",          
-        "solving an absolute value equation with extraneous root checking",     
-        "evaluating and simplifying an algebraic expression using order of operations", 
+    "álgebra": [
+        "resolver uma equação quadrática por fatoração",
+        "resolver uma equação linear com variáveis em ambos os lados",
+        "resolver um sistema linear por eliminação dadas duas equações explícitas",
+        "resolver um problema verbal de proporção usando multiplicação cruzada",
+        "resolver uma equação com valor absoluto verificando raízes extranhas",
+        "avaliar e simplificar uma expressão algébrica usando a ordem das operações",
     ],
-    "chemistry": [
-        "mole calculations and molar mass",
-        "converting from mass to moles",
-        "stoichiometry from balanced equations",
-        "limiting reagent with simple mole ratios",
-        "simple pH calculations (strong acids/bases)",
-        "dilution and concentration calculations",
+    "química": [
+        "cálculos de mol e massa molar",
+        "conversão de massa para mols",
+        "estequiometria a partir de equações balanceadas",
+        "reagente limitante com razões molares simples",
+        "cálculos simples de pH (ácidos/bases fortes)",
+        "cálculos de diluição e concentração",
     ],
-    "physics": [
-        "constant-acceleration motion",
-        "vertical motion under gravity",
-        "Newton's second law and forces",
-        "calculating work done (W = Fd)",
-        "momentum (p = mv)",
-        "using v = u + at"
+    "física": [
+        "movimento com aceleração constante",
+        "movimento vertical sob a gravidade",
+        "segunda lei de Newton e forças",
+        "cálculo do trabalho realizado (W = Fd)",
+        "quantidade de movimento (p = mv)",
+        "uso de v = u + at"
     ],
-    "probability": [
-        "calculating probability using a sample space",
-        "calculating probability using complementary events",
-        "calculating expected value for a discrete probability distribution",
-        "finding the probability of consecutive independent events",
-        "calculating the number of arrangements using basic permutations",
-        "calculating simple conditional probability from a word problem scenario"
+    "probabilidade": [
+        "calcular probabilidade usando um espaço amostral",
+        "calcular probabilidade usando eventos complementares",
+        "calcular valor esperado para uma distribuição discreta de probabilidade",
+        "encontrar a probabilidade de eventos independentes consecutivos",
+        "calcular o número de arranjos usando permutações básicas",
+        "calcular probabilidade condicional simples a partir de um problema verbal"
     ],
-    "geometry": [
-        "finding the circumference of a circle from a given area",
-        "determining the hypotenuse using cosine ratio",
-        "determining a missing endpoint using the midpoint formula",
-        "finding the missing side of a right triangle using Pythagoras theorem",
-        "determining the length of a line segment using the distance formula",
-        "finding the total interior angle sum of a polygon",
+    "geometria": [
+        "encontrar a circunferência de um círculo a partir de uma área dada",
+        "determinar a hipotenusa usando a razão do cosseno",
+        "determinar um ponto extremo ausente usando a fórmula do ponto médio",
+        "encontrar o lado ausente de um triângulo retângulo usando o teorema de Pitágoras",
+        "determinar o comprimento de um segmento de reta usando a fórmula da distância",
+        "encontrar a soma total dos ângulos internos de um polígono",
     ]
 }
 
-# Adds stricter generation rules for coding questions so they test tracing/evaluation, not program writing
+# Adiciona regras mais estritas para perguntas de programação testarem rastreamento/avaliação, não escrita de programas
 def category_extra_rules(category: str) -> str:
-    if category.lower() != "coding":
+    if category.lower() != "programação":
         return ""
 
     return """
-- The question MUST require the student to evaluate, trace, predict, or determine the result of given logic.
-- The question should NOT require the student to write, design, implement, or create a program.
-- The question must be fully self-contained: include all variables, values, and code or pseudocode required to solve it.
-Code formatting:
-- Use single backticks for inline, single-line code only.
-- Inline format: "question": "Given `x = 5; y = x + 2`, what is y?"
-- All backticks must be properly opened and closed.
+- A pergunta DEVE exigir que o aluno avalie, rastreie, preveja ou determine o resultado da lógica fornecida.
+- A pergunta NÃO deve exigir que o aluno escreva, desenhe, implemente ou crie um programa.
+- A pergunta deve ser totalmente autossuficiente: inclua todas as variáveis, valores e código ou pseudocódigo necessários para resolvê-la.
+Formatação de código:
+- Use crases simples apenas para código inline em uma única linha.
+- Formato inline: "question": "Dado `x = 5; y = x + 2`, qual é o valor de y?"
+- Todas as crases devem ser abertas e fechadas corretamente.
 """
 
-# Builds the prompt sent to Gemma for one category/subtopic question-generation request
+# Monta o prompt enviado ao Gemma para gerar uma pergunta de uma categoria/subtópico
 def build_prompt(category: str, subtopic: str) -> str:
     extra_rules = category_extra_rules(category)
 
-    return f"""You are an expert educator. Generate a single {category} problem based on this subtopic: {subtopic}.
+    return f"""Você é um educador especialista. Gere um único problema de {category} com base neste subtópico: {subtopic}.
 
-Rules for the question:
-- Write it as 1 to 3 concise sentences — a single, self-contained problem statement.
-- The problem must be deterministic with a clear solution path.
-- The problem must naturally require multiple sequential calculations or reasoning steps to reach the answer.
-- Use specific numbers, variables, and context so it is unambiguous.
+Regras para a pergunta:
+- Escreva-a em 1 a 3 frases concisas — uma única declaração de problema independente em Português do Brasil.
+- O problema deve ser determinístico com um caminho de solução claro.
+- O problema deve naturalmente exigir vários cálculos sequenciais ou etapas de raciocínio para chegar à resposta.
+- Use números específicos, variáveis e contexto para não haver ambiguidade.
 {extra_rules}
-Rules for the solution:
-- Provide a numbered list of steps — "1.", "2.", "3.", etc.
-- Each step is one logical operation or calculation, shown explicitly with working.
-- The final step must include the final answer naturally as part of the calculation or conclusion.
-- Do not include a separate step that restates the final answer.
+Regras para a solução:
+- Forneça uma lista numerada de passos — "1.", "2.", "3.", etc. em Português do Brasil.
+- Cada passo é uma operação lógica ou cálculo, mostrado explicitamente com o desenvolvimento.
+- O passo final deve incluir a resposta final naturalmente como parte do cálculo ou conclusão.
+- Não inclua um passo separado que apenas reafirme a resposta final.
 
-Return ONLY a valid JSON object (no markdown fences, no explanation) with exactly these keys:
-  "subtopic" : string        — the subtopic provided above
-  "question" : string        — the concise problem statement (1–3 sentences)
-  "solution" : array[string] — ordered solution steps, each showing the working
+Retorne APENAS um objeto JSON válido (sem marcadores markdown, sem explicação) com exatamente estas chaves:
+  "subtopic" : string        — o subtópico fornecido acima (em Português do Brasil)
+  "question" : string        — a declaração concisa do problema (1–3 frases)
+  "solution" : array[string] — passos de solução ordenados, cada um mostrando o raciocínio
 """
 
-# Sends one generation request to Ollama and parses the returned JSON question object
+# Envia uma requisição de geração ao Ollama e interpreta o objeto JSON de pergunta retornado
 def fetch_question(category: str, subtopic: str) -> dict:
     payload = {
         "model": MODEL,
@@ -149,7 +149,7 @@ def fetch_question(category: str, subtopic: str) -> dict:
 
     return parsed
 
-# Saves all generated questions for one category into a structured JSON file
+# Salva todas as perguntas geradas para uma categoria em um arquivo JSON estruturado
 def save(category: str, questions: list[dict]) -> None:
     output = {
         "category": category,
@@ -160,15 +160,15 @@ def save(category: str, questions: list[dict]) -> None:
     }
     path = OUTPUT_DIR / f"{category}.json"
     path.write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"  Saved → {path}\n")
+    print(f"  Salvo → {path}\n")
 
-# Runs the full dataset generation pipeline across all categories and subtopics
+# Executa o pipeline completo de geração do dataset em todas as categorias e subtópicos
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     total_categories = len(CATEGORIES)
     total_questions = sum(len(v) for v in CATEGORIES.values())
 
-    print(f"\nGenerating {total_questions} questions with {MODEL} via Ollama\n")
+    print(f"\nGerando {total_questions} perguntas com {MODEL} via Ollama\n")
     start = datetime.now()
 
     for cat_num, (category, subtopics) in enumerate(CATEGORIES.items(), 1):
@@ -187,8 +187,8 @@ def main() -> None:
         save(category, questions)
 
     elapsed = (datetime.now() - start).total_seconds()
-    print(f"   All done in {elapsed:.1f}s")
-    print(f"   Files: {', '.join(f'{c}.json' for c in CATEGORIES)}")
+    print(f"   Tudo concluído em {elapsed:.1f}s")
+    print(f"   Arquivos: {', '.join(f'{c}.json' for c in CATEGORIES)}")
 
 
 if __name__ == "__main__":

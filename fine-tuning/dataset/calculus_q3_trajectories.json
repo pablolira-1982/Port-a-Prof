@@ -1,12 +1,12 @@
 {
-  "problem": "Evaluate the definite integral ∫₀² (3x² + 2x - 1) dx.  Show all necessary steps to arrive at the result. The integral represents the area under the curve of the given polynomial from x=0 to x=2.",
-  "topic": "calculus",
-  "subtopic": "evaluating definite integrals",
+  "problem": "Avalie a integral definida ∫02 (3x2 + 2x - 1) dx. Mostrar todos os passos necessários para chegar ao resultado. A integral representa a área sob a curva do polinômio dado de x=0 a x=2.",
+  "topic": "cálculo",
+  "subtopic": "avaliação de integrais definidas",
   "solution_steps": [
-    "Find the antiderivative of the integrand: ∫(3x² + 2x - 1) dx = x³ + x² - x + C",
-    "Evaluate the antiderivative at the upper limit of integration: (2)³ + (2)² - (2) = 8 + 4 - 2 = 10",
-    "Evaluate the antiderivative at the lower limit of integration: (0)³ + (0)² - (0) = 0 + 0 - 0 = 0",
-    "Subtract the value of the antiderivative at the lower limit from the value at the upper limit: 10 - 0 = 10"
+    "Encontre o antiderivado do inteiro: ∫(3x2 + 2x - 1) dx = x3 + x2 - x + C",
+    "Avaliar o antiderivado no limite superior de integração: (2)3 + (2)2 - (2) = 8 + 4 - 2 = 10",
+    "Avaliar o antiderivado no limite inferior de integração: (0)3 + (0)2 - (0) = 0 + 0 - 0 = 0",
+    "Subtrair o valor do antiderivado no limite inferior do valor no limite superior: 10 - 0 = 10"
   ],
   "trajectories": [
     {
@@ -16,37 +16,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm looking at this integral, $\\int_0^2 (3x^2 + 2x - 1) dx$, and I honestly don't know where to start. It's a definite integral, and I'm not sure what I'm supposed to do with those limits, 0 and 2."
+              "content": "Eu estou olhando para esta integral, $\\int 0^2 (3x^2 + 2x - 1) dx$, e eu honestamente não sei por onde começar. É uma integral definida, e eu não tenho certeza o que eu devo fazer com esses limites, 0 e 2."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly stated the definite integral to be evaluated and expressed conceptual difficulty regarding the procedure for using the limits of integration, 0 and 2.",
+            "current_status": "O aluno afirmou corretamente a integral definida a ser avaliada e expressou dificuldade conceitual quanto ao procedimento de usação dos limites de integração, 0 e 2.",
             "teacher_role": "inject_info",
             "support": "none"
           },
-          "target_teacher_response": "The concept you need to recall here is the Fundamental Theorem of Calculus. This theorem provides the crucial link between antiderivatives and definite integrals.\n\nIn simple terms, to evaluate a definite integral, you first need to find the antiderivative of the function inside the integral. If $f(x)$ is the function, finding its antiderivative gives you a function, let's call it $F(x)$, such that $F'(x) = f(x)$.\n\nOnce you have $F(x)$, the theorem states that the value of the definite integral $\\int_a^b f(x) dx$ is simply $F(b) - F(a)$. You evaluate the antiderivative at the upper limit ($b$) and subtract the value of the antiderivative evaluated at the lower limit ($a$).\n\nFor your problem, $f(x) = 3x^2 + 2x - 1$, and your limits are $a=0$ and $b=2$. Before you can apply the subtraction step, what is the first mathematical operation you must perform on $3x^2 + 2x - 1$?"
+          "target_teacher_response": "O conceito que você precisa lembrar aqui é o Teorema Fundamental de Cálculo. Este teorema fornece a ligação crucial entre antiderivados e integrais definidas.\n\nEm termos simples, para avaliar uma integral definida, você primeiro precisa encontrar o antiderivado da função dentro da integral. Se $f(x)$ é a função, encontrar seu antiderivado lhe dá uma função, vamos chamá-lo de $F(x)$, tal que $F'(x) = f(x)$.\n\nUma vez que você tem $F(x)$, o teorema afirma que o valor da integral definida $\\int a^b f(x) dx$ é simplesmente $F(b) - F(a)$. Você avalia o antiderivado no limite superior ($b$) e subtrai o valor do antiderivado avaliado no limite inferior ($a$).\n\nPara o seu problema, $f(x) = 3x^2 + 2x - 1$, e seus limites são $a=0$ e $b=2$. Antes de aplicar a etapa de subtração, qual é a primeira operação matemática que você deve realizar em $3x^2 + 2x - 1$?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm looking at this integral, $\\int_0^2 (3x^2 + 2x - 1) dx$, and I honestly don't know where to start. It's a definite integral, and I'm not sure what I'm supposed to do with those limits, 0 and 2."
+              "content": "Eu estou olhando para esta integral, $\\int 0^2 (3x^2 + 2x - 1) dx$, e eu honestamente não sei por onde começar. É uma integral definida, e eu não tenho certeza o que eu devo fazer com esses limites, 0 e 2."
             },
             {
               "role": "teacher",
-              "content": "The concept you need to recall here is the Fundamental Theorem of Calculus. This theorem provides the crucial link between antiderivatives and definite integrals.\n\nIn simple terms, to evaluate a definite integral, you first need to find the antiderivative of the function inside the integral. If $f(x)$ is the function, finding its antiderivative gives you a function, let's call it $F(x)$, such that $F'(x) = f(x)$.\n\nOnce you have $F(x)$, the theorem states that the value of the definite integral $\\int_a^b f(x) dx$ is simply $F(b) - F(a)$. You evaluate the antiderivative at the upper limit ($b$) and subtract the value of the antiderivative evaluated at the lower limit ($a$).\n\nFor your problem, $f(x) = 3x^2 + 2x - 1$, and your limits are $a=0$ and $b=2$. Before you can apply the subtraction step, what is the first mathematical operation you must perform on $3x^2 + 2x - 1$?"
+              "content": "O conceito que você precisa lembrar aqui é o Teorema Fundamental de Cálculo. Este teorema fornece a ligação crucial entre antiderivados e integrais definidas.\n\nEm termos simples, para avaliar uma integral definida, você primeiro precisa encontrar o antiderivado da função dentro da integral. Se $f(x)$ é a função, encontrar seu antiderivado lhe dá uma função, vamos chamá-lo de $F(x)$, tal que $F'(x) = f(x)$.\n\nUma vez que você tem $F(x)$, o teorema afirma que o valor da integral definida $\\int a^b f(x) dx$ é simplesmente $F(b) - F(a)$. Você avalia o antiderivado no limite superior ($b$) e subtrai o valor do antiderivado avaliado no limite inferior ($a$).\n\nPara o seu problema, $f(x) = 3x^2 + 2x - 1$, e seus limites são $a=0$ e $b=2$. Antes de aplicar a etapa de subtração, qual é a primeira operação matemática que você deve realizar em $3x^2 + 2x - 1$?"
             },
             {
               "role": "student",
-              "content": "Okay, I understand that I need to find the antiderivative first, but I'm really stuck on how to actually do the integration of the whole polynomial. I know I have to find the antiderivative of $3x^2 + 2x - 1$, but I don't remember the rules for integrating terms like $3x^2$ or $2x$. Can you walk me through finding $F(x)$?"
+              "content": "Ok, eu entendo que eu preciso encontrar o antiderivado primeiro, mas eu estou realmente preso em como realmente fazer a integração de todo o polinomial. Eu sei que tenho que encontrar o antiderivado de $3x^2 + 2x - 1$, mas eu não me lembro das regras para integrar termos como $3x^2$ ou $2x$. Podes explicar-me onde está o $F(x)$?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies that the first step is finding the antiderivative, but they are currently struggling with the mechanical process of integrating the polynomial terms. They are asking the teacher for a detailed walkthrough on how to find the antiderivative function, F(x).",
+            "current_status": "O aluno identifica corretamente que o primeiro passo é encontrar o antiderivado, mas atualmente estão lutando com o processo mecânico de integração dos termos polinomiais. Eles estão pedindo ao professor para um passeio detalhado sobre como encontrar a função antiderivada, F(x).",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To find the antiderivative of a polynomial like $3x^2 + 2x - 1$, you must apply the linearity property of integration, which means you can integrate each term separately. \n\nFor a general term $ax^n$, the antiderivative is found using the Power Rule: $$\\frac{a x^{n+1}}{n+1}$$.\n\nApplying this rule to $3x^2 + 2x - 1$, the antiderivative $F(x)$ will be the sum of the antiderivatives of each term: \n\n$$F(x) = \\frac{3x^{2+1}}{2+1} + \\frac{2x^{1+1}}{1+1} - \\frac{1x^{0+1}}{0+1}$$ \n\nSimplify this expression to find $F(x)$ in terms of $x$. Once you have $F(x)$, you can proceed with the Fundamental Theorem of Calculus."
+          "target_teacher_response": "Para encontrar o antiderivado de um polinômio como $3x^2 + 2x - 1$, você deve aplicar a propriedade de linearidade da integração, o que significa que você pode integrar cada termo separadamente.\n\nPara um termo geral $ax^n$, o antiderivado é encontrado usando a Regra de Poder: $$\\frac{a x^{n+1}}{n+1}$$.\n\nAplicando esta regra a $3x^2 + 2x - 1$, o antiderivado $F(x)$ será a soma dos antiderivados de cada termo:\n\n$$F( x) = \\frac{3x^{2+1}}{2+1} +\\frac{2x^{1+1}}{1+1} -\\frac{1x^{0+1}}{0+1}$\n\nSimplifique esta expressão para encontrar $F(x)$ em termos de $x$. Depois de ter $F(x)$, você pode prosseguir com o Teorema Fundamental do Cálculo."
         }
       ]
     },
@@ -57,37 +57,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I found the antiderivative, which is x cubed plus x squared minus x. Now I need to plug in the limits. For the upper limit, I get 2 cubed plus 2 squared minus 2, which is 8 plus 4 minus 2. That equals 12. So I subtract 0 from that, and my answer is 12."
+              "content": "Eu encontrei o antiderivado, que é x cubo mais x ao quadrado menos x. Agora preciso de ligar os limites. Para o limite superior, eu tenho 2 cubos mais 2 ao quadrado menos 2, que é 8 mais 4 menos 2. Isso é igual a 12. Então eu subtraio 0 disso, e minha resposta é 12."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the antiderivative but made a calculation error when evaluating the upper limit. The student incorrectly calculated 8 plus 4 minus 2 to equal 12, when the correct result is 10.",
+            "current_status": "O aluno identificou corretamente o antiderivado, mas cometeu um erro de cálculo ao avaliar o limite superior. O aluno calculou incorretamente 8 mais 4 menos 2 para igual 12, quando o resultado correto é 10.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You correctly found the antiderivative. However, when you calculated the value at the upper limit, 8 plus 4 minus 2, the result you stated is incorrect. Please check your arithmetic for that specific expression and try the subtraction again."
+          "target_teacher_response": "Encontrou correctamente o antiderivado. No entanto, quando você calculou o valor no limite superior, 8 mais 4 menos 2, o resultado que você afirmou está incorreto. Por favor, verifique sua aritmética para essa expressão específica e tente a subtração novamente."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I found the antiderivative, which is x cubed plus x squared minus x. Now I need to plug in the limits. For the upper limit, I get 2 cubed plus 2 squared minus 2, which is 8 plus 4 minus 2. That equals 12. So I subtract 0 from that, and my answer is 12."
+              "content": "Eu encontrei o antiderivado, que é x cubo mais x ao quadrado menos x. Agora preciso de ligar os limites. Para o limite superior, eu tenho 2 cubos mais 2 ao quadrado menos 2, que é 8 mais 4 menos 2. Isso é igual a 12. Então eu subtraio 0 disso, e minha resposta é 12."
             },
             {
               "role": "teacher",
-              "content": "You correctly found the antiderivative. However, when you calculated the value at the upper limit, 8 plus 4 minus 2, the result you stated is incorrect. Please check your arithmetic for that specific expression and try the subtraction again."
+              "content": "Encontrou correctamente o antiderivado. No entanto, quando você calculou o valor no limite superior, 8 mais 4 menos 2, o resultado que você afirmou está incorreto. Por favor, verifique sua aritmética para essa expressão específica e tente a subtração novamente."
             },
             {
               "role": "student",
-              "content": "Okay, I see where I went wrong with the arithmetic. 8 plus 4 minus 2 is 10. So, I have 10 for the upper limit. Now I need to plug in the lower limit, which is 0. I get 0 cubed plus 0 squared minus 0, which is 0. So, I have 10 minus 0. But wait, do I just subtract the two numbers, or is there a specific way I need to set up the subtraction of the two results?"
+              "content": "Está bem, vejo onde errei com a aritmética. 8 mais 4 menos 2 é 10. Então, eu tenho 10 para o limite superior. Agora eu preciso ligar o limite inferior, que é 0. Eu tenho 0 cubo mais 0 ao quadrado menos 0, que é 0. Então, eu tenho 10 menos 0. Mas espere, eu apenas subtraio os dois números, ou existe uma maneira específica que eu preciso para configurar a subtração dos dois resultados?"
             }
           ],
           "internal_state": {
-            "current_status": "The student successfully recalculated the value at the upper limit as 10 and the value at the lower limit as 0. The student is now conceptually questioning the final step, asking if there is a specific procedure or setup required when subtracting the two resulting values.",
+            "current_status": "O aluno recalculou com sucesso o valor no limite superior como 10 e o valor no limite inferior como 0. O aluno está agora questionando conceitualmente o passo final, perguntando se há um procedimento específico ou configuração necessária para subtrair os dois valores resultantes.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "You correctly calculated the value at the upper limit, which is 10.\n\nTo evaluate the definite integral, you must calculate the difference between the antiderivative evaluated at the upper limit and the antiderivative evaluated at the lower limit. This is represented by the expression: $$F(2) - F(0)$$\n\nSince $F(x) = x^3 + x^2 - x$, the value at the lower limit is $F(0) = (0)^3 + (0)^2 - (0)$.\n\nNow, substitute the value you found for $F(0)$ into the overall subtraction structure and calculate the final difference."
+          "target_teacher_response": "Você calculou corretamente o valor no limite superior, que é 10.\n\nPara avaliar a integral definida, você deve calcular a diferença entre o antiderivado avaliado no limite superior e o antiderivado avaliado no limite inferior. Isso é representado pela expressão: $$F(2) - F(0)$$\n\nDesde $F(x) = x^3 + x^2 - x$, o valor no limite inferior é $F(0) = (0)^3 + (0)^2 - (0)$.\n\nAgora, substitua o valor encontrado por $F(0)$ na estrutura de subtração geral e calcule a diferença final."
         }
       ]
     },
@@ -98,37 +98,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think the antiderivative is x cubed plus x squared minus x. So, I need to calculate (2) cubed plus (2) squared minus (2) and then subtract the result of plugging in 0."
+              "content": "Eu acho que o antiderivado é x cúbico mais x ao quadrado menos x. Então, eu preciso calcular (2) ao cubo mais (2) ao quadrado menos (2) e então subtrair o resultado da ligação em 0."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the antiderivative as x cubed plus x squared minus x. They also accurately described the necessary steps for evaluating the definite integral by calculating the value at the upper limit and then subtracting the value at the lower limit.",
+            "current_status": "O aluno identificou corretamente o antiderivado como x ao cubo mais x ao quadrado menos x. Eles também descreveram com precisão os passos necessários para avaliar a integral definida, calculando o valor no limite superior e, em seguida, subtraindo o valor no limite inferior.",
             "teacher_role": "confirm_and_advance",
             "support": "none"
           },
-          "target_teacher_response": "You have correctly set up the evaluation using the Fundamental Theorem of Calculus. What is the value of the expression (2) cubed plus (2) squared minus (2)?"
+          "target_teacher_response": "Você configurou corretamente a avaliação usando o Teorema Fundamental do Cálculo. Qual é o valor da expressão (2) cúbica mais (2) ao quadrado menos (2)?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think the antiderivative is x cubed plus x squared minus x. So, I need to calculate (2) cubed plus (2) squared minus (2) and then subtract the result of plugging in 0."
+              "content": "Eu acho que o antiderivado é x cúbico mais x ao quadrado menos x. Então, eu preciso calcular (2) ao cubo mais (2) ao quadrado menos (2) e então subtrair o resultado da ligação em 0."
             },
             {
               "role": "teacher",
-              "content": "You have correctly set up the evaluation using the Fundamental Theorem of Calculus. What is the value of the expression (2) cubed plus (2) squared minus (2)?"
+              "content": "Você configurou corretamente a avaliação usando o Teorema Fundamental do Cálculo. Qual é o valor da expressão (2) cúbica mais (2) ao quadrado menos (2)?"
             },
             {
               "role": "student",
-              "content": "If I plug in 0, I get 0, so I just subtract 0 from 10. The final answer is 10."
+              "content": "Se eu ligar 0, eu recebo 0, então eu subtraio 0 de 10. A resposta final é 10."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly determines that plugging in 0 results in 0, and then correctly subtracts this value from the previously calculated upper limit value of 10, concluding that the final answer is 10.",
+            "current_status": "O aluno determina corretamente que ligar 0 resulta em 0, e então subtrai corretamente este valor do valor limite superior de 10, previamente calculado, concluindo que a resposta final é 10.",
             "teacher_role": "session_close",
             "support": "none"
           },
-          "target_teacher_response": "That is correct. The value of the definite integral is 10. Do you have any other problems you would like to work on?"
+          "target_teacher_response": "Correto. O valor da integral definida é 10. Tem outros problemas em que gostaria de trabalhar?"
         }
       ]
     },
@@ -139,37 +139,37 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I got the antiderivative right, it's x cubed plus x squared minus x. But now I'm stuck on what to do with the 0 and the 2. Do I plug them into the whole thing, or is there some other formula I need to remember?"
+              "content": "Eu acho que eu tenho o direito antiderivado, é x cubo mais x quadrado menos x. Mas agora estou preso no que fazer com o 0 e o 2. Eu conectá-los em toda a coisa, ou há alguma outra fórmula que eu preciso lembrar?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the antiderivative as x cubed plus x squared minus x, but they are currently struggling with the application of the limits of integration (0 and 2), questioning whether they should substitute these values into the entire expression or if a specific formula is needed.",
+            "current_status": "O aluno identificou corretamente o antiderivado como x ao cubo mais x ao quadrado menos x, mas eles estão atualmente lutando com a aplicação dos limites de integração (0 e 2), questionando se eles devem substituir esses valores em toda a expressão ou se uma fórmula específica é necessária.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To evaluate the definite integral, you must apply the **Fundamental Theorem of Calculus**. \n\nThis requires calculating the antiderivative, $F(x)$, at the upper limit and subtracting the result of calculating $F(x)$ at the lower limit.\n\nTherefore, the expression you need to evaluate is $$F(2) - F(0)$$\n\nSubstitute $x=2$ and $x=0$ into your antiderivative, $F(x) = x^3 + x^2 - x$, and set up the subtraction. What is the value of $F(2)$?"
+          "target_teacher_response": "Para avaliar a integral definida, você deve aplicar o Teorema Fundamental de Cálculo**.\n\nIsso requer calcular o antiderivado, $F(x)$, no limite superior e subtrair o resultado do cálculo de $F(x)$ no limite inferior.\n\nPortanto, a expressão que você precisa avaliar é $$F(2) - F(0)$$\n\nSubstitua $x=2$ e $x=0$ em seu antiderivado, $F(x) = x^3 + x^2 - x$, e configure a subtração. Qual é o valor de $F(2)$?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I think I got the antiderivative right, it's x cubed plus x squared minus x. But now I'm stuck on what to do with the 0 and the 2. Do I plug them into the whole thing, or is there some other formula I need to remember?"
+              "content": "Eu acho que eu tenho o direito antiderivado, é x cubo mais x quadrado menos x. Mas agora estou preso no que fazer com o 0 e o 2. Eu conectá-los em toda a coisa, ou há alguma outra fórmula que eu preciso lembrar?"
             },
             {
               "role": "teacher",
-              "content": "To evaluate the definite integral, you must apply the **Fundamental Theorem of Calculus**. \n\nThis requires calculating the antiderivative, $F(x)$, at the upper limit and subtracting the result of calculating $F(x)$ at the lower limit.\n\nTherefore, the expression you need to evaluate is $$F(2) - F(0)$$\n\nSubstitute $x=2$ and $x=0$ into your antiderivative, $F(x) = x^3 + x^2 - x$, and set up the subtraction. What is the value of $F(2)$?"
+              "content": "Para avaliar a integral definida, você deve aplicar o Teorema Fundamental de Cálculo**.\n\nIsso requer calcular o antiderivado, $F(x)$, no limite superior e subtrair o resultado do cálculo de $F(x)$ no limite inferior.\n\nPortanto, a expressão que você precisa avaliar é $$F(2) - F(0)$$\n\nSubstitua $x=2$ e $x=0$ em seu antiderivado, $F(x) = x^3 + x^2 - x$, e configure a subtração. Qual é o valor de $F(2)$?"
             },
             {
               "role": "student",
-              "content": "Okay, so I'm calculating F(2) first, right? It's 2 cubed plus 2 squared minus 2. So, 8 plus 4 minus 2... wait, I got 12 minus 2, which is 10. Wait, no, I'm getting 14. I'm not sure why I'm getting 14."
+              "content": "Ok, então eu estou calculando F(2) primeiro, certo? É 2 cubos mais 2 ao quadrado menos 2. Então, 8 mais 4 menos 2... espere, eu tenho 12 menos 2, que é 10. Espera, não, vou ter 14. Não sei por que estou a receber 14."
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly sets up the calculation for F(2) as 2 cubed plus 2 squared minus 2, and correctly calculates the intermediate sum of 12 minus 2 to equal 10. However, the student then expresses confusion, stating that they are getting a final result of 14, indicating a calculation error or conceptual struggle despite successfully performing the steps moments earlier.",
+            "current_status": "O aluno estabelece corretamente o cálculo para F(2) como 2 cubos mais 2 ao quadrado menos 2, e calcula corretamente a soma intermediária de 12 menos 2 a igual 10. No entanto, o aluno então expressa confusão, afirmando que está recebendo um resultado final de 14, indicando um erro de cálculo ou luta conceitual, apesar de ter realizado com sucesso os passos momentos anteriores.",
             "teacher_role": "redirect",
             "support": "none"
           },
-          "target_teacher_response": "You are calculating $F(2) = 2^3 + 2^2 - 2$. When you calculated $8 + 4 - 2$, you seem to have added the last term instead of subtracting it. Please re-examine the operation you performed on the value 2."
+          "target_teacher_response": "Você está calculando $F(2) = 2^3 + 2^2 - 2$. Quando você calculou $8 + 4 - 2$, você parece ter adicionado o último termo em vez de subtraí-lo. Por favor, reexamine a operação que realizou no valor 2."
         }
       ]
     },
@@ -180,67 +180,67 @@
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to evaluate the definite integral of 3x^2 + 2x - 1 from 0 to 2. I know I have to find the area, but I honestly don't know where to start with the setup. What's the first step I should take?"
+              "content": "Eu devo avaliar a integral definida de 3x^2 + 2x - 1 de 0 a 2. Sei que tenho de encontrar a área, mas não sei por onde começar com a instalação. Qual é o primeiro passo que devo dar?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identified the definite integral to be evaluated, which is the integral of 3x^2 + 2x - 1 from 0 to 2, but they are unsure how to begin the setup process and are asking for the initial step.",
+            "current_status": "O aluno identificou corretamente a integral definida a ser avaliada, que é a integral de 3x^2 + 2x - 1 de 0 a 2, mas eles não têm certeza de como iniciar o processo de configuração e estão pedindo o passo inicial.",
             "teacher_role": "partial_worked_step",
             "support": "low"
           },
-          "target_teacher_response": "To evaluate a definite integral, the first step is to find the **antiderivative** of the integrand, which is the function inside the integral sign.\n\nRemember that the antiderivative of a polynomial term like $ax^n$ is given by the formula: $$\\frac{{a}}{{n+1}}x^{n+1}$$\n\nFor the function $3x^2 + 2x - 1$, you need to find the antiderivative of each term separately. Write out the expression for the antiderivative of $3x^2$, then the antiderivative of $2x$, and finally the antiderivative of $-1$. What is the resulting antiderivative function?"
+          "target_teacher_response": "Para avaliar uma integral definida, o primeiro passo é encontrar o **antiderivativo** do integral, que é a função dentro do sinal integral.\n\nLembre-se que o antiderivado de um termo polinomial como $ax^n$ é dado pela fórmula: $$\\frac{{a}}{{n+1}}x^{n+1}$$\n\nPara a função $3x^2 + 2x - 1$, você precisa encontrar o antiderivado de cada termo separadamente. Escreva a expressão para o antiderivado de $3x^2$, então o antiderivado de $2x$, e finalmente o antiderivado de $-1$. Qual é a função antiderivada resultante?"
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to evaluate the definite integral of 3x^2 + 2x - 1 from 0 to 2. I know I have to find the area, but I honestly don't know where to start with the setup. What's the first step I should take?"
+              "content": "Eu devo avaliar a integral definida de 3x^2 + 2x - 1 de 0 a 2. Sei que tenho de encontrar a área, mas não sei por onde começar com a instalação. Qual é o primeiro passo que devo dar?"
             },
             {
               "role": "teacher",
-              "content": "To evaluate a definite integral, the first step is to find the **antiderivative** of the integrand, which is the function inside the integral sign.\n\nRemember that the antiderivative of a polynomial term like $ax^n$ is given by the formula: $$\\frac{{a}}{{n+1}}x^{n+1}$$\n\nFor the function $3x^2 + 2x - 1$, you need to find the antiderivative of each term separately. Write out the expression for the antiderivative of $3x^2$, then the antiderivative of $2x$, and finally the antiderivative of $-1$. What is the resulting antiderivative function?"
+              "content": "Para avaliar uma integral definida, o primeiro passo é encontrar o **antiderivativo** do integral, que é a função dentro do sinal integral.\n\nLembre-se que o antiderivado de um termo polinomial como $ax^n$ é dado pela fórmula: $$\\frac{{a}}{{n+1}}x^{n+1}$$\n\nPara a função $3x^2 + 2x - 1$, você precisa encontrar o antiderivado de cada termo separadamente. Escreva a expressão para o antiderivado de $3x^2$, então o antiderivado de $2x$, e finalmente o antiderivado de $-1$. Qual é a função antiderivada resultante?"
             },
             {
               "role": "student",
-              "content": "I got the antiderivative, but I'm really confused about the next part. When I look at the setup, I see the 0 and the 2, but I don't know what those numbers represent in the calculation. Where do I even get those values from?"
+              "content": "Tenho o antiderivado, mas estou muito confuso sobre a próxima parte. Quando olho para a configuração, vejo o 0 e o 2, mas não sei o que esses números representam no cálculo. Onde consigo esses valores?"
             }
           ],
           "internal_state": {
-            "current_status": "The student successfully found the antiderivative but is now confused about the role of the limits of integration, specifically asking what the numbers 0 and 2 represent in the final calculation.",
+            "current_status": "O aluno encontrou com sucesso o antiderivado, mas agora está confuso sobre o papel dos limites de integração, perguntando especificamente o que os números 0 e 2 representam no cálculo final.",
             "teacher_role": "partial_worked_step",
             "support": "medium"
           },
-          "target_teacher_response": "The setup you are looking at is based on the **Fundamental Theorem of Calculus**. \n\nWhen evaluating a definite integral, the limits of integration define the range of the variable $x$.\n\nIn your problem, the lower limit, which is the starting point for the area calculation, is **0**.\n\nThe upper limit, which is the ending point, is **2**.\n\nOnce you have found the antiderivative, let's call it $F(x)$, the process requires you to evaluate $F(2) - F(0)$. \n\nNow that you have identified the antiderivative and the two **limits of integration**, substitute these values into your function and continue the calculation."
+          "target_teacher_response": "A configuração que você está olhando é baseada no Teorema Fundamental do Cálculo**.\n\nAo avaliar uma integral definida, os limites de integração definem o intervalo da variável $x$.\n\nNo seu problema, o limite inferior, que é o ponto de partida para o cálculo da área, é **0**.\n\nO limite superior, que é o ponto final, é **2.\n\nUma vez que você encontrou o antiderivado, vamos chamá-lo de $F(x)$, o processo requer que você avalie $F(2) - F(0)$.\n\nAgora que você identificou o antiderivado e os dois **limites de integração**, substitua esses valores em sua função e continue o cálculo."
         },
         {
           "dialogue_history": [
             {
               "role": "student",
-              "content": "I'm supposed to evaluate the definite integral of 3x^2 + 2x - 1 from 0 to 2. I know I have to find the area, but I honestly don't know where to start with the setup. What's the first step I should take?"
+              "content": "Eu devo avaliar a integral definida de 3x^2 + 2x - 1 de 0 a 2. Sei que tenho de encontrar a área, mas não sei por onde começar com a instalação. Qual é o primeiro passo que devo dar?"
             },
             {
               "role": "teacher",
-              "content": "To evaluate a definite integral, the first step is to find the **antiderivative** of the integrand, which is the function inside the integral sign.\n\nRemember that the antiderivative of a polynomial term like $ax^n$ is given by the formula: $$\\frac{{a}}{{n+1}}x^{n+1}$$\n\nFor the function $3x^2 + 2x - 1$, you need to find the antiderivative of each term separately. Write out the expression for the antiderivative of $3x^2$, then the antiderivative of $2x$, and finally the antiderivative of $-1$. What is the resulting antiderivative function?"
+              "content": "Para avaliar uma integral definida, o primeiro passo é encontrar o **antiderivativo** do integral, que é a função dentro do sinal integral.\n\nLembre-se que o antiderivado de um termo polinomial como $ax^n$ é dado pela fórmula: $$\\frac{{a}}{{n+1}}x^{n+1}$$\n\nPara a função $3x^2 + 2x - 1$, você precisa encontrar o antiderivado de cada termo separadamente. Escreva a expressão para o antiderivado de $3x^2$, então o antiderivado de $2x$, e finalmente o antiderivado de $-1$. Qual é a função antiderivada resultante?"
             },
             {
               "role": "student",
-              "content": "I got the antiderivative, but I'm really confused about the next part. When I look at the setup, I see the 0 and the 2, but I don't know what those numbers represent in the calculation. Where do I even get those values from?"
+              "content": "Tenho o antiderivado, mas estou muito confuso sobre a próxima parte. Quando olho para a configuração, vejo o 0 e o 2, mas não sei o que esses números representam no cálculo. Onde consigo esses valores?"
             },
             {
               "role": "teacher",
-              "content": "The setup you are looking at is based on the **Fundamental Theorem of Calculus**. \n\nWhen evaluating a definite integral, the limits of integration define the range of the variable $x$.\n\nIn your problem, the lower limit, which is the starting point for the area calculation, is **0**.\n\nThe upper limit, which is the ending point, is **2**.\n\nOnce you have found the antiderivative, let's call it $F(x)$, the process requires you to evaluate $F(2) - F(0)$. \n\nNow that you have identified the antiderivative and the two **limits of integration**, substitute these values into your function and continue the calculation."
+              "content": "A configuração que você está olhando é baseada no Teorema Fundamental do Cálculo**.\n\nAo avaliar uma integral definida, os limites de integração definem o intervalo da variável $x$.\n\nNo seu problema, o limite inferior, que é o ponto de partida para o cálculo da área, é **0**.\n\nO limite superior, que é o ponto final, é **2.\n\nUma vez que você encontrou o antiderivado, vamos chamá-lo de $F(x)$, o processo requer que você avalie $F(2) - F(0)$.\n\nAgora que você identificou o antiderivado e os dois **limites de integração**, substitua esses valores em sua função e continue o cálculo."
             },
             {
               "role": "student",
-              "content": "I'm still really lost on how to actually plug those numbers in. I know I have $F(x) = x^3 + x^2 - x$, and I need to do $F(2) - F(0)$, but I don't know how to start the arithmetic. Can you just walk me through the substitution for both 2 and 0?"
+              "content": "Eu ainda estou realmente perdido em como realmente ligar esses números. Eu sei que tenho $F(x) = x^3 + x^2 - x$, e eu preciso fazer $F(2) - F(0)$, mas eu não sei como começar a aritmética. Podes explicar-me a substituição por 2 e 0?"
             }
           ],
           "internal_state": {
-            "current_status": "The student correctly identifies the antiderivative function as F(x) = x^3 + x^2 - x and understands that the next step is to calculate F(2) - F(0). The student's current struggle is procedural, requiring guidance on how to perform the arithmetic substitution for both the upper limit (2) and the lower limit (0).",
+            "current_status": "O aluno identifica corretamente a função antiderivada como F(x) = x^3 + x^2 - x e entende que o próximo passo é calcular F(2) - F(0). A luta atual do aluno é processual, requerendo orientação sobre como realizar a substituição aritmética tanto para o limite superior (2) quanto para o limite inferior (0).",
             "teacher_role": "partial_worked_step",
             "support": "high"
           },
-          "target_teacher_response": "We need to calculate $F(2)$ first. Substitute $x=2$ into the antiderivative $F(x) = x^3 + x^2 - x$.\n\n$$F(2) = (2)^3 + (2)^2 - (2)$$\n\nNow, calculate the powers of 2 and simplify the expression. What is the value of $F(2)$?"
+          "target_teacher_response": "Precisamos calcular $F(2)$ primeiro. Substitua $x=2$ no antiderivado $F(x) = x^3 + x^2 - x$.\n\n$$F(2) = (2)^3 + (2)^2 - (2)$$\n\nAgora, calcule os poderes de 2 e simplifique a expressão. Qual é o valor de $F(2)$?"
         }
       ]
     }
