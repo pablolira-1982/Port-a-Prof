@@ -115,8 +115,8 @@ O modelo é treinado em prompts estruturados com o seguinte esquema:
 Você pode optar por:
 
 1. **Fazer o fine-tuning você mesmo** — abra `fine-tuning/port-a-prof_QLoRA.ipynb` e siga as células. O notebook produz um modelo mesclado e de precisão total, salvo em `./port_a_prof_finetuned` no formato safetensors do Hugging Face, que pode então ser quantizado e convertido para GGUF usando o [llama.cpp](https://github.com/ggerganov/llama.cpp).
-2. **Baixar o GGUF pré-convertido** — pegue o modelo quantizado Q4_K_M diretamente do [Hugging Face](https://huggingface.co/bianca-lilyyy128/port-a-prof-Q4_K_M).
-Para executar o app, você também precisará do projetor multimodal Gemma 4 E2B, disponível [aqui](https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/blob/main/mmproj-F16.gguf).
+2. **Baixar o GGUF pré-convertido** — pegue o modelo quantizado Q4_K_M diretamente pelo [Google Drive](https://drive.google.com/file/d/1iSB_zN36mrmRCr8SUT2fMxHmAAWviwVe/view?usp=sharing).
+Para executar o app, você também precisará do projetor multimodal Gemma 4 E2B, disponível pelo  [Google Drive](https://drive.google.com/file/d/1tWI93dfLVuj3vkBu_ZjY7iQbDZYD-3lx/view?usp=sharing).
 
 ---
 
